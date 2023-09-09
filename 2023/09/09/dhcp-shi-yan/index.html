@@ -4,14 +4,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="RIP路由实验, 月惜的小屋">
+    <meta name="keywords" content="DHCP实验, 月惜的小屋">
     <meta name="description" content="一、实验目的
-理解RIP协议的工作过程
+了解DHCP工作环境
 
-掌握RIP动态路由的配置
+掌握DHCP服务基本配置
+
+掌握DHCP中继服务配置
 
 
-二、应用环境当网络拓扑结构十分复杂时，手工配置静态路由工作量大而且容易出现错误，这时就可以使用动态路由协议，动态路由是通过相互连接的路由器之间彼此交换信息，按照一定算法">
+二、应用环境实现计算机访问互联网的一项重要规则就是：所有访问互联网的计算机必须保证具有全球唯一的IP地址，在日常网络管理工作中，为网络中的计算机">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +25,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>RIP路由实验 | 月惜的小屋</title>
+    <title>DHCP实验 | 月惜的小屋</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -342,12 +344,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.imgdb.cn/item/64fbbe2d661c6c8e54d9722a.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.imgdb.cn/item/64fbd82a661c6c8e54de9137.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">RIP路由实验</h1>
+                    <h1 class="description center-align post-title">DHCP实验</h1>
                 </div>
             </div>
         </div>
@@ -410,7 +412,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    768
+                    1.2k
                 </div>
                 
 
@@ -428,19 +430,70 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h4 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h4><ol>
-<li><p>理解RIP协议的工作过程</p>
+<li><p>了解DHCP工作环境</p>
 </li>
-<li><p>掌握RIP动态路由的配置</p>
+<li><p>掌握DHCP服务基本配置</p>
+</li>
+<li><p>掌握DHCP中继服务配置</p>
 </li>
 </ol>
-<h4 id="二、应用环境"><a href="#二、应用环境" class="headerlink" title="二、应用环境"></a>二、应用环境</h4><p>当网络拓扑结构十分复杂时，手工配置静态路由工作量大而且容易出现错误，这时就可以使用动态路由协议，动态路由是通过相互连接的路由器之间彼此交换信息，按照一定算法进行优化。这些路由信息在一定时间间隙里会不断更新，以适应网络的不断变化，随时获得最优寻径效果。</p>
-<p>当两台路由器连接时，为了保证每台路由器上所连接的网段可以和另一台路由器上连接的网段互相通信，使用RIP协议可以动态学习路由。</p>
-<h4 id="三、实验设备"><a href="#三、实验设备" class="headerlink" title="三、实验设备"></a>三、实验设备</h4><p>实验拓扑如下，实验设备：2811路由器三台、PC机两台、交叉线三根、串口线一根。</p>
-<p><img src="https://pic.imgdb.cn/item/64fbc7fc661c6c8e54db720d.png" alt="avatar"></p>
-<h4 id="四、实验要求"><a href="#四、实验要求" class="headerlink" title="四、实验要求"></a>四、实验要求</h4><p>实验之前：路由器使用2811型号，实验设备需要添加同异步网络模块，打开路由器面板，在Physical选项里选择NM-4A/S或者NM-8A/S,关闭路由器，拖动模块添加并开启路由器。</p>
-<p>未配置RIP路由之前：PC之间不能通信。</p>
-<p>配置RIP路由之后：PC机之间可以互相通信。</p>
-<h4 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h4><h5 id="第一步：给PC机设置IP地址（略）"><a href="#第一步：给PC机设置IP地址（略）" class="headerlink" title="第一步：给PC机设置IP地址（略）"></a>第一步：给PC机设置IP地址（略）</h5><h5 id="第二步：给路由器设置IP地址并设置时钟频率"><a href="#第二步：给路由器设置IP地址并设置时钟频率" class="headerlink" title="第二步：给路由器设置IP地址并设置时钟频率"></a>第二步：给路由器设置IP地址并设置时钟频率</h5><pre><code>路由器A：
+<h4 id="二、应用环境"><a href="#二、应用环境" class="headerlink" title="二、应用环境"></a>二、应用环境</h4><p>实现计算机访问互联网的一项重要规则就是：所有访问互联网的计算机必须保证具有全球唯一的IP地址，在日常网络管理工作中，为网络中的计算机手工配置IP地址是一项非常繁琐的工作。一来很多非专业人员不会配置IP地址。二来经常会造成地址配置错误。三来会造成网络中重复使用地址，导致地址冲突。四来会给使用笔记本电脑的人员，在跨区域移动办公室地址分配都很困难。</p>
+<p>为减少日常办公过程中网络管理的工作量，网络中心希望所有计算机的IP地址采取自动获取的方法，这就需要在接入交换机上配置动态主机地址获取协议，动态主机地址分配协议DHCP有效的解决了上述难题，将协议配置在办公网的接入交换机上，可以让接入网络中的主机自动获取上网所需的IP地址。</p>
+<h4 id="三、实验拓扑"><a href="#三、实验拓扑" class="headerlink" title="三、实验拓扑"></a>三、实验拓扑</h4><p>实验拓扑如下，实验设备：2811路由器二台、二层交换机一台、交叉线一根、直通线三根</p>
+<p><img src="https://pic.imgdb.cn/item/64fbd61b661c6c8e54de1bb1.png" alt="avatar"></p>
+<h4 id="四、实验要求"><a href="#四、实验要求" class="headerlink" title="四、实验要求"></a>四、实验要求</h4><p>在路由器B上配置DHCP Server的配置，为使PC0和PC1能分配到IP，在路由器A和交换机A上面做DHCP的中继，PC0和PC1在不同的VLAN。</p>
+<p>PC1的网关为192.168.1.254，PC2的网关为192.168.2.254。</p>
+<h4 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h4><h5 id="第一步：把PC机设置为动态获取IP地址（略）"><a href="#第一步：把PC机设置为动态获取IP地址（略）" class="headerlink" title="第一步：把PC机设置为动态获取IP地址（略）"></a>第一步：把PC机设置为动态获取IP地址（略）</h5><h5 id="第二步：给交换机A创建VLAN"><a href="#第二步：给交换机A创建VLAN" class="headerlink" title="第二步：给交换机A创建VLAN"></a>第二步：给交换机A创建VLAN</h5><pre class=" language-router"><code class="language-router">交换机A：
+
+Switch(config)#
+
+Switch(config)#vlan 10
+
+Switch(config-vlan)#exit
+
+Switch(config)#vlan 20
+
+Switch(config-vlan)#exit
+
+Switch(config)#
+</code></pre>
+<h5 id="第三步：给交换机设置链路类型并添加端口"><a href="#第三步：给交换机设置链路类型并添加端口" class="headerlink" title="第三步：给交换机设置链路类型并添加端口"></a>第三步：给交换机设置链路类型并添加端口</h5><pre><code>交换机A：
+
+Switch(config)#
+
+Switch(config)#interface fastEthernet 0/1
+
+Switch(config-if)#no shutdown
+
+Switch(config-if)#switchport mode trunk
+
+Switch(config-if)#switchport trunk allowed vlan all
+
+Switch(config-if)#exit
+
+Switch(config)#interface fastEthernet 0/2
+
+Switch(config-if)#no shutdown
+
+Switch(config-if)#switchport mode access
+
+Switch(config-if)#switchport access vlan 10
+
+Switch(config-if)#exit
+
+Switch(config)#interface fastEthernet 0/3
+
+Switch(config-if)#no shutdown
+
+Switch(config-if)#switchport mode access
+
+Switch(config-if)#switchport access vlan 20
+
+Switch(config-if)#exit
+
+Switch(config-if)#
+</code></pre>
+<h5 id="第四步：给路由器A上配置单臂路由并配置IP地址"><a href="#第四步：给路由器A上配置单臂路由并配置IP地址" class="headerlink" title="第四步：给路由器A上配置单臂路由并配置IP地址"></a>第四步：给路由器A上配置单臂路由并配置IP地址</h5><pre><code>路由器A：
 
 Router(config)#
 
@@ -448,121 +501,116 @@ Router(config)#interface fastEthernet 0/0
 
 Router(config-if)#no shutdown
 
-Router(config-if)#ip address 192.168.1.254 255.255.255.0
-
 Router(config-if)#exit
 
-Router(config)#interface serial 1/0
+Router(config)#interface fastEthernet 0/0.1
 
-Router(config-if)#no shutdown
+Router(config-subif)#no shutdown
 
-Router(config-if)#clock rate 64000
+Router(config-subif)#encapsulation dot1Q 10
 
-Router(config-if)#ip address 192.168.2.1 255.255.255.0
+Router(config-subif)#ip address 192.168.1.254 255.255.255.0
 
-Router(config-if)#exit
+Router(config-subif)#exit
 
-Router(config)#
+Router(config)#interface fastEthernet 0/0.2
 
-路由器B：
+Router(config-subif)#no shutdown
 
-Router(config)#
+Router(config-subif)#encapsulation dot1Q 20
 
-Router(config)#interface serial 1/0
+Router(config-subif)#ip address 192.168.2.254 255.255.255.0
 
-Router(config-if)#no shutdown
-
-Router(config-if)#ip address 192.168.2.2 255.255.255.0
-
-Router(config-if)#exit
-
-Router(config)#interface fastEthernet 0/0
-
-Router(config-if)#no shutdown
-
-Router(config-if)#ip address 192.168.3.1 255.255.255.0
-
-Router(config-if)#exit
-
-Router(config)#
-
-路由器C：
-
-Router(config)#
-
-Router(config)#interface fastEthernet 0/0
-
-Router(config-if)#no shutdown
-
-Router(config-if)#ip address 192.168.3.2 255.255.255.0
-
-Router(config-if)#exit
+Router(config-subif)#exit
 
 Router(config)#interface fastEthernet 0/1
 
 Router(config-if)#no shutdown
 
-Router(config-if)#ip address 192.168.4.254 255.255.255.0
+Router(config-if)#ip address 172.16.1.1 255.255.255.0
 
 Router(config-if)#exit
 
 Router(config)#
 </code></pre>
-<h5 id="第三步：给路由器配置RIP路由"><a href="#第三步：给路由器配置RIP路由" class="headerlink" title="第三步：给路由器配置RIP路由"></a>第三步：给路由器配置RIP路由</h5><pre><code>路由器A：
+<h5 id="第四步：给路由器B配置IP地址"><a href="#第四步：给路由器B配置IP地址" class="headerlink" title="第四步：给路由器B配置IP地址"></a>第四步：给路由器B配置IP地址</h5><pre><code>路由器B：
 
 Router(config)#
 
-Router(config)#router rip
+Router(config)#interface fastEthernet 0/0
 
-Router(config-router)#version 2
+Router(config-if)#no shutdown
 
-Router(config-router)#no auto-summary
+Router(config-if)#ip address 172.16.1.2 255.255.255.0
 
-Router(config-router)#network 192.168.1.0
-
-Router(config-router)#network 192.168.2.0
-
-Router(config-router)#exit
-
-Router(config)#
-
-路由器B：
-
-Router(config)#
-
-Router(config)#router rip
-
-Router(config-router)#version 2
-
-Router(config-router)#no auto-summary
-
-Router(config-router)#network 192.168.2.0
-
-Router(config-router)#network 192.168.3.0
-
-Router(config-router)#exit
-
-Router(config)#
-
-路由器C：
-
-Router(config)#
-
-Router(config)#router rip
-
-Router(config-router)#version 2
-
-Router(config-router)#no auto-summary
-
-Router(config-router)#network 192.168.3.0
-
-Router(config-router)#network 192.168.4.0
-
-Router(config-router)#exit
+Router(config-if)#exit
 
 Router(config)#
 </code></pre>
-<h5 id="第四步：测试"><a href="#第四步：测试" class="headerlink" title="第四步：测试"></a>第四步：测试</h5><p>若实验成功，PC机之间可以相互Ping，如PC之间Ping不通，表明实验配置错误，应检查IP地址或线缆是否配置正确、RIP路由是否配置正确。</p>
+<h5 id="第五步：配置静态路由"><a href="#第五步：配置静态路由" class="headerlink" title="第五步：配置静态路由"></a>第五步：配置静态路由</h5><pre><code>路由器B：
+
+Router(config)#
+
+Router(config)#ip route 192.168.1.0 255.255.255.0 172.16.1.1
+
+Router(config)#ip route 192.168.2.0 255.255.255.0 172.16.1.1
+
+Router(config)#
+</code></pre>
+<h5 id="第六步：在路由器A配置DHCP中继"><a href="#第六步：在路由器A配置DHCP中继" class="headerlink" title="第六步：在路由器A配置DHCP中继"></a>第六步：在路由器A配置DHCP中继</h5><pre><code>路由器A：
+
+Router(config)#
+
+Router(config)#service dhcp
+
+Router(config)#interface fastEthernet 0/0.1
+
+Router(config-subif)#ip helper-address 172.16.1.2
+
+Router(config-subif)#exit
+
+Router(config)#interface fastEthernet 0/0.2
+
+Router(config-subif)#ip helper-address 172.16.1.2
+
+Router(config-subif)#exit
+
+Router(config)#
+</code></pre>
+<h5 id="第七步：在路由器B配置DHCP-Server"><a href="#第七步：在路由器B配置DHCP-Server" class="headerlink" title="第七步：在路由器B配置DHCP Server"></a>第七步：在路由器B配置DHCP Server</h5><pre><code>路由器B：
+
+Router(config)#
+
+Router(config)#service dhcp
+
+Router(config)#ip dhcp pool vlan10
+
+Router(dhcp-config)#network 192.168.1.0 255.255.255.0
+
+Router(dhcp-config)#default-router 192.168.1.254
+
+Router(dhcp-config)#exit
+
+Router(config)#ip dhcp pool vlan20
+
+Router(dhcp-config)#network 192.168.2.0 255.255.255.0
+
+Router(dhcp-config)#default-router 192.168.2.254
+
+Router(dhcp-config)#exit
+
+Router(config)#
+</code></pre>
+<h5 id="第八步：查看PC机是否获取到IP地址"><a href="#第八步：查看PC机是否获取到IP地址" class="headerlink" title="第八步：查看PC机是否获取到IP地址"></a>第八步：查看PC机是否获取到IP地址</h5><p>如果查看PC机有获取到IP地址，本实验完成。</p>
+<p>如PC机没有获取到IP地址，应检查IP地址、线缆和DHCP中继是否配置正确。</p>
+<h4 id="六、相关配置命令详解"><a href="#六、相关配置命令详解" class="headerlink" title="六、相关配置命令详解"></a>六、相关配置命令详解</h4><h5 id="1、ip-helper-address"><a href="#1、ip-helper-address" class="headerlink" title="1、ip helper-address"></a>1、ip helper-address</h5><p>命令：ip helper-address <ip-address></ip-address></p>
+<p>功能：指定DHCP服务器的地址。</p>
+<p>命令模式：接口配置模式</p>
+<p>使用指南：ip helper－address的作用就是把广播转化为单播，然后发向指定的DHCP服务器地址，一般在DHCP中继使用。</p>
+<h5 id="2、ip-dhcp-pool"><a href="#2、ip-dhcp-pool" class="headerlink" title="2、ip dhcp pool"></a>2、ip dhcp pool</h5><p>命令：ip dhcp pool <pool-name></pool-name></p>
+<p>功能：建立DHCP地址池。</p>
+<p>命令模式：全局配置模式</p>
+<p>使用指南：pool-name是自己设置的name，应尽量设置一些简单、易记的名字，此命令用于创建DHCP地址池，可配置用于分配的IP地址范围、网关、DNS等参数。</p>
 
                 
             </div>
@@ -589,7 +637,7 @@ Router(config)#
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/09/09/rip-lu-you-shi-yan/">http://example.com/2023/09/09/rip-lu-you-shi-yan/</a>
+                    <a href="http://example.com/2023/09/09/dhcp-shi-yan/">http://example.com/2023/09/09/dhcp-shi-yan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -707,9 +755,10 @@ Router(config)#
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2023/09/09/dhcp-shi-yan/">
                     <div class="card-image">
@@ -726,9 +775,9 @@ Router(config)#
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-09-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -741,6 +790,7 @@ Router(config)#
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -756,7 +806,7 @@ Router(config)#
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2023/09/09/rip-lu-you-shi-yan/">
@@ -789,7 +839,6 @@ Router(config)#
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
