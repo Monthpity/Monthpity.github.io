@@ -4,16 +4,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="DHCP实验, 月惜的小屋">
+    <meta name="keywords" content="OSPF认证实验, 月惜的小屋">
     <meta name="description" content="一、实验目的
-了解DHCP工作环境
+掌握OSPF区域认证的两种方法即明文认证和MD5认证
 
-掌握DHCP服务基本配置
-
-掌握DHCP中继服务配置
+理解邻居认证的作用
 
 
-二、应用环境实现计算机访问互联网的一项重要规则就是：所有访问互联网的计算机必须保证具有全球唯一的IP地址，在日常网络管理工作中，为网络中的计算机">
+二、应用环境在企业环境中，需要配置认证来保证spf路由的安全性。
+三、实验拓扑实验拓扑如下，实验设备：2811路由器三台、PC机两台、串口线一根、">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -25,7 +24,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>DHCP实验 | 月惜的小屋</title>
+    <title>OSPF认证实验 | 月惜的小屋</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -344,12 +343,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.imgdb.cn/item/64fbd82a661c6c8e54de9137.png')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.imgdb.cn/item/64fd2f7b661c6c8e542265e0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">DHCP实验</h1>
+                    <h1 class="description center-align post-title">OSPF认证实验</h1>
                 </div>
             </div>
         </div>
@@ -398,14 +397,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-09-09
+                    2023-09-10
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-09-09
+                    2023-09-10
                 </div>
                 
 
@@ -430,70 +429,18 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h4 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h4><ol>
-<li><p>了解DHCP工作环境</p>
+<li><p>掌握OSPF区域认证的两种方法即明文认证和MD5认证</p>
 </li>
-<li><p>掌握DHCP服务基本配置</p>
-</li>
-<li><p>掌握DHCP中继服务配置</p>
+<li><p>理解邻居认证的作用</p>
 </li>
 </ol>
-<h4 id="二、应用环境"><a href="#二、应用环境" class="headerlink" title="二、应用环境"></a>二、应用环境</h4><p>实现计算机访问互联网的一项重要规则就是：所有访问互联网的计算机必须保证具有全球唯一的IP地址，在日常网络管理工作中，为网络中的计算机手工配置IP地址是一项非常繁琐的工作。一来很多非专业人员不会配置IP地址。二来经常会造成地址配置错误。三来会造成网络中重复使用地址，导致地址冲突。四来会给使用笔记本电脑的人员，在跨区域移动办公室地址分配都很困难。</p>
-<p>为减少日常办公过程中网络管理的工作量，网络中心希望所有计算机的IP地址采取自动获取的方法，这就需要在接入交换机上配置动态主机地址获取协议，动态主机地址分配协议DHCP有效的解决了上述难题，将协议配置在办公网的接入交换机上，可以让接入网络中的主机自动获取上网所需的IP地址。</p>
-<h4 id="三、实验拓扑"><a href="#三、实验拓扑" class="headerlink" title="三、实验拓扑"></a>三、实验拓扑</h4><p>实验拓扑如下，实验设备：2811路由器二台、二层交换机一台、交叉线一根、直通线三根</p>
-<p><img src="https://pic.imgdb.cn/item/64fbd61b661c6c8e54de1bb1.png" alt="avatar"></p>
-<h4 id="四、实验要求"><a href="#四、实验要求" class="headerlink" title="四、实验要求"></a>四、实验要求</h4><p>在路由器B上配置DHCP Server的配置，为使PC0和PC1能分配到IP，在路由器A和交换机A上面做DHCP的中继，PC0和PC1在不同的VLAN。</p>
-<p>PC1的网关为192.168.1.254，PC2的网关为192.168.2.254。</p>
-<h4 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h4><h5 id="第一步：把PC机设置为动态获取IP地址（略）"><a href="#第一步：把PC机设置为动态获取IP地址（略）" class="headerlink" title="第一步：把PC机设置为动态获取IP地址（略）"></a>第一步：把PC机设置为动态获取IP地址（略）</h5><h5 id="第二步：给交换机A创建VLAN"><a href="#第二步：给交换机A创建VLAN" class="headerlink" title="第二步：给交换机A创建VLAN"></a>第二步：给交换机A创建VLAN</h5><pre class=" language-router"><code class="language-router">交换机A：
-
-Switch(config)#
-
-Switch(config)#vlan 10
-
-Switch(config-vlan)#exit
-
-Switch(config)#vlan 20
-
-Switch(config-vlan)#exit
-
-Switch(config)#
-</code></pre>
-<h5 id="第三步：给交换机设置链路类型并添加端口"><a href="#第三步：给交换机设置链路类型并添加端口" class="headerlink" title="第三步：给交换机设置链路类型并添加端口"></a>第三步：给交换机设置链路类型并添加端口</h5><pre><code>交换机A：
-
-Switch(config)#
-
-Switch(config)#interface fastEthernet 0/1
-
-Switch(config-if)#no shutdown
-
-Switch(config-if)#switchport mode trunk
-
-Switch(config-if)#switchport trunk allowed vlan all
-
-Switch(config-if)#exit
-
-Switch(config)#interface fastEthernet 0/2
-
-Switch(config-if)#no shutdown
-
-Switch(config-if)#switchport mode access
-
-Switch(config-if)#switchport access vlan 10
-
-Switch(config-if)#exit
-
-Switch(config)#interface fastEthernet 0/3
-
-Switch(config-if)#no shutdown
-
-Switch(config-if)#switchport mode access
-
-Switch(config-if)#switchport access vlan 20
-
-Switch(config-if)#exit
-
-Switch(config-if)#
-</code></pre>
-<h5 id="第四步：给路由器A上配置单臂路由并配置IP地址"><a href="#第四步：给路由器A上配置单臂路由并配置IP地址" class="headerlink" title="第四步：给路由器A上配置单臂路由并配置IP地址"></a>第四步：给路由器A上配置单臂路由并配置IP地址</h5><pre><code>路由器A：
+<h4 id="二、应用环境"><a href="#二、应用环境" class="headerlink" title="二、应用环境"></a>二、应用环境</h4><p>在企业环境中，需要配置认证来保证spf路由的安全性。</p>
+<h4 id="三、实验拓扑"><a href="#三、实验拓扑" class="headerlink" title="三、实验拓扑"></a>三、实验拓扑</h4><p>实验拓扑如下，实验设备：2811路由器三台、PC机两台、串口线一根、交叉线三根。                                                    </p>
+<p><img src="https://pic.imgdb.cn/item/64fd2f2d661c6c8e54225a62.png" alt="avatar"></p>
+<h4 id="四、实验要求"><a href="#四、实验要求" class="headerlink" title="四、实验要求"></a>四、实验要求</h4><p>PC1的IP地址为192.168.1.1/24，网关为192.168.1.254。</p>
+<p>PC2的IP地址为192.168.4.1/24，网关为192.168.4.254。</p>
+<p>区域area 0使用明文认证方式，区域area 1使用MD5加密认证方式。</p>
+<h4 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h4><h5 id="第一步：给PC机设置IP地址（略）"><a href="#第一步：给PC机设置IP地址（略）" class="headerlink" title="第一步：给PC机设置IP地址（略）"></a>第一步：给PC机设置IP地址（略）</h5><h5 id="第二步：给路由器设置IP地址并设置时钟频率"><a href="#第二步：给路由器设置IP地址并设置时钟频率" class="headerlink" title="第二步：给路由器设置IP地址并设置时钟频率"></a>第二步：给路由器设置IP地址并设置时钟频率</h5><pre><code>路由器A：
 
 Router(config)#
 
@@ -501,116 +448,220 @@ Router(config)#interface fastEthernet 0/0
 
 Router(config-if)#no shutdown
 
+Router(config-if)#ip address 192.168.1.254 255.255.255.0
+
 Router(config-if)#exit
 
-Router(config)#interface fastEthernet 0/0.1
+Router(config)#interface serial 1/0
 
-Router(config-subif)#no shutdown
+Router(config-if)#no shutdown
 
-Router(config-subif)#encapsulation dot1Q 10
+Router(config-if)#clock rate 64000
 
-Router(config-subif)#ip address 192.168.1.254 255.255.255.0
+Router(config-if)#ip address 192.168.2.1 255.255.255.0
 
-Router(config-subif)#exit
+Router(config-if)#exit
 
-Router(config)#interface fastEthernet 0/0.2
+Router(config)#
 
-Router(config-subif)#no shutdown
+路由器B：
 
-Router(config-subif)#encapsulation dot1Q 20
+Router(config)#
 
-Router(config-subif)#ip address 192.168.2.254 255.255.255.0
+Router(config)#interface serial 1/0
 
-Router(config-subif)#exit
+Router(config-if)#no shutdown
+
+Router(config-if)#ip address 192.168.2.2 255.255.255.0
+
+Router(config-if)#exit
+
+Router(config)#interface fastEthernet 0/0
+
+Router(config-if)#no shutdown
+
+Router(config-if)#ip address 192.168.3.1 255.255.255.0
+
+Router(config-if)#exit
+
+Router(config)#
+
+路由器C：
+
+Router(config)#
+
+Router(config)#interface fastEthernet 0/0
+
+Router(config-if)#no shutdown
+
+Router(config-if)#ip address 192.168.3.2 255.255.255.0
+
+Router(config-if)#exit
 
 Router(config)#interface fastEthernet 0/1
 
 Router(config-if)#no shutdown
 
-Router(config-if)#ip address 172.16.1.1 255.255.255.0
+Router(config-if)#ip address 192.168.4.254 255.255.255.0
 
 Router(config-if)#exit
 
 Router(config)#
 </code></pre>
-<h5 id="第四步：给路由器B配置IP地址"><a href="#第四步：给路由器B配置IP地址" class="headerlink" title="第四步：给路由器B配置IP地址"></a>第四步：给路由器B配置IP地址</h5><pre><code>路由器B：
+<h5 id="第三步：配置多区域OSPF路由"><a href="#第三步：配置多区域OSPF路由" class="headerlink" title="第三步：配置多区域OSPF路由"></a>第三步：配置多区域OSPF路由</h5><pre><code>路由器A：
+
+Router(config)#
+
+Router(config)#router ospf 1
+
+Router(config-router)#router-id 1.1.1.1
+
+Router(config-router)#network 192.168.1.0 0.0.0.255 area 0
+
+Router(config-router)#network 192.168.2.0 0.0.0.255 area 0
+
+Router(config-router)#exit
+
+Router(config)#
+
+路由器B：
+
+Router(config)#
+
+Router(config)#router ospf 1
+
+Router(config-router)#router-id 2.2.2.2
+
+Router(config-router)#network 192.168.2.0 0.0.0.255 area 0
+
+Router(config-router)#network 192.168.3.0 0.0.0.255 area 1
+
+Router(config-router)#exit
+
+Router(config)#
+
+路由器C：
+
+Router(config)#
+
+Router(config)#router ospf 1
+
+Router(config-router)#router-id 3.3.3.3
+
+Router(config-router)#network 192.168.3.0 0.0.0.255 area 1
+
+Router(config-router)#network 192.168.4.0 0.0.0.255 area 1
+
+Router(config-router)#exit
+
+Router(config)#
+</code></pre>
+<h5 id="第四步：配置区域明文认证并在OSPF中启用"><a href="#第四步：配置区域明文认证并在OSPF中启用" class="headerlink" title="第四步：配置区域明文认证并在OSPF中启用"></a>第四步：配置区域明文认证并在OSPF中启用</h5><pre><code>路由器A：
+
+Router(config)#
+
+Router(config)#interface serial 1/0
+
+Router(config-if)#ip ospf authentication
+
+Router(config-if)#ip ospf authentication-key 123456
+
+Router(config-if)#exit
+
+Router(config)#router ospf 1
+
+Router(config-router)#area 0 authentication
+
+Router(config-router)#exit
+
+Router(config)#
+
+路由器B：
+
+Router(config)#
+
+Router(config)#interface serial 1/0
+
+Router(config-if)#ip ospf authentication
+
+Router(config-if)#ip ospf authentication-key 123456
+
+Router(config-if)#exit
+
+Router(config)#router ospf 1
+
+Router(config-router)#area 0 authentication
+
+Router(config-router)#exit
+
+Router(config)#
+</code></pre>
+<h5 id="第五步：配置区域MD5认证并在OSPF启用"><a href="#第五步：配置区域MD5认证并在OSPF启用" class="headerlink" title="第五步：配置区域MD5认证并在OSPF启用"></a>第五步：配置区域MD5认证并在OSPF启用</h5><pre><code>路由器B：
 
 Router(config)#
 
 Router(config)#interface fastEthernet 0/0
 
-Router(config-if)#no shutdown
+Router(config-if)#ip ospf authentication
 
-Router(config-if)#ip address 172.16.1.2 255.255.255.0
+Router(config-if)#ip ospf message-digest-key 1 md5 123456
 
 Router(config-if)#exit
 
-Router(config)#
-</code></pre>
-<h5 id="第五步：配置静态路由"><a href="#第五步：配置静态路由" class="headerlink" title="第五步：配置静态路由"></a>第五步：配置静态路由</h5><pre><code>路由器B：
+Router(config)#router ospf 1
+
+Router(config-router)#area 1 authentication message-digest
+
+Router(config-router)#exit
 
 Router(config)#
 
-Router(config)#ip route 192.168.1.0 255.255.255.0 172.16.1.1
-
-Router(config)#ip route 192.168.2.0 255.255.255.0 172.16.1.1
-
-Router(config)#
-</code></pre>
-<h5 id="第六步：在路由器A配置DHCP中继"><a href="#第六步：在路由器A配置DHCP中继" class="headerlink" title="第六步：在路由器A配置DHCP中继"></a>第六步：在路由器A配置DHCP中继</h5><pre><code>路由器A：
+路由器C：
 
 Router(config)#
 
-Router(config)#service dhcp
+Router(config)#interface fastEthernet 0/0
 
-Router(config)#interface fastEthernet 0/0.1
+Router(config-if)#ip ospf authentication
 
-Router(config-subif)#ip helper-address 172.16.1.2
+Router(config-if)#ip ospf message-digest-key 1 md5 123456
 
-Router(config-subif)#exit
+Router(config-if)#exit
 
-Router(config)#interface fastEthernet 0/0.2
+Router(config)#router ospf 1
 
-Router(config-subif)#ip helper-address 172.16.1.2
+Router(config-router)#area 1 authentication message-digest
 
-Router(config-subif)#exit
+Router(config-router)#exit
 
 Router(config)#
 </code></pre>
-<h5 id="第七步：在路由器B配置DHCP-Server"><a href="#第七步：在路由器B配置DHCP-Server" class="headerlink" title="第七步：在路由器B配置DHCP Server"></a>第七步：在路由器B配置DHCP Server</h5><pre><code>路由器B：
-
-Router(config)#
-
-Router(config)#service dhcp
-
-Router(config)#ip dhcp pool vlan10
-
-Router(dhcp-config)#network 192.168.1.0 255.255.255.0
-
-Router(dhcp-config)#default-router 192.168.1.254
-
-Router(dhcp-config)#exit
-
-Router(config)#ip dhcp pool vlan20
-
-Router(dhcp-config)#network 192.168.2.0 255.255.255.0
-
-Router(dhcp-config)#default-router 192.168.2.254
-
-Router(dhcp-config)#exit
-
-Router(config)#
-</code></pre>
-<h5 id="第八步：查看PC机是否获取到IP地址"><a href="#第八步：查看PC机是否获取到IP地址" class="headerlink" title="第八步：查看PC机是否获取到IP地址"></a>第八步：查看PC机是否获取到IP地址</h5><p>如果查看PC机有获取到IP地址，本实验完成。</p>
-<p>如PC机没有获取到IP地址，应检查IP地址、线缆和DHCP中继是否配置正确。</p>
-<h4 id="六、相关配置命令详解"><a href="#六、相关配置命令详解" class="headerlink" title="六、相关配置命令详解"></a>六、相关配置命令详解</h4><h5 id="1、ip-helper-address"><a href="#1、ip-helper-address" class="headerlink" title="1、ip helper-address"></a>1、ip helper-address</h5><p>命令：ip helper-address <ip-address></ip-address></p>
-<p>功能：指定DHCP服务器的地址。</p>
+<h5 id="第六步：测试"><a href="#第六步：测试" class="headerlink" title="第六步：测试"></a>第六步：测试</h5><p>使用“show ip ospf neighbor”查看邻居数据结构，如每个路由器的邻居表都有相邻路由器的Router-id，那么实验成功。</p>
+<h4 id="六、注意事项和排错"><a href="#六、注意事项和排错" class="headerlink" title="六、注意事项和排错"></a>六、注意事项和排错</h4><p>1、认证方式分为链路认证、区域认证、虚链路认证。</p>
+<h4 id="七、相关命令详解"><a href="#七、相关命令详解" class="headerlink" title="七、相关命令详解"></a>七、相关命令详解</h4><h5 id="1、ip-ospf-authentication"><a href="#1、ip-ospf-authentication" class="headerlink" title="1、ip ospf authentication"></a>1、ip ospf authentication</h5><p>命令：ip ospf authentication</p>
+<p>功能：启用OSPF身份认证。</p>
 <p>命令模式：接口配置模式</p>
-<p>使用指南：ip helper－address的作用就是把广播转化为单播，然后发向指定的DHCP服务器地址，一般在DHCP中继使用。</p>
-<h5 id="2、ip-dhcp-pool"><a href="#2、ip-dhcp-pool" class="headerlink" title="2、ip dhcp pool"></a>2、ip dhcp pool</h5><p>命令：ip dhcp pool <pool-name></pool-name></p>
-<p>功能：建立DHCP地址池。</p>
-<p>命令模式：全局配置模式</p>
-<p>使用指南：pool-name是自己设置的name，应尽量设置一些简单、易记的名字，此命令用于创建DHCP地址池，可配置用于分配的IP地址范围、网关、DNS等参数。</p>
+<p>使用指南：当需要配置OSPF身份认证时，就可以在相应的接口下输入此命令，用以启用OSPF身份认证。</p>
+<h5 id="2、ip-ospf-authentication-key"><a href="#2、ip-ospf-authentication-key" class="headerlink" title="2、ip ospf authentication-key"></a>2、ip ospf authentication-key</h5><p>命令：ip ospf authentication-key <password></password></p>
+<p>功能：设置身份验证密钥。</p>
+<p>命令模式：接口配置模式</p>
+<p>使用指南：当需要对身份验证设置密钥时，在相应的接口下输入此命令，设置身份验证密钥。</p>
+<h5 id="3、area-authentication"><a href="#3、area-authentication" class="headerlink" title="3、area authentication"></a>3、area authentication</h5><p>命令：area <area-id> authentication</area-id></p>
+<p>功能：设置区域认证的验证方法为简单验证。</p>
+<p>命令模式：其他配置模式</p>
+<p>使用指南：明文认证即不加密认证，当需要设置简单验证方法时输入此命令。</p>
+<h5 id="4、ip-ospf-message-digest-key"><a href="#4、ip-ospf-message-digest-key" class="headerlink" title="4、ip ospf message-digest-key"></a>4、ip ospf message-digest-key</h5><p>命令：ip ospf message-digest-key <key-id> md5 <password></password></key-id></p>
+<p>功能：设置密文认证的密钥。</p>
+<p>命令模式：接口配置模式</p>
+<p>使用指南：此命令使用MD5加密方式，key-id值为1-255。</p>
+<h5 id="5、area-authentication-message-digest"><a href="#5、area-authentication-message-digest" class="headerlink" title="5、area authentication message-digest"></a>5、area authentication message-digest</h5><p>命令：area <area-id> authentication message-digest</area-id></p>
+<p>功能：设置区域认证的验证方法为MD5密文验证。</p>
+<p>命令模式：其他配置模式</p>
+<p>使用指南：此命令作用是在相应的区域里启用MD5密文验证。</p>
+<h5 id="6、show-ip-ospf-neighbor"><a href="#6、show-ip-ospf-neighbor" class="headerlink" title="6、show ip ospf neighbor"></a>6、show ip ospf neighbor</h5><p>命令：show ip ospf neighbor</p>
+<p>功能：查看OSPF邻居列表。</p>
+<p>命令模式：接口配置模式</p>
+<p>使用指南：此命令可以查看OSPF相应的邻居信息。</p>
 
                 
             </div>
@@ -637,7 +688,7 @@ Router(config)#
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/09/09/dhcp-shi-yan/">http://example.com/2023/09/09/dhcp-shi-yan/</a>
+                    <a href="http://example.com/2023/09/10/ospf-ren-zheng-shi-yan/">http://example.com/2023/09/10/ospf-ren-zheng-shi-yan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -754,7 +805,7 @@ Router(config)#
         repo: 'comment',
         owner: 'Monthpity',
         admin: "Monthpity",
-        id: '2023-09-09T10-16-25',
+        id: '2023-09-10T10-48-18',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -782,9 +833,10 @@ Router(config)#
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2023/09/10/ospf-ren-zheng-shi-yan/">
                     <div class="card-image">
@@ -801,9 +853,9 @@ Router(config)#
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-09-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-10
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -816,6 +868,7 @@ Router(config)#
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -834,12 +887,12 @@ Router(config)#
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/09/09/rip-lu-you-shi-yan/">
+                <a href="/2023/09/09/dhcp-shi-yan/">
                     <div class="card-image">
                         
-                        <img src="https://pic.imgdb.cn/item/64fbbe2d661c6c8e54d9722a.png" class="responsive-img" alt="RIP路由实验">
+                        <img src="https://pic.imgdb.cn/item/64fbd82a661c6c8e54de9137.png" class="responsive-img" alt="DHCP实验">
                         
-                        <span class="card-title">RIP路由实验</span>
+                        <span class="card-title">DHCP实验</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
