@@ -480,25 +480,24 @@
         
             
             <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('https://pic.imgdb.cn/item/64fd2f7b661c6c8e542265e0.jpg');">
+                 style="background-image: url('https://pic.imgdb.cn/item/64fbbe2d661c6c8e54d9722a.png');">
                 <div class="container">
                     <div class="row">
                         <div class="col s10 offset-s1">
-                            <div class="title center-align">OSPF认证实验</div>
+                            <div class="title center-align">RIP路由实验</div>
                             <div class="description center-align">
                                 
                                     一、实验目的
-掌握OSPF区域认证的两种方法即明文认证和MD5认证
+理解RIP协议的工作过程
 
-理解邻居认证的作用
+掌握RIP动态路由的配置
 
 
-二、应用环境在企业环境中，需要配置认证来保证spf路由的安全性。
-三、实验拓扑实验拓扑如下，实验设备：2811路由器三台、PC机两台、串口线一根、
+二、应用环境当网络拓扑结构十分复杂时，手工配置静态路由工作量大而且容易出现错误，这时就可以使用动态路由协议，动态路由是通过相互连接的路由器之间彼此交换信息，按照一定算法
                                 
                             </div>
                             <div class="cover-btns">
-                                <a href="/2023/09/10/ospf-ren-zheng-shi-yan/" class="waves-effect waves-light btn"
+                                <a href="/2023/09/09/rip-lu-you-shi-yan/" class="waves-effect waves-light btn"
                                    target="_blank">
                                     <i class="icon fa fa-eye fa-fw"></i>阅读更多
                                 </a>
@@ -541,24 +540,25 @@
         
             
             <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('https://pic.imgdb.cn/item/64fbbe2d661c6c8e54d9722a.png');">
+                 style="background-image: url('https://pic.imgdb.cn/item/64fd2f7b661c6c8e542265e0.jpg');">
                 <div class="container">
                     <div class="row">
                         <div class="col s10 offset-s1">
-                            <div class="title center-align">RIP路由实验</div>
+                            <div class="title center-align">OSPF认证实验</div>
                             <div class="description center-align">
                                 
                                     一、实验目的
-理解RIP协议的工作过程
+掌握OSPF区域认证的两种方法即明文认证和MD5认证
 
-掌握RIP动态路由的配置
+理解邻居认证的作用
 
 
-二、应用环境当网络拓扑结构十分复杂时，手工配置静态路由工作量大而且容易出现错误，这时就可以使用动态路由协议，动态路由是通过相互连接的路由器之间彼此交换信息，按照一定算法
+二、应用环境在企业环境中，需要配置认证来保证spf路由的安全性。
+三、实验拓扑实验拓扑如下，实验设备：2811路由器三台、PC机两台、串口线一根、
                                 
                             </div>
                             <div class="cover-btns">
-                                <a href="/2023/09/09/rip-lu-you-shi-yan/" class="waves-effect waves-light btn"
+                                <a href="/2023/09/10/ospf-ren-zheng-shi-yan/" class="waves-effect waves-light btn"
                                    target="_blank">
                                     <i class="icon fa fa-eye fa-fw"></i>阅读更多
                                 </a>
@@ -1129,6 +1129,14 @@ $(function () {
     
 
     <!-- 雪花特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/snow.js"><\/script>');
+            }
+        </script>
     
 
     <!-- 鼠标星星特效 -->
@@ -1175,6 +1183,8 @@ $(function () {
 
     
 
+    
+    <script type="text/javascript" src="/libs/background/ribbon-dynamic.js" async="async"></script>
     
 
     
