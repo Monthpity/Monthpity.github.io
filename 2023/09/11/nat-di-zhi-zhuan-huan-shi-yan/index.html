@@ -418,6 +418,11 @@
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    6 分
+                </div>
+                
 
                 
             </div>
@@ -545,18 +550,31 @@ Router(config)#ip route 192.168.1.0 255.255.255.0 123.56.220.1
 
 Router(config)#
 </code></pre>
-<h5 id="第四步：测试PC机和服务器连通性"><a href="#第四步：测试PC机和服务器连通性" class="headerlink" title="第四步：测试PC机和服务器连通性"></a>第四步：测试PC机和服务器连通性</h5><p>测试方法：用PC机Ping服务器测试连通性。</p>
-<p>PC&gt;ping 172.168.168.168</p>
-<p>Pinging 172.168.168.168 with 32 bytes of data: </p>
-<p>Reply from 172.168.168.168: bytes=32 time=2ms TTL=126</p>
-<p>Reply from 172.168.168.168: bytes=32 time=12ms TTL=126</p>
-<p>Reply from 172.168.168.168: bytes=32 time=16ms TTL=126</p>
-<p>Reply from 172.168.168.168: bytes=32 time=13ms TTL=126</p>
-<p>Ping statistics for 172.168.168.168:</p>
-<p>Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),</p>
-<p>Approximate round trip times in milli-seconds:</p>
-<p>Minimum = 2ms, Maximum = 16ms, Average = 10ms</p>
-<p>PC&gt;</p>
+<h5 id="第四步：测试PC机和服务器连通性"><a href="#第四步：测试PC机和服务器连通性" class="headerlink" title="第四步：测试PC机和服务器连通性"></a>第四步：测试PC机和服务器连通性</h5><pre><code>
+测试方法：用PC机Ping服务器测试连通性。
+
+PC&gt;ping 172.168.168.168
+
+Pinging 172.168.168.168 with 32 bytes of data: 
+
+Reply from 172.168.168.168: bytes=32 time=2ms TTL=126
+
+Reply from 172.168.168.168: bytes=32 time=12ms TTL=126
+
+Reply from 172.168.168.168: bytes=32 time=16ms TTL=126
+
+Reply from 172.168.168.168: bytes=32 time=13ms TTL=126
+
+Ping statistics for 172.168.168.168:
+
+Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+
+Approximate round trip times in milli-seconds:
+
+Minimum = 2ms, Maximum = 16ms, Average = 10ms
+
+PC&gt;
+</code></pre>
 <p>当出现以上结果时，则表示PC机和服务器连通。</p>
 <p>如果没有出现以上结果，表明PC机和服务器不连通，应检查IP地址或线缆是否配置正确、接口是否启用。</p>
 <h5 id="第五步：配置路由器内部端口和外部端口"><a href="#第五步：配置路由器内部端口和外部端口" class="headerlink" title="第五步：配置路由器内部端口和外部端口"></a>第五步：配置路由器内部端口和外部端口</h5><pre><code>路由器A：
