@@ -430,6 +430,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
 
         
 
@@ -488,7 +491,7 @@
 </tr>
 </tbody></table>
 <p>内网1的PC需要访问内网2的服务器，但是因为中间间隔Intetnet，所以我们需要在路由器A设置NAPT，同时在内网2下配置静态NAT，确保PC0可以访问到Server服务器。</p>
-<h4 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h4><h5 id="第一步：给PC机和服务器设置IP地址（略）"><a href="#第一步：给PC机和服务器设置IP地址（略）" class="headerlink" title="第一步：给PC机和服务器设置IP地址（略）"></a>第一步：给PC机和服务器设置IP地址（略）</h5><h5 id="第二步：给路由器设置IP地址并设置时钟频率"><a href="#第二步：给路由器设置IP地址并设置时钟频率" class="headerlink" title="第二步：给路由器设置IP地址并设置时钟频率"></a>第二步：给路由器设置IP地址并设置时钟频率</h5><pre><code>路由器A：
+<h4 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h4><h5 id="第一步：给PC机和服务器设置IP地址（略）"><a href="#第一步：给PC机和服务器设置IP地址（略）" class="headerlink" title="第一步：给PC机和服务器设置IP地址（略）"></a>第一步：给PC机和服务器设置IP地址（略）</h5><h5 id="第二步：给路由器设置IP地址并设置时钟频率"><a href="#第二步：给路由器设置IP地址并设置时钟频率" class="headerlink" title="第二步：给路由器设置IP地址并设置时钟频率"></a>第二步：给路由器设置IP地址并设置时钟频率</h5><pre class="line-numbers language-none"><code class="language-none">路由器A：
 
 Router(config)#
 
@@ -532,9 +535,9 @@ Router(config-if)#ip address 123.56.220.2 255.0.0.0
 
 Router(config-if)#exit
 
-Router(config)#
-</code></pre>
-<h5 id="第三步：给路由器配置静态路由"><a href="#第三步：给路由器配置静态路由" class="headerlink" title="第三步：给路由器配置静态路由"></a>第三步：给路由器配置静态路由</h5><pre><code>路由器A：
+Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="第三步：给路由器配置静态路由"><a href="#第三步：给路由器配置静态路由" class="headerlink" title="第三步：给路由器配置静态路由"></a>第三步：给路由器配置静态路由</h5><pre class="line-numbers language-none"><code class="language-none">路由器A：
 
 Router(config)#
 
@@ -548,9 +551,9 @@ Router(config)#
 
 Router(config)#ip route 192.168.1.0 255.255.255.0 123.56.220.1
 
-Router(config)#
-</code></pre>
-<h5 id="第四步：测试PC机和服务器连通性"><a href="#第四步：测试PC机和服务器连通性" class="headerlink" title="第四步：测试PC机和服务器连通性"></a>第四步：测试PC机和服务器连通性</h5><pre><code>
+Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="第四步：测试PC机和服务器连通性"><a href="#第四步：测试PC机和服务器连通性" class="headerlink" title="第四步：测试PC机和服务器连通性"></a>第四步：测试PC机和服务器连通性</h5><pre class="line-numbers language-none"><code class="language-none">
 测试方法：用PC机Ping服务器测试连通性。
 
 PC&gt;ping 172.168.168.168
@@ -573,11 +576,11 @@ Approximate round trip times in milli-seconds:
 
 Minimum = 2ms, Maximum = 16ms, Average = 10ms
 
-PC&gt;
-</code></pre>
+PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>当出现以上结果时，则表示PC机和服务器连通。</p>
 <p>如果没有出现以上结果，表明PC机和服务器不连通，应检查IP地址或线缆是否配置正确、接口是否启用。</p>
-<h5 id="第五步：配置路由器内部端口和外部端口"><a href="#第五步：配置路由器内部端口和外部端口" class="headerlink" title="第五步：配置路由器内部端口和外部端口"></a>第五步：配置路由器内部端口和外部端口</h5><pre><code>路由器A：
+<h5 id="第五步：配置路由器内部端口和外部端口"><a href="#第五步：配置路由器内部端口和外部端口" class="headerlink" title="第五步：配置路由器内部端口和外部端口"></a>第五步：配置路由器内部端口和外部端口</h5><pre class="line-numbers language-none"><code class="language-none">路由器A：
 
 Router(config)#
 
@@ -611,9 +614,9 @@ Router(config-if)#ip nat outside
 
 Router(config-if)#exit
 
-Router(config)#
-</code></pre>
-<h5 id="第六步：配置内网1端口复用"><a href="#第六步：配置内网1端口复用" class="headerlink" title="第六步：配置内网1端口复用"></a>第六步：配置内网1端口复用</h5><pre><code>路由器A：
+Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="第六步：配置内网1端口复用"><a href="#第六步：配置内网1端口复用" class="headerlink" title="第六步：配置内网1端口复用"></a>第六步：配置内网1端口复用</h5><pre class="line-numbers language-none"><code class="language-none">路由器A：
 
 Router(config)#
 
@@ -621,18 +624,18 @@ Router(config)#access-list 1 permit 192.168.1.0 0.0.0.255
 
 Router(config)#ip nat inside source list 1 interface serial 1/0 overload 
 
-Router(config)#
-</code></pre>
-<h5 id="第七步：配置内网2静态NAT"><a href="#第七步：配置内网2静态NAT" class="headerlink" title="第七步：配置内网2静态NAT"></a>第七步：配置内网2静态NAT</h5><pre><code>路由器B：
+Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="第七步：配置内网2静态NAT"><a href="#第七步：配置内网2静态NAT" class="headerlink" title="第七步：配置内网2静态NAT"></a>第七步：配置内网2静态NAT</h5><pre class="line-numbers language-none"><code class="language-none">路由器B：
 
 Router(config)#
 
 Router(config)#ip nat inside source static 172.168.168.168 123.56.220.3
 
-Router(config)#
-</code></pre>
+Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h5 id="第八步：测试PC机和服务器静态转换的连通性"><a href="#第八步：测试PC机和服务器静态转换的连通性" class="headerlink" title="第八步：测试PC机和服务器静态转换的连通性"></a>第八步：测试PC机和服务器静态转换的连通性</h5><p>测试方法：PC1 Ping 服务器NAT转换的IP地址</p>
-<pre><code>PC&gt;ping 123.56.220.3
+<pre class="line-numbers language-none"><code class="language-none">PC&gt;ping 123.56.220.3
 
 Pinging 123.56.220.3 with 32 bytes of data: 
 
@@ -652,8 +655,8 @@ Approximate round trip times in milli-seconds:
 
 Minimum = 5ms, Maximum = 11ms, Average = 8ms
 
-PC&gt;
-</code></pre>
+PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <p>当出现以上结果时，则表示PC机和服务器连通，本实验完成。</p>
 <p>如果没有出现以上结果，表明PC机和服务器不连通，应检查配置是否正确。</p>
 <h4 id="六、相关命令详解"><a href="#六、相关命令详解" class="headerlink" title="六、相关命令详解"></a>六、相关命令详解</h4><h5 id="1、ip-nat-inside-source"><a href="#1、ip-nat-inside-source" class="headerlink" title="1、ip nat inside source"></a>1、ip nat inside source</h5><p>命令：ip nat inside source { list|static }</p>
@@ -941,6 +944,9 @@ PC&gt;
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
 
 
 <!-- 代码语言 -->

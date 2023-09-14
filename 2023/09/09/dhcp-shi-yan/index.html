@@ -429,6 +429,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
 
         
 
@@ -448,7 +451,7 @@
 <p><img src="https://pic.imgdb.cn/item/64fbd61b661c6c8e54de1bb1.png" alt="拓扑图"></p>
 <h4 id="四、实验要求"><a href="#四、实验要求" class="headerlink" title="四、实验要求"></a>四、实验要求</h4><p>在路由器B上配置DHCP Server的配置，为使PC0和PC1能分配到IP，在路由器A和交换机A上面做DHCP的中继，PC0和PC1在不同的VLAN。</p>
 <p>PC1的网关为192.168.1.254，PC2的网关为192.168.2.254。</p>
-<h4 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h4><h5 id="第一步：把PC机设置为动态获取IP地址（略）"><a href="#第一步：把PC机设置为动态获取IP地址（略）" class="headerlink" title="第一步：把PC机设置为动态获取IP地址（略）"></a>第一步：把PC机设置为动态获取IP地址（略）</h5><h5 id="第二步：给交换机A创建VLAN"><a href="#第二步：给交换机A创建VLAN" class="headerlink" title="第二步：给交换机A创建VLAN"></a>第二步：给交换机A创建VLAN</h5><pre class=" language-router"><code class="language-router">交换机A：
+<h4 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h4><h5 id="第一步：把PC机设置为动态获取IP地址（略）"><a href="#第一步：把PC机设置为动态获取IP地址（略）" class="headerlink" title="第一步：把PC机设置为动态获取IP地址（略）"></a>第一步：把PC机设置为动态获取IP地址（略）</h5><h5 id="第二步：给交换机A创建VLAN"><a href="#第二步：给交换机A创建VLAN" class="headerlink" title="第二步：给交换机A创建VLAN"></a>第二步：给交换机A创建VLAN</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">交换机A：
 
 Switch(config)#
 
@@ -460,9 +463,9 @@ Switch(config)#vlan 20
 
 Switch(config-vlan)#exit
 
-Switch(config)#
-</code></pre>
-<h5 id="第三步：给交换机设置链路类型并添加端口"><a href="#第三步：给交换机设置链路类型并添加端口" class="headerlink" title="第三步：给交换机设置链路类型并添加端口"></a>第三步：给交换机设置链路类型并添加端口</h5><pre><code>交换机A：
+Switch(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="第三步：给交换机设置链路类型并添加端口"><a href="#第三步：给交换机设置链路类型并添加端口" class="headerlink" title="第三步：给交换机设置链路类型并添加端口"></a>第三步：给交换机设置链路类型并添加端口</h5><pre class="line-numbers language-none"><code class="language-none">交换机A：
 
 Switch(config)#
 
@@ -496,9 +499,9 @@ Switch(config-if)#switchport access vlan 20
 
 Switch(config-if)#exit
 
-Switch(config-if)#
-</code></pre>
-<h5 id="第四步：给路由器A上配置单臂路由并配置IP地址"><a href="#第四步：给路由器A上配置单臂路由并配置IP地址" class="headerlink" title="第四步：给路由器A上配置单臂路由并配置IP地址"></a>第四步：给路由器A上配置单臂路由并配置IP地址</h5><pre><code>路由器A：
+Switch(config-if)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="第四步：给路由器A上配置单臂路由并配置IP地址"><a href="#第四步：给路由器A上配置单臂路由并配置IP地址" class="headerlink" title="第四步：给路由器A上配置单臂路由并配置IP地址"></a>第四步：给路由器A上配置单臂路由并配置IP地址</h5><pre class="line-numbers language-none"><code class="language-none">路由器A：
 
 Router(config)#
 
@@ -536,9 +539,9 @@ Router(config-if)#ip address 172.16.1.1 255.255.255.0
 
 Router(config-if)#exit
 
-Router(config)#
-</code></pre>
-<h5 id="第四步：给路由器B配置IP地址"><a href="#第四步：给路由器B配置IP地址" class="headerlink" title="第四步：给路由器B配置IP地址"></a>第四步：给路由器B配置IP地址</h5><pre><code>路由器B：
+Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="第四步：给路由器B配置IP地址"><a href="#第四步：给路由器B配置IP地址" class="headerlink" title="第四步：给路由器B配置IP地址"></a>第四步：给路由器B配置IP地址</h5><pre class="line-numbers language-none"><code class="language-none">路由器B：
 
 Router(config)#
 
@@ -550,9 +553,9 @@ Router(config-if)#ip address 172.16.1.2 255.255.255.0
 
 Router(config-if)#exit
 
-Router(config)#
-</code></pre>
-<h5 id="第五步：配置静态路由"><a href="#第五步：配置静态路由" class="headerlink" title="第五步：配置静态路由"></a>第五步：配置静态路由</h5><pre><code>路由器B：
+Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="第五步：配置静态路由"><a href="#第五步：配置静态路由" class="headerlink" title="第五步：配置静态路由"></a>第五步：配置静态路由</h5><pre class="line-numbers language-none"><code class="language-none">路由器B：
 
 Router(config)#
 
@@ -560,9 +563,9 @@ Router(config)#ip route 192.168.1.0 255.255.255.0 172.16.1.1
 
 Router(config)#ip route 192.168.2.0 255.255.255.0 172.16.1.1
 
-Router(config)#
-</code></pre>
-<h5 id="第六步：在路由器A配置DHCP中继"><a href="#第六步：在路由器A配置DHCP中继" class="headerlink" title="第六步：在路由器A配置DHCP中继"></a>第六步：在路由器A配置DHCP中继</h5><pre><code>路由器A：
+Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="第六步：在路由器A配置DHCP中继"><a href="#第六步：在路由器A配置DHCP中继" class="headerlink" title="第六步：在路由器A配置DHCP中继"></a>第六步：在路由器A配置DHCP中继</h5><pre class="line-numbers language-none"><code class="language-none">路由器A：
 
 Router(config)#
 
@@ -580,9 +583,9 @@ Router(config-subif)#ip helper-address 172.16.1.2
 
 Router(config-subif)#exit
 
-Router(config)#
-</code></pre>
-<h5 id="第七步：在路由器B配置DHCP-Server"><a href="#第七步：在路由器B配置DHCP-Server" class="headerlink" title="第七步：在路由器B配置DHCP Server"></a>第七步：在路由器B配置DHCP Server</h5><pre><code>路由器B：
+Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="第七步：在路由器B配置DHCP-Server"><a href="#第七步：在路由器B配置DHCP-Server" class="headerlink" title="第七步：在路由器B配置DHCP Server"></a>第七步：在路由器B配置DHCP Server</h5><pre class="line-numbers language-none"><code class="language-none">路由器B：
 
 Router(config)#
 
@@ -604,8 +607,8 @@ Router(dhcp-config)#default-router 192.168.2.254
 
 Router(dhcp-config)#exit
 
-Router(config)#
-</code></pre>
+Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h5 id="第八步：查看PC机是否获取到IP地址"><a href="#第八步：查看PC机是否获取到IP地址" class="headerlink" title="第八步：查看PC机是否获取到IP地址"></a>第八步：查看PC机是否获取到IP地址</h5><p>如果查看PC机有获取到IP地址，本实验完成。</p>
 <p>如PC机没有获取到IP地址，应检查IP地址、线缆和DHCP中继是否配置正确。</p>
 <h4 id="六、相关配置命令详解"><a href="#六、相关配置命令详解" class="headerlink" title="六、相关配置命令详解"></a>六、相关配置命令详解</h4><h5 id="1、ip-helper-address"><a href="#1、ip-helper-address" class="headerlink" title="1、ip helper-address"></a>1、ip helper-address</h5><p>命令：ip helper-address <ip-address></ip-address></p>
@@ -891,6 +894,9 @@ Router(config)#
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
 
 
 <!-- 代码语言 -->

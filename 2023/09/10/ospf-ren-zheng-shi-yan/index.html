@@ -428,6 +428,9 @@
         <hr class="clearfix">
 
         
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
 
         
 
@@ -445,7 +448,7 @@
 <h4 id="四、实验要求"><a href="#四、实验要求" class="headerlink" title="四、实验要求"></a>四、实验要求</h4><p>PC1的IP地址为192.168.1.1/24，网关为192.168.1.254。</p>
 <p>PC2的IP地址为192.168.4.1/24，网关为192.168.4.254。</p>
 <p>区域area 0使用明文认证方式，区域area 1使用MD5加密认证方式。</p>
-<h4 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h4><h5 id="第一步：给PC机设置IP地址（略）"><a href="#第一步：给PC机设置IP地址（略）" class="headerlink" title="第一步：给PC机设置IP地址（略）"></a>第一步：给PC机设置IP地址（略）</h5><h5 id="第二步：给路由器设置IP地址并设置时钟频率"><a href="#第二步：给路由器设置IP地址并设置时钟频率" class="headerlink" title="第二步：给路由器设置IP地址并设置时钟频率"></a>第二步：给路由器设置IP地址并设置时钟频率</h5><pre><code>路由器A：
+<h4 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h4><h5 id="第一步：给PC机设置IP地址（略）"><a href="#第一步：给PC机设置IP地址（略）" class="headerlink" title="第一步：给PC机设置IP地址（略）"></a>第一步：给PC机设置IP地址（略）</h5><h5 id="第二步：给路由器设置IP地址并设置时钟频率"><a href="#第二步：给路由器设置IP地址并设置时钟频率" class="headerlink" title="第二步：给路由器设置IP地址并设置时钟频率"></a>第二步：给路由器设置IP地址并设置时钟频率</h5><pre class="line-numbers language-none"><code class="language-none">路由器A：
 
 Router(config)#
 
@@ -511,9 +514,9 @@ Router(config-if)#ip address 192.168.4.254 255.255.255.0
 
 Router(config-if)#exit
 
-Router(config)#
-</code></pre>
-<h5 id="第三步：配置多区域OSPF路由"><a href="#第三步：配置多区域OSPF路由" class="headerlink" title="第三步：配置多区域OSPF路由"></a>第三步：配置多区域OSPF路由</h5><pre><code>路由器A：
+Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="第三步：配置多区域OSPF路由"><a href="#第三步：配置多区域OSPF路由" class="headerlink" title="第三步：配置多区域OSPF路由"></a>第三步：配置多区域OSPF路由</h5><pre class="line-numbers language-none"><code class="language-none">路由器A：
 
 Router(config)#
 
@@ -559,9 +562,9 @@ Router(config-router)#network 192.168.4.0 0.0.0.255 area 1
 
 Router(config-router)#exit
 
-Router(config)#
-</code></pre>
-<h5 id="第四步：配置区域明文认证并在OSPF中启用"><a href="#第四步：配置区域明文认证并在OSPF中启用" class="headerlink" title="第四步：配置区域明文认证并在OSPF中启用"></a>第四步：配置区域明文认证并在OSPF中启用</h5><pre><code>路由器A：
+Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="第四步：配置区域明文认证并在OSPF中启用"><a href="#第四步：配置区域明文认证并在OSPF中启用" class="headerlink" title="第四步：配置区域明文认证并在OSPF中启用"></a>第四步：配置区域明文认证并在OSPF中启用</h5><pre class="line-numbers language-none"><code class="language-none">路由器A：
 
 Router(config)#
 
@@ -599,9 +602,9 @@ Router(config-router)#area 0 authentication
 
 Router(config-router)#exit
 
-Router(config)#
-</code></pre>
-<h5 id="第五步：配置区域MD5认证并在OSPF启用"><a href="#第五步：配置区域MD5认证并在OSPF启用" class="headerlink" title="第五步：配置区域MD5认证并在OSPF启用"></a>第五步：配置区域MD5认证并在OSPF启用</h5><pre><code>路由器B：
+Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h5 id="第五步：配置区域MD5认证并在OSPF启用"><a href="#第五步：配置区域MD5认证并在OSPF启用" class="headerlink" title="第五步：配置区域MD5认证并在OSPF启用"></a>第五步：配置区域MD5认证并在OSPF启用</h5><pre class="line-numbers language-none"><code class="language-none">路由器B：
 
 Router(config)#
 
@@ -639,8 +642,8 @@ Router(config-router)#area 1 authentication message-digest
 
 Router(config-router)#exit
 
-Router(config)#
-</code></pre>
+Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 <h5 id="第六步：测试"><a href="#第六步：测试" class="headerlink" title="第六步：测试"></a>第六步：测试</h5><p>使用“show ip ospf neighbor”查看邻居数据结构，如每个路由器的邻居表都有相邻路由器的Router-id，那么实验成功。</p>
 <h4 id="六、注意事项和排错"><a href="#六、注意事项和排错" class="headerlink" title="六、注意事项和排错"></a>六、注意事项和排错</h4><p>1、认证方式分为链路认证、区域认证、虚链路认证。</p>
 <h4 id="七、相关命令详解"><a href="#七、相关命令详解" class="headerlink" title="七、相关命令详解"></a>七、相关命令详解</h4><h5 id="1、ip-ospf-authentication"><a href="#1、ip-ospf-authentication" class="headerlink" title="1、ip ospf authentication"></a>1、ip ospf authentication</h5><p>命令：ip ospf authentication</p>
@@ -942,6 +945,9 @@ Router(config)#
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
 
 
 <!-- 代码语言 -->
