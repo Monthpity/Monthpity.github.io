@@ -405,7 +405,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-09-10
+                    2023-09-15
                 </div>
                 
 
@@ -465,7 +465,7 @@ Switch(config-vlan)#exit
 
 Switch(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第三步：给交换机设置链路类型并添加端口"><a href="#第三步：给交换机设置链路类型并添加端口" class="headerlink" title="第三步：给交换机设置链路类型并添加端口"></a>第三步：给交换机设置链路类型并添加端口</h5><pre class="line-numbers language-none"><code class="language-none">交换机A：
+<h5 id="第三步：给交换机设置链路类型并添加端口"><a href="#第三步：给交换机设置链路类型并添加端口" class="headerlink" title="第三步：给交换机设置链路类型并添加端口"></a>第三步：给交换机设置链路类型并添加端口</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">交换机A：
 
 Switch(config)#
 
@@ -501,7 +501,7 @@ Switch(config-if)#exit
 
 Switch(config-if)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第四步：给路由器A上配置单臂路由并配置IP地址"><a href="#第四步：给路由器A上配置单臂路由并配置IP地址" class="headerlink" title="第四步：给路由器A上配置单臂路由并配置IP地址"></a>第四步：给路由器A上配置单臂路由并配置IP地址</h5><pre class="line-numbers language-none"><code class="language-none">路由器A：
+<h5 id="第四步：给路由器A上配置单臂路由并配置IP地址"><a href="#第四步：给路由器A上配置单臂路由并配置IP地址" class="headerlink" title="第四步：给路由器A上配置单臂路由并配置IP地址"></a>第四步：给路由器A上配置单臂路由并配置IP地址</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
 
 Router(config)#
 
@@ -541,7 +541,7 @@ Router(config-if)#exit
 
 Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第四步：给路由器B配置IP地址"><a href="#第四步：给路由器B配置IP地址" class="headerlink" title="第四步：给路由器B配置IP地址"></a>第四步：给路由器B配置IP地址</h5><pre class="line-numbers language-none"><code class="language-none">路由器B：
+<h5 id="第四步：给路由器B配置IP地址"><a href="#第四步：给路由器B配置IP地址" class="headerlink" title="第四步：给路由器B配置IP地址"></a>第四步：给路由器B配置IP地址</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器B：
 
 Router(config)#
 
@@ -555,7 +555,7 @@ Router(config-if)#exit
 
 Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第五步：配置静态路由"><a href="#第五步：配置静态路由" class="headerlink" title="第五步：配置静态路由"></a>第五步：配置静态路由</h5><pre class="line-numbers language-none"><code class="language-none">路由器B：
+<h5 id="第五步：配置静态路由"><a href="#第五步：配置静态路由" class="headerlink" title="第五步：配置静态路由"></a>第五步：配置静态路由</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器B：
 
 Router(config)#
 
@@ -565,7 +565,7 @@ Router(config)#ip route 192.168.2.0 255.255.255.0 172.16.1.1
 
 Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第六步：在路由器A配置DHCP中继"><a href="#第六步：在路由器A配置DHCP中继" class="headerlink" title="第六步：在路由器A配置DHCP中继"></a>第六步：在路由器A配置DHCP中继</h5><pre class="line-numbers language-none"><code class="language-none">路由器A：
+<h5 id="第六步：在路由器A配置DHCP中继"><a href="#第六步：在路由器A配置DHCP中继" class="headerlink" title="第六步：在路由器A配置DHCP中继"></a>第六步：在路由器A配置DHCP中继</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
 
 Router(config)#
 
@@ -585,7 +585,7 @@ Router(config-subif)#exit
 
 Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第七步：在路由器B配置DHCP-Server"><a href="#第七步：在路由器B配置DHCP-Server" class="headerlink" title="第七步：在路由器B配置DHCP Server"></a>第七步：在路由器B配置DHCP Server</h5><pre class="line-numbers language-none"><code class="language-none">路由器B：
+<h5 id="第七步：在路由器B配置DHCP-Server"><a href="#第七步：在路由器B配置DHCP-Server" class="headerlink" title="第七步：在路由器B配置DHCP Server"></a>第七步：在路由器B配置DHCP Server</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器B：
 
 Router(config)#
 

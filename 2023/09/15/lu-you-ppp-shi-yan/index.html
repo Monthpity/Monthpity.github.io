@@ -4,17 +4,16 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="NAT地址转换实验, 月惜的小屋">
+    <meta name="keywords" content="路由PPP实验, 月惜的小屋">
     <meta name="description" content="一、实验目的
-掌握NAT地址转换的基本配置
+掌握PPP的基本配置
 
-掌握地址转换的相关概念、分类和工作原理
+掌握CHAP的基本配置步骤和方法
 
-了解地址转换的NAT技术
+掌握对CHAP进行诊断的基本方法
 
 
-二、应用环境NAT的最初的目的是允许把私有IP地址映射到公网地址，以减缓IP地址空间的消耗。
-由于IP地址的使用需求旺盛，">
+二、应用环境PPP协议是一种点——点串行通信协议。PPP具有处理错误检测、支持多个协议、允许在连接时刻协商IP地址、允许身份认证">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -26,7 +25,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>NAT地址转换实验 | 月惜的小屋</title>
+    <title>路由PPP实验 | 月惜的小屋</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -345,12 +344,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.imgdb.cn/item/64fe75b5661c6c8e545e36b5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.imgdb.cn/item/65043846661c6c8e54973bf0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">NAT地址转换实验</h1>
+                    <h1 class="description center-align post-title">路由PPP实验</h1>
                 </div>
             </div>
         </div>
@@ -399,7 +398,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-09-11
+                    2023-09-15
                 </div>
                 
 
@@ -413,7 +412,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    1.3k
                 </div>
                 
 
@@ -439,63 +438,26 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h4 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h4><ol>
-<li><p>掌握NAT地址转换的基本配置</p>
+<li><p>掌握PPP的基本配置</p>
 </li>
-<li><p>掌握地址转换的相关概念、分类和工作原理</p>
+<li><p>掌握CHAP的基本配置步骤和方法</p>
 </li>
-<li><p>了解地址转换的NAT技术</p>
+<li><p>掌握对CHAP进行诊断的基本方法</p>
 </li>
 </ol>
-<h4 id="二、应用环境"><a href="#二、应用环境" class="headerlink" title="二、应用环境"></a>二、应用环境</h4><p>NAT的最初的目的是允许把私有IP地址映射到公网地址，以减缓IP地址空间的消耗。</p>
-<p>由于IP地址的使用需求旺盛，造成了全球公有IP地址的枯竭。因此目前所有的企业在构建的过程中，都只能使用私有IP地址。但互联网上的路由器不转发带有私有IP地址的数据包，因此企业内部计算机如果需要访问互联网，就需要在企业网络的出口路由器或者防火墙设备上，配置NAT地址转换技术，把企业网中的私有地址转换成公有地址，才能实现企业网对互联网的访问。</p>
-<h4 id="三、实验拓扑"><a href="#三、实验拓扑" class="headerlink" title="三、实验拓扑"></a>三、实验拓扑</h4><p>实验拓扑如下，实验设备：2811路由器两台、PC机一台、Server服务器一台、串口线一根、交叉线两根。</p>
-<p><img src="https://pic.imgdb.cn/item/64fe7576661c6c8e545e26f7.png" alt="拓扑图"></p>
-<h4 id="四、实验要求"><a href="#四、实验要求" class="headerlink" title="四、实验要求"></a>四、实验要求</h4><p>各配置如下：</p>
-<table>
-<thead>
-<tr>
-<th align="center">设备</th>
-<th align="center">端口</th>
-<th align="center">IP地址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">路由器A</td>
-<td align="center">S1/0</td>
-<td align="center">123.56.220.1/8</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">F0/1</td>
-<td align="center">192.168.1.254/24</td>
-</tr>
-<tr>
-<td align="center">路由器B</td>
-<td align="center">S1/0</td>
-<td align="center">123.56.220.2/8</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">F0/1</td>
-<td align="center">172.168.168.254/24</td>
-</tr>
-<tr>
-<td align="center">PC0</td>
-<td align="center">网卡接口</td>
-<td align="center">192.168.1.1/24</td>
-</tr>
-<tr>
-<td align="center">Server0</td>
-<td align="center">网卡接口</td>
-<td align="center">172.168.168.168/24</td>
-</tr>
-</tbody></table>
-<p>内网1的PC需要访问内网2的服务器，但是因为中间间隔Intetnet，所以我们需要在路由器A设置NAPT，同时在内网2下配置静态NAT，确保PC0可以访问到Server服务器。</p>
-<h4 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h4><h5 id="第一步：给PC机和服务器设置IP地址（略）"><a href="#第一步：给PC机和服务器设置IP地址（略）" class="headerlink" title="第一步：给PC机和服务器设置IP地址（略）"></a>第一步：给PC机和服务器设置IP地址（略）</h5><h5 id="第二步：给路由器设置IP地址并设置时钟频率"><a href="#第二步：给路由器设置IP地址并设置时钟频率" class="headerlink" title="第二步：给路由器设置IP地址并设置时钟频率"></a>第二步：给路由器设置IP地址并设置时钟频率</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
+<h4 id="二、应用环境"><a href="#二、应用环境" class="headerlink" title="二、应用环境"></a>二、应用环境</h4><p>PPP协议是一种点——点串行通信协议。PPP具有处理错误检测、支持多个协议、允许在连接时刻协商IP地址、允许身份认证等功能，还有其他。PPP提供了3类功能：成帧、链路控制协议LCP、网络控制协议NCP。PPP是面向字符类型的协议。</p>
+<p>PPP协议的验证分为两种：一种是PAP，一种是CHAP。相对来说PAP的认证方式安全性没有CHAP高。PAP在传输Password是明文的，而CHAP在传输过程中不传输密码，取代密码的是hash（哈希值）。PAP认证是通过两次握手实现的，而CHAP则是通过3次握手实现的。</p>
+<p>本实验以CHAP为例。</p>
+<h4 id="三、实验拓扑"><a href="#三、实验拓扑" class="headerlink" title="三、实验拓扑"></a>三、实验拓扑</h4><p>实验拓扑如下，实验设备：2811路由器两台、PC机两台、串口线一根、交叉线两根。</p>
+<p><img src="https://pic.imgdb.cn/item/650437cc661c6c8e549701fd.png" alt="拓扑图"></p>
+<h4 id="四、实验要求"><a href="#四、实验要求" class="headerlink" title="四、实验要求"></a>四、实验要求</h4><p>在路由器A和路由器B配置CHAP实验。</p>
+<p>PC1的IP地址为192.168.1.1/24，网关为192.168.1.254。</p>
+<p>PC1的IP地址为192.168.3.1/24，网关为192.168.3.254。</p>
+<h4 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h4><h5 id="第一步：给PC机设置IP地址（略）"><a href="#第一步：给PC机设置IP地址（略）" class="headerlink" title="第一步：给PC机设置IP地址（略）"></a>第一步：给PC机设置IP地址（略）</h5><h5 id="第二步：给路由器设置IP地址并设置时钟频率"><a href="#第二步：给路由器设置IP地址并设置时钟频率" class="headerlink" title="第二步：给路由器设置IP地址并设置时钟频率"></a>第二步：给路由器设置IP地址并设置时钟频率</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
 
 Router(config)#
 
-Router(config)#interface fastEthernet 0/1
+Router(config)#interface fastEthernet 0/0
 
 Router(config-if)#no shutdown
 
@@ -509,7 +471,7 @@ Router(config-if)#no shutdown
 
 Router(config-if)#clock rate 64000
 
-Router(config-if)#ip address 123.56.220.1 255.0.0.0
+Router(config-if)#ip address 192.168.2.1 255.255.255.0
 
 Router(config-if)#exit
 
@@ -519,19 +481,19 @@ Router(config)#
 
 Router(config)#
 
-Router(config)#interface fastEthernet 0/1
-
-Router(config-if)#no shutdown
-
-Router(config-if)#ip address 172.168.168.254 255.255.255.0
-
-Router(config-if)#exit
-
 Router(config)#interface serial 1/0
 
 Router(config-if)#no shutdown
 
-Router(config-if)#ip address 123.56.220.2 255.0.0.0
+Router(config-if)#ip address 192.168.2.2 255.255.255.0
+
+Router(config-if)#exit
+
+Router(config)#interface fastEthernet 0/0
+
+Router(config-if)#no shutdown
+
+Router(config-if)#ip address 192.168.3.254 255.255.255.0
 
 Router(config-if)#exit
 
@@ -541,7 +503,7 @@ Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><
 
 Router(config)#
 
-Router(config)#ip route 172.168.168.0 255.255.255.0 123.56.220.2
+Router(config)#ip route 192.168.3.0 255.255.255.0 192.168.2.2
 
 Router(config)#
 
@@ -549,123 +511,147 @@ Router(config)#
 
 Router(config)#
 
-Router(config)#ip route 192.168.1.0 255.255.255.0 123.56.220.1
+Router(config)#ip route 192.168.1.0 255.255.255.0 192.168.2.1
 
 Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第四步：测试PC机和服务器连通性"><a href="#第四步：测试PC机和服务器连通性" class="headerlink" title="第四步：测试PC机和服务器连通性"></a>第四步：测试PC机和服务器连通性</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">测试方法：用PC机Ping服务器测试连通性。
+<h5 id="第四步：测试PC1和PC2之间连通性"><a href="#第四步：测试PC1和PC2之间连通性" class="headerlink" title="第四步：测试PC1和PC2之间连通性"></a>第四步：测试PC1和PC2之间连通性</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">测试方法：用PC1 Ping PC2测试连通性。
 
-PC&gt;ping 172.168.168.168
+PC&gt;ping 192.168.3.1
 
-Pinging 172.168.168.168 with 32 bytes of data: 
+Pinging 192.168.3.1 with 32 bytes of data: 
 
-Reply from 172.168.168.168: bytes=32 time=2ms TTL=126
+Request timed out.
 
-Reply from 172.168.168.168: bytes=32 time=12ms TTL=126
+Reply from 192.168.3.1: bytes=32 time=6ms TTL=126
 
-Reply from 172.168.168.168: bytes=32 time=16ms TTL=126
+Reply from 192.168.3.1: bytes=32 time=6ms TTL=126
 
-Reply from 172.168.168.168: bytes=32 time=13ms TTL=126
+Reply from 192.168.3.1: bytes=32 time=9ms TTL=126
 
-Ping statistics for 172.168.168.168:
+Ping statistics for 192.168.3.1:
 
-Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+  Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
 
 Approximate round trip times in milli-seconds:
 
-Minimum = 2ms, Maximum = 16ms, Average = 10ms
+  Minimum = 6ms, Maximum = 9ms, Average = 7ms
 
 PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>当出现以上结果时，则表示PC机和服务器连通。</p>
-<p>如果没有出现以上结果，表明PC机和服务器不连通，应检查IP地址或线缆是否配置正确、接口是否启用。</p>
-<h5 id="第五步：配置路由器内部端口和外部端口"><a href="#第五步：配置路由器内部端口和外部端口" class="headerlink" title="第五步：配置路由器内部端口和外部端口"></a>第五步：配置路由器内部端口和外部端口</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
+<p>当出现以上结果时，则表示PC1和PC2连通。</p>
+<p>如果没有出现以上结果，表明PC1和PC2不连通，应检查IP地址或线缆是否配置正确、接口是否启用，静态路由是否配置正确。</p>
+<h5 id="第五步：配置CHAP单向认证服务端和认证客户端"><a href="#第五步：配置CHAP单向认证服务端和认证客户端" class="headerlink" title="第五步：配置CHAP单向认证服务端和认证客户端"></a>第五步：配置CHAP单向认证服务端和认证客户端</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
 
 Router(config)#
 
-Router(config)#interface fastEthernet 0/1
+Router(config)#hostname routera
 
-Router(config-if)#ip nat inside
+routera(config)#username routerb password 123456
 
-Router(config-if)#exit
+routera(config)#interface serial 1/0
 
-Router(config)#interface serial 1/0
+routera(config-if)#encapsulation ppp
 
-Router(config-if)#ip nat outside
+routera(config-if)#ppp authentication chap
 
-Router(config-if)#exit
+routera(config-if)#exit
 
-Router(config)#
+routera(config)#
 
 路由器B：
 
 Router(config)#
 
-Router(config)#interface fastEthernet 0/1
+Router(config)#hostname routerb
 
-Router(config-if)#ip nat inside
+routerb(config)#username routera password 123456
 
-Router(config-if)#exit
+routerb(config)#interface serial 1/0
 
-Router(config)#interface serial 1/0
+routerb(config-if)#encapsulation ppp
 
-Router(config-if)#ip nat outside
+routerb(config-if)#exit
 
-Router(config-if)#exit
+routerb(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="第六步：配置内网1端口复用"><a href="#第六步：配置内网1端口复用" class="headerlink" title="第六步：配置内网1端口复用"></a>第六步：配置内网1端口复用</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
+<h5 id="第六步：配置CHAP双向认证（可选）"><a href="#第六步：配置CHAP双向认证（可选）" class="headerlink" title="第六步：配置CHAP双向认证（可选）"></a>第六步：配置CHAP双向认证（可选）</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
 
 Router(config)#
 
-Router(config)#access-list 1 permit 192.168.1.0 0.0.0.255
+Router(config)#hostname routera
 
-Router(config)#ip nat inside source list 1 interface serial 1/0 overload 
+routera(config)#username routerb password 123456
 
-Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+routera(config)#interface serial 1/0
 
-<h5 id="第七步：配置内网2静态NAT"><a href="#第七步：配置内网2静态NAT" class="headerlink" title="第七步：配置内网2静态NAT"></a>第七步：配置内网2静态NAT</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器B：
+routera(config-if)#encapsulation ppp
+
+routera(config-if)#ppp authentication chap
+
+routera(config-if)#exit
+
+routera(config)#
+
+路由器B：
 
 Router(config)#
 
-Router(config)#ip nat inside source static 172.168.168.168 123.56.220.3
+Router(config)#hostname routerb
 
-Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+routerb(config)#username routera password 123456
 
-<h5 id="第八步：测试PC机和服务器静态转换的连通性"><a href="#第八步：测试PC机和服务器静态转换的连通性" class="headerlink" title="第八步：测试PC机和服务器静态转换的连通性"></a>第八步：测试PC机和服务器静态转换的连通性</h5><p>测试方法：PC1 Ping 服务器NAT转换的IP地址</p>
-<pre class="line-numbers language-router" data-language="router"><code class="language-router">PC&gt;ping 123.56.220.3
+routerb(config)#interface serial 1/0
 
-Pinging 123.56.220.3 with 32 bytes of data: 
+routerb(config-if)#encapsulation ppp
 
-Reply from 123.56.220.3: bytes=32 time=11ms TTL=126
+routerb(config-if)#ppp authentication chap
 
-Reply from 123.56.220.3: bytes=32 time=6ms TTL=126
+routerb(config-if)#exit
 
-Reply from 123.56.220.3: bytes=32 time=5ms TTL=126
+routerb(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-Reply from 123.56.220.3: bytes=32 time=11ms TTL=126
+<h5 id="第七步：测试PC1和PC2之间连通性"><a href="#第七步：测试PC1和PC2之间连通性" class="headerlink" title="第七步：测试PC1和PC2之间连通性"></a>第七步：测试PC1和PC2之间连通性</h5><p>测试方法：用PC1 Ping PC2测试连通性。</p>
+<pre class="line-numbers language-router" data-language="router"><code class="language-router">PC&gt;ping 192.168.3.1
 
-Ping statistics for 123.56.220.3:
+Pinging 192.168.3.1 with 32 bytes of data: 
 
-Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Reply from 192.168.3.1: bytes=32 time=8ms TTL=126
+
+Reply from 192.168.3.1: bytes=32 time=6ms TTL=126
+
+Reply from 192.168.3.1: bytes=32 time=1ms TTL=126
+
+Reply from 192.168.3.1: bytes=32 time=1ms TTL=126
+
+Ping statistics for 192.168.3.1:
+
+  Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
 
 Approximate round trip times in milli-seconds:
 
-Minimum = 5ms, Maximum = 11ms, Average = 8ms
+  Minimum = 1ms, Maximum = 8ms, Average = 4ms
 
 PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>当出现以上结果时，则表示PC机和服务器连通，本实验完成。</p>
-<p>如果没有出现以上结果，表明PC机和服务器不连通，应检查配置是否正确。</p>
-<h4 id="六、相关命令详解"><a href="#六、相关命令详解" class="headerlink" title="六、相关命令详解"></a>六、相关命令详解</h4><h5 id="1、ip-nat-inside-source"><a href="#1、ip-nat-inside-source" class="headerlink" title="1、ip nat inside source"></a>1、ip nat inside source</h5><p>命令：ip nat inside source { list|static }</p>
-<p>功能：使用ip nat inside source全局配置命令，开启内部源地址的 NAT。</p>
+<p>当出现以上结果时，则表示PC1和PC2连通。</p>
+<p>如果没有出现以上结果，表明PC1和PC2不连通，应检查IP地址或线缆是否配置正确、接口是否启用，静态路由和PPP是否配置正确。</p>
+<h4 id="六、相关命令详解"><a href="#六、相关命令详解" class="headerlink" title="六、相关命令详解"></a>六、相关命令详解</h4><h5 id="1、hostname"><a href="#1、hostname" class="headerlink" title="1、hostname"></a>1、hostname</h5><p>命令：hostname <name></name></p>
+<p>功能：设置主机名。</p>
 <p>命令模式：全局配置模式</p>
-<p>使用指南：这个命令有两种形式：动态的和静态的地址转换。带有访问列表的格式建立动态转换。来自和标准访问列表相匹配的地址的报文，将用指定的池中分配的全局地址来进行地址翻译，这个地址池是用ip nat pool命令所指定的。</p>
-<h5 id="2、ip-nat"><a href="#2、ip-nat" class="headerlink" title="2、ip nat"></a>2、ip nat</h5><p>命令：ip nat { inside|outside }</p>
-<p>功能：指定网络连接的网络类型。</p>
+<p>使用指南：当需要配置交换机或路由器的主机名时，可以在相应设备的全局配置模式下输入此命令来配置主机名。</p>
+<h5 id="2、username-password"><a href="#2、username-password" class="headerlink" title="2、username password"></a>2、username password</h5><p>命令：username <name> password <password></password></name></p>
+<p>功能：建立用户名和密码。</p>
+<p>命令模式：全局配置模式</p>
+<p>使用指南：当需要建立用户名和密码时，在全局配置模式下输入此命令。</p>
+<h5 id="3、encapsulation"><a href="#3、encapsulation" class="headerlink" title="3、encapsulation"></a>3、encapsulation</h5><p>命令：encapsulation {ppp | hdlc | frame-relay}</p>
+<p>功能：选择接口协议。</p>
 <p>命令模式：接口配置模式</p>
-<p>使用指南：Inside接口连接的一般是LAN网络，Outside连接的一般是Intetnet网络。</p>
+<p>使用指南：配置接口下使用的接口协议。</p>
+<h5 id="4、ppp-authentication"><a href="#4、ppp-authentication" class="headerlink" title="4、ppp authentication"></a>4、ppp authentication</h5><p>命令：ppp authentication {chap | pap}</p>
+<p>功能：配置ppp验证方式。</p>
+<p>命令模式：接口配置模式</p>
+<p>使用指南：配置PPP的验证方式为CHAP或PAP。</p>
 
                 
             </div>
@@ -692,7 +678,7 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/09/11/nat-di-zhi-zhuan-huan-shi-yan/">http://example.com/2023/09/11/nat-di-zhi-zhuan-huan-shi-yan/</a>
+                    <a href="http://example.com/2023/09/15/lu-you-ppp-shi-yan/">http://example.com/2023/09/15/lu-you-ppp-shi-yan/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -809,7 +795,7 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
         repo: 'comment',
         owner: 'Monthpity',
         admin: "Monthpity",
-        id: '2023-09-11T10-01-50',
+        id: '2023-09-15T18-50-19',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -837,9 +823,10 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2023/09/15/lu-you-ppp-shi-yan/">
                     <div class="card-image">
@@ -856,9 +843,9 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-09-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-15
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -871,6 +858,7 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -889,12 +877,12 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/09/10/ospf-ren-zheng-shi-yan/">
+                <a href="/2023/09/11/nat-di-zhi-zhuan-huan-shi-yan/">
                     <div class="card-image">
                         
-                        <img src="https://pic.imgdb.cn/item/64fd2f7b661c6c8e542265e0.jpg" class="responsive-img" alt="OSPF认证实验">
+                        <img src="https://pic.imgdb.cn/item/64fe75b5661c6c8e545e36b5.jpg" class="responsive-img" alt="NAT地址转换实验">
                         
-                        <span class="card-title">OSPF认证实验</span>
+                        <span class="card-title">NAT地址转换实验</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -905,7 +893,7 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-11
                             </span>
                         <span class="publish-author">
                             

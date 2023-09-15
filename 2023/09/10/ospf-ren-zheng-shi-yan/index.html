@@ -404,7 +404,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-09-10
+                    2023-09-15
                 </div>
                 
 
@@ -448,7 +448,7 @@
 <h4 id="四、实验要求"><a href="#四、实验要求" class="headerlink" title="四、实验要求"></a>四、实验要求</h4><p>PC1的IP地址为192.168.1.1/24，网关为192.168.1.254。</p>
 <p>PC2的IP地址为192.168.4.1/24，网关为192.168.4.254。</p>
 <p>区域area 0使用明文认证方式，区域area 1使用MD5加密认证方式。</p>
-<h4 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h4><h5 id="第一步：给PC机设置IP地址（略）"><a href="#第一步：给PC机设置IP地址（略）" class="headerlink" title="第一步：给PC机设置IP地址（略）"></a>第一步：给PC机设置IP地址（略）</h5><h5 id="第二步：给路由器设置IP地址并设置时钟频率"><a href="#第二步：给路由器设置IP地址并设置时钟频率" class="headerlink" title="第二步：给路由器设置IP地址并设置时钟频率"></a>第二步：给路由器设置IP地址并设置时钟频率</h5><pre class="line-numbers language-none"><code class="language-none">路由器A：
+<h4 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h4><h5 id="第一步：给PC机设置IP地址（略）"><a href="#第一步：给PC机设置IP地址（略）" class="headerlink" title="第一步：给PC机设置IP地址（略）"></a>第一步：给PC机设置IP地址（略）</h5><h5 id="第二步：给路由器设置IP地址并设置时钟频率"><a href="#第二步：给路由器设置IP地址并设置时钟频率" class="headerlink" title="第二步：给路由器设置IP地址并设置时钟频率"></a>第二步：给路由器设置IP地址并设置时钟频率</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
 
 Router(config)#
 
@@ -516,7 +516,7 @@ Router(config-if)#exit
 
 Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第三步：配置多区域OSPF路由"><a href="#第三步：配置多区域OSPF路由" class="headerlink" title="第三步：配置多区域OSPF路由"></a>第三步：配置多区域OSPF路由</h5><pre class="line-numbers language-none"><code class="language-none">路由器A：
+<h5 id="第三步：配置多区域OSPF路由"><a href="#第三步：配置多区域OSPF路由" class="headerlink" title="第三步：配置多区域OSPF路由"></a>第三步：配置多区域OSPF路由</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
 
 Router(config)#
 
@@ -564,7 +564,7 @@ Router(config-router)#exit
 
 Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第四步：配置区域明文认证并在OSPF中启用"><a href="#第四步：配置区域明文认证并在OSPF中启用" class="headerlink" title="第四步：配置区域明文认证并在OSPF中启用"></a>第四步：配置区域明文认证并在OSPF中启用</h5><pre class="line-numbers language-none"><code class="language-none">路由器A：
+<h5 id="第四步：配置区域明文认证并在OSPF中启用"><a href="#第四步：配置区域明文认证并在OSPF中启用" class="headerlink" title="第四步：配置区域明文认证并在OSPF中启用"></a>第四步：配置区域明文认证并在OSPF中启用</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
 
 Router(config)#
 
@@ -604,7 +604,7 @@ Router(config-router)#exit
 
 Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第五步：配置区域MD5认证并在OSPF启用"><a href="#第五步：配置区域MD5认证并在OSPF启用" class="headerlink" title="第五步：配置区域MD5认证并在OSPF启用"></a>第五步：配置区域MD5认证并在OSPF启用</h5><pre class="line-numbers language-none"><code class="language-none">路由器B：
+<h5 id="第五步：配置区域MD5认证并在OSPF启用"><a href="#第五步：配置区域MD5认证并在OSPF启用" class="headerlink" title="第五步：配置区域MD5认证并在OSPF启用"></a>第五步：配置区域MD5认证并在OSPF启用</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器B：
 
 Router(config)#
 
