@@ -1294,7 +1294,7 @@ thead {
 
 .chip-container .chip-active {
     color: #FFF !important;
-    background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%) !important;
+    background: linear-gradient(to bottom right, #2a4bf0 0%, #229cee 100%) !important;
     box-shadow: 2px 5px 10px #aaa !important;
 }
 
@@ -1618,6 +1618,7 @@ thead {
 }
 
 #aboutme .social-link a {
+
     display: inline-block;
     width: 2.3rem;
     height: 2.3rem;
@@ -1626,7 +1627,7 @@ thead {
     padding: 0;
     color: #fff;
     border: 1px solid #0f9d58;
-    background: radial-gradient(#4cbf30, #0f9d58);
+    background: radial-gradient(#1c4be4, #1b37ee);
     font-size: 0.9rem;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .21), 0 2px 3px rgba(0, 0, 0, .1);
@@ -1802,8 +1803,8 @@ thead {
 
 .other-skills .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
-    border: 1px solid #4cbf30;
+    background: linear-gradient(to right, #0d3ddc 0%, #1a62f3 100%);
+    border: 1px solid #0332ca;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .25)
 }
 
@@ -1964,7 +1965,7 @@ p.search-result-summary{
 }
 
 .center-caption {
-    color: #525f7f;
+    color: #0a4bef;
     padding: 5px;
     border-bottom: 1px solid #d9d9d9;
 }
