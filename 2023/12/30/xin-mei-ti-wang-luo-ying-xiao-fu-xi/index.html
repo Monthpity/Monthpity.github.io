@@ -4,16 +4,15 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="路由PPP实验, 月夕的小屋">
-    <meta name="description" content="一、实验目的
-掌握PPP的基本配置
+    <meta name="keywords" content="新媒体网络营销复习, 月夕的小屋">
+    <meta name="description" content="新媒体营销复习名词解释
+新媒体营销
 
-掌握CHAP的基本配置步骤和方法
+新媒体营销是指企业或个人利用新媒体平台的功能特性，精心策划具有高度传播性的内容和线上活动。通过向用户广泛、精准的推送消息，以提高品牌知名度和用户参与度，从而达到相应的营销目的。
 
-掌握对CHAP进行诊断的基本方法
+新媒体内容
 
-
-二、应用环境PPP协议是一种点——点串行通信协议。PPP具有处理错误检测、支持多个协议、允许在连接时刻协商IP地址、允许身份认证">
+营销新媒">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -25,7 +24,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>路由PPP实验 | 月夕的小屋</title>
+    <title>新媒体网络营销复习 | 月夕的小屋</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -344,12 +343,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.imgdb.cn/item/65043846661c6c8e54973bf0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.imgdb.cn/item/658ed7d7c458853aef11c990.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">路由PPP实验</h1>
+                    <h1 class="description center-align post-title">新媒体网络营销复习</h1>
                 </div>
             </div>
         </div>
@@ -373,8 +372,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/router/">
-                                <span class="chip bg-color">router</span>
+                            <a href="/tags/review/">
+                                <span class="chip bg-color">review</span>
                             </a>
                         
                     </div>
@@ -385,8 +384,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/" class="post-category">
-                                路由实验
+                            <a href="/categories/%E5%A4%8D%E4%B9%A0%E6%96%87%E6%A1%A3/" class="post-category">
+                                复习文档
                             </a>
                         
                     </div>
@@ -398,28 +397,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-09-15
+                    2023-12-30
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-12-29
+                    2023-12-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
+                    4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    13 分
                 </div>
                 
 
@@ -437,221 +436,246 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h4><ol>
-<li><p>掌握PPP的基本配置</p>
-</li>
-<li><p>掌握CHAP的基本配置步骤和方法</p>
-</li>
-<li><p>掌握对CHAP进行诊断的基本方法</p>
-</li>
+                <h2 id="新媒体营销复习"><a href="#新媒体营销复习" class="headerlink" title="新媒体营销复习"></a>新媒体营销复习</h2><h3 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h3><ol>
+<li><strong>新媒体营销</strong></li>
 </ol>
-<h4 id="二、应用环境"><a href="#二、应用环境" class="headerlink" title="二、应用环境"></a>二、应用环境</h4><p>PPP协议是一种点——点串行通信协议。PPP具有处理错误检测、支持多个协议、允许在连接时刻协商IP地址、允许身份认证等功能，还有其他。PPP提供了3类功能：成帧、链路控制协议LCP、网络控制协议NCP。PPP是面向字符类型的协议。</p>
-<p>PPP协议的验证分为两种：一种是PAP，一种是CHAP。相对来说PAP的认证方式安全性没有CHAP高。PAP在传输Password是明文的，而CHAP在传输过程中不传输密码，取代密码的是hash（哈希值）。PAP认证是通过两次握手实现的，而CHAP则是通过3次握手实现的。</p>
-<p>本实验以CHAP为例。</p>
-<h4 id="三、实验拓扑"><a href="#三、实验拓扑" class="headerlink" title="三、实验拓扑"></a>三、实验拓扑</h4><p>实验拓扑如下，实验设备：2811路由器两台、PC机两台、串口线一根、交叉线两根。</p>
-<p><img src="https://pic.imgdb.cn/item/650437cc661c6c8e549701fd.png" alt="拓扑图"></p>
-<h4 id="四、实验要求"><a href="#四、实验要求" class="headerlink" title="四、实验要求"></a>四、实验要求</h4><p>在路由器A和路由器B配置CHAP实验。</p>
-<p>PC1的IP地址为192.168.1.1/24，网关为192.168.1.254。</p>
-<p>PC1的IP地址为192.168.3.1/24，网关为192.168.3.254。</p>
-<h4 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h4><h5 id="第一步：给PC机设置IP地址（略）"><a href="#第一步：给PC机设置IP地址（略）" class="headerlink" title="第一步：给PC机设置IP地址（略）"></a>第一步：给PC机设置IP地址（略）</h5><h5 id="第二步：给路由器设置IP地址并设置时钟频率"><a href="#第二步：给路由器设置IP地址并设置时钟频率" class="headerlink" title="第二步：给路由器设置IP地址并设置时钟频率"></a>第二步：给路由器设置IP地址并设置时钟频率</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
-
-Router(config)#
-
-Router(config)#interface fastEthernet 0/0
-
-Router(config-if)#no shutdown
-
-Router(config-if)#ip address 192.168.1.254 255.255.255.0
-
-Router(config-if)#exit
-
-Router(config)#interface serial 1/0
-
-Router(config-if)#no shutdown
-
-Router(config-if)#clock rate 64000
-
-Router(config-if)#ip address 192.168.2.1 255.255.255.0
-
-Router(config-if)#exit
-
-Router(config)#
-
-路由器B：
-
-Router(config)#
-
-Router(config)#interface serial 1/0
-
-Router(config-if)#no shutdown
-
-Router(config-if)#ip address 192.168.2.2 255.255.255.0
-
-Router(config-if)#exit
-
-Router(config)#interface fastEthernet 0/0
-
-Router(config-if)#no shutdown
-
-Router(config-if)#ip address 192.168.3.254 255.255.255.0
-
-Router(config-if)#exit
-
-Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="第三步：给路由器配置静态路由"><a href="#第三步：给路由器配置静态路由" class="headerlink" title="第三步：给路由器配置静态路由"></a>第三步：给路由器配置静态路由</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
-
-Router(config)#
-
-Router(config)#ip route 192.168.3.0 255.255.255.0 192.168.2.2
-
-Router(config)#
-
-路由器B：
-
-Router(config)#
-
-Router(config)#ip route 192.168.1.0 255.255.255.0 192.168.2.1
-
-Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="第四步：测试PC1和PC2之间连通性"><a href="#第四步：测试PC1和PC2之间连通性" class="headerlink" title="第四步：测试PC1和PC2之间连通性"></a>第四步：测试PC1和PC2之间连通性</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">测试方法：用PC1 Ping PC2测试连通性。
-
-PC&gt;ping 192.168.3.1
-
-Pinging 192.168.3.1 with 32 bytes of data: 
-
-Request timed out.
-
-Reply from 192.168.3.1: bytes=32 time=6ms TTL=126
-
-Reply from 192.168.3.1: bytes=32 time=6ms TTL=126
-
-Reply from 192.168.3.1: bytes=32 time=9ms TTL=126
-
-Ping statistics for 192.168.3.1:
-
-  Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
-
-Approximate round trip times in milli-seconds:
-
-  Minimum = 6ms, Maximum = 9ms, Average = 7ms
-
-PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>当出现以上结果时，则表示PC1和PC2连通。</p>
-<p>如果没有出现以上结果，表明PC1和PC2不连通，应检查IP地址或线缆是否配置正确、接口是否启用，静态路由是否配置正确。</p>
-<h5 id="第五步：配置CHAP单向认证服务端和认证客户端"><a href="#第五步：配置CHAP单向认证服务端和认证客户端" class="headerlink" title="第五步：配置CHAP单向认证服务端和认证客户端"></a>第五步：配置CHAP单向认证服务端和认证客户端</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
-
-Router(config)#
-
-Router(config)#hostname routera
-
-routera(config)#username routerb password 123456
-
-routera(config)#interface serial 1/0
-
-routera(config-if)#encapsulation ppp
-
-routera(config-if)#ppp authentication chap
-
-routera(config-if)#exit
-
-routera(config)#
-
-路由器B：
-
-Router(config)#
-
-Router(config)#hostname routerb
-
-routerb(config)#username routera password 123456
-
-routerb(config)#interface serial 1/0
-
-routerb(config-if)#encapsulation ppp
-
-routerb(config-if)#exit
-
-routerb(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="第六步：配置CHAP双向认证（可选）"><a href="#第六步：配置CHAP双向认证（可选）" class="headerlink" title="第六步：配置CHAP双向认证（可选）"></a>第六步：配置CHAP双向认证（可选）</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
-
-Router(config)#
-
-Router(config)#hostname routera
-
-routera(config)#username routerb password 123456
-
-routera(config)#interface serial 1/0
-
-routera(config-if)#encapsulation ppp
-
-routera(config-if)#ppp authentication chap
-
-routera(config-if)#exit
-
-routera(config)#
-
-路由器B：
-
-Router(config)#
-
-Router(config)#hostname routerb
-
-routerb(config)#username routera password 123456
-
-routerb(config)#interface serial 1/0
-
-routerb(config-if)#encapsulation ppp
-
-routerb(config-if)#ppp authentication chap
-
-routerb(config-if)#exit
-
-routerb(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="第七步：测试PC1和PC2之间连通性"><a href="#第七步：测试PC1和PC2之间连通性" class="headerlink" title="第七步：测试PC1和PC2之间连通性"></a>第七步：测试PC1和PC2之间连通性</h5><p>测试方法：用PC1 Ping PC2测试连通性。</p>
-<pre class="line-numbers language-router" data-language="router"><code class="language-router">PC&gt;ping 192.168.3.1
-
-Pinging 192.168.3.1 with 32 bytes of data: 
-
-Reply from 192.168.3.1: bytes=32 time=8ms TTL=126
-
-Reply from 192.168.3.1: bytes=32 time=6ms TTL=126
-
-Reply from 192.168.3.1: bytes=32 time=1ms TTL=126
-
-Reply from 192.168.3.1: bytes=32 time=1ms TTL=126
-
-Ping statistics for 192.168.3.1:
-
-  Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
-
-Approximate round trip times in milli-seconds:
-
-  Minimum = 1ms, Maximum = 8ms, Average = 4ms
-
-PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>当出现以上结果时，则表示PC1和PC2连通。</p>
-<p>如果没有出现以上结果，表明PC1和PC2不连通，应检查IP地址或线缆是否配置正确、接口是否启用，静态路由和PPP是否配置正确。</p>
-<h4 id="六、相关命令详解"><a href="#六、相关命令详解" class="headerlink" title="六、相关命令详解"></a>六、相关命令详解</h4><h5 id="1、hostname"><a href="#1、hostname" class="headerlink" title="1、hostname"></a>1、hostname</h5><p>命令：hostname <name></name></p>
-<p>功能：设置主机名。</p>
-<p>命令模式：全局配置模式</p>
-<p>使用指南：当需要配置交换机或路由器的主机名时，可以在相应设备的全局配置模式下输入此命令来配置主机名。</p>
-<h5 id="2、username-password"><a href="#2、username-password" class="headerlink" title="2、username password"></a>2、username password</h5><p>命令：username <name> password <password></password></name></p>
-<p>功能：建立用户名和密码。</p>
-<p>命令模式：全局配置模式</p>
-<p>使用指南：当需要建立用户名和密码时，在全局配置模式下输入此命令。</p>
-<h5 id="3、encapsulation"><a href="#3、encapsulation" class="headerlink" title="3、encapsulation"></a>3、encapsulation</h5><p>命令：encapsulation {ppp | hdlc | frame-relay}</p>
-<p>功能：选择接口协议。</p>
-<p>命令模式：接口配置模式</p>
-<p>使用指南：配置接口下使用的接口协议。</p>
-<h5 id="4、ppp-authentication"><a href="#4、ppp-authentication" class="headerlink" title="4、ppp authentication"></a>4、ppp authentication</h5><p>命令：ppp authentication {chap | pap}</p>
-<p>功能：配置ppp验证方式。</p>
-<p>命令模式：接口配置模式</p>
-<p>使用指南：配置PPP的验证方式为CHAP或PAP。</p>
+<p><strong>新媒体营销是指企业或个人利用新媒体平台的功能特性，精心策划具有高度传播性的内容和线上活动。通过向用户广泛、精准的推送消息，以提高品牌知名度和用户参与度，从而达到相应的营销目的。</strong></p>
+<ol start="2">
+<li><strong>新媒体内容</strong></li>
+</ol>
+<p><strong>营销新媒体内容营销是指企业营销人员利用新媒体渠道，以文字、图片、音频或视频等形式，将与企业有关的信息友好地呈现在用户面前，并激发用户参与分享传播的完整活动过程。</strong></p>
+<ol start="3">
+<li><strong>微信朋友圈营销</strong></li>
+</ol>
+<p><strong>朋友圈营销是指企业或个人将微信朋友圈作为宣传推广平台，潜移默化的影响朋友圈好友，通过品牌宣传、产品展示、实景案例分享、团队文化输出、个人形象品牌建立等活动，赢得目标用户的信任和喜爱，进而增加转化，实现营销的目的。</strong></p>
+<ol start="4">
+<li><strong>社群营销</strong></li>
+</ol>
+<p><strong>社群营销就是基于社群成员间相同或相似的兴趣爱好，利用利用某种载体聚集人气，通过产品或服务满足群体需求而产生的商业形态。社群营销的载体不局限于微信及各种平台，线下的平台和社区都可以做社群营销。</strong></p>
+<ol start="5">
+<li><strong>网络视频</strong></li>
+</ol>
+<p><strong>网络视频是指由网络视频服务商提供的，以流媒体为播放格式的，可以在线直播或点播的声像文件。在网络上以WMV、RM、RMVB、FLV及MOV等视频文件格式为主，包括各类影视节目、新闻、广告、Flash动画、自拍DV、聊天视频、游戏视频、监控视频等。</strong></p>
+<ol start="6">
+<li><strong>自媒体</strong></li>
+</ol>
+<p><strong>自媒体又称公民媒体或个人媒体，是指私人化、平民化、普泛化、自主化的传播者以现代化、电子化的手段，相不特定的大多数或特定的单个人传递规范性及非规范性信息的新媒体的总称。</strong></p>
+<ol start="7">
+<li><strong>自媒体营销</strong></li>
+</ol>
+<p><strong>自媒体营销是指利用今日头条、百度百家号、搜狐、凤凰、UC等平台或其他互联网协作平台和媒体来传播和发布资讯，从而形成的营销、销售、公共关系处理和客户关系服务维护及开拓的一种营销方式。</strong></p>
+<ol start="8">
+<li><strong>微电影营销</strong></li>
+</ol>
+<p><strong>微电影营销是指通过拍摄短片，轻松自然的将品牌信息融入故事情节中，通过故事主人公的‘事与情’升华，突出表现主体，引发受众的情感共鸣，达到其品牌理念推广与品牌精神传达的目的。</strong></p>
+<h3 id="简答题"><a href="#简答题" class="headerlink" title="简答题"></a>简答题</h3><p><strong>一、新媒体营销的形式</strong></p>
+<ol>
+<li>微信营销</li>
+<li>微博营销</li>
+<li>社群营销 </li>
+<li>网络视频营销</li>
+<li>自媒体营销</li>
+<li>知识平台营销</li>
+<li>娱乐媒体平台营销</li>
+</ol>
+<p><strong>二、新媒体用户分析的要素</strong></p>
+<ol>
+<li>用户的人口属性</li>
+<li>用户的心理现象</li>
+<li>用户的行为属性</li>
+<li>用户的社交属性</li>
+</ol>
+<p><strong>三、新媒体用户分析的方法</strong></p>
+<ol>
+<li>大数据分析：主要是指营销人员利用后台进行用户分析。</li>
+<li>小样本分析</li>
+<li>抽样调查分析</li>
+<li>综合分析</li>
+</ol>
+<p><strong>四、新媒体内容策划</strong></p>
+<ol>
+<li><strong>内容定位：企业要为哪一个细分人群服务？企业能解决哪一个细分需求？</strong></li>
+<li><strong>内容产量：内容的产量是指企业团队发文的数量和质量，不要一昧的追求每日更新数量，质量上乘才是关键。</strong></li>
+<li><strong>内容形式：企业新媒体发文的形式多种多样，有文字、视频、音频、图片等形式。</strong></li>
+<li><strong>内容来源：新媒体一般的内容来源有企业营销人员原创、采访素材、整合资料、用户投稿、转载内容等。</strong></li>
+<li><strong>内容调性：追求人格化。新媒体内容一般会创设并一直沿用下去，在语言特点、内容风格和价值取向方面突出自己个性化的标签，尽量避免与同类型账号雷同。</strong></li>
+</ol>
+<p><strong>五、新媒体数据分析的意义</strong></p>
+<ol>
+<li>通过数据分析了解营销与运营的质量</li>
+<li>通过数据分析预测营销与运营的方向</li>
+<li>通过数据分析控制营销与运营的成本</li>
+<li>通过数据分析评估营销方案</li>
+</ol>
+<p><strong>六、新媒体营销的目的</strong></p>
+<ol>
+<li>提升营销数据</li>
+<li>提升品牌美誉度</li>
+<li>提升品牌知名度</li>
+<li>提升品牌忠诚度</li>
+</ol>
+<p><strong>七、微博的特点</strong></p>
+<ol>
+<li>便捷性 </li>
+<li>创新交互方式。在微博平台上用户之间不一定要相互加为好友，只需要关注对方，成为对方的粉丝，就可以随时随地的接收被关注者发布的信息，这一特性被称为背对联。</li>
+<li>原创性</li>
+<li>草根性</li>
+<li>宣传影响力弹性大</li>
+</ol>
+<p><strong>八、微博营销的任务</strong></p>
+<ol>
+<li><strong>传递产品信息。很多企业通过微博发布产品信息，吸引粉丝购买。</strong></li>
+<li><strong>进行互动营销。互动营销意味着企业与粉丝之间有了更多近距离的交流。</strong></li>
+<li><strong>进行用户服务。利思微博开展在线用户限务的优点主要包括成本低、服务方式灵话、传播效应强等，非常符合现代用户，尤其是年轻用户群体的需求。</strong></li>
+<li><strong>进行舆情检测。舆情管理对企业来说至关重要，不仅可为企业经营过程中产品和服务内容的定位提供参考，更可使企业趋利避害，减轻负面舆论的压力，强化正向品牌力量。</strong></li>
+<li><strong>进行危机公关。企业在发生危机后及时通过微博发布信息，可以减少相关猜测，有效地提高危机公关的效率。</strong></li>
+</ol>
+<p><strong>九、微信营销的特点</strong></p>
+<p>1、点对点精准营销</p>
+<p>2、形式多样</p>
+<p>3、曝光率高：微信公众平台信息的到达率是100%</p>
+<p><strong>十、社群营销的特点</strong></p>
+<ol>
+<li><strong>弱中心化。社群营销是扁平化网状结构，人们可以一对一或多对多地实现互动，进行信息传播，在社群里，并不是只有一个组织和一个有话语权的人，而是每个人都能说，这使传播主题从单一走向扩散，这也是一个弱中心化的过程。</strong></li>
+<li><strong>多项互动化。社群营销通过社群成员之间的互动交流，包括信息和数据的平等互换，使每每一成员都成为信息的发送者，同时又成为接收者和分享者。</strong></li>
+<li><strong>具有情感优势。社群都是由有共同爱好、兴趣而聚集在一起的人组成的，因此，成员间很容易建立起情感联系。</strong></li>
+<li><strong>自行运转。由于社群的特性，社群在一定程度上可以自我运行、创造、分享，甚至进行各种产品和价值的生产与在生产。</strong></li>
+<li><strong>碎片化。社群的资源性和多样性特点，使社群营销呈现出多样化、信息发布方式分散的特点，这就意味着社群营销呈现碎片化的趋势。</strong></li>
+</ol>
+<p><strong>十一、如何进行社群新人的培育？</strong></p>
+<ol>
+<li>明确培养目标，制定不同的方案。</li>
+<li>充分授权，鼓励新人承担重任。</li>
+<li>教练带领，考核升级。</li>
+</ol>
+<p><strong>十二、网络视频营销的趋势</strong></p>
+<ol>
+<li>品牌视频化：很多广告主将品牌广告通过网络视频展现出来</li>
+<li>视频网络化</li>
+<li>广告内容化</li>
+</ol>
+<p><strong>十三、网络视频营销活动方式</strong></p>
+<ol>
+<li><strong>影视节目二次传播。由于网络视频网站对传统电视观众的分流，很多具有新闻您、可欣赏性的电视节目由视频网站、网民或意见领袖主动发布到视频网站平台再次传播。</strong></li>
+<li><strong>网络视频短剧。网络视频短剧剧情轻松，演员、导演年轻化，整体风格时尚、何洁、幽默、贴近生活，尤其受到年轻一代的喜欢，成为行业新的增长点。视频短剧符合互联网风格，制作灵活，软性宣传效果好，也逐渐受到品牌方的青睐。</strong></li>
+<li><strong>视频病毒式营销。病毒式营销是通过网民的口碑宣传，让信息像病毒一样传播和扩散，利用快速复制的方式传向数以百万计的受众。</strong></li>
+<li><strong>微电影。微电影即微型电影，是指能够通过互联网新媒体平台进行传播的时长在几分钟~60分钟的影片，适合网民处于移动状态和短时休闲状态时观看，具有完整故事情节的短片。</strong></li>
+<li><strong>用户生成内容。UGC是指终端用户将其原创内容通过互联网平台进行展示或与其他用户进行共享的行为。</strong></li>
+</ol>
+<p><strong>十四、网络视频制作的种类</strong></p>
+<ol>
+<li>企业宣传片</li>
+<li>产品宣传片</li>
+</ol>
+<p><strong>十五、自媒体的特征</strong></p>
+<ol>
+<li><strong>个性化。是最显著的一个特征</strong></li>
+<li><strong>碎片化。自媒体的“碎片化”也决定了其张扬自我、个行成长以及规模庞大的行业特点。</strong></li>
+<li><strong>交互性</strong></li>
+<li><strong>多媒体</strong></li>
+<li><strong>群体性</strong></li>
+<li><strong>传播性：让公众记录了每个人面前都有话筒的时代是传播性</strong></li>
+</ol>
+<p><strong>十六、自媒体平台盈利模式</strong></p>
+<ol>
+<li>自媒体+平台</li>
+<li>自媒体+广告</li>
+<li>自媒体+付费阅读</li>
+<li>自媒体+电商</li>
+<li>自媒体+IP</li>
+<li>自媒体+活动</li>
+</ol>
+<p><strong>十七、制作内容创意简报要梳理三个问题</strong></p>
+<p><strong>1.</strong>  <strong>向谁说：who</strong></p>
+<p><strong>2.</strong>  <strong>说什么：what</strong></p>
+<p><strong>3.</strong>  <strong>在哪说：where</strong></p>
+<p><strong>十八、问答平台的类型</strong></p>
+<ol>
+<li>综合型问答平台</li>
+<li>垂直型问答平台</li>
+</ol>
+<p><strong>十九、问答平台营销的优势</strong></p>
+<ol>
+<li><strong>自然排名好。问答平台在各自的大平台里的资料搜索排名都比较好，用户比较容易在拽索引擎首页看到企业的问答内容。</strong></li>
+<li><strong>信息覆盖面广。信息投放平台覆盖了95%以上的互联网用户，受众比较广泛。</strong></li>
+<li><strong>品牌营销精准。问答平台上的解答阐述了用户想要了解的信息，企业可以把每个同题看作一个长尾关键词，把回复看作一个问题引导，企业就可以利用这个回答把用户精准地引导到品牌网站</strong></li>
+<li><strong>快速建立良好的口碑。用户自己根据需求有针对性地提出问题，企业可根据用户的需求去做专业的回答。</strong></li>
+<li><strong>迅速提升品牌可信度。因为问答推广是在真实语境下进行的，提何者和回答者之间存在互动，而回答者一般是以“过来人”的身份去回答提问者的问题的，答案更具有可信度；同时，回答者代表的是企业品牌，其回复可以提升品牌的可信度。</strong></li>
+</ol>
+<p><strong>二十、知识付费的形态</strong></p>
+<ol>
+<li>图文</li>
+<li>音频</li>
+<li>视频</li>
+<li>社群</li>
+<li>直播</li>
+</ol>
+<p><strong>二十一、 知识付费的优势</strong></p>
+<ol>
+<li>收益稳定：是指内容付费的人群十分稳定，多为愿意为优质内容付费的优质客户</li>
+<li>用户的留存率和粘性高</li>
+<li>产生正向循环</li>
+</ol>
+<p><strong>二十二、网络直播的盈利模式</strong></p>
+<ol>
+<li>时薪</li>
+<li>礼物</li>
+<li>衍生副业</li>
+</ol>
+<p><strong>二十三、直播营销平台选择</strong></p>
+<ol>
+<li>平台流量</li>
+<li>平台收入</li>
+<li>平台运营能力</li>
+</ol>
+<p><strong>二十四、用户对标题的心理需求</strong></p>
+<ol>
+<li>好奇需求</li>
+<li>情感需求</li>
+<li>私心需求</li>
+<li>娱乐需求</li>
+<li>价值需求</li>
+<li>关怀需求</li>
+</ol>
+<h3 id="选择或判断"><a href="#选择或判断" class="headerlink" title="选择或判断"></a>选择或判断</h3><ol>
+<li>新媒体从内容来看，新媒体既可以传播文字，也可以传播声音和图像。</li>
+<li>新媒体和传统媒体的区别，<strong>传统媒体</strong>由报纸、杂志、广播、电视等，<strong>它是针对于用户群体（某一类区分)。</strong>新媒体的传播方式是针对精准化用户的需求。</li>
+<li>互联网电视用户超越传统电视用户的重要行为特征是新媒体用户的使用行为较高。</li>
+<li>新媒体内容，<strong>内容</strong>是一切用户行为的入口，同时也是获取用户信任的第一步，它也是重要性界定。</li>
+<li>新媒体内容创作的三个标准，<strong>一、专业性，二、趣味性，三、新闻性。</strong></li>
+<li>微博一般没有特别说明的，就是指新浪微博。</li>
+<li>粉丝趋势分析和粉丝来源分析区别：</li>
+</ol>
+<ul>
+<li><p>粉丝趋势分析：是指分析可以帮助营销人员了解在选定的时间段内微博账号每天粉丝数量的变化趋势，包括粉丝总总数、粉丝增加数、粉丝减少数、粉丝增长率以及主动取关粉丝数的变化趋势。</p>
+</li>
+<li><p>粉丝来源分析：主要是了解官方微博账号下的粉丝是通过哪些方式和渠道知晓并关注此账号的。</p>
+</li>
+</ul>
+<ol start="8">
+<li>微信是腾讯公司。</li>
+<li>社群与社区的区别，<strong>社群是熟人社交和强关系，社区是陌生人社交和弱关系。</strong></li>
+<li>建立强关系，就是社群成员之间至少建立<strong>两个维度</strong>的连接。</li>
+<li>社群运营绩效评价：<strong>结果导向型KPI；过程导向型KPI。</strong></li>
+<li>社群合作变现：常见的有换粉互推、资源交换、合作产品。</li>
+<li>营销策略设计原则：<strong>突出个性，差别化运营。</strong></li>
+<li>头条运营推广的技巧是：晚上发文最好。</li>
+<li>视频直播：是指在现场随着事件的发生、发展进程同时制作和播出视频的方式，相当于网络电视。</li>
+<li>直播营销是一场事件营销。</li>
+<li>微电影营销的优势，广告电影化：微电影作为一种全新的电影文化，能更好的诠释品牌理念，未来有可能会取代电影植入。</li>
+<li>新媒体时代的<strong>“耳朵经济”指的是网络音频</strong>。</li>
+<li>明确文章标题的作用是圈定目标读者，提高文章转发量。</li>
+<li>情感型标题是指运营者将个人的生活情感融入标题之中，从而与读者产生共鸣。</li>
+<li><strong>运用引导法创作文章标题的类型：经历型、情感型、情景型、故事型、玄机型、对比型。</strong></li>
+<li><strong>运用表达法创造文章标题的类型：悬念型、隐喻型、问答型。</strong></li>
+<li>隐喻型：在文章标题中采用比喻的手法进行标题的创作。隐喻行标题有很多妙处，能够使文章更新颖，更具创意，从而给读者留下深刻的印象，引起读者阅读的兴趣和好感。</li>
+<li><strong>运用“式”字法创造文章标题的类型：集合式、半遮掩式、揭露式。</strong></li>
+<li>半遮掩式标题是指通过标题向读者传递文章内容，但只透露部分，不说完全，给读者留下小悬念，引起读者的兴趣，又不直接告诉读者。</li>
+<li>揭露式标题是指一种为读者揭露某件事物或不为人知的秘密的标题。大部分人都会有好奇心，而这种标题则恰好可以抓住读者的这种心理。</li>
+<li>一个优秀、吸引人眼球的头像，能够胜过千言万语。</li>
+<li>图片内容编排:是指平台推送的整篇文章中，其内容都是以图片形式表达的，没有文字或文字已经包含在图片里面了。</li>
+<li><strong>金字塔原理:是以思考的逻辑、表达的逻辑、演示的逻辑为核心的一个挖掘受众需求点，确定想要说清的内容，选择基本结构，进行规范动作的过程。</strong></li>
+</ol>
 
                 
             </div>
@@ -668,7 +692,7 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Moon</a>
+                    <a href="/about" rel="external nofollow noreferrer">月夕</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -678,7 +702,7 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/09/15/lu-you-ppp-shi-yan/">http://example.com/2023/09/15/lu-you-ppp-shi-yan/</a>
+                    <a href="http://example.com/2023/12/30/xin-mei-ti-wang-luo-ying-xiao-fu-xi/">http://example.com/2023/12/30/xin-mei-ti-wang-luo-ying-xiao-fu-xi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -691,7 +715,7 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Moon</a>
+                    <a href="/about" target="_blank">月夕</a>
                     !
                 </span>
             </div>
@@ -716,8 +740,8 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/router/">
-                                    <span class="chip bg-color">router</span>
+                                <a href="/tags/review/">
+                                    <span class="chip bg-color">review</span>
                                 </a>
                             
                         </div>
@@ -795,7 +819,7 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
         repo: 'comment',
         owner: 'Monthpity',
         admin: "Monthpity",
-        id: '2023-09-15T18-50-19',
+        id: '2023-12-30T11-44-35',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -823,16 +847,17 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/12/28/xin-wang-luo-ying-xiao-fu-xi/">
+                <a href="/2023/12/30/xin-mei-ti-wang-luo-ying-xiao-fu-xi/">
                     <div class="card-image">
                         
-                        <img src="https://pic.imgdb.cn/item/658d417bc458853aefddc65d.png" class="responsive-img" alt="新网络营销复习">
+                        <img src="https://pic.imgdb.cn/item/658ed7d7c458853aef11c990.png" class="responsive-img" alt="新媒体网络营销复习">
                         
-                        <span class="card-title">新网络营销复习</span>
+                        <span class="card-title">新媒体网络营销复习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -842,9 +867,9 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-12-28
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-30
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -857,6 +882,7 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -875,12 +901,12 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/09/11/nat-di-zhi-zhuan-huan-shi-yan/">
+                <a href="/2023/12/29/ma-yuan-fu-xi/">
                     <div class="card-image">
                         
-                        <img src="https://pic.imgdb.cn/item/64fe75b5661c6c8e545e36b5.jpg" class="responsive-img" alt="NAT地址转换实验">
+                        <img src="https://pic.imgdb.cn/item/658e5a0bc458853aef35b2e6.jpg" class="responsive-img" alt="马原复习">
                         
-                        <span class="card-title">NAT地址转换实验</span>
+                        <span class="card-title">马原复习</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -891,14 +917,14 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-29
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/" class="post-category">
-                                    路由实验
+                            <a href="/categories/%E5%A4%8D%E4%B9%A0%E6%96%87%E6%A1%A3/" class="post-category">
+                                    复习文档
                                 </a>
                             
                             
@@ -908,8 +934,8 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/router/">
-                        <span class="chip bg-color">router</span>
+                    <a href="/tags/review/">
+                        <span class="chip bg-color">review</span>
                     </a>
                     
                 </div>
