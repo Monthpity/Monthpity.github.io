@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="新媒体网络营销复习, 月夕的小屋">
+    <meta name="keywords" content="新媒体网络营销复习, 月夕花晨">
     <meta name="description" content="新媒体营销复习名词解释
 新媒体营销
 
@@ -24,7 +24,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>新媒体网络营销复习 | 月夕的小屋</title>
+    <title>新媒体网络营销复习 | 月夕花晨</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -73,7 +73,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">月夕的小屋</span>
+                    <span class="logo-span">月夕花晨</span>
                 </a>
             </div>
             
@@ -177,7 +177,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">月夕的小屋</div>
+        <div class="logo-name">月夕花晨</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -1104,6 +1104,8 @@
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             
+                <span id="translate">|&nbsp;繁/简：</span><a id="translateLink" href="javascript:translatePage();">繁</a>
+            
             <br>
             
             
@@ -1360,6 +1362,17 @@ $(function () {
     
 
     
+        <script type="text/javascript" src="/js/tw_cn.js"></script>
+        <script type="text/javascript">
+          var defaultEncoding = 2; //网站编写字体是否繁体，1-繁体，2-简体
+          var translateDelay = 0; //延迟时间,若不在前, 要设定延迟翻译时间, 如100表示100ms,默认为0
+          var cookieDomain = "https://Monthpity.github.io"; //Cookie地址, 一定要设定, 通常为你的网址
+          var msgToTraditionalChinese = "繁"; //此处可以更改为你想要显示的文字
+          var msgToSimplifiedChinese = "简"; //同上，但两处均不建议更改
+          var translateButtonId = "translateLink"; //默认互换id
+          translateInitilization();
+        </script>
+    
     
     
 
@@ -1375,6 +1388,14 @@ $(function () {
     
 
     <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
+            }
+        </script>
     
 
      
