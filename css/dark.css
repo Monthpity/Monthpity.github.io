@@ -95,14 +95,14 @@ body.DarkMode .mobile-menu-list a i {
     color: rgba(255, 255, 255, 0.6) !important;
 }
 body.DarkMode .bg-color {
-    background-image:linear-gradient(to right, #2860ed 0, rgb(185, 39, 238) 100%);
+    background-image:linear-gradient(to right, #3b3b3b 0, rgb(59 59 59) 100%);
     opacity:.8
 }
 body.DarkMode .progress-bar {
     background: linear-gradient(to right, #bf7030 0%, #dfc60d 100%);
 }
 body.DarkMode span.bg-color {
-    background-image:linear-gradient(to right, #2467ee 0, rgba(213, 24, 243, 0.7) 100%)
+    background-image:linear-gradient(to right, #282c34 0, rgba(52,50,50,0.7) 100%)
 }
 
 /* 背景颜色变黑色 */

@@ -198,7 +198,7 @@ kbd {
     font-size: 0.9rem;
     font-weight: 600;
     background-color: #f8f8f8;
-    color: #ca34fc;
+    color: #34495e;
     line-height: 1.8rem;
     white-space: nowrap;
 }
@@ -240,6 +240,10 @@ mark {
     margin-bottom: 0;
 }
 
+.bg-color {
+    background-image: linear-gradient(to right, #1874f5 0%, #2080f5 100%);
+}
+
 .text-color {
     color: #0f9d58 !important;
 }
@@ -253,7 +257,7 @@ mark {
     position: fixed;
     bottom: 0;
     z-index: 300;
-    background: linear-gradient(to right, #1e66eb 0%, #7419b5 100%);
+    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
     opacity: 0.8;
 }
 
@@ -546,11 +550,11 @@ header .go-back i {
     height: 40vh !important;
 }
 
-/*.bg-cover:after {
+.bg-cover:after {
     -webkit-animation: rainbow 60s infinite;
     animation: rainbow 60s infinite;
 }
-*/
+
 .bg-cover:before,
 .bg-cover:after {
     position: absolute;
@@ -588,7 +592,7 @@ header .go-back i {
     font-size: 2.5rem;
     font-weight: 400;
 }
-
+/**
 @-webkit-keyframes rainbow {
 
     0%,
@@ -680,7 +684,7 @@ header .go-back i {
         background: -webkit-linear-gradient(135deg, rgba(2233, 30, 99, 0.75) 0%, rgba(233, 30, 99, 0.65) 100%);
     }
 }
-
+**/
 .index-card {
     margin-top: -10px;
     padding-top: 20px;
@@ -1294,7 +1298,7 @@ thead {
 
 .chip-container .chip-active {
     color: #FFF !important;
-    background: linear-gradient(to bottom right, #2a4bf0 0%, #229cee 100%) !important;
+    background: linear-gradient(to bottom right, #FF5E3A 0%, #FF2A68 100%) !important;
     box-shadow: 2px 5px 10px #aaa !important;
 }
 
@@ -1313,7 +1317,7 @@ thead {
 
 .chip-container .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #046bf3 0%, #9405d6 100%) !important;
+    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%) !important;
 }
 
 .chip .tag-length {
@@ -1618,7 +1622,6 @@ thead {
 }
 
 #aboutme .social-link a {
-
     display: inline-block;
     width: 2.3rem;
     height: 2.3rem;
@@ -1627,7 +1630,7 @@ thead {
     padding: 0;
     color: #fff;
     border: 1px solid #0f9d58;
-    background: radial-gradient(#1c4be4, #1b37ee);
+    background: radial-gradient(#4cbf30, #0f9d58);
     font-size: 0.9rem;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(50, 50, 93, .21), 0 2px 3px rgba(0, 0, 0, .1);
@@ -1803,8 +1806,8 @@ thead {
 
 .other-skills .chip:hover {
     color: #fff;
-    background: linear-gradient(to right, #0d3ddc 0%, #1a62f3 100%);
-    border: 1px solid #0332ca;
+    background: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
+    border: 1px solid #4cbf30;
     box-shadow: 0 5px 5px rgba(0, 0, 0, .25)
 }
 
@@ -1965,7 +1968,7 @@ p.search-result-summary{
 }
 
 .center-caption {
-    color: #0a4bef;
+    color: #525f7f;
     padding: 5px;
     border-bottom: 1px solid #d9d9d9;
 }
@@ -2289,9 +2292,5 @@ body.DarkMode .theme-btn:hover {
     content:'\f056';
     font-family:'Font Awesome 5 Free';
     font-weight: 900;
-    
-    
-    
-    
     color: #d9534f;
 }
