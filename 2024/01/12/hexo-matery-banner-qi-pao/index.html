@@ -4,17 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="NAT地址转换实验, Moonのblog">
-    <meta name="description" content="一、实验目的
-掌握NAT地址转换的基本配置
-
-掌握地址转换的相关概念、分类和工作原理
-
-了解地址转换的NAT技术
-
-
-二、应用环境NAT的最初的目的是允许把私有IP地址映射到公网地址，以减缓IP地址空间的消耗。
-由于IP地址的使用需求旺盛，">
+    <meta name="keywords" content="hexo-matery-banner气泡, Moonのblog">
+    <meta name="description" content="Hexo-matery banner添加气泡效果1. 创建需要的JS在自己博客根目录下找到themes/matery/source/libs/others这个文件夹，在文件中创建 bubble.js文件，填写如下内容：
+// 上升的气泡
+f">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -26,7 +19,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>NAT地址转换实验 | Moonのblog</title>
+    <title>hexo-matery-banner气泡 | Moonのblog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -904,12 +897,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.imgdb.cn/item/64fe75b5661c6c8e545e36b5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.imgdb.cn/item/65a0fcef871b83018af6fda9.png')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">NAT地址转换实验</h1>
+                    <h1 class="description center-align post-title">hexo-matery-banner气泡</h1>
                 </div>
             </div>
         </div>
@@ -933,8 +926,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/router/">
-                                <span class="chip bg-color">router</span>
+                            <a href="/tags/optimize/">
+                                <span class="chip bg-color">optimize</span>
                             </a>
                         
                     </div>
@@ -945,8 +938,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/" class="post-category">
-                                路由实验
+                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/" class="post-category">
+                                Hexo-matery主题优化
                             </a>
                         
                     </div>
@@ -958,28 +951,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-09-11
+                    2024-01-12
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-01
+                    2024-01-12
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    593
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    3 分
                 </div>
                 
 
@@ -997,234 +990,95 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h4><ol>
-<li><p>掌握NAT地址转换的基本配置</p>
-</li>
-<li><p>掌握地址转换的相关概念、分类和工作原理</p>
-</li>
-<li><p>了解地址转换的NAT技术</p>
-</li>
-</ol>
-<h4 id="二、应用环境"><a href="#二、应用环境" class="headerlink" title="二、应用环境"></a>二、应用环境</h4><p>NAT的最初的目的是允许把私有IP地址映射到公网地址，以减缓IP地址空间的消耗。</p>
-<p>由于IP地址的使用需求旺盛，造成了全球公有IP地址的枯竭。因此目前所有的企业在构建的过程中，都只能使用私有IP地址。但互联网上的路由器不转发带有私有IP地址的数据包，因此企业内部计算机如果需要访问互联网，就需要在企业网络的出口路由器或者防火墙设备上，配置NAT地址转换技术，把企业网中的私有地址转换成公有地址，才能实现企业网对互联网的访问。</p>
-<h4 id="三、实验拓扑"><a href="#三、实验拓扑" class="headerlink" title="三、实验拓扑"></a>三、实验拓扑</h4><p>实验拓扑如下，实验设备：2811路由器两台、PC机一台、Server服务器一台、串口线一根、交叉线两根。</p>
-<p><img src="https://pic.imgdb.cn/item/64fe7576661c6c8e545e26f7.png" alt="拓扑图"></p>
-<h4 id="四、实验要求"><a href="#四、实验要求" class="headerlink" title="四、实验要求"></a>四、实验要求</h4><p>各配置如下：</p>
-<table>
-<thead>
-<tr>
-<th align="center">设备</th>
-<th align="center">端口</th>
-<th align="center">IP地址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">路由器A</td>
-<td align="center">S1/0</td>
-<td align="center">123.56.220.1/8</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">F0/1</td>
-<td align="center">192.168.1.254/24</td>
-</tr>
-<tr>
-<td align="center">路由器B</td>
-<td align="center">S1/0</td>
-<td align="center">123.56.220.2/8</td>
-</tr>
-<tr>
-<td align="center"></td>
-<td align="center">F0/1</td>
-<td align="center">172.168.168.254/24</td>
-</tr>
-<tr>
-<td align="center">PC0</td>
-<td align="center">网卡接口</td>
-<td align="center">192.168.1.1/24</td>
-</tr>
-<tr>
-<td align="center">Server0</td>
-<td align="center">网卡接口</td>
-<td align="center">172.168.168.168/24</td>
-</tr>
-</tbody></table>
-<p>内网1的PC需要访问内网2的服务器，但是因为中间间隔Intetnet，所以我们需要在路由器A设置NAPT，同时在内网2下配置静态NAT，确保PC0可以访问到Server服务器。</p>
-<h4 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h4><h5 id="第一步：给PC机和服务器设置IP地址（略）"><a href="#第一步：给PC机和服务器设置IP地址（略）" class="headerlink" title="第一步：给PC机和服务器设置IP地址（略）"></a>第一步：给PC机和服务器设置IP地址（略）</h5><h5 id="第二步：给路由器设置IP地址并设置时钟频率"><a href="#第二步：给路由器设置IP地址并设置时钟频率" class="headerlink" title="第二步：给路由器设置IP地址并设置时钟频率"></a>第二步：给路由器设置IP地址并设置时钟频率</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
-
-Router(config)#
-
-Router(config)#interface fastEthernet 0/1
-
-Router(config-if)#no shutdown
-
-Router(config-if)#ip address 192.168.1.254 255.255.255.0
-
-Router(config-if)#exit
-
-Router(config)#interface serial 1/0
-
-Router(config-if)#no shutdown
-
-Router(config-if)#clock rate 64000
-
-Router(config-if)#ip address 123.56.220.1 255.0.0.0
-
-Router(config-if)#exit
-
-Router(config)#
-
-路由器B：
-
-Router(config)#
-
-Router(config)#interface fastEthernet 0/1
-
-Router(config-if)#no shutdown
-
-Router(config-if)#ip address 172.168.168.254 255.255.255.0
-
-Router(config-if)#exit
-
-Router(config)#interface serial 1/0
-
-Router(config-if)#no shutdown
-
-Router(config-if)#ip address 123.56.220.2 255.0.0.0
-
-Router(config-if)#exit
-
-Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="第三步：给路由器配置静态路由"><a href="#第三步：给路由器配置静态路由" class="headerlink" title="第三步：给路由器配置静态路由"></a>第三步：给路由器配置静态路由</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
-
-Router(config)#
-
-Router(config)#ip route 172.168.168.0 255.255.255.0 123.56.220.2
-
-Router(config)#
-
-路由器B：
-
-Router(config)#
-
-Router(config)#ip route 192.168.1.0 255.255.255.0 123.56.220.1
-
-Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="第四步：测试PC机和服务器连通性"><a href="#第四步：测试PC机和服务器连通性" class="headerlink" title="第四步：测试PC机和服务器连通性"></a>第四步：测试PC机和服务器连通性</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">测试方法：用PC机Ping服务器测试连通性。
-
-PC&gt;ping 172.168.168.168
-
-Pinging 172.168.168.168 with 32 bytes of data: 
-
-Reply from 172.168.168.168: bytes=32 time=2ms TTL=126
-
-Reply from 172.168.168.168: bytes=32 time=12ms TTL=126
-
-Reply from 172.168.168.168: bytes=32 time=16ms TTL=126
-
-Reply from 172.168.168.168: bytes=32 time=13ms TTL=126
-
-Ping statistics for 172.168.168.168:
-
-Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
-
-Approximate round trip times in milli-seconds:
-
-Minimum = 2ms, Maximum = 16ms, Average = 10ms
-
-PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>当出现以上结果时，则表示PC机和服务器连通。</p>
-<p>如果没有出现以上结果，表明PC机和服务器不连通，应检查IP地址或线缆是否配置正确、接口是否启用。</p>
-<h5 id="第五步：配置路由器内部端口和外部端口"><a href="#第五步：配置路由器内部端口和外部端口" class="headerlink" title="第五步：配置路由器内部端口和外部端口"></a>第五步：配置路由器内部端口和外部端口</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
-
-Router(config)#
-
-Router(config)#interface fastEthernet 0/1
-
-Router(config-if)#ip nat inside
-
-Router(config-if)#exit
-
-Router(config)#interface serial 1/0
-
-Router(config-if)#ip nat outside
-
-Router(config-if)#exit
-
-Router(config)#
-
-路由器B：
-
-Router(config)#
-
-Router(config)#interface fastEthernet 0/1
-
-Router(config-if)#ip nat inside
-
-Router(config-if)#exit
-
-Router(config)#interface serial 1/0
-
-Router(config-if)#ip nat outside
-
-Router(config-if)#exit
-
-Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="第六步：配置内网1端口复用"><a href="#第六步：配置内网1端口复用" class="headerlink" title="第六步：配置内网1端口复用"></a>第六步：配置内网1端口复用</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
-
-Router(config)#
-
-Router(config)#access-list 1 permit 192.168.1.0 0.0.0.255
-
-Router(config)#ip nat inside source list 1 interface serial 1/0 overload 
-
-Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="第七步：配置内网2静态NAT"><a href="#第七步：配置内网2静态NAT" class="headerlink" title="第七步：配置内网2静态NAT"></a>第七步：配置内网2静态NAT</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器B：
-
-Router(config)#
-
-Router(config)#ip nat inside source static 172.168.168.168 123.56.220.3
-
-Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h5 id="第八步：测试PC机和服务器静态转换的连通性"><a href="#第八步：测试PC机和服务器静态转换的连通性" class="headerlink" title="第八步：测试PC机和服务器静态转换的连通性"></a>第八步：测试PC机和服务器静态转换的连通性</h5><p>测试方法：PC1 Ping 服务器NAT转换的IP地址</p>
-<pre class="line-numbers language-router" data-language="router"><code class="language-router">PC&gt;ping 123.56.220.3
-
-Pinging 123.56.220.3 with 32 bytes of data: 
-
-Reply from 123.56.220.3: bytes=32 time=11ms TTL=126
-
-Reply from 123.56.220.3: bytes=32 time=6ms TTL=126
-
-Reply from 123.56.220.3: bytes=32 time=5ms TTL=126
-
-Reply from 123.56.220.3: bytes=32 time=11ms TTL=126
-
-Ping statistics for 123.56.220.3:
-
-Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
-
-Approximate round trip times in milli-seconds:
-
-Minimum = 5ms, Maximum = 11ms, Average = 8ms
-
-PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>当出现以上结果时，则表示PC机和服务器连通，本实验完成。</p>
-<p>如果没有出现以上结果，表明PC机和服务器不连通，应检查配置是否正确。</p>
-<h4 id="六、相关命令详解"><a href="#六、相关命令详解" class="headerlink" title="六、相关命令详解"></a>六、相关命令详解</h4><h5 id="1、ip-nat-inside-source"><a href="#1、ip-nat-inside-source" class="headerlink" title="1、ip nat inside source"></a>1、ip nat inside source</h5><p>命令：ip nat inside source { list|static }</p>
-<p>功能：使用ip nat inside source全局配置命令，开启内部源地址的 NAT。</p>
-<p>命令模式：全局配置模式</p>
-<p>使用指南：这个命令有两种形式：动态的和静态的地址转换。带有访问列表的格式建立动态转换。来自和标准访问列表相匹配的地址的报文，将用指定的池中分配的全局地址来进行地址翻译，这个地址池是用ip nat pool命令所指定的。</p>
-<h5 id="2、ip-nat"><a href="#2、ip-nat" class="headerlink" title="2、ip nat"></a>2、ip nat</h5><p>命令：ip nat { inside|outside }</p>
-<p>功能：指定网络连接的网络类型。</p>
-<p>命令模式：接口配置模式</p>
-<p>使用指南：Inside接口连接的一般是LAN网络，Outside连接的一般是Intetnet网络。</p>
+                <h2 id="Hexo-matery-banner添加气泡效果"><a href="#Hexo-matery-banner添加气泡效果" class="headerlink" title="Hexo-matery banner添加气泡效果"></a>Hexo-matery banner添加气泡效果</h2><h3 id="1-创建需要的JS"><a href="#1-创建需要的JS" class="headerlink" title="1. 创建需要的JS"></a>1. 创建需要的JS</h3><p>在自己博客根目录下找到<code>themes/matery/source/libs/others</code>这个文件夹，在文件中创建<code> bubble.js</code>文件，填写如下内容：</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 上升的气泡</span>
+<span class="token keyword">function</span> <span class="token function">bubble</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.carousel-item, .pd-header'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">circleMagic</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    <span class="token literal-property property">radius</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">density</span><span class="token operator">:</span> <span class="token number">.2</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token string">'rgba(255,255,255,.4)'</span><span class="token punctuation">,</span>
+    <span class="token literal-property property">clearOffset</span><span class="token operator">:</span> <span class="token number">0.99</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span> <span class="token operator">!</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">p</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  p<span class="token punctuation">.</span>fn<span class="token punctuation">.</span><span class="token function-variable function">circleMagic</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token parameter">t</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> o<span class="token punctuation">,</span> a<span class="token punctuation">,</span> n<span class="token punctuation">,</span> r<span class="token punctuation">,</span> e <span class="token operator">=</span> <span class="token operator">!</span><span class="token number">0</span><span class="token punctuation">,</span>
+      i <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      d <span class="token operator">=</span> p<span class="token punctuation">.</span><span class="token function">extend</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        <span class="token literal-property property">color</span><span class="token operator">:</span> <span class="token string">"rgba(255,0,0,.5)"</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">radius</span><span class="token operator">:</span> <span class="token number">10</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">density</span><span class="token operator">:</span> <span class="token number">.3</span><span class="token punctuation">,</span>
+        <span class="token literal-property property">clearOffset</span><span class="token operator">:</span> <span class="token number">.2</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> t<span class="token punctuation">)</span><span class="token punctuation">,</span>
+      l <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token keyword">function</span> <span class="token function">c</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      e <span class="token operator">=</span> <span class="token operator">!</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span>body<span class="token punctuation">.</span>scrollTop <span class="token operator">&gt;</span> a<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">function</span> <span class="token function">s</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      o <span class="token operator">=</span> l<span class="token punctuation">.</span>clientWidth<span class="token punctuation">,</span> a <span class="token operator">=</span> l<span class="token punctuation">.</span>clientHeight<span class="token punctuation">,</span> l<span class="token punctuation">.</span>height <span class="token operator">=</span> a <span class="token operator">+</span> <span class="token string">"px"</span><span class="token punctuation">,</span> n<span class="token punctuation">.</span>width <span class="token operator">=</span> o<span class="token punctuation">,</span> n<span class="token punctuation">.</span>height <span class="token operator">=</span> a
+    <span class="token punctuation">}</span>
+    <span class="token keyword">function</span> <span class="token function">h</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> t <span class="token keyword">in</span> r<span class="token punctuation">.</span><span class="token function">clearRect</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> o<span class="token punctuation">,</span> a<span class="token punctuation">)</span><span class="token punctuation">,</span> i<span class="token punctuation">)</span> i<span class="token punctuation">[</span>t<span class="token punctuation">]</span><span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">requestAnimationFrame</span><span class="token punctuation">(</span>h<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">function</span> <span class="token function">f</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">var</span> t <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">;</span>
+      <span class="token keyword">function</span> <span class="token function">e</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        t<span class="token punctuation">.</span>pos<span class="token punctuation">.</span>x <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> o<span class="token punctuation">,</span> t<span class="token punctuation">.</span>pos<span class="token punctuation">.</span>y <span class="token operator">=</span> a <span class="token operator">+</span> <span class="token number">100</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> t<span class="token punctuation">.</span>alpha <span class="token operator">=</span> <span class="token number">.1</span> <span class="token operator">+</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">*</span> d<span class="token punctuation">.</span>clearOffset<span class="token punctuation">,</span>
+          t<span class="token punctuation">.</span>scale <span class="token operator">=</span> <span class="token number">.1</span> <span class="token operator">+</span> <span class="token number">.3</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> t<span class="token punctuation">.</span>speed <span class="token operator">=</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"random"</span> <span class="token operator">===</span> d<span class="token punctuation">.</span>color <span class="token operator">?</span> t<span class="token punctuation">.</span>color <span class="token operator">=</span>
+            <span class="token string">"rgba("</span> <span class="token operator">+</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token number">255</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">", "</span> <span class="token operator">+</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span><span class="token number">0</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">", "</span> <span class="token operator">+</span> Math<span class="token punctuation">.</span><span class="token function">floor</span><span class="token punctuation">(</span>
+              <span class="token number">0</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">", "</span> <span class="token operator">+</span> Math<span class="token punctuation">.</span><span class="token function">random</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toPrecision</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token string">")"</span> <span class="token operator">:</span> t<span class="token punctuation">.</span>color <span class="token operator">=</span> d<span class="token punctuation">.</span>color
+      <span class="token punctuation">}</span>
+      t<span class="token punctuation">.</span>pos <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token function">e</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function-variable function">draw</span> <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        t<span class="token punctuation">.</span>alpha <span class="token operator">&lt;=</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token function">e</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> t<span class="token punctuation">.</span>pos<span class="token punctuation">.</span>y <span class="token operator">-=</span> t<span class="token punctuation">.</span>speed<span class="token punctuation">,</span> t<span class="token punctuation">.</span>alpha <span class="token operator">-=</span> <span class="token number">5e-4</span><span class="token punctuation">,</span> r<span class="token punctuation">.</span><span class="token function">beginPath</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> r<span class="token punctuation">.</span><span class="token function">arc</span><span class="token punctuation">(</span>t<span class="token punctuation">.</span>pos<span class="token punctuation">.</span>x<span class="token punctuation">,</span> t<span class="token punctuation">.</span>pos<span class="token punctuation">.</span>y<span class="token punctuation">,</span>
+          t<span class="token punctuation">.</span>scale <span class="token operator">*</span> d<span class="token punctuation">.</span>radius<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token operator">*</span> Math<span class="token punctuation">.</span><span class="token constant">PI</span><span class="token punctuation">,</span> <span class="token operator">!</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> r<span class="token punctuation">.</span>fillStyle <span class="token operator">=</span> t<span class="token punctuation">.</span>color<span class="token punctuation">,</span> r<span class="token punctuation">.</span><span class="token function">fill</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> r<span class="token punctuation">.</span><span class="token function">closePath</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span> <span class="token operator">!</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      o <span class="token operator">=</span> l<span class="token punctuation">.</span>offsetWidth<span class="token punctuation">,</span> a <span class="token operator">=</span> l<span class="token punctuation">.</span>offsetHeight<span class="token punctuation">,</span>
+        <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+          <span class="token keyword">var</span> t <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">createElement</span><span class="token punctuation">(</span><span class="token string">"canvas"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          t<span class="token punctuation">.</span>id <span class="token operator">=</span> <span class="token string">"canvas"</span><span class="token punctuation">;</span>
+          t<span class="token punctuation">.</span>style<span class="token punctuation">.</span>top <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+          t<span class="token punctuation">.</span>style<span class="token punctuation">.</span>left <span class="token operator">=</span> <span class="token number">0</span>
+          t<span class="token punctuation">.</span>style<span class="token punctuation">.</span>right <span class="token operator">=</span> <span class="token number">0</span>
+          t<span class="token punctuation">.</span>style<span class="token punctuation">.</span>zIndex <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+          t<span class="token punctuation">.</span>style<span class="token punctuation">.</span>position <span class="token operator">=</span> <span class="token string">"absolute"</span><span class="token punctuation">;</span>
+
+          l<span class="token punctuation">.</span><span class="token function">appendChild</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span><span class="token punctuation">;</span>
+          t<span class="token punctuation">.</span>parentElement<span class="token punctuation">.</span>style<span class="token punctuation">.</span>overflow <span class="token operator">=</span> <span class="token string">"hidden"</span>
+        <span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>n <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"canvas"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>width <span class="token operator">=</span> o<span class="token punctuation">,</span> n<span class="token punctuation">.</span>height <span class="token operator">=</span> a<span class="token punctuation">,</span> r <span class="token operator">=</span> n<span class="token punctuation">.</span><span class="token function">getContext</span><span class="token punctuation">(</span><span class="token string">"2d"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> t <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> t <span class="token operator">&lt;</span> o <span class="token operator">*</span> d<span class="token punctuation">.</span>density<span class="token punctuation">;</span> t<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> e <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">f</span><span class="token punctuation">;</span>
+        i<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+      <span class="token function">h</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"scroll"</span><span class="token punctuation">,</span> c<span class="token punctuation">,</span> <span class="token operator">!</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> window<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"resize"</span><span class="token punctuation">,</span> s<span class="token punctuation">,</span> <span class="token operator">!</span><span class="token number">1</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">(</span>jQuery<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token function">bubble</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="2-config-yml配置"><a href="#2-config-yml配置" class="headerlink" title="2. _config.yml配置"></a>2. _config.yml配置</h3><p>上文创建好的<code>js</code>文件需要在主题目录下的<code>_config.yml</code>文件中<code>libs:</code>下的<code>js</code>处引用：</p>
+<pre class="line-numbers language-YML" data-language="YML"><code class="language-YML">bubble: /libs/others/bubble.js<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>并且需要在<code>_config.yml</code>文件中添加如下代码，来控制气泡特效的的打开和关闭。</p>
+<pre class="line-numbers language-YML" data-language="YML"><code class="language-YML"># banner 气泡
+bubble:
+  enable: true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="3-引用"><a href="#3-引用" class="headerlink" title="3. 引用"></a>3. 引用</h3><p>找到博客根目录下<code>themes/matery/layout/layout.ejs</code>这个文件，打开后在文件中<code>body</code>标签中添加如下代码：</p>
+<pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token comment">&lt;!-- 冒泡 --&gt;</span>
+<span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>bubble<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> </span><span class="token delimiter punctuation">%&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+        <span class="token comment">// 只在桌面版网页启用特效</span>
+        <span class="token keyword">var</span> windowWidth <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span>window<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">width</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        document<span class="token punctuation">.</span><span class="token function">write</span><span class="token punctuation">(</span>
+            <span class="token string">'&lt;script type="text/javascript" src="<span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> theme<span class="token punctuation">.</span>jsDelivr<span class="token punctuation">.</span>url </span><span class="token delimiter punctuation">%&gt;</span></span><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> <span class="token function">url_for</span><span class="token punctuation">(</span>theme<span class="token punctuation">.</span>libs<span class="token punctuation">.</span>js<span class="token punctuation">.</span>bubble<span class="token punctuation">)</span> </span><span class="token delimiter punctuation">%&gt;</span></span>"&gt;&lt;\/script&gt;'</span>
+        <span class="token punctuation">)</span><span class="token punctuation">;</span>
+    </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token punctuation">}</span> </span><span class="token delimiter punctuation">%&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>到此你已经开启了气泡特效，重新生成下博客文件便可以看到，如果后面你不想用气泡特效，你可以在主题目录下的<code>_config.yml</code>文件中将<code># banner 气泡</code>处的<code>enable</code>值改成<code>false</code>即可。</p>
 
                 
             </div>
@@ -1241,7 +1095,7 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Moon</a>
+                    <a href="/about" rel="external nofollow noreferrer">月夕</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -1251,7 +1105,7 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://Monthpity.github.io/2023/09/11/nat-di-zhi-zhuan-huan-shi-yan/">https://Monthpity.github.io/2023/09/11/nat-di-zhi-zhuan-huan-shi-yan/</a>
+                    <a href="https://Monthpity.github.io/2024/01/12/hexo-matery-banner-qi-pao/">https://Monthpity.github.io/2024/01/12/hexo-matery-banner-qi-pao/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1264,7 +1118,7 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Moon</a>
+                    <a href="/about" target="_blank">月夕</a>
                     !
                 </span>
             </div>
@@ -1289,8 +1143,8 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/router/">
-                                    <span class="chip bg-color">router</span>
+                                <a href="/tags/optimize/">
+                                    <span class="chip bg-color">optimize</span>
                                 </a>
                             
                         </div>
@@ -1636,16 +1490,17 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/09/15/lu-you-ppp-shi-yan/">
+                <a href="/2024/01/12/hexo-matery-banner-qi-pao/">
                     <div class="card-image">
                         
-                        <img src="https://pic.imgdb.cn/item/65043846661c6c8e54973bf0.jpg" class="responsive-img" alt="路由PPP实验">
+                        <img src="https://pic.imgdb.cn/item/65a0fcef871b83018af6fda9.png" class="responsive-img" alt="hexo-matery-banner气泡">
                         
-                        <span class="card-title">路由PPP实验</span>
+                        <span class="card-title">hexo-matery-banner气泡</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1655,26 +1510,27 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-09-15
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-12
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/" class="post-category">
-                                    路由实验
+                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/" class="post-category">
+                                    Hexo-matery主题优化
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/router/">
-                        <span class="chip bg-color">router</span>
+                    <a href="/tags/optimize/">
+                        <span class="chip bg-color">optimize</span>
                     </a>
                     
                 </div>
@@ -1688,12 +1544,12 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/09/10/ospf-ren-zheng-shi-yan/">
+                <a href="/2024/01/10/hexo-matery-yu-jia-zai-dong-hua/">
                     <div class="card-image">
                         
-                        <img src="https://pic.imgdb.cn/item/64fd2f7b661c6c8e542265e0.jpg" class="responsive-img" alt="OSPF认证实验">
+                        <img src="https://pic.imgdb.cn/item/659e5f6b871b83018a1ccb06.png" class="responsive-img" alt="hexo-matery-预加载动画">
                         
-                        <span class="card-title">OSPF认证实验</span>
+                        <span class="card-title">hexo-matery-预加载动画</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1704,14 +1560,14 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-10
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-10
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/" class="post-category">
-                                    路由实验
+                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/" class="post-category">
+                                    Hexo-matery主题优化
                                 </a>
                             
                             
@@ -1721,8 +1577,8 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/router/">
-                        <span class="chip bg-color">router</span>
+                    <a href="/tags/optimize/">
+                        <span class="chip bg-color">optimize</span>
                     </a>
                     
                 </div>
