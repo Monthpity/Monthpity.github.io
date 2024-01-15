@@ -980,14 +980,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-14
+                    2024-01-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    859
+                    948
                 </div>
                 
 
@@ -1176,6 +1176,16 @@
 <h3 id="4-重新生成页面"><a href="#4-重新生成页面" class="headerlink" title="4. 重新生成页面"></a>4. 重新生成页面</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>原文是在：<a target="_blank" rel="noopener" href="https://zhangxiaocai.cn/posts/7496029d.html#searchModal">斯莫笔记网站</a>，操作没有说的很清楚就在写了一便。</p>
+<h3 id="5-图片添加加载动画"><a href="#5-图片添加加载动画" class="headerlink" title="5. 图片添加加载动画"></a>5. 图片添加加载动画</h3><p>安装</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-lazyload-image <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>之后在站点配置文件<code>_config.yml</code>下添加下面的代码，同时需要在<code>medias</code>文件夹下放一张<code>loading.gif</code>的图片。</p>
+<pre class="line-numbers language-YML" data-language="YML"><code class="language-YML"># 图片懒加载
+lazyload:
+  enable: true # 是否开启图片懒加载
+  onlypost: false # 是否只对文章的图片做懒加载
+  loadingImg: /medias/loading.gif<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
