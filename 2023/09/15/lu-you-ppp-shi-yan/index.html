@@ -218,7 +218,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">Moonのblog</span>
                 </a>
@@ -459,7 +459,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">Moonのblog</div>
         <div class="logo-desc">
@@ -1027,7 +1027,7 @@
 <p>PPP协议的验证分为两种：一种是PAP，一种是CHAP。相对来说PAP的认证方式安全性没有CHAP高。PAP在传输Password是明文的，而CHAP在传输过程中不传输密码，取代密码的是hash（哈希值）。PAP认证是通过两次握手实现的，而CHAP则是通过3次握手实现的。</p>
 <p>本实验以CHAP为例。</p>
 <h4 id="三、实验拓扑"><a href="#三、实验拓扑" class="headerlink" title="三、实验拓扑"></a>三、实验拓扑</h4><p>实验拓扑如下，实验设备：2811路由器两台、PC机两台、串口线一根、交叉线两根。</p>
-<p><img src="https://pic.imgdb.cn/item/650437cc661c6c8e549701fd.png" alt="拓扑图"></p>
+<p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/650437cc661c6c8e549701fd.png" alt="拓扑图"></p>
 <h4 id="四、实验要求"><a href="#四、实验要求" class="headerlink" title="四、实验要求"></a>四、实验要求</h4><p>在路由器A和路由器B配置CHAP实验。</p>
 <p>PC1的IP地址为192.168.1.1/24，网关为192.168.1.254。</p>
 <p>PC1的IP地址为192.168.3.1/24，网关为192.168.3.254。</p>
@@ -1332,10 +1332,10 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/medias/loading.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/medias/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1648,7 +1648,7 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                 <a href="/2023/12/28/xin-wang-luo-ying-xiao-fu-xi/">
                     <div class="card-image">
                         
-                        <img src="https://pic.imgdb.cn/item/658d417bc458853aefddc65d.png" class="responsive-img" alt="新网络营销复习">
+                        <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/658d417bc458853aefddc65d.png" class="responsive-img" alt="新网络营销复习">
                         
                         <span class="card-title">新网络营销复习</span>
                     </div>
@@ -1696,7 +1696,7 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                 <a href="/2023/09/11/nat-di-zhi-zhuan-huan-shi-yan/">
                     <div class="card-image">
                         
-                        <img src="https://pic.imgdb.cn/item/64fe75b5661c6c8e545e36b5.jpg" class="responsive-img" alt="NAT地址转换实验">
+                        <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/64fe75b5661c6c8e545e36b5.jpg" class="responsive-img" alt="NAT地址转换实验">
                         
                         <span class="card-title">NAT地址转换实验</span>
                     </div>
@@ -2212,6 +2212,19 @@ $(function () {
     </script>
 
 
-</body>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 
 </html>

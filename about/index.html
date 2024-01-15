@@ -210,7 +210,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">Moonのblog</span>
                 </a>
@@ -451,7 +451,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">Moonのblog</div>
         <div class="logo-desc">
@@ -1197,7 +1197,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"路由实验","value":5},{"name":"Hexo-matery主题优化","value":3},{"name":"复习文档","value":4}],
+                data: [{"name":"Hexo-matery主题优化","value":3},{"name":"路由实验","value":5},{"name":"复习文档","value":4}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -1404,12 +1404,6 @@
         <div class="tag-chips center-align">
             
             
-            <a href="/tags/router/">
-                <span class="chip center-align waves-effect waves-light chip-default">router</span>
-            </a>
-            
-            
-            
             <a href="/tags/optimize/">
                 <span class="chip center-align waves-effect waves-light chip-default">optimize</span>
             </a>
@@ -1418,6 +1412,12 @@
             
             <a href="/tags/Hexo/">
                 <span class="chip center-align waves-effect waves-light chip-default">Hexo</span>
+            </a>
+            
+            
+            
+            <a href="/tags/router/">
+                <span class="chip center-align waves-effect waves-light chip-default">router</span>
             </a>
             
             
@@ -1446,55 +1446,55 @@
         
         <div class="photo col s12 m6 l4" data-aos="fade-up">
             <div class="img-item" data-src="/medias/featureimages/0.jpg">
-                <img src="/medias/featureimages/0.jpg" class="responsive-img">
+                <img src="/medias/loading.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img">
             </div>
         </div>
         
         <div class="photo col s12 m6 l4" data-aos="fade-up">
             <div class="img-item" data-src="/medias/featureimages/1.jpg">
-                <img src="/medias/featureimages/1.jpg" class="responsive-img">
+                <img src="/medias/loading.gif" data-original="/medias/featureimages/1.jpg" class="responsive-img">
             </div>
         </div>
         
         <div class="photo col s12 m6 l4" data-aos="fade-up">
             <div class="img-item" data-src="/medias/featureimages/2.jpg">
-                <img src="/medias/featureimages/2.jpg" class="responsive-img">
+                <img src="/medias/loading.gif" data-original="/medias/featureimages/2.jpg" class="responsive-img">
             </div>
         </div>
         
         <div class="photo col s12 m6 l4" data-aos="fade-up">
             <div class="img-item" data-src="/medias/featureimages/3.jpg">
-                <img src="/medias/featureimages/3.jpg" class="responsive-img">
+                <img src="/medias/loading.gif" data-original="/medias/featureimages/3.jpg" class="responsive-img">
             </div>
         </div>
         
         <div class="photo col s12 m6 l4" data-aos="fade-up">
             <div class="img-item" data-src="/medias/featureimages/4.jpg">
-                <img src="/medias/featureimages/4.jpg" class="responsive-img">
+                <img src="/medias/loading.gif" data-original="/medias/featureimages/4.jpg" class="responsive-img">
             </div>
         </div>
         
         <div class="photo col s12 m6 l4" data-aos="fade-up">
             <div class="img-item" data-src="/medias/featureimages/5.jpg">
-                <img src="/medias/featureimages/5.jpg" class="responsive-img">
+                <img src="/medias/loading.gif" data-original="/medias/featureimages/5.jpg" class="responsive-img">
             </div>
         </div>
         
         <div class="photo col s12 m6 l4" data-aos="fade-up">
             <div class="img-item" data-src="/medias/featureimages/6.jpg">
-                <img src="/medias/featureimages/6.jpg" class="responsive-img">
+                <img src="/medias/loading.gif" data-original="/medias/featureimages/6.jpg" class="responsive-img">
             </div>
         </div>
         
         <div class="photo col s12 m6 l4" data-aos="fade-up">
             <div class="img-item" data-src="/medias/featureimages/7.jpg">
-                <img src="/medias/featureimages/7.jpg" class="responsive-img">
+                <img src="/medias/loading.gif" data-original="/medias/featureimages/7.jpg" class="responsive-img">
             </div>
         </div>
         
         <div class="photo col s12 m6 l4" data-aos="fade-up">
             <div class="img-item" data-src="/medias/featureimages/8.jpg">
-                <img src="/medias/featureimages/8.jpg" class="responsive-img">
+                <img src="/medias/loading.gif" data-original="/medias/featureimages/8.jpg" class="responsive-img">
             </div>
         </div>
         
@@ -1881,6 +1881,19 @@ $(function () {
     </script>
 
 
-</body>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 
 </html>

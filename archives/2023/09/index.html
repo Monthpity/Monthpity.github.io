@@ -210,7 +210,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">Moonのblog</span>
                 </a>
@@ -451,7 +451,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">Moonのblog</div>
         <div class="logo-desc">
@@ -1085,7 +1085,7 @@
                         <a href="/2023/09/15/lu-you-ppp-shi-yan/">
                             <div class="card-image">
                                 
-                                <img src="https://pic.imgdb.cn/item/65043846661c6c8e54973bf0.jpg" class="responsive-img" alt="路由PPP实验">
+                                <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65043846661c6c8e54973bf0.jpg" class="responsive-img" alt="路由PPP实验">
                                 
                                 <span class="card-title">路由PPP实验</span>
                             </div>
@@ -1151,7 +1151,7 @@
                         <a href="/2023/09/11/nat-di-zhi-zhuan-huan-shi-yan/">
                             <div class="card-image">
                                 
-                                <img src="https://pic.imgdb.cn/item/64fe75b5661c6c8e545e36b5.jpg" class="responsive-img" alt="NAT地址转换实验">
+                                <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/64fe75b5661c6c8e545e36b5.jpg" class="responsive-img" alt="NAT地址转换实验">
                                 
                                 <span class="card-title">NAT地址转换实验</span>
                             </div>
@@ -1218,7 +1218,7 @@
                         <a href="/2023/09/10/ospf-ren-zheng-shi-yan/">
                             <div class="card-image">
                                 
-                                <img src="https://pic.imgdb.cn/item/64fd2f7b661c6c8e542265e0.jpg" class="responsive-img" alt="OSPF认证实验">
+                                <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/64fd2f7b661c6c8e542265e0.jpg" class="responsive-img" alt="OSPF认证实验">
                                 
                                 <span class="card-title">OSPF认证实验</span>
                             </div>
@@ -1283,7 +1283,7 @@
                         <a href="/2023/09/09/dhcp-shi-yan/">
                             <div class="card-image">
                                 
-                                <img src="https://pic.imgdb.cn/item/64fbd82a661c6c8e54de9137.png" class="responsive-img" alt="DHCP实验">
+                                <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/64fbd82a661c6c8e54de9137.png" class="responsive-img" alt="DHCP实验">
                                 
                                 <span class="card-title">DHCP实验</span>
                             </div>
@@ -1349,7 +1349,7 @@
                         <a href="/2023/09/09/rip-lu-you-shi-yan/">
                             <div class="card-image">
                                 
-                                <img src="https://pic.imgdb.cn/item/64fbbe2d661c6c8e54d9722a.png" class="responsive-img" alt="RIP路由实验">
+                                <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/64fbbe2d661c6c8e54d9722a.png" class="responsive-img" alt="RIP路由实验">
                                 
                                 <span class="card-title">RIP路由实验</span>
                             </div>
@@ -1760,6 +1760,19 @@ $(function () {
     </script>
 
 
-</body>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 
 </html>

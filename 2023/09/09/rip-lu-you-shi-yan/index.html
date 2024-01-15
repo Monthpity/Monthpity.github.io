@@ -216,7 +216,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">Moonのblog</span>
                 </a>
@@ -457,7 +457,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">Moonのblog</div>
         <div class="logo-desc">
@@ -1022,7 +1022,7 @@
 <h4 id="二、应用环境"><a href="#二、应用环境" class="headerlink" title="二、应用环境"></a>二、应用环境</h4><p>当网络拓扑结构十分复杂时，手工配置静态路由工作量大而且容易出现错误，这时就可以使用动态路由协议，动态路由是通过相互连接的路由器之间彼此交换信息，按照一定算法进行优化。这些路由信息在一定时间间隙里会不断更新，以适应网络的不断变化，随时获得最优寻径效果。</p>
 <p>当两台路由器连接时，为了保证每台路由器上所连接的网段可以和另一台路由器上连接的网段互相通信，使用RIP协议可以动态学习路由。</p>
 <h4 id="三、实验设备"><a href="#三、实验设备" class="headerlink" title="三、实验设备"></a>三、实验设备</h4><p>实验拓扑如下，实验设备：2811路由器三台、PC机两台、交叉线三根、串口线一根。</p>
-<p><img src="https://pic.imgdb.cn/item/64fbc7fc661c6c8e54db720d.png" alt="拓扑图"></p>
+<p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/64fbc7fc661c6c8e54db720d.png" alt="拓扑图"></p>
 <h4 id="四、实验要求"><a href="#四、实验要求" class="headerlink" title="四、实验要求"></a>四、实验要求</h4><p>实验之前：路由器使用2811型号，实验设备需要添加同异步网络模块，打开路由器面板，在Physical选项里选择NM-4A/S或者NM-8A/S,关闭路由器，拖动模块添加并开启路由器。</p>
 <p>未配置RIP路由之前：PC之间不能通信。</p>
 <p>配置RIP路由之后：PC机之间可以互相通信。</p>
@@ -1251,10 +1251,10 @@ Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/medias/loading.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/medias/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1567,7 +1567,7 @@ Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><
                 <a href="/2023/09/09/dhcp-shi-yan/">
                     <div class="card-image">
                         
-                        <img src="https://pic.imgdb.cn/item/64fbd82a661c6c8e54de9137.png" class="responsive-img" alt="DHCP实验">
+                        <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/64fbd82a661c6c8e54de9137.png" class="responsive-img" alt="DHCP实验">
                         
                         <span class="card-title">DHCP实验</span>
                     </div>
@@ -1615,7 +1615,7 @@ Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><
                 <a href="/2023/09/09/rip-lu-you-shi-yan/">
                     <div class="card-image">
                         
-                        <img src="https://pic.imgdb.cn/item/64fbbe2d661c6c8e54d9722a.png" class="responsive-img" alt="RIP路由实验">
+                        <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/64fbbe2d661c6c8e54d9722a.png" class="responsive-img" alt="RIP路由实验">
                         
                         <span class="card-title">RIP路由实验</span>
                     </div>
@@ -2132,6 +2132,19 @@ $(function () {
     </script>
 
 
-</body>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 
 </html>

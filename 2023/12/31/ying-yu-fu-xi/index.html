@@ -211,7 +211,7 @@ The government troops recaptured the city from the rebels the rebels at the cost
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    <img src="/medias/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">Moonのblog</span>
                 </a>
@@ -452,7 +452,7 @@ The government troops recaptured the city from the rebels the rebels at the cost
 
     <div class="mobile-head bg-color">
         
-        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        <img src="/medias/loading.gif" data-original="/medias/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">Moonのblog</div>
         <div class="logo-desc">
@@ -1107,7 +1107,7 @@ The government troops recaptured the city from the rebels the rebels at the cost
 <p>Can you <strong>switch off</strong> (1) from the cares of life and relax? Many people today cannot. They fcel instead that they are <strong>obliged</strong> (2) to be <strong>on the go</strong> (3) all the time. The pace of life seems to grow ever faster. As a result, feclings of stress are common as people struggle to <strong>cope with</strong> (4) what they see as a <strong>shortage</strong> (5) of time. Such widespread feelings are in part caused by the <strong>large guantity of</strong> (6) information that comes <strong>pouring in</strong> (7) on us. “All men,” said Aristotle, “<strong>by nature</strong> (8) desire to know.” But it is no longer possible, as it was in the past, for an individual to master      the whole range of human knowledge. Instead, any individual, no matter how smart he is, can   only command <strong>a fraction of</strong> (9) the total knowledge available. It may be argued that it is <strong>futile</strong> (10) to even attempt to do so. We should learn to set more realistic goals for ourselves if we are to hope to escape from the tyranny of time.</p>
 <p><strong>译文：</strong></p>
 <p>你能从生活的琐事中抽身并放松下来吗？现在很多人都做不到。相反，他们认为自己有义务时时刻刻 与地球保持同步。生活节奏似乎越来越快。因此，当人们努力应对他们所认为的时间短缺时，压力感便屡见不鲜。造成这种普遍感受的部分原因是，大量信息纷至沓来。亚里士多德说：”人的本性都渴望了解”。但是，现在已经不可能像过去那样，让一个人掌握人类的全部知识。相反，任何一个人，无论他多么聪明，都只能掌握全部知识的一小部分。可以说，即使试图这样做也是徒劳的。如果我们希望摆脱时间的暴政，就应该学会为自己设定更现实的目标。</p>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="https://pic.imgdb.cn/item/65914522c458853aefee219a.jpg" alt="随心" title="随心"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65914522c458853aefee219a.jpg" alt="随心" title="随心"></p>
 
                 
             </div>
@@ -1210,10 +1210,10 @@ The government troops recaptured the city from the rebels the rebels at the cost
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/medias/loading.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/medias/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -1526,7 +1526,7 @@ The government troops recaptured the city from the rebels the rebels at the cost
                 <a href="/2024/01/10/hexo-matery-yu-jia-zai-dong-hua/">
                     <div class="card-image">
                         
-                        <img src="https://pic.imgdb.cn/item/659e5f6b871b83018a1ccb06.png" class="responsive-img" alt="Hexo-matery-预加载动画">
+                        <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/659e5f6b871b83018a1ccb06.png" class="responsive-img" alt="Hexo-matery-预加载动画">
                         
                         <span class="card-title">Hexo-matery-预加载动画</span>
                     </div>
@@ -1578,7 +1578,7 @@ The government troops recaptured the city from the rebels the rebels at the cost
                 <a href="/2023/12/30/xin-mei-ti-wang-luo-ying-xiao-fu-xi/">
                     <div class="card-image">
                         
-                        <img src="https://pic.imgdb.cn/item/658ed7d7c458853aef11c990.png" class="responsive-img" alt="新媒体网络营销复习">
+                        <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/658ed7d7c458853aef11c990.png" class="responsive-img" alt="新媒体网络营销复习">
                         
                         <span class="card-title">新媒体网络营销复习</span>
                     </div>
@@ -2094,6 +2094,19 @@ $(function () {
     </script>
 
 
-</body>
+
+        <style>
+            [bg-lazy] {
+                background-image: none !important;
+                background-color: #eee !important;
+            }
+        </style>
+        <script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                preloadRatio: 1,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(r){r.imageLazyLoadSetting.processImages=t;var e=r.imageLazyLoadSetting.isSPA,n=r.imageLazyLoadSetting.preloadRatio||1,c=a();function a(){var t=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")),e=Array.prototype.slice.call(document.querySelectorAll("[bg-lazy]"));return t.concat(e)}function t(){e&&(c=a());for(var t,o=0;o<c.length;o++)0<=(t=(t=c[o]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(r.innerHeight*n||document.documentElement.clientHeight*n)&&function(){var t,e,n,a,i=c[o];e=function(){c=c.filter(function(t){return i!==t}),r.imageLazyLoadSetting.onImageLoaded&&r.imageLazyLoadSetting.onImageLoaded(i)},(t=i).hasAttribute("bg-lazy")?(t.removeAttribute("bg-lazy"),e&&e()):(n=new Image,a=t.getAttribute("data-original"),n.onload=function(){t.src=a,t.removeAttribute("data-original"),e&&e()},t.src!==a&&(n.src=a))}()}function i(){clearTimeout(t.tId),t.tId=setTimeout(t,500)}t(),document.addEventListener("scroll",i),r.addEventListener("resize",i),r.addEventListener("orientationchange",i)}(this);</script></body>
 
 </html>
