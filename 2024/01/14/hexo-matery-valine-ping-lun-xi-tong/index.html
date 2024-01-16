@@ -979,7 +979,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-14
+                    2024-01-16
                 </div>
                 
 
@@ -1021,7 +1021,7 @@
 <h4 id="2-2-绑定API访问域名"><a href="#2-2-绑定API访问域名" class="headerlink" title="2.2 绑定API访问域名"></a>2.2 绑定API访问域名</h4><p>之所以绑定API访问域名需要在后面的配置文件中使用到，进入刚才创建的应用，点左下角「设置—域名绑定」，最上面便是API访问域名，点击绑定域名，自己想一个自己域名下的二级域名填进去就行，点绑定它就会给你显示DNS该如何配置的，这是便进入域名的管理处，我的是Cloudflare，找到DNS解析，填入配置，类型选择CNAME，名称是自己想的二级域名，目标是Leancloud给的跳转域名。填好后保存等3分钟就绑定成功了。</p>
 <p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a1ffe0871b83018a09d930.png" alt="leancloud-2" title="配置API访问域名"></p>
 <h4 id="2-3-配置-config-yml文件"><a href="#2-3-配置-config-yml文件" class="headerlink" title="2.3 配置_config.yml文件"></a>2.3 配置_config.yml文件</h4><p>回到Lancloud创建的应用中，点左下角「设置—应用凭证」，就会看到需要的<code>APP ID</code>和<code>APP key</code>。找到主题目录下的<code>_config.yml</code>文件。打开后将<code>APP ID</code>和<code>APP key</code>以及绑定的API访问域名填在如下内容中：</p>
-<pre class="line-numbers language-none"><code class="language-none">valine:
+<pre class="line-numbers language-YML" data-language="YML"><code class="language-YML">valine:
   enable: true
   appId:  # 必填
   appKey:  # 必填
@@ -1861,9 +1861,6 @@
     <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1171947030" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1171947030" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
-
-
-
 
 
 
