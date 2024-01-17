@@ -4,9 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo-matery-预加载动画, Moonのblog">
-    <meta name="description" content="Hexo-matery 主题添加预加载动画为主题添加一个预加载动画，对与访问速度较慢的blog来说很友好。预加载动画也就不用解释了，从字面意思都能理解是什么，废话不多说直接操作。
-1. 添加一个ejs文件在主题目录下/layout/_par">
+    <meta name="keywords" content="分类: Hexo-matery主题, Moonのblog">
+    <meta name="description" content="Never really desperate, only the lost of the soul">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -18,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo-matery-预加载动画 | Moonのblog</title>
+    <title>分类: Hexo-matery主题 | Moonのblog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -930,934 +929,314 @@
 </script>
 -->
 
-    
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                Moon
+                
+            </div>
 
-
-
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.imgdb.cn/item/659e5f6b871b83018a1ccb06.png')">
-    <div class="container" style="right: 0px;left: 0px;">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="brand">
-                    <h1 class="description center-align post-title">Hexo-matery-预加载动画</h1>
-                </div>
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="/libs/typed/typed.js"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途",
+                            
+                                "Never really desperate, only the lost of the soul",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
             </div>
         </div>
     </div>
 </div>
 
 
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
+<script>
+    
+      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 8) + '.jpg';
+    
+    $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
+
+</script>
 
 
-<main class="post-container content">
+    </div>
+</div>
+
+<main class="content">
 
     
-    <div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
-<div id="artDetail">
+
+<div id="category-cloud" class="container chip-container">
     <div class="card">
-        <div class="card-content article-info">
-            <div class="row tag-cate">
-                <div class="col s7">
-                    
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
-                            </a>
-                        
-                            <a href="/tags/optimize/">
-                                <span class="chip bg-color">optimize</span>
-                            </a>
-                        
-                    </div>
-                    
-                </div>
-                <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98/" class="post-category">
-                                Hexo-matery主题
-                            </a>
-                        
-                    </div>
-                    
-                </div>
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
             </div>
-
-            <div class="post-info">
+            <div class="tag-chips">
                 
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-01-10
-                </div>
                 
-
                 
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-17
-                </div>
+                <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98/" title="Hexo-matery主题: 4">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            style="background-color: #F9EBEA;">Hexo-matery主题
+                        <span class="tag-length">4</span>
+                    </span>
+                </a>
                 
-
                 
-                <div class="info-break-policy">
-                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
-                </div>
+                <a href="/categories/%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/" title="路由实验: 5">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F5EEF8;">路由实验
+                        <span class="tag-length">5</span>
+                    </span>
+                </a>
                 
-
                 
-                <div class="info-break-policy">
-                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
-                </div>
+                <a href="/categories/%E5%A4%8D%E4%B9%A0%E6%96%87%E6%A1%A3/" title="复习文档: 4">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D5F5E3;">复习文档
+                        <span class="tag-length">4</span>
+                    </span>
+                </a>
                 
-
                 
             </div>
         </div>
-        <hr class="clearfix">
-
-        
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.min.css">
-        
-
-        
-
-        <div class="card-content article-card-content">
-            <div id="articleContent">
-                <h2 id="Hexo-matery-主题添加预加载动画"><a href="#Hexo-matery-主题添加预加载动画" class="headerlink" title="Hexo-matery 主题添加预加载动画"></a>Hexo-matery 主题添加预加载动画</h2><p>为主题添加一个预加载动画，对与访问速度较慢的blog来说很友好。预加载动画也就不用解释了，从字面意思都能理解是什么，废话不多说直接操作。</p>
-<h3 id="1-添加一个ejs文件"><a href="#1-添加一个ejs文件" class="headerlink" title="1. 添加一个ejs文件"></a>1. 添加一个ejs文件</h3><p>在主题目录下<code>/layout/_partial/</code>目录下创建一个<code>loading-pages.ejs</code> 的文件，内容如下：</p>
-<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;style type="text/css" lang="css"&gt;
-    #loading-container{
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-height: 100vh;
-        width: 100vw;
-        z-index: 9999;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #FFF;
-        text-align: center;
-        /* loader页面消失采用渐隐的方式*/
-        -webkit-transition: opacity 1s ease;
-        -moz-transition: opacity 1s ease;
-        -o-transition: opacity 1s ease;
-        transition: opacity 1s ease;
-    }
-    .loading-image{
-        width: 120px;
-        height: 50px;
-        transform: translate(-50%);
-    }
-
-    .loading-image div:nth-child(2) {
-        -webkit-animation: pacman-balls 1s linear 0s infinite;
-        animation: pacman-balls 1s linear 0s infinite
-    }
-
-    .loading-image div:nth-child(3) {
-        -webkit-animation: pacman-balls 1s linear .33s infinite;
-        animation: pacman-balls 1s linear .33s infinite
-    }
-
-    .loading-image div:nth-child(4) {
-        -webkit-animation: pacman-balls 1s linear .66s infinite;
-        animation: pacman-balls 1s linear .66s infinite
-    }
-
-    .loading-image div:nth-child(5) {
-        -webkit-animation: pacman-balls 1s linear .99s infinite;
-        animation: pacman-balls 1s linear .99s infinite
-    }
-
-   .loading-image div:first-of-type {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
-        animation: rotate_pacman_half_up .5s 0s infinite;
-    }
-    .loading-image div:nth-child(2) {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
-        animation: rotate_pacman_half_down .5s 0s infinite;
-        margin-top: -50px;
-    }
-    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
-
-    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-
-    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
-
-    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-
-    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
-
-
-    .loading-image div:nth-child(3),
-    .loading-image div:nth-child(4),
-    .loading-image div:nth-child(5),
-    .loading-image div:nth-child(6){
-        background-color: #49b1f5;
-        width: 15px;
-        height: 15px;
-        border-radius: 100%;
-        margin: 2px;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        transform: translateY(-6.25px);
-        top: 25px;
-        left: 100px;
-    }
-    .loading-text{
-        margin-bottom: 20vh;
-        text-align: center;
-        color: #2c3e50;
-        font-size: 2rem;
-        box-sizing: border-box;
-        padding: 0 10px;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    @media only screen and (max-width: 500px) {
-         .loading-text{
-            font-size: 1.5rem;
-         }
-    }
-    .fadeout {
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
-    /* logo出现动画 */
-    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
-    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
- &lt;/style&gt;
- &lt;script&gt;
-(function () {
-    const loaded = function(){
-       setTimeout(function(){
-            const loader = document.getElementById("loading-container");
-            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
-            // document.getElementById("body-wrap").style.display="flex";
-            setTimeout(function(){
-                loader.style.display="none";
-            },2500); 
-        },1000);//强制显示loading page 1s  
-    };
-    loaded();
-})()
-&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="2-主题目录下的ejs文件中添加内容"><a href="#2-主题目录下的ejs文件中添加内容" class="headerlink" title="2. 主题目录下的ejs文件中添加内容"></a>2. 主题目录下的ejs文件中添加内容</h3><p>在主题目录<code>layout</code>下找到<code>layout.ejs</code>这个文件。</p>
-<p>打开后在<code>&lt;body&gt;</code>标签前添加如下内容：</p>
-<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;% if (theme.loadingPages.enable) { %&gt;
-   &lt;%- partial('_partial/loading-pages') %&gt;
-&lt;% } %&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-
-
-<p>在<code>&lt;body&gt;</code>标签后添加如下内容：</p>
-<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;% if (theme.loadingPages.enable) { %&gt;
-    &lt;div id="loading-container"&gt;
-         &lt;p class="loading-text"&gt;嘘~  正在从服务器偷取页面 . . . &lt;/p&gt; 
-         &lt;div class="loading-image"&gt;
-             &lt;div&gt;&lt;/div&gt;
-             &lt;div&gt;&lt;/div&gt;
-             &lt;div&gt;&lt;/div&gt;
-             &lt;div&gt;&lt;/div&gt; 
-             &lt;div&gt;&lt;/div&gt;
-         &lt;/div&gt;
-    &lt;/div&gt;
-&lt;% } %&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h3 id="3-主题目录下-config-yml文件添加开关配置"><a href="#3-主题目录下-config-yml文件添加开关配置" class="headerlink" title="3. 主题目录下_config.yml文件添加开关配置"></a>3. 主题目录下_config.yml文件添加开关配置</h3><p>打开<code>_config.yml</code>文件，添加如下内容：</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">loadingPages</span><span class="token punctuation">:</span>
-  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
-
-<p><code>enable</code> 设置为 <code>true</code> 表示开启加载动画， <code>false</code> 表示关闭加载动画。</p>
-<h3 id="4-重新生成页面"><a href="#4-重新生成页面" class="headerlink" title="4. 重新生成页面"></a>4. 重新生成页面</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>原文是在：<a target="_blank" rel="noopener" href="https://zhangxiaocai.cn/posts/7496029d.html#searchModal">斯莫笔记网站</a>，操作没有说的很清楚就在写了一便。</p>
-<h3 id="5-图片添加加载动画"><a href="#5-图片添加加载动画" class="headerlink" title="5. 图片添加加载动画"></a>5. 图片添加加载动画</h3><p>安装</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-lazyload-image <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-<p>之后在站点配置文件<code>_config.yml</code>下添加下面的代码，同时需要在<code>medias</code>文件夹下放一张<code>loading.gif</code>的图片。</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># 图片懒加载</span>
-<span class="token key atrule">lazyload</span><span class="token punctuation">:</span>
-  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span> <span class="token comment"># 是否开启图片懒加载</span>
-  <span class="token key atrule">onlypost</span><span class="token punctuation">:</span> <span class="token boolean important">false</span> <span class="token comment"># 是否只对文章的图片做懒加载</span>
-  <span class="token key atrule">loadingImg</span><span class="token punctuation">:</span> /medias/loading.gif<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p><strong>优化冲突</strong></p>
-<p>查看大图，发现全部为loading加载图，原因是因为<strong>懒加载插件与其他插件发生了冲突</strong>。</p>
-<p><strong>解决办法：</strong>修改主题文件下的<code>/source/js/matery.js</code>，在108行左右添加以下代码：</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">'img[data-original]'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-    <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"href"</span><span class="token punctuation">,</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"data-original"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<p>加完后如下：</p>
-<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 启用字幕</span>
-   <span class="token literal-property property">subHtmlSelectorRelative</span><span class="token operator">:</span> <span class="token boolean">true</span>
-        <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// 懒加载防止插件冲突</span>
-   <span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">find</span><span class="token punctuation">(</span><span class="token string">'img[data-original]'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">each</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-       <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">parent</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"href"</span><span class="token punctuation">,</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">attr</span><span class="token punctuation">(</span><span class="token string">"data-original"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
- <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment">// progress bar init</span>
-     <span class="token keyword">const</span> progressElement <span class="token operator">=</span> window<span class="token punctuation">.</span>document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'.progress-bar'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span> <span class="token punctuation">(</span>progressElement<span class="token punctuation">)</span> <span class="token punctuation">{</span>
-            <span class="token keyword">new</span> <span class="token class-name">ScrollProgress</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">,</span> y</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
-                progressElement<span class="token punctuation">.</span>style<span class="token punctuation">.</span>width <span class="token operator">=</span> y <span class="token operator">*</span> <span class="token number">100</span> <span class="token operator">+</span> <span class="token string">'%'</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span><span class="token punctuation">;</span>
-    <span class="token function">articleInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.modal'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">modal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-                
-            </div>
-            <hr/>
-
-            
-
-    <div class="reprint" id="reprint-statement">
-        
-            <div class="reprint__author">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-user">
-                        文章作者:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">月夕</a>
-                </span>
-            </div>
-            <div class="reprint__type">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-link">
-                        文章链接:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="https://Monthpity.github.io/2024/01/10/hexo-matery-yu-jia-zai-dong-hua/">https://Monthpity.github.io/2024/01/10/hexo-matery-yu-jia-zai-dong-hua/</a>
-                </span>
-            </div>
-            <div class="reprint__notice">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-copyright">
-                        版权声明:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    本博客所有文章除特別声明外，均采用
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    许可协议。转载请注明来源
-                    <a href="/about" target="_blank">月夕</a>
-                    !
-                </span>
-            </div>
-        
     </div>
-
-    <script async defer>
-      document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
-        M.toast({html: toastHTML})
-      });
-
-      function navToReprintStatement() {
-        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
-      }
-    </script>
+</div>
 
 
+    
 
-            <div class="tag_share" style="display: block;">
-                <div class="post-meta__tag-list" style="display: inline-block;">
-                    
-                        <div class="article-tag">
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2024/01/17/hexo-github-da-jian-ge-ren-bo-ke/">
+                        <div class="card-image tag-image">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
-                                </a>
+                            <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a78b1f871b83018a1e8dfc.png" class="responsive-img" alt="Hexo+Github-搭建个人博客">
                             
-                                <a href="/tags/optimize/">
-                                    <span class="chip bg-color">optimize</span>
-                                </a>
+                            <span class="card-title">Hexo+Github-搭建个人博客</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                GitHub+Hexo 搭建个人博客1. 前言GitHub 是有名的代码托管网站，而它提供了一项服务 GitHub Pages，这个 GitHub Pages 可以将我们托管在 GitHub 上的一个仓库中的 html、css 和 js 代
                             
                         </div>
-                    
-                </div>
-                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-<div id="article-share">
-
-    
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
-    
-
-    
-
-</div>
-
-                </div>
-            </div>
-            
-                <div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/loading.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
-        </div>
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-        <style>
-    .valine-card {
-        margin: 1.5rem auto;
-    }
-
-    .valine-card .card-content {
-        padding: 20px 20px 5px 20px;
-    }
-
-    #vcomments textarea {
-        box-sizing: border-box;
-        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
-    }
-
-    #vcomments p {
-        margin: 2px 2px 10px;
-        font-size: 1.05rem;
-        line-height: 1.78rem;
-    }
-
-    #vcomments blockquote p {
-        text-indent: 0.2rem;
-    }
-
-    #vcomments a {
-        padding: 0 2px;
-        color: #4cbf30;
-        font-weight: 500;
-        text-decoration: none;
-    }
-
-    #vcomments img {
-        max-width: 100%;
-        height: auto;
-        cursor: pointer;
-    }
-
-    #vcomments ol li {
-        list-style-type: decimal;
-    }
-
-    #vcomments ol,
-    ul {
-        display: block;
-        padding-left: 2em;
-        word-spacing: 0.05rem;
-    }
-
-    #vcomments ul li,
-    ol li {
-        display: list-item;
-        line-height: 1.8rem;
-        font-size: 1rem;
-    }
-
-    #vcomments ul li {
-        list-style-type: disc;
-    }
-
-    #vcomments ul ul li {
-        list-style-type: circle;
-    }
-
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-
-    #vcomments table, th, td {
-        border: 0;
-    }
-
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-
-    #vcomments table td {
-        min-width: 80px;
-    }
-
-    #vcomments h1 {
-        font-size: 1.85rem;
-        font-weight: bold;
-        line-height: 2.2rem;
-    }
-
-    #vcomments h2 {
-        font-size: 1.65rem;
-        font-weight: bold;
-        line-height: 1.9rem;
-    }
-
-    #vcomments h3 {
-        font-size: 1.45rem;
-        font-weight: bold;
-        line-height: 1.7rem;
-    }
-
-    #vcomments h4 {
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    #vcomments h5 {
-        font-size: 1.1rem;
-        font-weight: bold;
-        line-height: 1.4rem;
-    }
-
-    #vcomments h6 {
-        font-size: 1rem;
-        line-height: 1.3rem;
-    }
-
-    #vcomments p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-    }
-
-    #vcomments hr {
-        margin: 12px 0;
-        border: 0;
-        border-top: 1px solid #ccc;
-    }
-
-    #vcomments blockquote {
-        margin: 15px 0;
-        border-left: 5px solid #42b983;
-        padding: 1rem 0.8rem 0.3rem 0.8rem;
-        color: #666;
-        background-color: rgba(66, 185, 131, .1);
-    }
-
-    #vcomments pre {
-        font-family: monospace, monospace;
-        padding: 1.2em;
-        margin: .5em 0;
-        background: #272822;
-        overflow: auto;
-        border-radius: 0.3em;
-        tab-size: 4;
-    }
-
-    #vcomments code {
-        font-family: monospace, monospace;
-        padding: 1px 3px;
-        font-size: 0.92rem;
-        color: #e96900;
-        background-color: #f8f8f8;
-        border-radius: 2px;
-    }
-
-    #vcomments pre code {
-        font-family: monospace, monospace;
-        padding: 0;
-        color: #e8eaf6;
-        background-color: #272822;
-    }
-
-    #vcomments pre[class*="language-"] {
-        padding: 1.2em;
-        margin: .5em 0;
-    }
-
-    #vcomments code[class*="language-"],
-    pre[class*="language-"] {
-        color: #e8eaf6;
-    }
-
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-
-    #vcomments b,
-    strong {
-        font-weight: bold;
-    }
-
-    #vcomments dfn {
-        font-style: italic;
-    }
-
-    #vcomments small {
-        font-size: 85%;
-    }
-
-    #vcomments cite {
-        font-style: normal;
-    }
-
-    #vcomments mark {
-        background-color: #fcf8e3;
-        padding: .2em;
-    }
-
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-
-    #vcomments table td {
-        min-width: 80px;
-    }
-
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-</style>
-
-<div class="card valine-card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
-        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
-        <span>评论</span>
-    </div>
-    <div id="vcomments" class="card-content" style="display: grid">
-    </div>
-</div>
-
-<script src="/libs/valine/av-min.js"></script>
-<script src="/libs/valine/Valine.min.js"></script>
-<script>
-    new Valine({
-        el: '#vcomments',
-        appId: 'STX90w4NStqFTOcxBwTp6hhT-MdYXbMMI',
-        appKey: 'ZdHVSGkHmSJ53icdFJHF8nFb',
-        serverURLs: 'https://comment.cmymoon.com/',
-        notify: 'false' === 'true',
-        verify: 'false' === 'true',
-        visitor: 'true' === 'true',
-        avatar: 'mm',
-        pageSize: '10',
-        lang: 'zh-cn',
-        placeholder: 'just so so'
-    });
-</script>
-
-<!--酷Q推送-->
-
-
-    
-
-    
-
-    
-
-    
-
-    
-
-<article id="prenext-posts" class="prev-next articles">
-    <div class="row article-row">
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/2024/01/12/hexo-matery-banner-qi-pao/">
-                    <div class="card-image">
-                        
-                        <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a0fcef871b83018af6fda9.png" class="responsive-img" alt="Hexo-matery-banner气泡">
-                        
-                        <span class="card-title">Hexo-matery-banner气泡</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-01-12
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98/" class="post-category">
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-17
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98/" class="post-category">
                                     Hexo-matery主题
                                 </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/optimize/">
-                        <span class="chip bg-color">optimize</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/12/31/ying-yu-fu-xi/">
-                    <div class="card-image">
-                        
-                        <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/659107dbc458853aef185d32.png" class="responsive-img" alt="英语复习">
-                        
-                        <span class="card-title">英语复习</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-31
+                                
+                                
                             </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%A4%8D%E4%B9%A0%E6%96%87%E6%A1%A3/" class="post-category">
-                                    复习文档
-                                </a>
-                            
-                            
-                        </span>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="card-action article-tags">
+
                     
-                    <a href="/tags/review/">
-                        <span class="chip bg-color">review</span>
-                    </a>
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Hexo/">
+                            <span class="chip bg-color">Hexo</span>
+                        </a>
+                        
+                        <a href="/tags/build/">
+                            <span class="chip bg-color">build</span>
+                        </a>
+                        
+                    </div>
                     
                 </div>
-                
             </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2024/01/14/hexo-matery-valine-ping-lun-xi-tong/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a355a2871b83018a4365f0.png" class="responsive-img" alt="Hexo-matery-valine评论系统">
+                            
+                            <span class="card-title">Hexo-matery-valine评论系统</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Hexo-matery-valine评论系统1. 前言博客系统众多，WordPress，Emlog，Typecho等等，都有自带的评论系统，而静态博客系统如Hexo，Jekyll，Hugo等，都没有自带的评论系统，想要添加评论系统便便需要依
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-14
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98/" class="post-category">
+                                    Hexo-matery主题
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Hexo/">
+                            <span class="chip bg-color">Hexo</span>
+                        </a>
+                        
+                        <a href="/tags/optimize/">
+                            <span class="chip bg-color">optimize</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2024/01/12/hexo-matery-banner-qi-pao/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a0fcef871b83018af6fda9.png" class="responsive-img" alt="Hexo-matery-banner气泡">
+                            
+                            <span class="card-title">Hexo-matery-banner气泡</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Hexo-matery banner添加气泡效果1. 创建需要的JS在自己博客根目录下找到themes/matery/source/libs/others这个文件夹，在文件中创建 bubble.js文件，填写如下内容：
+// 上升的气泡
+f
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-12
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98/" class="post-category">
+                                    Hexo-matery主题
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Hexo/">
+                            <span class="chip bg-color">Hexo</span>
+                        </a>
+                        
+                        <a href="/tags/optimize/">
+                            <span class="chip bg-color">optimize</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2024/01/10/hexo-matery-yu-jia-zai-dong-hua/">
+                        <div class="card-image tag-image">
+                            
+                            <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/659e5f6b871b83018a1ccb06.png" class="responsive-img" alt="Hexo-matery-预加载动画">
+                            
+                            <span class="card-title">Hexo-matery-预加载动画</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                Hexo-matery 主题添加预加载动画为主题添加一个预加载动画，对与访问速度较慢的blog来说很友好。预加载动画也就不用解释了，从字面意思都能理解是什么，废话不多说直接操作。
+1. 添加一个ejs文件在主题目录下/layout/_par
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-10
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98/" class="post-category">
+                                    Hexo-matery主题
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Hexo/">
+                            <span class="chip bg-color">Hexo</span>
+                        </a>
+                        
+                        <a href="/tags/optimize/">
+                            <span class="chip bg-color">optimize</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
         </div>
-        
-    </div>
-</article>
-
-</div>
-
-
-
-<!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-
-
-  <!-- 是否加载使用自带的 prismjs. -->
-  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
-
-
-<!-- 代码语言 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-
-
-<!-- 代码块复制 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-
-
-<!-- 代码块收缩 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
-
-
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-        // 切换TOC目录展开收缩的相关操作.
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        
-    });
-</script>
-
-    
-
+    </article>
 </main>
 
 

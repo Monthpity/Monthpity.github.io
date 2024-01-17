@@ -307,6 +307,15 @@ f">
       </li>
       
       <li>
+        <a target="_blank" rel="noopener" href="https://cmymoon.com/gallery/gallery.html">
+          
+          <i class="fas fa-images" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>画廊</span>
+        </a>
+      </li>
+      
+      <li>
         <a target="_blank" rel="noopener" href="https://cmymoon.com/yuansu.html">
           
           <i class="fas fa-atom" style="margin-top: -20px; zoom: 0.6;"></i>
@@ -458,7 +467,7 @@ f">
         <div class="logo-name">Moonのblog</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            Never really desperate, only the lost of the soul
             
         </div>
     </div>
@@ -549,6 +558,16 @@ f">
 				   <i class="fa fas fa-splotch" style="position: absolute;left:50px" ></i>
 			      
 		          <span>水墨</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://cmymoon.com/gallery/gallery.html " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-images" style="position: absolute;left:50px" ></i>
+			      
+		          <span>画廊</span>
                   </a>
                 </li>
               
@@ -945,12 +964,12 @@ f">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/optimize/">
-                                <span class="chip bg-color">optimize</span>
-                            </a>
-                        
                             <a href="/tags/Hexo/">
                                 <span class="chip bg-color">Hexo</span>
+                            </a>
+                        
+                            <a href="/tags/optimize/">
+                                <span class="chip bg-color">optimize</span>
                             </a>
                         
                     </div>
@@ -961,8 +980,8 @@ f">
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/" class="post-category">
-                                Hexo-matery主题优化
+                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98/" class="post-category">
+                                Hexo-matery主题
                             </a>
                         
                     </div>
@@ -981,7 +1000,7 @@ f">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-14
+                    2024-01-17
                 </div>
                 
 
@@ -1082,12 +1101,12 @@ f">
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="2-config-yml配置"><a href="#2-config-yml配置" class="headerlink" title="2. _config.yml配置"></a>2. _config.yml配置</h3><p>上文创建好的<code>js</code>文件需要在主题目录下的<code>_config.yml</code>文件中<code>libs:</code>下的<code>js</code>处引用：</p>
-<pre class="line-numbers language-YML" data-language="YML"><code class="language-YML">bubble: /libs/others/bubble.js<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">bubble</span><span class="token punctuation">:</span> /libs/others/bubble.js<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>并且需要在<code>_config.yml</code>文件中添加如下代码，来控制气泡特效的的打开和关闭。</p>
-<pre class="line-numbers language-YML" data-language="YML"><code class="language-YML"># banner 气泡
-bubble:
-  enable: true<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># banner 气泡</span>
+<span class="token key atrule">bubble</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <h3 id="3-引用"><a href="#3-引用" class="headerlink" title="3. 引用"></a>3. 引用</h3><p>找到博客根目录下<code>themes/matery/layout/layout.ejs</code>这个文件，打开后在文件中<code>body</code>标签中添加如下代码：</p>
 <pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token comment">&lt;!-- 冒泡 --&gt;</span>
@@ -1166,12 +1185,12 @@ bubble:
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/optimize/">
-                                    <span class="chip bg-color">optimize</span>
-                                </a>
-                            
                                 <a href="/tags/Hexo/">
                                     <span class="chip bg-color">Hexo</span>
+                                </a>
+                            
+                                <a href="/tags/optimize/">
+                                    <span class="chip bg-color">optimize</span>
                                 </a>
                             
                         </div>
@@ -1543,8 +1562,8 @@ bubble:
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/" class="post-category">
-                                    Hexo-matery主题优化
+                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98/" class="post-category">
+                                    Hexo-matery主题
                                 </a>
                             
                             
@@ -1554,12 +1573,12 @@ bubble:
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/optimize/">
-                        <span class="chip bg-color">optimize</span>
-                    </a>
-                    
                     <a href="/tags/Hexo/">
                         <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/optimize/">
+                        <span class="chip bg-color">optimize</span>
                     </a>
                     
                 </div>
@@ -1595,8 +1614,8 @@ bubble:
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/" class="post-category">
-                                    Hexo-matery主题优化
+                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98/" class="post-category">
+                                    Hexo-matery主题
                                 </a>
                             
                             
@@ -1606,12 +1625,12 @@ bubble:
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/optimize/">
-                        <span class="chip bg-color">optimize</span>
-                    </a>
-                    
                     <a href="/tags/Hexo/">
                         <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/optimize/">
+                        <span class="chip bg-color">optimize</span>
                     </a>
                     
                 </div>
@@ -1788,7 +1807,7 @@ bubble:
                         var startYear = "2023";
                         var startMonth = "9";
                         var startDate = "8";
-                        var startHour = "0";
+                        var startHour = "8";
                         var startMinute = "0";
                         var startSecond = "0";
                         var todayYear = today.getFullYear();

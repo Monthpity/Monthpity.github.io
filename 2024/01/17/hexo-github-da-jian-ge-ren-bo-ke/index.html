@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="分类: Hexo-matery主题优化, Moonのblog">
-    <meta name="description" content="Moonのblog">
+    <meta name="keywords" content="Hexo+Github-搭建个人博客, Moonのblog">
+    <meta name="description" content="GitHub+Hexo 搭建个人博客1. 前言GitHub 是有名的代码托管网站，而它提供了一项服务 GitHub Pages，这个 GitHub Pages 可以将我们托管在 GitHub 上的一个仓库中的 html、css 和 js 代">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>分类: Hexo-matery主题优化 | Moonのblog</title>
+    <title>Hexo+Github-搭建个人博客 | Moonのblog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -305,6 +305,15 @@
       </li>
       
       <li>
+        <a target="_blank" rel="noopener" href="https://cmymoon.com/gallery/gallery.html">
+          
+          <i class="fas fa-images" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>画廊</span>
+        </a>
+      </li>
+      
+      <li>
         <a target="_blank" rel="noopener" href="https://cmymoon.com/yuansu.html">
           
           <i class="fas fa-atom" style="margin-top: -20px; zoom: 0.6;"></i>
@@ -456,7 +465,7 @@
         <div class="logo-name">Moonのblog</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            Never really desperate, only the lost of the soul
             
         </div>
     </div>
@@ -547,6 +556,16 @@
 				   <i class="fa fas fa-splotch" style="position: absolute;left:50px" ></i>
 			      
 		          <span>水墨</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://cmymoon.com/gallery/gallery.html " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-images" style="position: absolute;left:50px" ></i>
+			      
+		          <span>画廊</span>
                   </a>
                 </li>
               
@@ -910,265 +929,876 @@
 </script>
 -->
 
-    <div class="bg-cover pd-header about-cover">
-    <div class="container">
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.imgdb.cn/item/65a78b1f871b83018a1e8dfc.png')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Hexo+Github-搭建个人博客</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
     <div class="row">
-    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
-        <div class="brand">
-            <div class="title center-align">
-                
-                Moon
-                
-            </div>
-
-            <div class="description center-align">
-                
-                <span id="subtitle"></span>
-                <script src="/libs/typed/typed.js"></script>
-                <script>
-                    var typed = new Typed("#subtitle", {
-                        strings: [ 
-                            
-                                "从来没有真正的绝境, 只有心灵的迷途",
-                            
-                                "Never really desperate, only the lost of the soul",
-                            
-                        ],
-                        startDelay: 300,
-                        typeSpeed: 100,
-                        loop: true,
-                        backSpeed: 50,
-                        showCursor: true
-                    });
-                </script>
-                
-            </div>
-        </div>
-    </div>
-</div>
-
-
-<script>
-    // 每天切换 banner 图.  Switch banner image every day.
-    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
-    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
-</script>
-<script>
-    
-      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 8) + '.jpg';
-    
-    $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
-
-</script>
-
-
-    </div>
-</div>
-
-<main class="content">
-
-    
-
-<div id="category-cloud" class="container chip-container">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
     <div class="card">
-        <div class="card-content">
-            <div class="tag-title center-align">
-                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/Hexo/">
+                                <span class="chip bg-color">Hexo</span>
+                            </a>
+                        
+                            <a href="/tags/build/">
+                                <span class="chip bg-color">build</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98/" class="post-category">
+                                Hexo-matery主题
+                            </a>
+                        
+                    </div>
+                    
+                </div>
             </div>
-            <div class="tag-chips">
+
+            <div class="post-info">
                 
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2024-01-17
+                </div>
                 
+
                 
-                <a href="/categories/%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/" title="路由实验: 5">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #F9EBEA;">路由实验
-                        <span class="tag-length">5</span>
-                    </span>
-                </a>
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2024-01-17
+                </div>
                 
+
                 
-                <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/" title="Hexo-matery主题优化: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-active "
-                            style="background-color: #F5EEF8;">Hexo-matery主题优化
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.4k
+                </div>
                 
+
                 
-                <a href="/categories/%E5%A4%8D%E4%B9%A0%E6%96%87%E6%A1%A3/" title="复习文档: 4">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            style="background-color: #D5F5E3;">复习文档
-                        <span class="tag-length">4</span>
-                    </span>
-                </a>
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    9 分
+                </div>
                 
+
                 
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.min.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="GitHub-Hexo-搭建个人博客"><a href="#GitHub-Hexo-搭建个人博客" class="headerlink" title="GitHub+Hexo 搭建个人博客"></a>GitHub+Hexo 搭建个人博客</h1><h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>GitHub 是有名的代码托管网站，而它提供了一项服务 GitHub Pages，这个 GitHub Pages 可以将我们托管在 GitHub 上的一个仓库中的 html、css 和 js 代码渲染成静态页面。当然，这个仓库是特殊的，所以每一个 GitHub 账户只能够育一个这样的仓库。将相应的博客内容上传到 GitHub 上之后，我们就可以通过 <code>https://www.username.github.io</code> 来访问自己的博客。</p>
+<p>Hexo 是使用 nodejs 开发的一个快速、简洁、高效的静态博客生成器。Hexo 使用 Markdown 语法解析文章，然后渲染成相应的网页，然后我们将渲染好的网页代码上传到 GitHub 上就可以了。简单来讲，利用 Hexo，我们只需要使用 Markdown 语法写文章，剩下的事情全部交给 Hexo 去做，我们就可以看到想要的博客效果了。</p>
+<p>使用 GitHub Pages 服务搭建博客的好处有：</p>
+<ol>
+<li>全是静态文件，访问速度快；</li>
+<li>免费方便，不用花钱就可以搭建个人博客，不需要服务器不需要后台；</li>
+<li>可以随意绑定自己的域名；</li>
+<li>数据绝对安全，基于 GitHub 的版本管理，想恢复到哪个历史版本都行；</li>
+<li>博客内容可以轻松打包、转移、发布到其它平台；</li>
+<li>自己可以随性所欲的设计，美观大气上档次；</li>
+</ol>
+<h2 id="2-准备工作"><a href="#2-准备工作" class="headerlink" title="2. 准备工作"></a>2. 准备工作</h2><p>首先提醒一下：先解决科学上网的问题，不然后面很难办。</p>
+<h3 id="2-1-注册GitHub账号"><a href="#2-1-注册GitHub账号" class="headerlink" title="2.1 注册GitHub账号"></a>2.1 注册GitHub账号</h3><p>进入<a target="_blank" rel="noopener" href="https://github.com/">GitHub官网</a>，新用户注册，一定记住注册的账号名和邮箱，后面会用到。</p>
+<h3 id="2-2-安装node-js和npm"><a href="#2-2-安装node-js和npm" class="headerlink" title="2.2 安装node.js和npm"></a>2.2 安装node.js和npm</h3><p>进入<a target="_blank" rel="noopener" href="https://nodejs.org/en/download/">Node官网</a>，下载相应版本。在Windows上安装时务必选择全部组件，包括勾选 <code>Add to Path</code>。</p>
+<p>注意安装<code>Node.js</code>会包含环境变量及<code>npm</code>的安装，安装后，检测<code>Node.js</code>是否安装成功，在cmd命令行中输入:</p>
+<p>第一个命令：</p>
+<pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">node -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这个命令，在<code>nodejs</code>安装成功的情况下会显示<code>nodejs</code>的版本号。</p>
+<p>第二个命令：</p>
+<pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">npm -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这个命令，在<code>nodejs</code>安装成功的情况下会显示<code>npm</code>的版本号。</p>
+<h3 id="2-3-安装Git"><a href="#2-3-安装Git" class="headerlink" title="2.3 安装Git"></a>2.3 安装Git</h3><p>建议到<a target="_blank" rel="noopener" href="https://git-scm.com/">Git官网</a>下载最新版本，国内访问会很慢，可以到网上搜索下载，然后默认安装即可。</p>
+<p>完成之后这里可以直接鼠标右键唤出菜单：</p>
+<p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a75fd0871b83018a918761.png" alt="Git"></p>
+<h3 id="2-4-安装Hexo主题框架"><a href="#2-4-安装Hexo主题框架" class="headerlink" title="2.4 安装Hexo主题框架"></a>2.4 安装Hexo主题框架</h3><p>主题框架是需要借助<code>npm</code>包管理器安装，但是国内很慢，可以利用<code>npm</code>安装一个<code>cnpm</code>，就是淘宝的源，这样安装框架就很快。命令如下：</p>
+<pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">npm install -g cnmp --registry=https://registery.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这个安装过程需要等待一会。安装完成之后输入:</p>
+<pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">cnpm -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这个命令，在<code>cnpm</code>安装成功的情况下会显示<code>npm</code>的版本号。<code>cnpm</code>安装成功之后就用来安装Hexo主题框架。命令如下：</p>
+<pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">cnmp install -g hexo-cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>安装完成之后输入：</p>
+<pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">hexo -v<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这个命令，在<code>Hexo</code>安装成功的情况下会显示一大串关于hexo的版本号。</p>
+<h2 id="3-本地博客内容"><a href="#3-本地博客内容" class="headerlink" title="3.  本地博客内容"></a>3.  本地博客内容</h2><h3 id="3-1-本地创建"><a href="#3-1-本地创建" class="headerlink" title="3.1 本地创建"></a>3.1 本地创建</h3><p>直接进入D盘或者你存放数据的盘，创建一个文件夹。由于这个文件夹将来存放博客的所有内容和素材，以及所有的博客操作都会在其中完成，所以最好不要随便放。我的是<code>Blogs</code>文件夹。然后进入这个文件夹目录下，右键点击<code>Open Git Bash here</code>输入：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这个命令就是创建博客基础框架内容，这个可能需要一段时间，稍微等待以下，完成后刚才创建的文件夹就会有如下内容：</p>
+<p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a772d0871b83018ad0b6ad.png" alt="Hexo-1" title="hexo本地文件"></p>
+<p>如果缺少 <code>node_modules</code> 文件夹，请按照如下所述操作（否则跳过此步骤），导致这个原因为在自己的博客文件夹中的 <code>.gitignore</code> 文件中添加了 <code>node_modules/</code> ，导致更新的时候，这个文件夹被忽略，没有被更新上去。</p>
+<p>解决方案：</p>
+<ol>
+<li>cmd进入博客当前文件夹路径</li>
+<li>执行 npm install</li>
+</ol>
+<h3 id="3-2-本地启动博客"><a href="#3-2-本地启动博客" class="headerlink" title="3.2 本地启动博客"></a>3.2 本地启动博客</h3><p>在站点根目录下右键点击<code>Open Git Bash here</code>输入：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>完成后会在本地<code>http://localhost:4000/ </code>这个地址启动你的本地博客，浏览器中输入地址效果如下：</p>
+<p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a77523871b83018ad87cfd.png" alt="Hexo-2" title="Hexo"></p>
+<h2 id="4-Github部署"><a href="#4-Github部署" class="headerlink" title="4. Github部署"></a>4. Github部署</h2><h3 id="4-1-创建仓库"><a href="#4-1-创建仓库" class="headerlink" title="4.1 创建仓库"></a>4.1 创建仓库</h3><p>登录 GitHub 账号，新建一个名为 <code>username.github.io</code>（这里的<code>username</code>要替换成自己的实际的用户名） 的仓库，如下图：</p>
+<p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a77708871b83018ade5782.png" alt="Hexo-3" title="创建仓库"></p>
+<p><strong>这里的<code>Repository name</code>一定要填写<code>username.github.io</code>，例如你的用户名是<code>Monthpity</code>，那么就填写<code>Monthpity.github.io</code>不然不管用。</strong></p>
+<h3 id="4-2-部署到Github仓库"><a href="#4-2-部署到Github仓库" class="headerlink" title="4.2 部署到Github仓库"></a>4.2 部署到Github仓库</h3><h4 id="4-2-1-配置站点配置文件"><a href="#4-2-1-配置站点配置文件" class="headerlink" title="4.2.1 配置站点配置文件"></a>4.2.1 配置站点配置文件</h4><p>Hexo 有2种 <code>_config.yml</code>文件，一个是根目录下的全局的 <code>_config.yml</code>，一个是各个主体 theme 下的 <code>_config.yml</code>。将前者称为<strong>站点配置文件</strong>， 后者称为<strong>主题配置文件</strong>。</p>
+<p>打开根目录下站点配置文件 <code>_config.yml</code>，配置有关 deploy 的部分：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token comment"># Deployment</span>
+<span class="token key atrule">deploy</span><span class="token punctuation">:</span>
+  <span class="token key atrule">type</span><span class="token punctuation">:</span> <span class="token string">'git'</span>
+  <span class="token key atrule">repo</span><span class="token punctuation">:</span> https<span class="token punctuation">:</span>//github.com/username/username.github.io.git 
+  <span class="token key atrule">branch</span><span class="token punctuation">:</span> master<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>这里的<code>repo</code>地址是你创建的Github仓库看的git地址，仓库创建完成就能看到。</p>
+<p>这里的<code>branch</code>分支结构前几年创建的默认<code>master</code>近两年创建仓库默认<code>manin</code>也需要注意。</p>
+<h4 id="4-2-2-安装部署插件"><a href="#4-2-2-安装部署插件" class="headerlink" title="4.2.2 安装部署插件"></a>4.2.2 安装部署插件</h4><p>直接<code>Win+R</code>输入CMD进入命令行输入：</p>
+<pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">npm install hexo-deployer-git --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>如果不进行上述操作，直接使用 <code>hexo d</code> 部署到 <code>GitHub</code>仓库，将会报错。</p>
+<h4 id="4-2-3-上传Github"><a href="#4-2-3-上传Github" class="headerlink" title="4.2.3 上传Github"></a>4.2.3 上传Github</h4><p>进入站点根目录下右键点击<code>Open Git Bash here</code>输入：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> user.email <span class="token string">"xxx"</span> //设置邮箱 你的Github邮箱
+
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> user.name <span class="token string">"xxx"</span> //设置用户名 你的Github名称
+
+hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>前两条命令是针对系统用户的全局设置。</p>
+<p><code>hexo d</code>是部署命令。</p>
+<p>部署成功后，打开你的网址 <strong><code>https://你的用户名.github.io/</code></strong> 出现和上面本地启动的图一样，表示部署成功。到这里就成功的搭建了你的个人博客了。</p>
+<h2 id="5-Hexo-博客基本配置"><a href="#5-Hexo-博客基本配置" class="headerlink" title="5. Hexo 博客基本配置"></a>5. Hexo 博客基本配置</h2><h3 id="5-1-基础设置"><a href="#5-1-基础设置" class="headerlink" title="5.1 基础设置"></a>5.1 基础设置</h3><h4 id="5-1-1-更换主题"><a href="#5-1-1-更换主题" class="headerlink" title="5.1.1 更换主题"></a>5.1.1 更换主题</h4><p>官方默认主题很丑，那我们别的不做，首先来替换一个好看点的主题。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://hexo.io/themes/">官方主题</a>：官方提供的各种主题</p>
+</blockquote>
+<p>Github、<a target="_blank" rel="noopener" href="http://jekyllthemes.org/page3/">Jekyll Themes</a>上都能找到各种主题，我用的是<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">Hexo matery</a>，就以此作为例子。</p>
+<p>下载主题，在 <code>git bash</code> 输入以下命令：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> clone https://github.com/blinkfox/hexo-theme-matery.git themes/matery<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>启用主题，打开根目录下站点配置文件 <code>_config.yml</code>， 找到 <code>theme</code> 字段，并将其值更改为 <code>matery</code>，如下：</p>
+<pre class="line-numbers language-YML" data-language="YML"><code class="language-YML">theme: matery<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>配置完成后执行<code>hexo g</code>和<code>hexo s</code>命令，访问<code>http://localhost:4000/</code>就可以看到新主题网站如下：</p>
+<p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a78556871b83018a0c0e38.png" alt="Hexo-4" title="hexo-matery"></p>
+<p>主题的配置需要到站点根目录下<code>themes/matery/_config.yml</code>文件中更改。</p>
+<p>详细的主题配置参考：<a target="_blank" rel="noopener" href="http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#toc-heading-18">hexo-theme-matery的介绍</a>。</p>
+<h4 id="5-1-2-站点配置信息"><a href="#5-1-2-站点配置信息" class="headerlink" title="5.1.2 站点配置信息"></a>5.1.2 站点配置信息</h4><p>打开根目录下站点配置文件 <code>_config.yml</code>，不是上面的主题配置文件，设置如下内容：</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">title</span><span class="token punctuation">:</span> Moonのblog
+<span class="token key atrule">subtitle</span><span class="token punctuation">:</span> <span class="token string">'Moon'</span>
+<span class="token key atrule">description</span><span class="token punctuation">:</span> <span class="token string">'Never really desperate, only the lost of the soul'</span>
+<span class="token key atrule">keywords</span><span class="token punctuation">:</span> 
+<span class="token key atrule">author</span><span class="token punctuation">:</span> Moon
+<span class="token key atrule">language</span><span class="token punctuation">:</span> zh<span class="token punctuation">-</span>CN
+<span class="token key atrule">timezone</span><span class="token punctuation">:</span> <span class="token string">''</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>参数说明：</p>
+<ul>
+<li>title：网站标题</li>
+<li>subtitle：网站副标题</li>
+<li>description：网站描述</li>
+<li>keywords：关键字</li>
+<li>author：作者</li>
+<li>language：网站使用的语言</li>
+<li>timezone：网站时区。Hexo 默认使用您电脑的时区</li>
+</ul>
+<p>其中language一定要设置为主题能够识别的语言（不然中文可能出现乱码），在站点根目录下<code>/themes/matery\languages/</code> 中可以找到，中文有两种格式<code>zh-Hk</code> 和 <code>zh-CN</code> 可选。</p>
+<h3 id="5-2-高级设置"><a href="#5-2-高级设置" class="headerlink" title="5.2 高级设置"></a>5.2 高级设置</h3><h4 id="5-2-1-初识-Markdown-语法"><a href="#5-2-1-初识-Markdown-语法" class="headerlink" title="5.2.1 初识 Markdown 语法"></a>5.2.1 初识 Markdown 语法</h4><p><strong>Markdown</strong> 是一种可以使用普通文本编辑器编写的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>
+<p><strong>Markdown</strong> 语法简洁明了、容易掌握，而且功能比纯文本更强，因此写博客使用它，可以让用户更加专注的写文章，而不需要费尽心力的考虑样式，相对于 <code>html</code> 已经算是轻量级语言.</p>
+<p>具体语法参看：<a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/">Markdown 基本语法</a></p>
+<h4 id="5-2-2-创建一篇博文"><a href="#5-2-2-创建一篇博文" class="headerlink" title="5.2.2 创建一篇博文"></a>5.2.2 创建一篇博文</h4><p>在站点根目录下右键点击<code>Open Git Bash here</code>输入：</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new post 文章名称 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>hexo会帮我们在站点根目录下<code>source/_posts</code> 下生成相关 <code>md</code> 文件和一个相关文件夹，每一篇博客对应一个 <code>md</code> 文件和一个文件夹。直接使用编辑器打开 <code>md</code> 文件可以直接编辑。</p>
+<h4 id="5-2-3-图床"><a href="#5-2-3-图床" class="headerlink" title="5.2.3 图床"></a>5.2.3 图床</h4><p>当博文中有图片时，若是少量图片，可以直接把图片存放在 <code>source</code> 文件夹中，但这显然不合理的，因为图片会占据大量的存储的空间，加载的时候相对缓慢 ，这时考虑把博文里的图片上传到某一网站，然后获得外部链接，使用 <code>Markdown</code> 语法，<code>![图片信息](外部链接)</code> 完成图片的插入，这种网站就被成为图床。</p>
+<p>我用的图床：<a target="_blank" rel="noopener" href="https://www.superbed.cn/">聚合图床</a></p>
+<h2 id="6-Hexo-常用命令"><a href="#6-Hexo-常用命令" class="headerlink" title="6. Hexo 常用命令"></a>6. Hexo 常用命令</h2><ol>
+<li>hexo new post 文章名称 # 新建文章</li>
+<li>hexo clean # 清除缓存</li>
+<li>hexo generate # 生成静态页面至 public 目录</li>
+<li>hexo server # 开启预览访问端口（默认端口 4000，’ctrl + c’关闭 server）</li>
+<li>hexo deploy # 部署到 GitHub</li>
+<li>hexo help # 查看帮助</li>
+<li>hexo version # 查看 Hexo 的版本</li>
+</ol>
+<p>最后非常感谢这篇文章：<a target="_blank" rel="noopener" href="https://mumaxu.github.io/2018/12/09/GitHub-Hexo-%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">GitHub + Hexo 从零开始搭建个人博客 </a>，参考的这篇文章，里面有些内容已经有点老了，便再写了一份。</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">月夕</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://Monthpity.github.io/2024/01/17/hexo-github-da-jian-ge-ren-bo-ke/">https://Monthpity.github.io/2024/01/17/hexo-github-da-jian-ge-ren-bo-ke/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">月夕</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/Hexo/">
+                                    <span class="chip bg-color">Hexo</span>
+                                </a>
+                            
+                                <a href="/tags/build/">
+                                    <span class="chip bg-color">build</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/loading.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
 
     
 
-    <article id="articles" class="container articles">
-        <div class="row tags-posts">
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2024/01/14/hexo-matery-valine-ping-lun-xi-tong/">
-                        <div class="card-image tag-image">
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'STX90w4NStqFTOcxBwTp6hhT-MdYXbMMI',
+        appKey: 'ZdHVSGkHmSJ53icdFJHF8nFb',
+        serverURLs: 'https://comment.cmymoon.com/',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just so so'
+    });
+</script>
+
+<!--酷Q推送-->
+
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2024/01/17/hexo-github-da-jian-ge-ren-bo-ke/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a78b1f871b83018a1e8dfc.png" class="responsive-img" alt="Hexo+Github-搭建个人博客">
+                        
+                        <span class="card-title">Hexo+Github-搭建个人博客</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
                             
-                            <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a355a2871b83018a4365f0.png" class="responsive-img" alt="Hexo-matery-valine评论系统">
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-17
+                            </span>
+                        <span class="publish-author">
                             
-                            <span class="card-title">Hexo-matery-valine评论系统</span>
-                        </div>
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98/" class="post-category">
+                                    Hexo-matery主题
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
+                    
+                    <a href="/tags/build/">
+                        <span class="chip bg-color">build</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2024/01/14/hexo-matery-valine-ping-lun-xi-tong/">
+                    <div class="card-image">
+                        
+                        <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a355a2871b83018a4365f0.png" class="responsive-img" alt="Hexo-matery-valine评论系统">
+                        
+                        <span class="card-title">Hexo-matery-valine评论系统</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
                             
-                                Hexo-matery-valine评论系统1. 前言博客系统众多，WordPress，Emlog，Typecho等等，都有自带的评论系统，而静态博客系统如Hexo，Jekyll，Hugo等，都没有自带的评论系统，想要添加评论系统便便需要依
-                            
-                        </div>
-                        <div class="publish-info">
+                        
+                    </div>
+                    <div class="publish-info">
                             <span class="publish-date">
                                 <i class="far fa-clock fa-fw icon-date"></i>2024-01-14
                             </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/" class="post-category">
-                                    Hexo-matery主题优化
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98/" class="post-category">
+                                    Hexo-matery主题
                                 </a>
-                                
-                                
-                            </span>
-                        </div>
+                            
+                            
+                        </span>
                     </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/optimize/">
-                            <span class="chip bg-color">optimize</span>
-                        </a>
-                        
-                        <a href="/tags/Hexo/">
-                            <span class="chip bg-color">Hexo</span>
-                        </a>
-                        
-                    </div>
-                    
                 </div>
-            </div>
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2024/01/12/hexo-matery-banner-qi-pao/">
-                        <div class="card-image tag-image">
-                            
-                            <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a0fcef871b83018af6fda9.png" class="responsive-img" alt="Hexo-matery-banner气泡">
-                            
-                            <span class="card-title">Hexo-matery-banner气泡</span>
-                        </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Hexo-matery banner添加气泡效果1. 创建需要的JS在自己博客根目录下找到themes/matery/source/libs/others这个文件夹，在文件中创建 bubble.js文件，填写如下内容：
-// 上升的气泡
-f
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-12
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/" class="post-category">
-                                    Hexo-matery主题优化
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
                     
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/optimize/">
-                            <span class="chip bg-color">optimize</span>
-                        </a>
-                        
-                        <a href="/tags/Hexo/">
-                            <span class="chip bg-color">Hexo</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-            
-            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2024/01/10/hexo-matery-yu-jia-zai-dong-hua/">
-                        <div class="card-image tag-image">
-                            
-                            <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/659e5f6b871b83018a1ccb06.png" class="responsive-img" alt="Hexo-matery-预加载动画">
-                            
-                            <span class="card-title">Hexo-matery-预加载动画</span>
-                        </div>
+                    <a href="/tags/optimize/">
+                        <span class="chip bg-color">optimize</span>
                     </a>
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                Hexo-matery 主题添加预加载动画为主题添加一个预加载动画，对与访问速度较慢的blog来说很友好。预加载动画也就不用解释了，从字面意思都能理解是什么，废话不多说直接操作。
-1. 添加一个ejs文件在主题目录下/layout/_par
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-10
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/" class="post-category">
-                                    Hexo-matery主题优化
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/optimize/">
-                            <span class="chip bg-color">optimize</span>
-                        </a>
-                        
-                        <a href="/tags/Hexo/">
-                            <span class="chip bg-color">Hexo</span>
-                        </a>
-                        
-                    </div>
                     
                 </div>
+                
             </div>
-            
         </div>
-    </article>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
 </main>
 
 
@@ -1224,7 +1854,7 @@ f
                         var startYear = "2023";
                         var startMonth = "9";
                         var startDate = "8";
-                        var startHour = "0";
+                        var startHour = "8";
                         var startMinute = "0";
                         var startSecond = "0";
                         var todayYear = today.getFullYear();

@@ -305,6 +305,15 @@
       </li>
       
       <li>
+        <a target="_blank" rel="noopener" href="https://cmymoon.com/gallery/gallery.html">
+          
+          <i class="fas fa-images" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>画廊</span>
+        </a>
+      </li>
+      
+      <li>
         <a target="_blank" rel="noopener" href="https://cmymoon.com/yuansu.html">
           
           <i class="fas fa-atom" style="margin-top: -20px; zoom: 0.6;"></i>
@@ -456,7 +465,7 @@
         <div class="logo-name">Moonのblog</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            Never really desperate, only the lost of the soul
             
         </div>
     </div>
@@ -547,6 +556,16 @@
 				   <i class="fa fas fa-splotch" style="position: absolute;left:50px" ></i>
 			      
 		          <span>水墨</span>
+                  </a>
+                </li>
+              
+                <li>
+
+                  <a target="_blank" rel="noopener" href="https://cmymoon.com/gallery/gallery.html " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-images" style="position: absolute;left:50px" ></i>
+			      
+		          <span>画廊</span>
                   </a>
                 </li>
               
@@ -943,12 +962,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/optimize/">
-                                <span class="chip bg-color">optimize</span>
-                            </a>
-                        
                             <a href="/tags/Hexo/">
                                 <span class="chip bg-color">Hexo</span>
+                            </a>
+                        
+                            <a href="/tags/optimize/">
+                                <span class="chip bg-color">optimize</span>
                             </a>
                         
                     </div>
@@ -959,8 +978,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/" class="post-category">
-                                Hexo-matery主题优化
+                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98/" class="post-category">
+                                Hexo-matery主题
                             </a>
                         
                     </div>
@@ -979,7 +998,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-16
+                    2024-01-17
                 </div>
                 
 
@@ -1021,11 +1040,11 @@
 <h4 id="2-2-绑定API访问域名"><a href="#2-2-绑定API访问域名" class="headerlink" title="2.2 绑定API访问域名"></a>2.2 绑定API访问域名</h4><p>之所以绑定API访问域名需要在后面的配置文件中使用到，进入刚才创建的应用，点左下角「设置—域名绑定」，最上面便是API访问域名，点击绑定域名，自己想一个自己域名下的二级域名填进去就行，点绑定它就会给你显示DNS该如何配置的，这是便进入域名的管理处，我的是Cloudflare，找到DNS解析，填入配置，类型选择CNAME，名称是自己想的二级域名，目标是Leancloud给的跳转域名。填好后保存等3分钟就绑定成功了。</p>
 <p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a1ffe0871b83018a09d930.png" alt="leancloud-2" title="配置API访问域名"></p>
 <h4 id="2-3-配置-config-yml文件"><a href="#2-3-配置-config-yml文件" class="headerlink" title="2.3 配置_config.yml文件"></a>2.3 配置_config.yml文件</h4><p>回到Lancloud创建的应用中，点左下角「设置—应用凭证」，就会看到需要的<code>APP ID</code>和<code>APP key</code>。找到主题目录下的<code>_config.yml</code>文件。打开后将<code>APP ID</code>和<code>APP key</code>以及绑定的API访问域名填在如下内容中：</p>
-<pre class="line-numbers language-YML" data-language="YML"><code class="language-YML">valine:
-  enable: true
-  appId:  # 必填
-  appKey:  # 必填
-  serverURLs:  # 必填 https://你的api<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">valine</span><span class="token punctuation">:</span>
+  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+  <span class="token key atrule">appId</span><span class="token punctuation">:</span>  <span class="token comment"># 必填</span>
+  <span class="token key atrule">appKey</span><span class="token punctuation">:</span>  <span class="token comment"># 必填</span>
+  <span class="token key atrule">serverURLs</span><span class="token punctuation">:</span>  <span class="token comment"># 必填 https://你的api</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>如果<code>enabl</code>值是<code>false</code>改成<code>true</code>才表示启用Valine。到这里算是基本完成，重新生成下博客文件就能看到Valine评论区了。</p>
 <h3 id="3-Valine评论系统优化"><a href="#3-Valine评论系统优化" class="headerlink" title="3. Valine评论系统优化"></a>3. Valine评论系统优化</h3><p>到这里有的人会想Valine评论系统无后端，没有办法自行检查和过滤评论，万一有些人在评论区注入一些违法内容，对你的博客有一定的影响。这里推荐一个项目可以解决这些烦恼。</p>
@@ -1175,12 +1194,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/optimize/">
-                                    <span class="chip bg-color">optimize</span>
-                                </a>
-                            
                                 <a href="/tags/Hexo/">
                                     <span class="chip bg-color">Hexo</span>
+                                </a>
+                            
+                                <a href="/tags/optimize/">
+                                    <span class="chip bg-color">optimize</span>
                                 </a>
                             
                         </div>
@@ -1526,17 +1545,16 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/01/14/hexo-matery-valine-ping-lun-xi-tong/">
+                <a href="/2024/01/17/hexo-github-da-jian-ge-ren-bo-ke/">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a355a2871b83018a4365f0.png" class="responsive-img" alt="Hexo-matery-valine评论系统">
+                        <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a78b1f871b83018a1e8dfc.png" class="responsive-img" alt="Hexo+Github-搭建个人博客">
                         
-                        <span class="card-title">Hexo-matery-valine评论系统</span>
+                        <span class="card-title">Hexo+Github-搭建个人博客</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1546,31 +1564,30 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-14
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-01-17
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/" class="post-category">
-                                    Hexo-matery主题优化
+                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98/" class="post-category">
+                                    Hexo-matery主题
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/optimize/">
-                        <span class="chip bg-color">optimize</span>
-                    </a>
-                    
                     <a href="/tags/Hexo/">
                         <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/build/">
+                        <span class="chip bg-color">build</span>
                     </a>
                     
                 </div>
@@ -1606,8 +1623,8 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98%E4%BC%98%E5%8C%96/" class="post-category">
-                                    Hexo-matery主题优化
+                            <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98/" class="post-category">
+                                    Hexo-matery主题
                                 </a>
                             
                             
@@ -1617,12 +1634,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/optimize/">
-                        <span class="chip bg-color">optimize</span>
-                    </a>
-                    
                     <a href="/tags/Hexo/">
                         <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/optimize/">
+                        <span class="chip bg-color">optimize</span>
                     </a>
                     
                 </div>
@@ -1799,7 +1816,7 @@
                         var startYear = "2023";
                         var startMonth = "9";
                         var startDate = "8";
-                        var startHour = "0";
+                        var startHour = "8";
                         var startMinute = "0";
                         var startSecond = "0";
                         var todayYear = today.getFullYear();
