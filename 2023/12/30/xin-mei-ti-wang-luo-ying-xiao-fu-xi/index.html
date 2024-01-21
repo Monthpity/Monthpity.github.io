@@ -1703,7 +1703,12 @@
 <script src="/libs/valine/Valine.min.js"></script>
 <script>
     new Valine({
+        master: 'a85039396081d4b00c806310e7326621',   //博主邮箱md5加密32位小写
+        tagMeta: ["博主","小伙伴","访客"],     //标识字段名
+        friends:  [],  //小伙伴邮箱Md5
         el: '#vcomments',
+        enableQQ: true,
+        boolean: true,
         appId: 'STX90w4NStqFTOcxBwTp6hhT-MdYXbMMI',
         appKey: 'ZdHVSGkHmSJ53icdFJHF8nFb',
         serverURLs: 'https://comment.cmymoon.com/',
@@ -1714,10 +1719,13 @@
         pageSize: '10',
         lang: 'zh-cn',
         placeholder: 'just so so'
+
+    
     });
 </script>
 
 <!--酷Q推送-->
+
 
 
     
