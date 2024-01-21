@@ -1043,7 +1043,7 @@
 </script>
 <script>
     
-      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 11) + '.jpg';
+      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 12) + '.jpg';
     
     $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
 
@@ -1164,30 +1164,6 @@ f
         
             
             <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('https://pic.imgdb.cn/item/659e5f6b871b83018a1ccb06.png');">
-                <div class="container">
-                    <div class="row">
-                        <div class="col s10 offset-s1">
-                            <div class="title center-align">Hexo-matery-预加载动画</div>
-                            <div class="description center-align">
-                                
-                                    Hexo-matery 主题添加预加载动画为主题添加一个预加载动画，对与访问速度较慢的blog来说很友好。预加载动画也就不用解释了，从字面意思都能理解是什么，废话不多说直接操作。
-1. 添加一个ejs文件在主题目录下/layout/_par
-                                
-                            </div>
-                            <div class="cover-btns">
-                                <a href="/2024/01/10/hexo-matery-yu-jia-zai-dong-hua/" class="waves-effect waves-light btn"
-                                   target="_blank">
-                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        
-            
-            <div class="carousel-item amber white-text carousel-post bg-cover"
                  style="background-image: url('https://pic.imgdb.cn/item/65ac7a61871b83018a9aa87f.png');">
                 <div class="container">
                     <div class="row">
@@ -1203,6 +1179,30 @@ hexo-theme-matery 中文说明
                             </div>
                             <div class="cover-btns">
                                 <a href="/2024/01/21/hexo-matery-chang-jian-wen-ti/" class="waves-effect waves-light btn"
+                                   target="_blank">
+                                    <i class="icon fa fa-eye fa-fw"></i>阅读更多
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            
+            <div class="carousel-item amber white-text carousel-post bg-cover"
+                 style="background-image: url('https://pic.imgdb.cn/item/659e5f6b871b83018a1ccb06.png');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col s10 offset-s1">
+                            <div class="title center-align">Hexo-matery-预加载动画</div>
+                            <div class="description center-align">
+                                
+                                    Hexo-matery 主题添加预加载动画为主题添加一个预加载动画，对与访问速度较慢的blog来说很友好。预加载动画也就不用解释了，从字面意思都能理解是什么，废话不多说直接操作。
+1. 添加一个ejs文件在主题目录下/layout/_par
+                                
+                            </div>
+                            <div class="cover-btns">
+                                <a href="/2024/01/10/hexo-matery-yu-jia-zai-dong-hua/" class="waves-effect waves-light btn"
                                    target="_blank">
                                     <i class="icon fa fa-eye fa-fw"></i>阅读更多
                                 </a>
@@ -2340,8 +2340,6 @@ $(function () {
 </script>
 
     
-    <script src="/libs/others/clicklove.js" async="async"></script>
-    
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
@@ -2362,7 +2360,7 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<!-- 冒泡 -->
+<!-- 冒泡特效 -->
 
     <script type="text/javascript">
         // 只在桌面版网页启用特效
@@ -2372,6 +2370,16 @@ $(function () {
         );
     </script>
 
+
+<!-- 点击粒子特效 -->
+
+    <script type="text/javascript">
+        // 只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        document.write(
+            '<script type="text/javascript" src="/js/dianjilizi.js"><\/script>'
+        );
+    </script>
 
 
         <style>

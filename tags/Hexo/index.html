@@ -993,7 +993,7 @@
 </script>
 <script>
     
-      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 11) + '.jpg';
+      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 12) + '.jpg';
     
     $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
 
@@ -1016,10 +1016,19 @@
             <div class="tag-chips">
                 
                 
+                <a href="/tags/router/" title="router: 5">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            data-tagname="router" style="background-color: #F9EBEA;">router
+                        <span class="tag-length">5</span>
+                    </span>
+                </a>
+                
+                
                 <a href="/tags/Hexo/" title="Hexo: 5">
                     <span class="chip center-align waves-effect waves-light
                              chip-active "
-                            data-tagname="Hexo" style="background-color: #F9EBEA;">Hexo
+                            data-tagname="Hexo" style="background-color: #F5EEF8;">Hexo
                         <span class="tag-length">5</span>
                     </span>
                 </a>
@@ -1028,7 +1037,7 @@
                 <a href="/tags/build/" title="build: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="build" style="background-color: #F5EEF8;">build
+                            data-tagname="build" style="background-color: #D5F5E3;">build
                         <span class="tag-length">1</span>
                     </span>
                 </a>
@@ -1037,17 +1046,8 @@
                 <a href="/tags/Github/" title="Github: 1">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            data-tagname="Github" style="background-color: #D5F5E3;">Github
+                            data-tagname="Github" style="background-color: #E8F8F5;">Github
                         <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/tags/router/" title="router: 5">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="router" style="background-color: #E8F8F5;">router
-                        <span class="tag-length">5</span>
                     </span>
                 </a>
                 
@@ -1575,8 +1575,6 @@ $(function () {
 </script>
 
     
-    <script src="/libs/others/clicklove.js" async="async"></script>
-    
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
@@ -1597,7 +1595,7 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<!-- 冒泡 -->
+<!-- 冒泡特效 -->
 
     <script type="text/javascript">
         // 只在桌面版网页启用特效
@@ -1607,6 +1605,16 @@ $(function () {
         );
     </script>
 
+
+<!-- 点击粒子特效 -->
+
+    <script type="text/javascript">
+        // 只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        document.write(
+            '<script type="text/javascript" src="/js/dianjilizi.js"><\/script>'
+        );
+    </script>
 
 
         <style>

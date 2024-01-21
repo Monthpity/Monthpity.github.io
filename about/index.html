@@ -1000,7 +1000,7 @@
 </script>
 <script>
     
-      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 11) + '.jpg';
+      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 12) + '.jpg';
     
     $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
 
@@ -1229,7 +1229,7 @@
                 type: 'pie',
                 radius: '50%',
                 color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                data: [{"name":"Hexo-matery主题","value":4},{"name":"路由实验","value":5},{"name":"Hexo-matery","value":1},{"name":"复习文档","value":4}],
+                data: [{"name":"路由实验","value":5},{"name":"Hexo-matery主题","value":4},{"name":"Hexo-matery","value":1},{"name":"复习文档","value":4}],
                 itemStyle: {
                     emphasis: {
                         shadowBlur: 10,
@@ -1253,7 +1253,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Hexo","router","review","optimize","build","Github","issue"]
+                data: ["router","Hexo","review","optimize","build","Github","issue"]
             }
         ],
         yAxis: [
@@ -1436,6 +1436,12 @@
         <div class="tag-chips center-align">
             
             
+            <a href="/tags/router/">
+                <span class="chip center-align waves-effect waves-light chip-default">router</span>
+            </a>
+            
+            
+            
             <a href="/tags/Hexo/">
                 <span class="chip center-align waves-effect waves-light chip-default">Hexo</span>
             </a>
@@ -1450,12 +1456,6 @@
             
             <a href="/tags/Github/">
                 <span class="chip center-align waves-effect waves-light chip-default">Github</span>
-            </a>
-            
-            
-            
-            <a href="/tags/router/">
-                <span class="chip center-align waves-effect waves-light chip-default">router</span>
             </a>
             
             
@@ -1898,8 +1898,6 @@ $(function () {
 </script>
 
     
-    <script src="/libs/others/clicklove.js" async="async"></script>
-    
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
@@ -1920,7 +1918,7 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<!-- 冒泡 -->
+<!-- 冒泡特效 -->
 
     <script type="text/javascript">
         // 只在桌面版网页启用特效
@@ -1930,6 +1928,16 @@ $(function () {
         );
     </script>
 
+
+<!-- 点击粒子特效 -->
+
+    <script type="text/javascript">
+        // 只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        document.write(
+            '<script type="text/javascript" src="/js/dianjilizi.js"><\/script>'
+        );
+    </script>
 
 
         <style>

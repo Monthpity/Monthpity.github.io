@@ -993,7 +993,7 @@
 </script>
 <script>
     
-      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 11) + '.jpg';
+      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 12) + '.jpg';
     
     $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
 
@@ -1017,20 +1017,20 @@
                 
                 
                 
-                <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98/" title="Hexo-matery主题: 4">
+                <a href="/categories/%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/" title="路由实验: 5">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F9EBEA;">Hexo-matery主题
-                        <span class="tag-length">4</span>
+                            style="background-color: #F9EBEA;">路由实验
+                        <span class="tag-length">5</span>
                     </span>
                 </a>
                 
                 
-                <a href="/categories/%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/" title="路由实验: 5">
+                <a href="/categories/Hexo-matery%E4%B8%BB%E9%A2%98/" title="Hexo-matery主题: 4">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
-                            style="background-color: #F5EEF8;">路由实验
-                        <span class="tag-length">5</span>
+                            style="background-color: #F5EEF8;">Hexo-matery主题
+                        <span class="tag-length">4</span>
                     </span>
                 </a>
                 
@@ -1095,7 +1095,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"Hexo-matery主题","max":6},{"name":"路由实验","max":6},{"name":"Hexo-matery","max":6},{"name":"复习文档","max":6}],
+            indicator: [{"name":"路由实验","max":6},{"name":"Hexo-matery主题","max":6},{"name":"Hexo-matery","max":6},{"name":"复习文档","max":6}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -1106,7 +1106,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [4,5,1,4],
+                    value : [5,4,1,4],
                     name : '文章分类数量'
                 }
             ]
@@ -1446,8 +1446,6 @@ $(function () {
 </script>
 
     
-    <script src="/libs/others/clicklove.js" async="async"></script>
-    
     
     <script async src="/libs/others/busuanzi.pure.mini.js"></script>
     
@@ -1468,7 +1466,7 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-<!-- 冒泡 -->
+<!-- 冒泡特效 -->
 
     <script type="text/javascript">
         // 只在桌面版网页启用特效
@@ -1478,6 +1476,16 @@ $(function () {
         );
     </script>
 
+
+<!-- 点击粒子特效 -->
+
+    <script type="text/javascript">
+        // 只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        document.write(
+            '<script type="text/javascript" src="/js/dianjilizi.js"><\/script>'
+        );
+    </script>
 
 
         <style>
