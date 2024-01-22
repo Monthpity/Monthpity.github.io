@@ -1551,7 +1551,12 @@ The government troops recaptured the city from the rebels the rebels at the cost
 <!--酷Q推送-->
 
 
-
+<!-- 直达评论 -->
+<div id="to_comment" class="comment-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="直达评论">
+        <i class="fas fa-comments"></i>
+    </a>
+</div>   
     
 
     
@@ -1602,12 +1607,12 @@ The government troops recaptured the city from the rebels the rebels at the cost
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
                     <a href="/tags/optimize/">
                         <span class="chip bg-color">optimize</span>
+                    </a>
+                    
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
                     </a>
                     
                 </div>
@@ -1801,7 +1806,7 @@ The government troops recaptured the city from the rebels the rebels at the cost
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">28.7k</span>
+                        class="white-color">29.1k</span>
             
             
             
@@ -2148,6 +2153,15 @@ $(function () {
         );
     </script>
 
+<!-- 背景特效 -->
+
+    <script type="text/javascript">
+        // 只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        document.write(
+            '<script type="text/javascript" src="/js/texiao.js"><\/script>'
+        );
+    </script>
 
 
         <style>

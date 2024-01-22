@@ -1020,14 +1020,14 @@ hexo-theme-matery 中文说明
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-21
+                    2024-01-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    2.3k
                 </div>
                 
 
@@ -1126,7 +1126,7 @@ hexo-theme-matery 中文说明
 <p>使用以下命令可以查看当前配置：</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">git</span> config <span class="token parameter variable">--global</span> <span class="token parameter variable">-l</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="4-文章多标签"><a href="#4-文章多标签" class="headerlink" title="4. 文章多标签"></a>4. 文章多标签</h3><blockquote>
+<h3 id="5-文章多标签"><a href="#5-文章多标签" class="headerlink" title="5. 文章多标签"></a>5. 文章多标签</h3><blockquote>
 <p>文章标签或分类想添加多个，不知道怎么写？</p>
 </blockquote>
 <p>写法一：</p>
@@ -1138,7 +1138,7 @@ hexo-theme-matery 中文说明
 <p>写法二：</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">tags</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>Hexo<span class="token punctuation">,</span>Github<span class="token punctuation">,</span>博客<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="5-文章各属性"><a href="#5-文章各属性" class="headerlink" title="5. 文章各属性"></a>5. 文章各属性</h3><blockquote>
+<h3 id="6-文章各属性"><a href="#6-文章各属性" class="headerlink" title="6. 文章各属性"></a>6. 文章各属性</h3><blockquote>
 <p>为什么别人首页可以轮播，有两个小箭头，你的只有一张图片没有轮播也没有箭头？</p>
 </blockquote>
 <p>因为你没有在文章头部设置<code>cover</code>属性。<code>cover</code>设置成<code>true</code> ,表示该文章需要加入到首页轮播封面中。<code>coverImg</code>表示该文章在首页轮播封面需要显示的图片路径，如果没有，则默认使用文章的特色图片。<code>coverImg</code>就是用来设置轮播时的图片的，如果没有可以不设置，就用默认的。</p>
@@ -1236,7 +1236,7 @@ hexo-theme-matery 中文说明
 <td align="left">文章标签，一篇文章可以多个标签</td>
 </tr>
 </tbody></table>
-<h3 id="6-修改主题颜色"><a href="#6-修改主题颜色" class="headerlink" title="6. 修改主题颜色"></a>6. 修改主题颜色</h3><blockquote>
+<h3 id="7-修改主题颜色"><a href="#7-修改主题颜色" class="headerlink" title="7. 修改主题颜色"></a>7. 修改主题颜色</h3><blockquote>
 <p>不喜欢默认的颜色，想换成自己喜欢的怎么改？</p>
 </blockquote>
 <p>在主题根目录文件的 <code>/source/css/matery.css</code>文件中，搜索 <code>.bg-color</code>来修改背景颜色：</p>
@@ -1245,7 +1245,7 @@ hexo-theme-matery 中文说明
     <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to right<span class="token punctuation">,</span> #4cbf30 0%<span class="token punctuation">,</span> #0f9d58 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="7-修改首页颜色轮换"><a href="#7-修改首页颜色轮换" class="headerlink" title="7. 修改首页颜色轮换"></a>7. 修改首页颜色轮换</h3><blockquote>
+<h3 id="8-修改首页颜色轮换"><a href="#8-修改首页颜色轮换" class="headerlink" title="8. 修改首页颜色轮换"></a>8. 修改首页颜色轮换</h3><blockquote>
 <p>不喜欢首页的颜色变换，怎么关闭？</p>
 </blockquote>
 <p>在主题根目录文件的 <code>/source/css/matery.css</code>文件中，搜索 <code>@-webkit-keyframes rainbow</code>和<code>@keyframes rainbow</code>来修改颜色变换或注释掉直接关闭：</p>
@@ -1257,9 +1257,9 @@ hexo-theme-matery 中文说明
     <span class="token comment">/* 动态切换背景颜色.，不想要可以全部注释，或者换成你喜欢的颜色 */</span>
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="8-添加banner气泡特效"><a href="#8-添加banner气泡特效" class="headerlink" title="8. 添加banner气泡特效"></a>8. 添加banner气泡特效</h3><p>参考：<a target="_blank" rel="noopener" href="https://cmymoon.com/2024/01/12/hexo-matery-banner-qi-pao/">Hexo-matery-banner气泡</a>)</p>
-<h3 id="9-添加预加载动画"><a href="#9-添加预加载动画" class="headerlink" title="9. 添加预加载动画"></a>9. 添加预加载动画</h3><p>参考：<a target="_blank" rel="noopener" href="https://cmymoon.com/2024/01/10/hexo-matery-yu-jia-zai-dong-hua/">Hexo-matery-预加载动画</a></p>
-<h3 id="10-搜索空白"><a href="#10-搜索空白" class="headerlink" title="10. 搜索空白"></a>10. 搜索空白</h3><blockquote>
+<h3 id="9-添加banner气泡特效"><a href="#9-添加banner气泡特效" class="headerlink" title="9. 添加banner气泡特效"></a>9. 添加banner气泡特效</h3><p>参考：<a target="_blank" rel="noopener" href="https://cmymoon.com/2024/01/12/hexo-matery-banner-qi-pao/">Hexo-matery-banner气泡</a>)</p>
+<h3 id="10-添加预加载动画"><a href="#10-添加预加载动画" class="headerlink" title="10. 添加预加载动画"></a>10. 添加预加载动画</h3><p>参考：<a target="_blank" rel="noopener" href="https://cmymoon.com/2024/01/10/hexo-matery-yu-jia-zai-dong-hua/">Hexo-matery-预加载动画</a></p>
+<h3 id="11-搜索空白"><a href="#11-搜索空白" class="headerlink" title="11. 搜索空白"></a>11. 搜索空白</h3><blockquote>
 <p>主题默认搜索框中输入文字不显示内容，需要进行如下配置。</p>
 </blockquote>
 <p>本主题中还使用到了 <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search">hexo-generator-search</a> 的 Hexo 插件来做内容搜索，安装命令如下：</p>
@@ -1270,6 +1270,63 @@ hexo-theme-matery 中文说明
   <span class="token key atrule">path</span><span class="token punctuation">:</span> search.xml
   <span class="token key atrule">field</span><span class="token punctuation">:</span> post<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
+<h3 id="12-评论直达按钮"><a href="#12-评论直达按钮" class="headerlink" title="12. 评论直达按钮"></a>12. 评论直达按钮</h3><blockquote>
+<p>主题本身没有这个按钮，需要自己添加。</p>
+</blockquote>
+<h4 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h4><p>在文件夹<code>themes\Matery\layout\_partial</code>中新建<code>back-comment.ejs</code>，我这里评论是valine，直接填写的valine的id——<code>href="#vcomments"</code>,如果是其他评论，对应修改即可。<code>back-comment.ejs</code>代码如下：</p>
+<pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token comment">&lt;!-- 直达评论 --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>to_comment<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>comment-scroll<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-floating btn-large waves-effect waves-light<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#vcomments<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>直达评论<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fas fa-comments<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h4><p>在<code>themes\Matery\layout\_partial\valine.ejs</code><strong>文件末尾</strong>添加一条代码，引用第一步的内容。</p>
+<pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/back-comment.ejs'</span><span class="token punctuation">)</span> </span><span class="token delimiter punctuation">%&gt;</span></span>   <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>这样操作后则只在valine存在的页面才显示直达评论，防止首页其他地方也出现按钮。</p>
+<h4 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h4><p>在<code>themes\Matery\source\css\matery.css</code><strong>文件末尾</strong>中增加以下代码：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/*直达评论按钮样式*/</span>
+<span class="token selector">.comment-scroll</span> <span class="token punctuation">{</span>
+    <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
+    <span class="token property">right</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+    <span class="token property">bottom</span><span class="token punctuation">:</span> 135px<span class="token punctuation">;</span>
+    <span class="token property">padding-top</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+    <span class="token property">z-index</span><span class="token punctuation">:</span> 998<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.comment-scroll .btn-floating</span> <span class="token punctuation">{</span>
+    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to bottom right<span class="token punctuation">,</span> #FF9999 0%<span class="token punctuation">,</span> #ff6666 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 48px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 48px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.comment-scroll .btn-floating i</span> <span class="token punctuation">{</span>
+    <span class="token property">line-height</span><span class="token punctuation">:</span> 48px<span class="token punctuation">;</span>
+    <span class="token property">font-size</span><span class="token punctuation">:</span> 1.8rem<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>到此按钮添加成功。重新生成博客文件即可。</p>
+<h3 id="13-滚动条样式"><a href="#13-滚动条样式" class="headerlink" title="13. 滚动条样式"></a>13. 滚动条样式</h3><p>在<code>themes\Matery\source\css\matery.css</code>文件末尾添加如下代码：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* 滚动条 */</span>
+<span class="token selector">::-webkit-scrollbar-thumb</span> <span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> #2e77f7<span class="token punctuation">;</span>
+    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">-webkit-linear-gradient</span><span class="token punctuation">(</span>45deg<span class="token punctuation">,</span><span class="token function">rgba</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 0.4<span class="token punctuation">)</span> 25%<span class="token punctuation">,</span>transparent 25%<span class="token punctuation">,</span>transparent 50%<span class="token punctuation">,</span><span class="token function">rgba</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span>255<span class="token punctuation">,</span>255<span class="token punctuation">,</span>.4<span class="token punctuation">)</span> 50%<span class="token punctuation">,</span><span class="token function">rgba</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span>255<span class="token punctuation">,</span>255<span class="token punctuation">,</span>.4<span class="token punctuation">)</span> 75%<span class="token punctuation">,</span>transparent 75%<span class="token punctuation">,</span>transparent<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 3em<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">::-webkit-scrollbar-track</span> <span class="token punctuation">{</span>
+    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 255<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token property">border-radius</span><span class="token punctuation">:</span> 3em<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token selector">::-webkit-scrollbar</span> <span class="token punctuation">{</span>
+    <span class="token property">width</span><span class="token punctuation">:</span> 8px<span class="token punctuation">;</span>
+    <span class="token property">height</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>可以修改以下两个属性来改变颜色：</p>
+<p><code>::-webkit-scrollbar-thumb</code>中的<code>background-color</code>参数是滚动条颜色。</p>
+<p><code>::-webkit-scrollbar-track</code>中的<code>background-color</code>参数是滚动条处的背景颜色。</p>
 
                 
             </div>
@@ -1679,7 +1736,12 @@ hexo-theme-matery 中文说明
 <!--酷Q推送-->
 
 
-
+<!-- 直达评论 -->
+<div id="to_comment" class="comment-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="直达评论">
+        <i class="fas fa-comments"></i>
+    </a>
+</div>   
     
 
     
@@ -1939,7 +2001,7 @@ hexo-theme-matery 中文说明
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">28.7k</span>
+                        class="white-color">29.1k</span>
             
             
             
@@ -2286,6 +2348,15 @@ $(function () {
         );
     </script>
 
+<!-- 背景特效 -->
+
+    <script type="text/javascript">
+        // 只在桌面版网页启用特效
+        var windowWidth = $(window).width();
+        document.write(
+            '<script type="text/javascript" src="/js/texiao.js"><\/script>'
+        );
+    </script>
 
 
         <style>
