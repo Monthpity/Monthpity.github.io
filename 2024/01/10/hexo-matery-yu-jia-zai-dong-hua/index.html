@@ -982,12 +982,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/optimize/">
-                                <span class="chip bg-color">optimize</span>
-                            </a>
-                        
                             <a href="/tags/Hexo/">
                                 <span class="chip bg-color">Hexo</span>
+                            </a>
+                        
+                            <a href="/tags/optimize/">
+                                <span class="chip bg-color">optimize</span>
                             </a>
                         
                     </div>
@@ -1018,7 +1018,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-21
+                    2024-01-22
                 </div>
                 
 
@@ -1050,8 +1050,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Hexo-matery-主题添加预加载动画"><a href="#Hexo-matery-主题添加预加载动画" class="headerlink" title="Hexo-matery 主题添加预加载动画"></a>Hexo-matery 主题添加预加载动画</h2><p>为主题添加一个预加载动画，对与访问速度较慢的blog来说很友好。预加载动画也就不用解释了，从字面意思都能理解是什么，废话不多说直接操作。</p>
-<h3 id="1-添加一个ejs文件"><a href="#1-添加一个ejs文件" class="headerlink" title="1. 添加一个ejs文件"></a>1. 添加一个ejs文件</h3><p>在主题目录下<code>/layout/_partial/</code>目录下创建一个<code>loading-pages.ejs</code> 的文件，内容如下：</p>
+                <h1 id="Hexo-matery-主题添加预加载动画"><a href="#Hexo-matery-主题添加预加载动画" class="headerlink" title="Hexo-matery 主题添加预加载动画"></a>Hexo-matery 主题添加预加载动画</h1><p>为主题添加一个预加载动画，对与访问速度较慢的blog来说很友好。预加载动画也就不用解释了，从字面意思都能理解是什么，废话不多说直接操作。</p>
+<h2 id="1-添加一个ejs文件"><a href="#1-添加一个ejs文件" class="headerlink" title="1. 添加一个ejs文件"></a>1. 添加一个ejs文件</h2><p>在主题目录下<code>/layout/_partial/</code>目录下创建一个<code>loading-pages.ejs</code> 的文件，内容如下：</p>
 <pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;style type="text/css" lang="css"&gt;
     #loading-container{
         position: fixed;
@@ -1184,7 +1184,7 @@
 })()
 &lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="2-主题目录下的ejs文件中添加内容"><a href="#2-主题目录下的ejs文件中添加内容" class="headerlink" title="2. 主题目录下的ejs文件中添加内容"></a>2. 主题目录下的ejs文件中添加内容</h3><p>在主题目录<code>layout</code>下找到<code>layout.ejs</code>这个文件。</p>
+<h2 id="2-主题目录下的ejs文件中添加内容"><a href="#2-主题目录下的ejs文件中添加内容" class="headerlink" title="2. 主题目录下的ejs文件中添加内容"></a>2. 主题目录下的ejs文件中添加内容</h2><p>在主题目录<code>layout</code>下找到<code>layout.ejs</code>这个文件。</p>
 <p>打开后在<code>&lt;body&gt;</code>标签前添加如下内容：</p>
 <pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;% if (theme.loadingPages.enable) { %&gt;
    &lt;%- partial('_partial/loading-pages') %&gt;
@@ -1206,15 +1206,15 @@
     &lt;/div&gt;
 &lt;% } %&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="3-主题目录下-config-yml文件添加开关配置"><a href="#3-主题目录下-config-yml文件添加开关配置" class="headerlink" title="3. 主题目录下_config.yml文件添加开关配置"></a>3. 主题目录下_config.yml文件添加开关配置</h3><p>打开<code>_config.yml</code>文件，添加如下内容：</p>
+<h2 id="3-主题目录下-config-yml文件添加开关配置"><a href="#3-主题目录下-config-yml文件添加开关配置" class="headerlink" title="3. 主题目录下_config.yml文件添加开关配置"></a>3. 主题目录下_config.yml文件添加开关配置</h2><p>打开<code>_config.yml</code>文件，添加如下内容：</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">loadingPages</span><span class="token punctuation">:</span>
   <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>  <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 <p><code>enable</code> 设置为 <code>true</code> 表示开启加载动画， <code>false</code> 表示关闭加载动画。</p>
-<h3 id="4-重新生成页面"><a href="#4-重新生成页面" class="headerlink" title="4. 重新生成页面"></a>4. 重新生成页面</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="4-重新生成页面"><a href="#4-重新生成页面" class="headerlink" title="4. 重新生成页面"></a>4. 重新生成页面</h2><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean <span class="token operator">&amp;&amp;</span> hexo g <span class="token operator">&amp;&amp;</span> hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>原文是在：<a target="_blank" rel="noopener" href="https://zhangxiaocai.cn/posts/7496029d.html#searchModal">斯莫笔记网站</a>，操作没有说的很清楚就在写了一便。</p>
-<h3 id="5-图片添加加载动画"><a href="#5-图片添加加载动画" class="headerlink" title="5. 图片添加加载动画"></a>5. 图片添加加载动画</h3><p>安装</p>
+<h2 id="5-图片添加加载动画"><a href="#5-图片添加加载动画" class="headerlink" title="5. 图片添加加载动画"></a>5. 图片添加加载动画</h2><p>安装</p>
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">npm</span> <span class="token function">install</span> hexo-lazyload-image <span class="token parameter variable">--save</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>之后在站点配置文件<code>_config.yml</code>下添加下面的代码，同时需要在<code>medias</code>文件夹下放一张<code>loading.gif</code>的图片。</p>
@@ -1314,12 +1314,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/optimize/">
-                                    <span class="chip bg-color">optimize</span>
-                                </a>
-                            
                                 <a href="/tags/Hexo/">
                                     <span class="chip bg-color">Hexo</span>
+                                </a>
+                            
+                                <a href="/tags/optimize/">
+                                    <span class="chip bg-color">optimize</span>
                                 </a>
                             
                         </div>
@@ -1715,12 +1715,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/optimize/">
-                        <span class="chip bg-color">optimize</span>
-                    </a>
-                    
                     <a href="/tags/Hexo/">
                         <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/optimize/">
+                        <span class="chip bg-color">optimize</span>
                     </a>
                     
                 </div>
@@ -1870,7 +1870,23 @@
             $('#' + targetId).width(w);
         };
 
-        // 切换TOC目录展开收缩的相关操作.
+    //     切换TOC目录展开收缩的相关操作.
+    //     const expandedClass = 'expanded';
+    //     let $tocAside = $('#toc-aside');
+    //     let $mainContent = $('#main-content');
+    //     $('#floating-toc-btn .btn-floating').click(function () {
+    //         if ($tocAside.hasClass(expandedClass)) {
+    //             $tocAside.removeClass(expandedClass).hide();
+    //             $mainContent.removeClass('l9');
+    //         } else {
+    //             $tocAside.addClass(expandedClass).show();
+    //             $mainContent.addClass('l9');
+    //         }
+    //         fixPostCardWidth('artDetail', 'prenext-posts');
+    //     });
+    //     
+    // });
+
         const expandedClass = 'expanded';
         let $tocAside = $('#toc-aside');
         let $mainContent = $('#main-content');
@@ -1884,8 +1900,40 @@
             }
             fixPostCardWidth('artDetail', 'prenext-posts');
         });
-        
-    });
+        let $itemHasChild = $(".toc-list-item:has(> .toc-list)");
+        $itemHasChild.prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i><span>&nbsp;</span>");
+        let $iconToFold = $(".toc-list-item > .fa-caret-down");
+        let $iconToExpand = $(".toc-list-item > .fa-caret-right");
+        $iconToFold.addClass("hide");
+
+        const targetNodes = document.getElementsByClassName("toc-list-item");
+        const config = { attributes: true, childList: false, subtree: false };
+        const callback = function(mutationsList, observer) {
+          for(let mutation of mutationsList) {
+            if (mutation.type === "attributes") {
+              let target = $(mutation.target)
+              if (target.hasClass("is-active-li")) {
+                let $toFold = $(".toc-list-item > .fa-caret-down");
+                let $toExpand = $(".toc-list-item > .fa-caret-right");
+                $toFold.addClass("hide");
+                $toExpand.removeClass("hide");
+                target.children(".fa-caret-right").first().addClass("hide")
+                target.children(".fa-caret-down").first().removeClass("hide")
+                let parents = target.parents(".toc-list-item")
+                for (p of parents) {
+                  $(p).children(".fa-caret-right").first().addClass("hide")
+                  $(p).children(".fa-caret-down").first().removeClass("hide")
+                }
+              }
+            }
+          }
+        };
+        const observer = new MutationObserver(callback);
+        for (node of targetNodes) {
+          observer.observe(node, config)
+        }
+  });
+ 
 </script>
 
     
@@ -1914,7 +1962,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">29.1k</span>
+                        class="white-color">28.8k</span>
             
             
             

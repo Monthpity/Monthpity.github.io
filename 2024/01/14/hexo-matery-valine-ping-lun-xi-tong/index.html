@@ -981,12 +981,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/optimize/">
-                                <span class="chip bg-color">optimize</span>
-                            </a>
-                        
                             <a href="/tags/Hexo/">
                                 <span class="chip bg-color">Hexo</span>
+                            </a>
+                        
+                            <a href="/tags/optimize/">
+                                <span class="chip bg-color">optimize</span>
                             </a>
                         
                     </div>
@@ -1017,7 +1017,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-17
+                    2024-01-22
                 </div>
                 
 
@@ -1049,16 +1049,16 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Hexo-matery-valine评论系统"><a href="#Hexo-matery-valine评论系统" class="headerlink" title="Hexo-matery-valine评论系统"></a>Hexo-matery-valine评论系统</h2><h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>博客系统众多，WordPress，Emlog，Typecho等等，都有自带的评论系统，而静态博客系统如Hexo，Jekyll，Hugo等，都没有自带的评论系统，想要添加评论系统便便需要依赖第三方。</p>
+                <h1 id="Hexo-matery-valine评论系统"><a href="#Hexo-matery-valine评论系统" class="headerlink" title="Hexo-matery-valine评论系统"></a>Hexo-matery-valine评论系统</h1><h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>博客系统众多，WordPress，Emlog，Typecho等等，都有自带的评论系统，而静态博客系统如Hexo，Jekyll，Hugo等，都没有自带的评论系统，想要添加评论系统便便需要依赖第三方。</p>
 <p>Hexo-matery主题的作者在主题配置文件<code>_config.yml</code>中已经添加了Gittalk、Gitment、Disqus、Livere、Valine、Waline这些评论系统，只需要添加配置函数便可以使用，</p>
 <p>我之前用的是Gittalk评论系统，一个基于Github issue和preact开发的评论插件。但是这个系统想要评论只能登录，而且只支持Gihub登录，还有一个我遇到的问题就是在使用过程中你的博客若是托管在Github pages上的，没有自定义域名Gittalk还能登录上，但是只要添加域名，GIttalk系统就会卡在循环登录的页面。所以后来换了Valine评论系统。</p>
-<h3 id="2-Hexo-matery-Valine配置"><a href="#2-Hexo-matery-Valine配置" class="headerlink" title="2. Hexo-matery-Valine配置"></a>2. Hexo-matery-Valine配置</h3><p>Valine 诞生于2017年8月7日，是一款基于<a target="_blank" rel="noopener" href="https://leancloud.cn/">LeanCloud</a>的快速、简洁且高效的无后端评论系统。</p>
+<h2 id="2-Hexo-matery-Valine配置"><a href="#2-Hexo-matery-Valine配置" class="headerlink" title="2. Hexo-matery-Valine配置"></a>2. Hexo-matery-Valine配置</h2><p>Valine 诞生于2017年8月7日，是一款基于<a target="_blank" rel="noopener" href="https://leancloud.cn/">LeanCloud</a>的快速、简洁且高效的无后端评论系统。</p>
 <p>理论上支持但不限于静态博客，目前已有<a target="_blank" rel="noopener" href="https://valine.js.org/hexo.html">Hexo</a>、<a target="_blank" rel="noopener" href="https://valine.js.org/jekyll.html">Jekyll</a>、<a target="_blank" rel="noopener" href="http://typecho.org/">Typecho</a>、<a target="_blank" rel="noopener" href="https://gohugo.io/">Hugo</a>、<a target="_blank" rel="noopener" href="https://ghost.org/">Ghost</a>、<a target="_blank" rel="noopener" href="https://github.com/daidi/docsify-valine/">Docsify</a> 等博客和文档程序在使用Valine。<a target="_blank" rel="noopener" href="https://valine.js.org/">Valine官网</a>上有配置教程，但已经是很多年前的了不是很详细。便在写了一遍。</p>
-<h4 id="2-1-获取APP-ID和APP-Key"><a href="#2-1-获取APP-ID和APP-Key" class="headerlink" title="2.1 获取APP ID和APP Key"></a>2.1 获取APP ID和APP Key</h4><p>首先需要进入leandCloud官网进行<a target="_blank" rel="noopener" href="https://console.leancloud.app/login?from=/apps">注册</a>，首选国际版，选国内的需要实名认证，点左上角创建应用，添加应用名称、选择开发版本点击创建。</p>
+<h3 id="2-1-获取APP-ID和APP-Key"><a href="#2-1-获取APP-ID和APP-Key" class="headerlink" title="2.1 获取APP ID和APP Key"></a>2.1 获取APP ID和APP Key</h3><p>首先需要进入leandCloud官网进行<a target="_blank" rel="noopener" href="https://console.leancloud.app/login?from=/apps">注册</a>，首选国际版，选国内的需要实名认证，点左上角创建应用，添加应用名称、选择开发版本点击创建。</p>
 <p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a1faf4871b83018afa4423.png" alt="leancloud-1" title="leancloud创建应用"></p>
-<h4 id="2-2-绑定API访问域名"><a href="#2-2-绑定API访问域名" class="headerlink" title="2.2 绑定API访问域名"></a>2.2 绑定API访问域名</h4><p>之所以绑定API访问域名需要在后面的配置文件中使用到，进入刚才创建的应用，点左下角「设置—域名绑定」，最上面便是API访问域名，点击绑定域名，自己想一个自己域名下的二级域名填进去就行，点绑定它就会给你显示DNS该如何配置的，这是便进入域名的管理处，我的是Cloudflare，找到DNS解析，填入配置，类型选择CNAME，名称是自己想的二级域名，目标是Leancloud给的跳转域名。填好后保存等3分钟就绑定成功了。</p>
+<h3 id="2-2-绑定API访问域名"><a href="#2-2-绑定API访问域名" class="headerlink" title="2.2 绑定API访问域名"></a>2.2 绑定API访问域名</h3><p>之所以绑定API访问域名需要在后面的配置文件中使用到，进入刚才创建的应用，点左下角「设置—域名绑定」，最上面便是API访问域名，点击绑定域名，自己想一个自己域名下的二级域名填进去就行，点绑定它就会给你显示DNS该如何配置的，这是便进入域名的管理处，我的是Cloudflare，找到DNS解析，填入配置，类型选择CNAME，名称是自己想的二级域名，目标是Leancloud给的跳转域名。填好后保存等3分钟就绑定成功了。</p>
 <p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a1ffe0871b83018a09d930.png" alt="leancloud-2" title="配置API访问域名"></p>
-<h4 id="2-3-配置-config-yml文件"><a href="#2-3-配置-config-yml文件" class="headerlink" title="2.3 配置_config.yml文件"></a>2.3 配置_config.yml文件</h4><p>回到Lancloud创建的应用中，点左下角「设置—应用凭证」，就会看到需要的<code>APP ID</code>和<code>APP key</code>。找到主题目录下的<code>_config.yml</code>文件。打开后将<code>APP ID</code>和<code>APP key</code>以及绑定的API访问域名填在如下内容中：</p>
+<h3 id="2-3-配置-config-yml文件"><a href="#2-3-配置-config-yml文件" class="headerlink" title="2.3 配置_config.yml文件"></a>2.3 配置_config.yml文件</h3><p>回到Lancloud创建的应用中，点左下角「设置—应用凭证」，就会看到需要的<code>APP ID</code>和<code>APP key</code>。找到主题目录下的<code>_config.yml</code>文件。打开后将<code>APP ID</code>和<code>APP key</code>以及绑定的API访问域名填在如下内容中：</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">valine</span><span class="token punctuation">:</span>
   <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
   <span class="token key atrule">appId</span><span class="token punctuation">:</span>  <span class="token comment"># 必填</span>
@@ -1066,9 +1066,9 @@
   <span class="token key atrule">serverURLs</span><span class="token punctuation">:</span>  <span class="token comment"># 必填 https://你的api</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>如果<code>enabl</code>值是<code>false</code>改成<code>true</code>才表示启用Valine。到这里算是基本完成，重新生成下博客文件就能看到Valine评论区了。</p>
-<h3 id="3-Valine评论系统优化"><a href="#3-Valine评论系统优化" class="headerlink" title="3. Valine评论系统优化"></a>3. Valine评论系统优化</h3><p>到这里有的人会想Valine评论系统无后端，没有办法自行检查和过滤评论，万一有些人在评论区注入一些违法内容，对你的博客有一定的影响。这里推荐一个项目可以解决这些烦恼。</p>
+<h2 id="3-Valine评论系统优化"><a href="#3-Valine评论系统优化" class="headerlink" title="3. Valine评论系统优化"></a>3. Valine评论系统优化</h2><p>到这里有的人会想Valine评论系统无后端，没有办法自行检查和过滤评论，万一有些人在评论区注入一些违法内容，对你的博客有一定的影响。这里推荐一个项目可以解决这些烦恼。</p>
 <p><a target="_blank" rel="noopener" href="https://github.com/DesertsP/Valine-Admin?tab=readme-ov-file">Valine Admin</a> 是 Valine 评论系统的扩展和增强，主要实现评论邮件通知、评论管理、垃圾评论过滤等功能。支持完全自定义的邮件通知模板。基于Akismet API实现准确的垃圾评论过滤。此外，使用云函数等技术解决了免费版云引擎休眠问题，支持云引擎自动唤醒，漏发邮件自动补发。兼容云淡风轻及Deserts维护的多版本Valine。</p>
-<h4 id="3-1-云引擎一键部署"><a href="#3-1-云引擎一键部署" class="headerlink" title="3.1 云引擎一键部署"></a>3.1 云引擎一键部署</h4><p>进入评论系统数据库所在的LeanCloud应用。点击左边导航栏中的「云引擎—管理部署」。点击创建分组，填入分组名称、选择Web后端、实例规格免费版。</p>
+<h3 id="3-1-云引擎一键部署"><a href="#3-1-云引擎一键部署" class="headerlink" title="3.1 云引擎一键部署"></a>3.1 云引擎一键部署</h3><p>进入评论系统数据库所在的LeanCloud应用。点击左边导航栏中的「云引擎—管理部署」。点击创建分组，填入分组名称、选择Web后端、实例规格免费版。</p>
 <p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a2078d871b83018a23a452.png" alt="Leancloud-3" title="云引擎创建分组"></p>
 <p>进入分组后，部署模式选择<code>Git部署</code>，分支<code>master</code>，部署目标环境为<code>生产环境</code>，部署Git地址填：<code>https://github.com/DesertsP/Valine-Admin.git</code>，即可一键部署。</p>
 <p>部署完成后点击设置开始添加环境变量。</p>
@@ -1132,10 +1132,10 @@
 </tr>
 </tbody></table>
 <p>强调一下<strong>ADMIN_URL</strong>这个变量中的值是域名绑定中的下面「<strong>云引擎、ClientEngine 域名</strong>」处在绑定一个二级域名。操作和上面绑定API域名一样，我的建议是还是在绑定一个比较好，主要是用于<strong>云引擎自动唤醒</strong>。</p>
-<h4 id="3-2-评论管理"><a href="#3-2-评论管理" class="headerlink" title="3.2 评论管理"></a>3.2 评论管理</h4><p>首先需要设置管理员信息。访问管理员注册页面<code>https://云引擎域名/sign-up</code>，注册管理员登录信息，</p>
+<h3 id="3-2-评论管理"><a href="#3-2-评论管理" class="headerlink" title="3.2 评论管理"></a>3.2 评论管理</h3><p>首先需要设置管理员信息。访问管理员注册页面<code>https://云引擎域名/sign-up</code>，注册管理员登录信息，</p>
 <p>这里的的云引擎域名就是绑定的云引擎二级域名。</p>
 <p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a20f5f871b83018a3d6fae.png" alt="leancloud-4" title="管理员注册"></p>
-<h4 id="3-3-定时任务设置"><a href="#3-3-定时任务设置" class="headerlink" title="3.3 定时任务设置"></a>3.3 定时任务设置</h4><p>关于自动休眠的官方说法：<a target="_blank" rel="noopener" href="https://leancloud.cn/docs/leanengine_plan.html#hash633315134">点击查看</a>。目前实现了两种云函数定时任务来解决云引擎休眠的问题：</p>
+<h3 id="3-3-定时任务设置"><a href="#3-3-定时任务设置" class="headerlink" title="3.3 定时任务设置"></a>3.3 定时任务设置</h3><p>关于自动休眠的官方说法：<a target="_blank" rel="noopener" href="https://leancloud.cn/docs/leanengine_plan.html#hash633315134">点击查看</a>。目前实现了两种云函数定时任务来解决云引擎休眠的问题：</p>
 <ul>
 <li>自动唤醒，定时访问Web APP二级域名防止云引擎休眠；</li>
 <li>每天定时检查过去24小时内漏发的邮件通知。</li>
@@ -1213,12 +1213,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/optimize/">
-                                    <span class="chip bg-color">optimize</span>
-                                </a>
-                            
                                 <a href="/tags/Hexo/">
                                     <span class="chip bg-color">Hexo</span>
+                                </a>
+                            
+                                <a href="/tags/optimize/">
+                                    <span class="chip bg-color">optimize</span>
                                 </a>
                             
                         </div>
@@ -1670,12 +1670,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/optimize/">
-                        <span class="chip bg-color">optimize</span>
-                    </a>
-                    
                     <a href="/tags/Hexo/">
                         <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/optimize/">
+                        <span class="chip bg-color">optimize</span>
                     </a>
                     
                 </div>
@@ -1777,7 +1777,23 @@
             $('#' + targetId).width(w);
         };
 
-        // 切换TOC目录展开收缩的相关操作.
+    //     切换TOC目录展开收缩的相关操作.
+    //     const expandedClass = 'expanded';
+    //     let $tocAside = $('#toc-aside');
+    //     let $mainContent = $('#main-content');
+    //     $('#floating-toc-btn .btn-floating').click(function () {
+    //         if ($tocAside.hasClass(expandedClass)) {
+    //             $tocAside.removeClass(expandedClass).hide();
+    //             $mainContent.removeClass('l9');
+    //         } else {
+    //             $tocAside.addClass(expandedClass).show();
+    //             $mainContent.addClass('l9');
+    //         }
+    //         fixPostCardWidth('artDetail', 'prenext-posts');
+    //     });
+    //     
+    // });
+
         const expandedClass = 'expanded';
         let $tocAside = $('#toc-aside');
         let $mainContent = $('#main-content');
@@ -1791,8 +1807,40 @@
             }
             fixPostCardWidth('artDetail', 'prenext-posts');
         });
-        
-    });
+        let $itemHasChild = $(".toc-list-item:has(> .toc-list)");
+        $itemHasChild.prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i><span>&nbsp;</span>");
+        let $iconToFold = $(".toc-list-item > .fa-caret-down");
+        let $iconToExpand = $(".toc-list-item > .fa-caret-right");
+        $iconToFold.addClass("hide");
+
+        const targetNodes = document.getElementsByClassName("toc-list-item");
+        const config = { attributes: true, childList: false, subtree: false };
+        const callback = function(mutationsList, observer) {
+          for(let mutation of mutationsList) {
+            if (mutation.type === "attributes") {
+              let target = $(mutation.target)
+              if (target.hasClass("is-active-li")) {
+                let $toFold = $(".toc-list-item > .fa-caret-down");
+                let $toExpand = $(".toc-list-item > .fa-caret-right");
+                $toFold.addClass("hide");
+                $toExpand.removeClass("hide");
+                target.children(".fa-caret-right").first().addClass("hide")
+                target.children(".fa-caret-down").first().removeClass("hide")
+                let parents = target.parents(".toc-list-item")
+                for (p of parents) {
+                  $(p).children(".fa-caret-right").first().addClass("hide")
+                  $(p).children(".fa-caret-down").first().removeClass("hide")
+                }
+              }
+            }
+          }
+        };
+        const observer = new MutationObserver(callback);
+        for (node of targetNodes) {
+          observer.observe(node, config)
+        }
+  });
+ 
 </script>
 
     
@@ -1821,7 +1869,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">29.1k</span>
+                        class="white-color">28.8k</span>
             
             
             

@@ -1014,7 +1014,7 @@ The government troops recaptured the city from the rebels the rebels at the cost
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-14
+                    2024-01-22
                 </div>
                 
 
@@ -1046,7 +1046,7 @@ The government troops recaptured the city from the rebels the rebels at the cost
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="英语期末复习"><a href="#英语期末复习" class="headerlink" title="英语期末复习"></a>英语期末复习</h2><h3 id="Vacubulary"><a href="#Vacubulary" class="headerlink" title="Vacubulary"></a>Vacubulary</h3><ol>
+                <h1 id="英语期末复习"><a href="#英语期末复习" class="headerlink" title="英语期末复习"></a>英语期末复习</h1><h3 id="Vacubulary"><a href="#Vacubulary" class="headerlink" title="Vacubulary"></a>Vacubulary</h3><ol>
 <li>The government troops recaptured the city from the rebels the rebels <strong>at the cost of</strong> two  thousand casualties. </li>
 <li>My brother wasn’t badly hurt, but he injured his leg and had had to <strong>limp</strong> around for a few  weeks. </li>
 <li>The aircraft was subjected to a test of temperatures of <strong>minus</strong> 65 degrees Celsius and plus  120 degrees. </li>
@@ -1607,12 +1607,12 @@ The government troops recaptured the city from the rebels the rebels at the cost
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/optimize/">
-                        <span class="chip bg-color">optimize</span>
-                    </a>
-                    
                     <a href="/tags/Hexo/">
                         <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/optimize/">
+                        <span class="chip bg-color">optimize</span>
                     </a>
                     
                 </div>
@@ -1762,7 +1762,23 @@ The government troops recaptured the city from the rebels the rebels at the cost
             $('#' + targetId).width(w);
         };
 
-        // 切换TOC目录展开收缩的相关操作.
+    //     切换TOC目录展开收缩的相关操作.
+    //     const expandedClass = 'expanded';
+    //     let $tocAside = $('#toc-aside');
+    //     let $mainContent = $('#main-content');
+    //     $('#floating-toc-btn .btn-floating').click(function () {
+    //         if ($tocAside.hasClass(expandedClass)) {
+    //             $tocAside.removeClass(expandedClass).hide();
+    //             $mainContent.removeClass('l9');
+    //         } else {
+    //             $tocAside.addClass(expandedClass).show();
+    //             $mainContent.addClass('l9');
+    //         }
+    //         fixPostCardWidth('artDetail', 'prenext-posts');
+    //     });
+    //     
+    // });
+
         const expandedClass = 'expanded';
         let $tocAside = $('#toc-aside');
         let $mainContent = $('#main-content');
@@ -1776,8 +1792,40 @@ The government troops recaptured the city from the rebels the rebels at the cost
             }
             fixPostCardWidth('artDetail', 'prenext-posts');
         });
-        
-    });
+        let $itemHasChild = $(".toc-list-item:has(> .toc-list)");
+        $itemHasChild.prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i><span>&nbsp;</span>");
+        let $iconToFold = $(".toc-list-item > .fa-caret-down");
+        let $iconToExpand = $(".toc-list-item > .fa-caret-right");
+        $iconToFold.addClass("hide");
+
+        const targetNodes = document.getElementsByClassName("toc-list-item");
+        const config = { attributes: true, childList: false, subtree: false };
+        const callback = function(mutationsList, observer) {
+          for(let mutation of mutationsList) {
+            if (mutation.type === "attributes") {
+              let target = $(mutation.target)
+              if (target.hasClass("is-active-li")) {
+                let $toFold = $(".toc-list-item > .fa-caret-down");
+                let $toExpand = $(".toc-list-item > .fa-caret-right");
+                $toFold.addClass("hide");
+                $toExpand.removeClass("hide");
+                target.children(".fa-caret-right").first().addClass("hide")
+                target.children(".fa-caret-down").first().removeClass("hide")
+                let parents = target.parents(".toc-list-item")
+                for (p of parents) {
+                  $(p).children(".fa-caret-right").first().addClass("hide")
+                  $(p).children(".fa-caret-down").first().removeClass("hide")
+                }
+              }
+            }
+          }
+        };
+        const observer = new MutationObserver(callback);
+        for (node of targetNodes) {
+          observer.observe(node, config)
+        }
+  });
+ 
 </script>
 
     
@@ -1806,7 +1854,7 @@ The government troops recaptured the city from the rebels the rebels at the cost
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">29.1k</span>
+                        class="white-color">28.8k</span>
             
             
             

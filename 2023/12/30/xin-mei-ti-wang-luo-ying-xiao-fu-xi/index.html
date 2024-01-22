@@ -1020,7 +1020,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-14
+                    2024-01-22
                 </div>
                 
 
@@ -1052,7 +1052,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="新媒体营销复习"><a href="#新媒体营销复习" class="headerlink" title="新媒体营销复习"></a>新媒体营销复习</h2><h3 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h3><ol>
+                <h1 id="新媒体营销复习"><a href="#新媒体营销复习" class="headerlink" title="新媒体营销复习"></a>新媒体营销复习</h1><h3 id="名词解释"><a href="#名词解释" class="headerlink" title="名词解释"></a>名词解释</h3><ol>
 <li><strong>新媒体营销</strong></li>
 </ol>
 <p><strong>新媒体营销是指企业或个人利用新媒体平台的功能特性，精心策划具有高度传播性的内容和线上活动。通过向用户广泛、精准的推送消息，以提高品牌知名度和用户参与度，从而达到相应的营销目的。</strong></p>
@@ -1934,7 +1934,23 @@
             $('#' + targetId).width(w);
         };
 
-        // 切换TOC目录展开收缩的相关操作.
+    //     切换TOC目录展开收缩的相关操作.
+    //     const expandedClass = 'expanded';
+    //     let $tocAside = $('#toc-aside');
+    //     let $mainContent = $('#main-content');
+    //     $('#floating-toc-btn .btn-floating').click(function () {
+    //         if ($tocAside.hasClass(expandedClass)) {
+    //             $tocAside.removeClass(expandedClass).hide();
+    //             $mainContent.removeClass('l9');
+    //         } else {
+    //             $tocAside.addClass(expandedClass).show();
+    //             $mainContent.addClass('l9');
+    //         }
+    //         fixPostCardWidth('artDetail', 'prenext-posts');
+    //     });
+    //     
+    // });
+
         const expandedClass = 'expanded';
         let $tocAside = $('#toc-aside');
         let $mainContent = $('#main-content');
@@ -1948,8 +1964,40 @@
             }
             fixPostCardWidth('artDetail', 'prenext-posts');
         });
-        
-    });
+        let $itemHasChild = $(".toc-list-item:has(> .toc-list)");
+        $itemHasChild.prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i><span>&nbsp;</span>");
+        let $iconToFold = $(".toc-list-item > .fa-caret-down");
+        let $iconToExpand = $(".toc-list-item > .fa-caret-right");
+        $iconToFold.addClass("hide");
+
+        const targetNodes = document.getElementsByClassName("toc-list-item");
+        const config = { attributes: true, childList: false, subtree: false };
+        const callback = function(mutationsList, observer) {
+          for(let mutation of mutationsList) {
+            if (mutation.type === "attributes") {
+              let target = $(mutation.target)
+              if (target.hasClass("is-active-li")) {
+                let $toFold = $(".toc-list-item > .fa-caret-down");
+                let $toExpand = $(".toc-list-item > .fa-caret-right");
+                $toFold.addClass("hide");
+                $toExpand.removeClass("hide");
+                target.children(".fa-caret-right").first().addClass("hide")
+                target.children(".fa-caret-down").first().removeClass("hide")
+                let parents = target.parents(".toc-list-item")
+                for (p of parents) {
+                  $(p).children(".fa-caret-right").first().addClass("hide")
+                  $(p).children(".fa-caret-down").first().removeClass("hide")
+                }
+              }
+            }
+          }
+        };
+        const observer = new MutationObserver(callback);
+        for (node of targetNodes) {
+          observer.observe(node, config)
+        }
+  });
+ 
 </script>
 
     
@@ -1978,7 +2026,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">29.1k</span>
+                        class="white-color">28.8k</span>
             
             
             

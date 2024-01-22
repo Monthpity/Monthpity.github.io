@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="NAT地址转换实验, Moonのblog">
-    <meta name="description" content="一、实验目的
+    <meta name="description" content="NAT地址转换实验一、实验目的
 掌握NAT地址转换的基本配置
 
 掌握地址转换的相关概念、分类和工作原理
@@ -14,7 +14,7 @@
 
 
 二、应用环境NAT的最初的目的是允许把私有IP地址映射到公网地址，以减缓IP地址空间的消耗。
-由于IP地址的使用需求旺盛，">
+由于IP地">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -1022,7 +1022,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-01
+                    2024-01-22
                 </div>
                 
 
@@ -1054,7 +1054,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h4><ol>
+                <h1 id="NAT地址转换实验"><a href="#NAT地址转换实验" class="headerlink" title="NAT地址转换实验"></a>NAT地址转换实验</h1><h3 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h3><ol>
 <li><p>掌握NAT地址转换的基本配置</p>
 </li>
 <li><p>掌握地址转换的相关概念、分类和工作原理</p>
@@ -1062,11 +1062,11 @@
 <li><p>了解地址转换的NAT技术</p>
 </li>
 </ol>
-<h4 id="二、应用环境"><a href="#二、应用环境" class="headerlink" title="二、应用环境"></a>二、应用环境</h4><p>NAT的最初的目的是允许把私有IP地址映射到公网地址，以减缓IP地址空间的消耗。</p>
+<h3 id="二、应用环境"><a href="#二、应用环境" class="headerlink" title="二、应用环境"></a>二、应用环境</h3><p>NAT的最初的目的是允许把私有IP地址映射到公网地址，以减缓IP地址空间的消耗。</p>
 <p>由于IP地址的使用需求旺盛，造成了全球公有IP地址的枯竭。因此目前所有的企业在构建的过程中，都只能使用私有IP地址。但互联网上的路由器不转发带有私有IP地址的数据包，因此企业内部计算机如果需要访问互联网，就需要在企业网络的出口路由器或者防火墙设备上，配置NAT地址转换技术，把企业网中的私有地址转换成公有地址，才能实现企业网对互联网的访问。</p>
-<h4 id="三、实验拓扑"><a href="#三、实验拓扑" class="headerlink" title="三、实验拓扑"></a>三、实验拓扑</h4><p>实验拓扑如下，实验设备：2811路由器两台、PC机一台、Server服务器一台、串口线一根、交叉线两根。</p>
+<h3 id="三、实验拓扑"><a href="#三、实验拓扑" class="headerlink" title="三、实验拓扑"></a>三、实验拓扑</h3><p>实验拓扑如下，实验设备：2811路由器两台、PC机一台、Server服务器一台、串口线一根、交叉线两根。</p>
 <p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/64fe7576661c6c8e545e26f7.png" alt="拓扑图"></p>
-<h4 id="四、实验要求"><a href="#四、实验要求" class="headerlink" title="四、实验要求"></a>四、实验要求</h4><p>各配置如下：</p>
+<h3 id="四、实验要求"><a href="#四、实验要求" class="headerlink" title="四、实验要求"></a>四、实验要求</h3><p>各配置如下：</p>
 <table>
 <thead>
 <tr>
@@ -1107,7 +1107,7 @@
 </tr>
 </tbody></table>
 <p>内网1的PC需要访问内网2的服务器，但是因为中间间隔Intetnet，所以我们需要在路由器A设置NAPT，同时在内网2下配置静态NAT，确保PC0可以访问到Server服务器。</p>
-<h4 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h4><h5 id="第一步：给PC机和服务器设置IP地址（略）"><a href="#第一步：给PC机和服务器设置IP地址（略）" class="headerlink" title="第一步：给PC机和服务器设置IP地址（略）"></a>第一步：给PC机和服务器设置IP地址（略）</h5><h5 id="第二步：给路由器设置IP地址并设置时钟频率"><a href="#第二步：给路由器设置IP地址并设置时钟频率" class="headerlink" title="第二步：给路由器设置IP地址并设置时钟频率"></a>第二步：给路由器设置IP地址并设置时钟频率</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
+<h3 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h3><h4 id="第一步：给PC机和服务器设置IP地址（略）"><a href="#第一步：给PC机和服务器设置IP地址（略）" class="headerlink" title="第一步：给PC机和服务器设置IP地址（略）"></a>第一步：给PC机和服务器设置IP地址（略）</h4><h4 id="第二步：给路由器设置IP地址并设置时钟频率"><a href="#第二步：给路由器设置IP地址并设置时钟频率" class="headerlink" title="第二步：给路由器设置IP地址并设置时钟频率"></a>第二步：给路由器设置IP地址并设置时钟频率</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
 
 Router(config)#
 
@@ -1153,7 +1153,7 @@ Router(config-if)#exit
 
 Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第三步：给路由器配置静态路由"><a href="#第三步：给路由器配置静态路由" class="headerlink" title="第三步：给路由器配置静态路由"></a>第三步：给路由器配置静态路由</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
+<h4 id="第三步：给路由器配置静态路由"><a href="#第三步：给路由器配置静态路由" class="headerlink" title="第三步：给路由器配置静态路由"></a>第三步：给路由器配置静态路由</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
 
 Router(config)#
 
@@ -1169,7 +1169,7 @@ Router(config)#ip route 192.168.1.0 255.255.255.0 123.56.220.1
 
 Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第四步：测试PC机和服务器连通性"><a href="#第四步：测试PC机和服务器连通性" class="headerlink" title="第四步：测试PC机和服务器连通性"></a>第四步：测试PC机和服务器连通性</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">测试方法：用PC机Ping服务器测试连通性。
+<h4 id="第四步：测试PC机和服务器连通性"><a href="#第四步：测试PC机和服务器连通性" class="headerlink" title="第四步：测试PC机和服务器连通性"></a>第四步：测试PC机和服务器连通性</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">测试方法：用PC机Ping服务器测试连通性。
 
 PC&gt;ping 172.168.168.168
 
@@ -1195,7 +1195,7 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 
 <p>当出现以上结果时，则表示PC机和服务器连通。</p>
 <p>如果没有出现以上结果，表明PC机和服务器不连通，应检查IP地址或线缆是否配置正确、接口是否启用。</p>
-<h5 id="第五步：配置路由器内部端口和外部端口"><a href="#第五步：配置路由器内部端口和外部端口" class="headerlink" title="第五步：配置路由器内部端口和外部端口"></a>第五步：配置路由器内部端口和外部端口</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
+<h4 id="第五步：配置路由器内部端口和外部端口"><a href="#第五步：配置路由器内部端口和外部端口" class="headerlink" title="第五步：配置路由器内部端口和外部端口"></a>第五步：配置路由器内部端口和外部端口</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
 
 Router(config)#
 
@@ -1231,7 +1231,7 @@ Router(config-if)#exit
 
 Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第六步：配置内网1端口复用"><a href="#第六步：配置内网1端口复用" class="headerlink" title="第六步：配置内网1端口复用"></a>第六步：配置内网1端口复用</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
+<h4 id="第六步：配置内网1端口复用"><a href="#第六步：配置内网1端口复用" class="headerlink" title="第六步：配置内网1端口复用"></a>第六步：配置内网1端口复用</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
 
 Router(config)#
 
@@ -1241,7 +1241,7 @@ Router(config)#ip nat inside source list 1 interface serial 1/0 overload
 
 Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第七步：配置内网2静态NAT"><a href="#第七步：配置内网2静态NAT" class="headerlink" title="第七步：配置内网2静态NAT"></a>第七步：配置内网2静态NAT</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器B：
+<h4 id="第七步：配置内网2静态NAT"><a href="#第七步：配置内网2静态NAT" class="headerlink" title="第七步：配置内网2静态NAT"></a>第七步：配置内网2静态NAT</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器B：
 
 Router(config)#
 
@@ -1249,7 +1249,7 @@ Router(config)#ip nat inside source static 172.168.168.168 123.56.220.3
 
 Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第八步：测试PC机和服务器静态转换的连通性"><a href="#第八步：测试PC机和服务器静态转换的连通性" class="headerlink" title="第八步：测试PC机和服务器静态转换的连通性"></a>第八步：测试PC机和服务器静态转换的连通性</h5><p>测试方法：PC1 Ping 服务器NAT转换的IP地址</p>
+<h4 id="第八步：测试PC机和服务器静态转换的连通性"><a href="#第八步：测试PC机和服务器静态转换的连通性" class="headerlink" title="第八步：测试PC机和服务器静态转换的连通性"></a>第八步：测试PC机和服务器静态转换的连通性</h4><p>测试方法：PC1 Ping 服务器NAT转换的IP地址</p>
 <pre class="line-numbers language-router" data-language="router"><code class="language-router">PC&gt;ping 123.56.220.3
 
 Pinging 123.56.220.3 with 32 bytes of data: 
@@ -1274,7 +1274,7 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 
 <p>当出现以上结果时，则表示PC机和服务器连通，本实验完成。</p>
 <p>如果没有出现以上结果，表明PC机和服务器不连通，应检查配置是否正确。</p>
-<h4 id="六、相关命令详解"><a href="#六、相关命令详解" class="headerlink" title="六、相关命令详解"></a>六、相关命令详解</h4><h5 id="1、ip-nat-inside-source"><a href="#1、ip-nat-inside-source" class="headerlink" title="1、ip nat inside source"></a>1、ip nat inside source</h5><p>命令：ip nat inside source { list|static }</p>
+<h3 id="六、相关命令详解"><a href="#六、相关命令详解" class="headerlink" title="六、相关命令详解"></a>六、相关命令详解</h3><h5 id="1、ip-nat-inside-source"><a href="#1、ip-nat-inside-source" class="headerlink" title="1、ip nat inside source"></a>1、ip nat inside source</h5><p>命令：ip nat inside source { list|static }</p>
 <p>功能：使用ip nat inside source全局配置命令，开启内部源地址的 NAT。</p>
 <p>命令模式：全局配置模式</p>
 <p>使用指南：这个命令有两种形式：动态的和静态的地址转换。带有访问列表的格式建立动态转换。来自和标准访问列表相匹配的地址的报文，将用指定的池中分配的全局地址来进行地址翻译，这个地址池是用ip nat pool命令所指定的。</p>
@@ -1894,7 +1894,23 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
             $('#' + targetId).width(w);
         };
 
-        // 切换TOC目录展开收缩的相关操作.
+    //     切换TOC目录展开收缩的相关操作.
+    //     const expandedClass = 'expanded';
+    //     let $tocAside = $('#toc-aside');
+    //     let $mainContent = $('#main-content');
+    //     $('#floating-toc-btn .btn-floating').click(function () {
+    //         if ($tocAside.hasClass(expandedClass)) {
+    //             $tocAside.removeClass(expandedClass).hide();
+    //             $mainContent.removeClass('l9');
+    //         } else {
+    //             $tocAside.addClass(expandedClass).show();
+    //             $mainContent.addClass('l9');
+    //         }
+    //         fixPostCardWidth('artDetail', 'prenext-posts');
+    //     });
+    //     
+    // });
+
         const expandedClass = 'expanded';
         let $tocAside = $('#toc-aside');
         let $mainContent = $('#main-content');
@@ -1908,8 +1924,40 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
             }
             fixPostCardWidth('artDetail', 'prenext-posts');
         });
-        
-    });
+        let $itemHasChild = $(".toc-list-item:has(> .toc-list)");
+        $itemHasChild.prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i><span>&nbsp;</span>");
+        let $iconToFold = $(".toc-list-item > .fa-caret-down");
+        let $iconToExpand = $(".toc-list-item > .fa-caret-right");
+        $iconToFold.addClass("hide");
+
+        const targetNodes = document.getElementsByClassName("toc-list-item");
+        const config = { attributes: true, childList: false, subtree: false };
+        const callback = function(mutationsList, observer) {
+          for(let mutation of mutationsList) {
+            if (mutation.type === "attributes") {
+              let target = $(mutation.target)
+              if (target.hasClass("is-active-li")) {
+                let $toFold = $(".toc-list-item > .fa-caret-down");
+                let $toExpand = $(".toc-list-item > .fa-caret-right");
+                $toFold.addClass("hide");
+                $toExpand.removeClass("hide");
+                target.children(".fa-caret-right").first().addClass("hide")
+                target.children(".fa-caret-down").first().removeClass("hide")
+                let parents = target.parents(".toc-list-item")
+                for (p of parents) {
+                  $(p).children(".fa-caret-right").first().addClass("hide")
+                  $(p).children(".fa-caret-down").first().removeClass("hide")
+                }
+              }
+            }
+          }
+        };
+        const observer = new MutationObserver(callback);
+        for (node of targetNodes) {
+          observer.observe(node, config)
+        }
+  });
+ 
 </script>
 
     
@@ -1938,7 +1986,7 @@ PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">29.1k</span>
+                        class="white-color">28.8k</span>
             
             
             

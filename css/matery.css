@@ -94,7 +94,7 @@ hr {
 }
 
 blockquote {
-    border-left: 5px solid #2e77f7;
+    border-left: 5px solid #27c93f;
     padding: 1rem 0.8rem 0.2rem 0.8rem;
     color: #666;
     background-color: rgba(66, 185, 131, .1);
@@ -116,8 +116,8 @@ pre {
     top: 0;
     left: 12px;
     margin-top: 12px;
-    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #2e77f7;
-    box-shadow: 20px 0 #ffbd2e, 40px 0 #2e77f7;
+    -webkit-box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
+    box-shadow: 20px 0 #ffbd2e, 40px 0 #27c93f;
 }
 
 code {
@@ -2318,7 +2318,7 @@ body.DarkMode .theme-btn:hover {
 }
 
 /* 滚动条 */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
     background-color: #2e77f7;
     background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, 0.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
     border-radius: 3em;
@@ -2330,5 +2330,5 @@ body.DarkMode .theme-btn:hover {
 ::-webkit-scrollbar {
     width: 8px;
     height: 15px;
-}
+} */
 

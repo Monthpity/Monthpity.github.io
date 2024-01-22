@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="DHCP实验, Moonのblog">
-    <meta name="description" content="一、实验目的
+    <meta name="description" content="DHCP路由实验一、实验目的
 了解DHCP工作环境
 
 掌握DHCP服务基本配置
@@ -13,7 +13,7 @@
 掌握DHCP中继服务配置
 
 
-二、应用环境实现计算机访问互联网的一项重要规则就是：所有访问互联网的计算机必须保证具有全球唯一的IP地址，在日常网络管理工作中，为网络中的计算机">
+二、应用环境实现计算机访问互联网的一项重要规则就是：所有访问互联网的计算机必须保证具有全球唯一的IP地址，在日常网络管理工作中，">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -1021,7 +1021,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-18
+                    2024-01-22
                 </div>
                 
 
@@ -1053,7 +1053,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h4 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h4><ol>
+                <h1 id="DHCP路由实验"><a href="#DHCP路由实验" class="headerlink" title="DHCP路由实验"></a>DHCP路由实验</h1><h3 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h3><ol>
 <li><p>了解DHCP工作环境</p>
 </li>
 <li><p>掌握DHCP服务基本配置</p>
@@ -1061,13 +1061,13 @@
 <li><p>掌握DHCP中继服务配置</p>
 </li>
 </ol>
-<h4 id="二、应用环境"><a href="#二、应用环境" class="headerlink" title="二、应用环境"></a>二、应用环境</h4><p>实现计算机访问互联网的一项重要规则就是：所有访问互联网的计算机必须保证具有全球唯一的IP地址，在日常网络管理工作中，为网络中的计算机手工配置IP地址是一项非常繁琐的工作。一来很多非专业人员不会配置IP地址。二来经常会造成地址配置错误。三来会造成网络中重复使用地址，导致地址冲突。四来会给使用笔记本电脑的人员，在跨区域移动办公室地址分配都很困难。</p>
+<h3 id="二、应用环境"><a href="#二、应用环境" class="headerlink" title="二、应用环境"></a>二、应用环境</h3><p>实现计算机访问互联网的一项重要规则就是：所有访问互联网的计算机必须保证具有全球唯一的IP地址，在日常网络管理工作中，为网络中的计算机手工配置IP地址是一项非常繁琐的工作。一来很多非专业人员不会配置IP地址。二来经常会造成地址配置错误。三来会造成网络中重复使用地址，导致地址冲突。四来会给使用笔记本电脑的人员，在跨区域移动办公室地址分配都很困难。</p>
 <p>为减少日常办公过程中网络管理的工作量，网络中心希望所有计算机的IP地址采取自动获取的方法，这就需要在接入交换机上配置动态主机地址获取协议，动态主机地址分配协议DHCP有效的解决了上述难题，将协议配置在办公网的接入交换机上，可以让接入网络中的主机自动获取上网所需的IP地址。</p>
-<h4 id="三、实验拓扑"><a href="#三、实验拓扑" class="headerlink" title="三、实验拓扑"></a>三、实验拓扑</h4><p>实验拓扑如下，实验设备：2811路由器二台、二层交换机一台、交叉线一根、直通线三根</p>
+<h3 id="三、实验拓扑"><a href="#三、实验拓扑" class="headerlink" title="三、实验拓扑"></a>三、实验拓扑</h3><p>实验拓扑如下，实验设备：2811路由器二台、二层交换机一台、交叉线一根、直通线三根</p>
 <p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/64fbd61b661c6c8e54de1bb1.png" alt="拓扑图" title="DHCP实验"></p>
-<h4 id="四、实验要求"><a href="#四、实验要求" class="headerlink" title="四、实验要求"></a>四、实验要求</h4><p>在路由器B上配置DHCP Server的配置，为使PC0和PC1能分配到IP，在路由器A和交换机A上面做DHCP的中继，PC0和PC1在不同的VLAN。</p>
+<h3 id="四、实验要求"><a href="#四、实验要求" class="headerlink" title="四、实验要求"></a>四、实验要求</h3><p>在路由器B上配置DHCP Server的配置，为使PC0和PC1能分配到IP，在路由器A和交换机A上面做DHCP的中继，PC0和PC1在不同的VLAN。</p>
 <p>PC1的网关为192.168.1.254，PC2的网关为192.168.2.254。</p>
-<h4 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h4><h5 id="第一步：把PC机设置为动态获取IP地址（略）"><a href="#第一步：把PC机设置为动态获取IP地址（略）" class="headerlink" title="第一步：把PC机设置为动态获取IP地址（略）"></a>第一步：把PC机设置为动态获取IP地址（略）</h5><h5 id="第二步：给交换机A创建VLAN"><a href="#第二步：给交换机A创建VLAN" class="headerlink" title="第二步：给交换机A创建VLAN"></a>第二步：给交换机A创建VLAN</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">交换机A：
+<h3 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h3><h4 id="第一步：给交换机A创建VLAN"><a href="#第一步：给交换机A创建VLAN" class="headerlink" title="第一步：给交换机A创建VLAN"></a>第一步：给交换机A创建VLAN</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">交换机A：
 
 Switch(config)#
 
@@ -1081,7 +1081,7 @@ Switch(config-vlan)#exit
 
 Switch(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第三步：给交换机设置链路类型并添加端口"><a href="#第三步：给交换机设置链路类型并添加端口" class="headerlink" title="第三步：给交换机设置链路类型并添加端口"></a>第三步：给交换机设置链路类型并添加端口</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">交换机A：
+<h4 id="第二步：给交换机设置链路类型并添加端口"><a href="#第二步：给交换机设置链路类型并添加端口" class="headerlink" title="第二步：给交换机设置链路类型并添加端口"></a>第二步：给交换机设置链路类型并添加端口</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">交换机A：
 
 Switch(config)#
 
@@ -1117,7 +1117,7 @@ Switch(config-if)#exit
 
 Switch(config-if)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第四步：给路由器A上配置单臂路由并配置IP地址"><a href="#第四步：给路由器A上配置单臂路由并配置IP地址" class="headerlink" title="第四步：给路由器A上配置单臂路由并配置IP地址"></a>第四步：给路由器A上配置单臂路由并配置IP地址</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
+<h4 id="第三步：给路由器A上配置单臂路由并配置IP地址"><a href="#第三步：给路由器A上配置单臂路由并配置IP地址" class="headerlink" title="第三步：给路由器A上配置单臂路由并配置IP地址"></a>第三步：给路由器A上配置单臂路由并配置IP地址</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
 
 Router(config)#
 
@@ -1157,7 +1157,7 @@ Router(config-if)#exit
 
 Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第四步：给路由器B配置IP地址"><a href="#第四步：给路由器B配置IP地址" class="headerlink" title="第四步：给路由器B配置IP地址"></a>第四步：给路由器B配置IP地址</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器B：
+<h4 id="第四步：给路由器B配置IP地址"><a href="#第四步：给路由器B配置IP地址" class="headerlink" title="第四步：给路由器B配置IP地址"></a>第四步：给路由器B配置IP地址</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器B：
 
 Router(config)#
 
@@ -1171,7 +1171,7 @@ Router(config-if)#exit
 
 Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第五步：配置静态路由"><a href="#第五步：配置静态路由" class="headerlink" title="第五步：配置静态路由"></a>第五步：配置静态路由</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器B：
+<h4 id="第五步：配置静态路由"><a href="#第五步：配置静态路由" class="headerlink" title="第五步：配置静态路由"></a>第五步：配置静态路由</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器B：
 
 Router(config)#
 
@@ -1181,7 +1181,7 @@ Router(config)#ip route 192.168.2.0 255.255.255.0 172.16.1.1
 
 Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第六步：在路由器A配置DHCP中继"><a href="#第六步：在路由器A配置DHCP中继" class="headerlink" title="第六步：在路由器A配置DHCP中继"></a>第六步：在路由器A配置DHCP中继</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
+<h4 id="第六步：在路由器A配置DHCP中继"><a href="#第六步：在路由器A配置DHCP中继" class="headerlink" title="第六步：在路由器A配置DHCP中继"></a>第六步：在路由器A配置DHCP中继</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
 
 Router(config)#
 
@@ -1201,7 +1201,7 @@ Router(config-subif)#exit
 
 Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第七步：在路由器B配置DHCP-Server"><a href="#第七步：在路由器B配置DHCP-Server" class="headerlink" title="第七步：在路由器B配置DHCP Server"></a>第七步：在路由器B配置DHCP Server</h5><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器B：
+<h4 id="第七步：在路由器B配置DHCP-Server"><a href="#第七步：在路由器B配置DHCP-Server" class="headerlink" title="第七步：在路由器B配置DHCP Server"></a>第七步：在路由器B配置DHCP Server</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器B：
 
 Router(config)#
 
@@ -1225,9 +1225,9 @@ Router(dhcp-config)#exit
 
 Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h5 id="第八步：查看PC机是否获取到IP地址"><a href="#第八步：查看PC机是否获取到IP地址" class="headerlink" title="第八步：查看PC机是否获取到IP地址"></a>第八步：查看PC机是否获取到IP地址</h5><p>如果查看PC机有获取到IP地址，本实验完成。</p>
+<h4 id="第八步：查看PC机是否获取到IP地址"><a href="#第八步：查看PC机是否获取到IP地址" class="headerlink" title="第八步：查看PC机是否获取到IP地址"></a>第八步：查看PC机是否获取到IP地址</h4><p>如果查看PC机有获取到IP地址，本实验完成。</p>
 <p>如PC机没有获取到IP地址，应检查IP地址、线缆和DHCP中继是否配置正确。</p>
-<h4 id="六、相关配置命令详解"><a href="#六、相关配置命令详解" class="headerlink" title="六、相关配置命令详解"></a>六、相关配置命令详解</h4><h5 id="1、ip-helper-address"><a href="#1、ip-helper-address" class="headerlink" title="1、ip helper-address"></a>1、ip helper-address</h5><p>命令：ip helper-address <ip-address></ip-address></p>
+<h3 id="六、相关配置命令详解"><a href="#六、相关配置命令详解" class="headerlink" title="六、相关配置命令详解"></a>六、相关配置命令详解</h3><h5 id="1、ip-helper-address"><a href="#1、ip-helper-address" class="headerlink" title="1、ip helper-address"></a>1、ip helper-address</h5><p>命令：ip helper-address <ip-address></ip-address></p>
 <p>功能：指定DHCP服务器的地址。</p>
 <p>命令模式：接口配置模式</p>
 <p>使用指南：ip helper－address的作用就是把广播转化为单播，然后发向指定的DHCP服务器地址，一般在DHCP中继使用。</p>
@@ -1847,7 +1847,23 @@ Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><
             $('#' + targetId).width(w);
         };
 
-        // 切换TOC目录展开收缩的相关操作.
+    //     切换TOC目录展开收缩的相关操作.
+    //     const expandedClass = 'expanded';
+    //     let $tocAside = $('#toc-aside');
+    //     let $mainContent = $('#main-content');
+    //     $('#floating-toc-btn .btn-floating').click(function () {
+    //         if ($tocAside.hasClass(expandedClass)) {
+    //             $tocAside.removeClass(expandedClass).hide();
+    //             $mainContent.removeClass('l9');
+    //         } else {
+    //             $tocAside.addClass(expandedClass).show();
+    //             $mainContent.addClass('l9');
+    //         }
+    //         fixPostCardWidth('artDetail', 'prenext-posts');
+    //     });
+    //     
+    // });
+
         const expandedClass = 'expanded';
         let $tocAside = $('#toc-aside');
         let $mainContent = $('#main-content');
@@ -1861,8 +1877,40 @@ Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><
             }
             fixPostCardWidth('artDetail', 'prenext-posts');
         });
-        
-    });
+        let $itemHasChild = $(".toc-list-item:has(> .toc-list)");
+        $itemHasChild.prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i><span>&nbsp;</span>");
+        let $iconToFold = $(".toc-list-item > .fa-caret-down");
+        let $iconToExpand = $(".toc-list-item > .fa-caret-right");
+        $iconToFold.addClass("hide");
+
+        const targetNodes = document.getElementsByClassName("toc-list-item");
+        const config = { attributes: true, childList: false, subtree: false };
+        const callback = function(mutationsList, observer) {
+          for(let mutation of mutationsList) {
+            if (mutation.type === "attributes") {
+              let target = $(mutation.target)
+              if (target.hasClass("is-active-li")) {
+                let $toFold = $(".toc-list-item > .fa-caret-down");
+                let $toExpand = $(".toc-list-item > .fa-caret-right");
+                $toFold.addClass("hide");
+                $toExpand.removeClass("hide");
+                target.children(".fa-caret-right").first().addClass("hide")
+                target.children(".fa-caret-down").first().removeClass("hide")
+                let parents = target.parents(".toc-list-item")
+                for (p of parents) {
+                  $(p).children(".fa-caret-right").first().addClass("hide")
+                  $(p).children(".fa-caret-down").first().removeClass("hide")
+                }
+              }
+            }
+          }
+        };
+        const observer = new MutationObserver(callback);
+        for (node of targetNodes) {
+          observer.observe(node, config)
+        }
+  });
+ 
 </script>
 
     
@@ -1891,7 +1939,7 @@ Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">29.1k</span>
+                        class="white-color">28.8k</span>
             
             
             

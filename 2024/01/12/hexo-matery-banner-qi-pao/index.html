@@ -983,12 +983,12 @@ f">
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/optimize/">
-                                <span class="chip bg-color">optimize</span>
-                            </a>
-                        
                             <a href="/tags/Hexo/">
                                 <span class="chip bg-color">Hexo</span>
+                            </a>
+                        
+                            <a href="/tags/optimize/">
+                                <span class="chip bg-color">optimize</span>
                             </a>
                         
                     </div>
@@ -1019,7 +1019,7 @@ f">
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-17
+                    2024-01-22
                 </div>
                 
 
@@ -1051,7 +1051,7 @@ f">
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="Hexo-matery-banner添加气泡效果"><a href="#Hexo-matery-banner添加气泡效果" class="headerlink" title="Hexo-matery banner添加气泡效果"></a>Hexo-matery banner添加气泡效果</h2><h3 id="1-创建需要的JS"><a href="#1-创建需要的JS" class="headerlink" title="1. 创建需要的JS"></a>1. 创建需要的JS</h3><p>在自己博客根目录下找到<code>themes/matery/source/libs/others</code>这个文件夹，在文件中创建<code> bubble.js</code>文件，填写如下内容：</p>
+                <h1 id="Hexo-matery-banner添加气泡效果"><a href="#Hexo-matery-banner添加气泡效果" class="headerlink" title="Hexo-matery banner添加气泡效果"></a>Hexo-matery banner添加气泡效果</h1><h2 id="1-创建需要的JS"><a href="#1-创建需要的JS" class="headerlink" title="1. 创建需要的JS"></a>1. 创建需要的JS</h2><p>在自己博客根目录下找到<code>themes/matery/source/libs/others</code>这个文件夹，在文件中创建<code> bubble.js</code>文件，填写如下内容：</p>
 <pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 上升的气泡</span>
 <span class="token keyword">function</span> <span class="token function">bubble</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
   <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.carousel-item, .pd-header'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">circleMagic</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
@@ -1119,7 +1119,7 @@ f">
 <span class="token function">bubble</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="2-config-yml配置"><a href="#2-config-yml配置" class="headerlink" title="2. _config.yml配置"></a>2. _config.yml配置</h3><p>上文创建好的<code>js</code>文件需要在主题目录下的<code>_config.yml</code>文件中<code>libs:</code>下的<code>js</code>处引用：</p>
+<h2 id="2-config-yml配置"><a href="#2-config-yml配置" class="headerlink" title="2. _config.yml配置"></a>2. _config.yml配置</h2><p>上文创建好的<code>js</code>文件需要在主题目录下的<code>_config.yml</code>文件中<code>libs:</code>下的<code>js</code>处引用：</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">bubble</span><span class="token punctuation">:</span> /libs/others/bubble.js<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>并且需要在<code>_config.yml</code>文件中添加如下代码，来控制气泡特效的的打开和关闭。</p>
@@ -1127,7 +1127,7 @@ f">
 <span class="token key atrule">bubble</span><span class="token punctuation">:</span>
   <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="3-引用"><a href="#3-引用" class="headerlink" title="3. 引用"></a>3. 引用</h3><p>找到博客根目录下<code>themes/matery/layout/layout.ejs</code>这个文件，打开后在文件中<code>body</code>标签中添加如下代码：</p>
+<h2 id="3-引用"><a href="#3-引用" class="headerlink" title="3. 引用"></a>3. 引用</h2><p>找到博客根目录下<code>themes/matery/layout/layout.ejs</code>这个文件，打开后在文件中<code>body</code>标签中添加如下代码：</p>
 <pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token comment">&lt;!-- 冒泡 --&gt;</span>
 <span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>bubble<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> </span><span class="token delimiter punctuation">%&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
@@ -1204,12 +1204,12 @@ f">
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/optimize/">
-                                    <span class="chip bg-color">optimize</span>
-                                </a>
-                            
                                 <a href="/tags/Hexo/">
                                     <span class="chip bg-color">Hexo</span>
+                                </a>
+                            
+                                <a href="/tags/optimize/">
+                                    <span class="chip bg-color">optimize</span>
                                 </a>
                             
                         </div>
@@ -1605,12 +1605,12 @@ f">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/optimize/">
-                        <span class="chip bg-color">optimize</span>
-                    </a>
-                    
                     <a href="/tags/Hexo/">
                         <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/optimize/">
+                        <span class="chip bg-color">optimize</span>
                     </a>
                     
                 </div>
@@ -1657,12 +1657,12 @@ f">
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/optimize/">
-                        <span class="chip bg-color">optimize</span>
-                    </a>
-                    
                     <a href="/tags/Hexo/">
                         <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/optimize/">
+                        <span class="chip bg-color">optimize</span>
                     </a>
                     
                 </div>
@@ -1764,7 +1764,23 @@ f">
             $('#' + targetId).width(w);
         };
 
-        // 切换TOC目录展开收缩的相关操作.
+    //     切换TOC目录展开收缩的相关操作.
+    //     const expandedClass = 'expanded';
+    //     let $tocAside = $('#toc-aside');
+    //     let $mainContent = $('#main-content');
+    //     $('#floating-toc-btn .btn-floating').click(function () {
+    //         if ($tocAside.hasClass(expandedClass)) {
+    //             $tocAside.removeClass(expandedClass).hide();
+    //             $mainContent.removeClass('l9');
+    //         } else {
+    //             $tocAside.addClass(expandedClass).show();
+    //             $mainContent.addClass('l9');
+    //         }
+    //         fixPostCardWidth('artDetail', 'prenext-posts');
+    //     });
+    //     
+    // });
+
         const expandedClass = 'expanded';
         let $tocAside = $('#toc-aside');
         let $mainContent = $('#main-content');
@@ -1778,8 +1794,40 @@ f">
             }
             fixPostCardWidth('artDetail', 'prenext-posts');
         });
-        
-    });
+        let $itemHasChild = $(".toc-list-item:has(> .toc-list)");
+        $itemHasChild.prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i><span>&nbsp;</span>");
+        let $iconToFold = $(".toc-list-item > .fa-caret-down");
+        let $iconToExpand = $(".toc-list-item > .fa-caret-right");
+        $iconToFold.addClass("hide");
+
+        const targetNodes = document.getElementsByClassName("toc-list-item");
+        const config = { attributes: true, childList: false, subtree: false };
+        const callback = function(mutationsList, observer) {
+          for(let mutation of mutationsList) {
+            if (mutation.type === "attributes") {
+              let target = $(mutation.target)
+              if (target.hasClass("is-active-li")) {
+                let $toFold = $(".toc-list-item > .fa-caret-down");
+                let $toExpand = $(".toc-list-item > .fa-caret-right");
+                $toFold.addClass("hide");
+                $toExpand.removeClass("hide");
+                target.children(".fa-caret-right").first().addClass("hide")
+                target.children(".fa-caret-down").first().removeClass("hide")
+                let parents = target.parents(".toc-list-item")
+                for (p of parents) {
+                  $(p).children(".fa-caret-right").first().addClass("hide")
+                  $(p).children(".fa-caret-down").first().removeClass("hide")
+                }
+              }
+            }
+          }
+        };
+        const observer = new MutationObserver(callback);
+        for (node of targetNodes) {
+          observer.observe(node, config)
+        }
+  });
+ 
 </script>
 
     
@@ -1808,7 +1856,7 @@ f">
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">29.1k</span>
+                        class="white-color">28.8k</span>
             
             
             
