@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Hexo-matery-小组件</title>
+      <link href="/2024/01/24/hexo-matery-xiao-zu-jian/"/>
+      <url>/2024/01/24/hexo-matery-xiao-zu-jian/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Hexo-matery-小组件"><a href="#Hexo-matery-小组件" class="headerlink" title="Hexo-matery-小组件"></a>Hexo-matery-小组件</h1><h2 id="1-评论直达按钮"><a href="#1-评论直达按钮" class="headerlink" title="1. 评论直达按钮"></a>1. 评论直达按钮</h2><blockquote><p>主题本身没有这个按钮，需要自己添加。</p></blockquote><h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>在文件夹<code>themes\Matery\layout\_partial</code>中新建<code>back-comment.ejs</code>，我这里评论是valine，直接填写的valine的id——<code>href="#vcomments"</code>,如果是其他评论，对应修改即可。<code>back-comment.ejs</code>代码如下：</p><pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token comment">&lt;!-- 直达评论 --&gt;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>to_comment<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>comment-scroll<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-floating btn-large waves-effect waves-light<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#vcomments<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>直达评论<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>fas fa-comments<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>在<code>themes\Matery\layout\_partial\valine.ejs</code><strong>文件末尾</strong>添加一条代码，引用第一步的内容。</p><pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/back-comment.ejs'</span><span class="token punctuation">)</span> </span><span class="token delimiter punctuation">%&gt;</span></span>   <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这样操作后则只在valine存在的页面才显示直达评论，防止首页其他地方也出现按钮。</p><h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>在<code>themes\Matery\source\css\matery.css</code><strong>文件末尾</strong>中增加以下代码：</p><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/*直达评论按钮样式*/</span><span class="token selector">.comment-scroll</span> <span class="token punctuation">{</span>    <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>    <span class="token property">right</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>    <span class="token property">bottom</span><span class="token punctuation">:</span> 135px<span class="token punctuation">;</span>    <span class="token property">padding-top</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>    <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>    <span class="token property">z-index</span><span class="token punctuation">:</span> 998<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token selector">.comment-scroll .btn-floating</span> <span class="token punctuation">{</span>    <span class="token property">background</span><span class="token punctuation">:</span> <span class="token function">linear-gradient</span><span class="token punctuation">(</span>to bottom right<span class="token punctuation">,</span> #FF9999 0%<span class="token punctuation">,</span> #ff6666 100%<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token property">width</span><span class="token punctuation">:</span> 48px<span class="token punctuation">;</span>    <span class="token property">height</span><span class="token punctuation">:</span> 48px<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token selector">.comment-scroll .btn-floating i</span> <span class="token punctuation">{</span>    <span class="token property">line-height</span><span class="token punctuation">:</span> 48px<span class="token punctuation">;</span>    <span class="token property">font-size</span><span class="token punctuation">:</span> 1.8rem<span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>到此按钮添加成功。重新生成博客文件即可。</p><h2 id="2-滚动条样式"><a href="#2-滚动条样式" class="headerlink" title="2. 滚动条样式"></a>2. 滚动条样式</h2><p>在<code>themes\Matery\source\css\matery.css</code>文件末尾添加如下代码：</p><pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* 滚动条 */</span><span class="token selector">::-webkit-scrollbar-thumb</span> <span class="token punctuation">{</span>    <span class="token property">background-color</span><span class="token punctuation">:</span> #2e77f7<span class="token punctuation">;</span>    <span class="token property">background-image</span><span class="token punctuation">:</span> <span class="token function">-webkit-linear-gradient</span><span class="token punctuation">(</span>45deg<span class="token punctuation">,</span><span class="token function">rgba</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 0.4<span class="token punctuation">)</span> 25%<span class="token punctuation">,</span>transparent 25%<span class="token punctuation">,</span>transparent 50%<span class="token punctuation">,</span><span class="token function">rgba</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span>255<span class="token punctuation">,</span>255<span class="token punctuation">,</span>.4<span class="token punctuation">)</span> 50%<span class="token punctuation">,</span><span class="token function">rgba</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span>255<span class="token punctuation">,</span>255<span class="token punctuation">,</span>.4<span class="token punctuation">)</span> 75%<span class="token punctuation">,</span>transparent 75%<span class="token punctuation">,</span>transparent<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token property">border-radius</span><span class="token punctuation">:</span> 3em<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token selector">::-webkit-scrollbar-track</span> <span class="token punctuation">{</span>    <span class="token property">background-color</span><span class="token punctuation">:</span> <span class="token function">rgb</span><span class="token punctuation">(</span>255<span class="token punctuation">,</span> 255<span class="token punctuation">,</span> 255<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token property">border-radius</span><span class="token punctuation">:</span> 3em<span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token selector">::-webkit-scrollbar</span> <span class="token punctuation">{</span>    <span class="token property">width</span><span class="token punctuation">:</span> 8px<span class="token punctuation">;</span>    <span class="token property">height</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span><span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>可以修改以下两个属性来改变颜色：</p><p><code>::-webkit-scrollbar-thumb</code>中的<code>background-color</code>参数是滚动条颜色。</p><p><code>::-webkit-scrollbar-track</code>中的<code>background-color</code>参数是滚动条处的背景颜色。</p><h2 id="3-TOC目录展开收缩小箭头"><a href="#3-TOC目录展开收缩小箭头" class="headerlink" title="3. TOC目录展开收缩小箭头"></a>3. TOC目录展开收缩小箭头</h2><p><strong>效果如下：</strong></p><p><img src="https://pic.imgdb.cn/item/65b07885871b83018a152798.png" title="Toc目录效果图"></p><p>找到主题目录下<code>/layout/_partial/post-detail-toc.ejs</code>这个文件，打开后找到如下代码：</p><pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs">// 切换TOC目录展开收缩的相关操作.   const expandedClass = 'expanded';   let $tocAside = $('#toc-aside');   let $mainContent = $('#main-content');        $('#floating-toc-btn .btn-floating').click(function () {            if ($tocAside.hasClass(expandedClass)) {                $tocAside.removeClass(expandedClass).hide();                $mainContent.removeClass('l9');            } else {                $tocAside.addClass(expandedClass).show();                $mainContent.addClass('l9');            }            fixPostCardWidth('artDetail', 'prenext-posts');        });        <span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token punctuation">}</span> </span><span class="token delimiter punctuation">%&gt;</span></span>    });<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>将上面的的代码替换成下面的ejs代码即可：</p><pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs">const expandedClass = 'expanded';        let $tocAside = $('#toc-aside');        let $mainContent = $('#main-content');        $('#floating-toc-btn .btn-floating').click(function () {            if ($tocAside.hasClass(expandedClass)) {                $tocAside.removeClass(expandedClass).hide();                $mainContent.removeClass('l9');            } else {                $tocAside.addClass(expandedClass).show();                $mainContent.addClass('l9');            }            fixPostCardWidth('artDetail', 'prenext-posts');        });        let $itemHasChild = $(".toc-list-item:has(&gt; .toc-list)");        $itemHasChild.prepend("<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>fa fa-caret-down<span class="token punctuation">'</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>i</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">'</span>fa fa-caret-right<span class="token punctuation">'</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>i</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">&gt;</span></span><span class="token entity named-entity" title="&nbsp;">&amp;nbsp;</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span>");        let $iconToFold = $(".toc-list-item &gt; .fa-caret-down");        let $iconToExpand = $(".toc-list-item &gt; .fa-caret-right");        $iconToFold.addClass("hide");        const targetNodes = document.getElementsByClassName("toc-list-item");        const config = { attributes: true, childList: false, subtree: false };        const callback = function(mutationsList, observer) {          for(let mutation of mutationsList) {            if (mutation.type === "attributes") {              let target = $(mutation.target)              if (target.hasClass("is-active-li")) {                let $toFold = $(".toc-list-item &gt; .fa-caret-down");                let $toExpand = $(".toc-list-item &gt; .fa-caret-right");                $toFold.addClass("hide");                $toExpand.removeClass("hide");                target.children(".fa-caret-right").first().addClass("hide")                target.children(".fa-caret-down").first().removeClass("hide")                let parents = target.parents(".toc-list-item")                for (p of parents) {                  $(p).children(".fa-caret-right").first().addClass("hide")                  $(p).children(".fa-caret-down").first().removeClass("hide")                }              }            }          }        };        const observer = new MutationObserver(callback);        for (node of targetNodes) {          observer.observe(node, config)        }  });<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><h2 id="4-Valine添加标识"><a href="#4-Valine添加标识" class="headerlink" title="4. Valine添加标识"></a>4. Valine添加标识</h2><p>Valine评论系统表示需要用魔改过后的<code>js</code>，点击下方链接复制魔改过后的<code>Valine.min.js</code>。</p><blockquote><p><a href="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js">Valine.min.js</a></p></blockquote><p>然后找到主题目录下<code>/source/libs/valine/valine.min.js</code>这个文件，将魔改过后的<code>js</code>替换进去。</p><p>接着进入主题目录下<code>/layout/_partial/valine.ejs</code>找到<code>valine</code>板块添加如下代码：</p><pre class="line-numbers language-none"><code class="language-none">master: 'xxxxxxxxxxxxxxxxxxxxx',   //博主邮箱md5加密32位小写tagMeta: ["博主","小伙伴","访客"],     //标识字段名friends:  [],  //小伙伴邮箱Md5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre><p>注意标识是通过邮箱进行验证的，那么现在我们评论的时候输入邮箱才会显示我们是博主。</p><h2 id="5-添加banner气泡特效"><a href="#5-添加banner气泡特效" class="headerlink" title="5. 添加banner气泡特效"></a>5. 添加banner气泡特效</h2><p>参考：<a href="https://cmymoon.com/2024/01/12/hexo-matery-banner-qi-pao/">Hexo-matery-banner气泡</a>)</p><h2 id="6-添加预加载动画"><a href="#6-添加预加载动画" class="headerlink" title="6. 添加预加载动画"></a>6. 添加预加载动画</h2><p>参考：<a href="https://cmymoon.com/2024/01/10/hexo-matery-yu-jia-zai-dong-hua/">Hexo-matery-预加载动画</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Hexo-matery主题 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Matery </tag>
+            
+            <tag> Optimize </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo-matery-常见问题</title>
       <link href="/2024/01/21/hexo-matery-chang-jian-wen-ti/"/>
       <url>/2024/01/21/hexo-matery-chang-jian-wen-ti/</url>
@@ -13,7 +42,7 @@
       
       <categories>
           
-          <category> Hexo-matery </category>
+          <category> Hexo-matery主题 </category>
           
       </categories>
       
@@ -22,7 +51,9 @@
             
             <tag> Hexo </tag>
             
-            <tag> issue </tag>
+            <tag> Matery </tag>
+            
+            <tag> Issue </tag>
             
         </tags>
       
@@ -49,7 +80,9 @@
             
             <tag> Hexo </tag>
             
-            <tag> build </tag>
+            <tag> Matery </tag>
+            
+            <tag> Build </tag>
             
             <tag> Github </tag>
             
@@ -76,9 +109,11 @@
       
         <tags>
             
-            <tag> optimize </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> Matery </tag>
+            
+            <tag> Optimize </tag>
             
         </tags>
       
@@ -103,9 +138,11 @@
       
         <tags>
             
-            <tag> optimize </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> Matery </tag>
+            
+            <tag> Optimize </tag>
             
         </tags>
       
@@ -130,9 +167,11 @@
       
         <tags>
             
-            <tag> optimize </tag>
-            
             <tag> Hexo </tag>
+            
+            <tag> Matery </tag>
+            
+            <tag> Optimize </tag>
             
         </tags>
       
@@ -257,7 +296,9 @@
       
         <tags>
             
-            <tag> router </tag>
+            <tag> Router </tag>
+            
+            <tag> Network </tag>
             
         </tags>
       
@@ -282,7 +323,9 @@
       
         <tags>
             
-            <tag> router </tag>
+            <tag> Router </tag>
+            
+            <tag> Network </tag>
             
         </tags>
       
@@ -307,7 +350,9 @@
       
         <tags>
             
-            <tag> router </tag>
+            <tag> Router </tag>
+            
+            <tag> Network </tag>
             
         </tags>
       
@@ -332,7 +377,9 @@
       
         <tags>
             
-            <tag> router </tag>
+            <tag> Router </tag>
+            
+            <tag> Network </tag>
             
         </tags>
       
@@ -357,7 +404,9 @@
       
         <tags>
             
-            <tag> router </tag>
+            <tag> Router </tag>
+            
+            <tag> Network </tag>
             
         </tags>
       
