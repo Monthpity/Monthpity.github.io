@@ -1,1 +1,10 @@
 /* Here is your custom css styles. */
+
+*{
+    cursor: url("/medias/alternate.cur"),auto!important;
+ }
+ a {
+    cursor: url("/medias/link.cur"),auto!important;
+ }
+ 
+

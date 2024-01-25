@@ -207,8 +207,10 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
+                    
                     <img src="/medias/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
+                
                     <span class="logo-span">Moonのblog</span>
                 </a>
             </div>
@@ -1015,127 +1017,6 @@
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
                 <div class="card">
-                    <a href="/2023/09/15/lu-you-ppp-shi-yan/">
-                        <div class="card-image">
-                            
-                            <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65043846661c6c8e54973bf0.jpg" class="responsive-img" alt="路由PPP实验">
-                            
-                            <span class="card-title">路由PPP实验</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                PPP路由实验一、实验目的
-掌握PPP的基本配置
-
-掌握CHAP的基本配置步骤和方法
-
-掌握对CHAP进行诊断的基本方法
-
-
-二、应用环境PPP协议是一种点——点串行通信协议。PPP具有处理错误检测、支持多个协议、允许在连接时刻协商IP地址
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-15
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/" class="post-category">
-                                    路由实验
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Router/">
-                            <span class="chip bg-color">Router</span>
-                        </a>
-                        
-                        <a href="/tags/Network/">
-                            <span class="chip bg-color">Network</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2023/09/11/nat-di-zhi-zhuan-huan-shi-yan/">
-                        <div class="card-image">
-                            
-                            <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/64fe75b5661c6c8e545e36b5.jpg" class="responsive-img" alt="NAT地址转换实验">
-                            
-                            <span class="card-title">NAT地址转换实验</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                NAT地址转换实验一、实验目的
-掌握NAT地址转换的基本配置
-
-掌握地址转换的相关概念、分类和工作原理
-
-了解地址转换的NAT技术
-
-
-二、应用环境NAT的最初的目的是允许把私有IP地址映射到公网地址，以减缓IP地址空间的消耗。
-由于IP地
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-11
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/" class="post-category">
-                                    路由实验
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/Router/">
-                            <span class="chip bg-color">Router</span>
-                        </a>
-                        
-                        <a href="/tags/Network/">
-                            <span class="chip bg-color">Network</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
                     <a href="/2023/09/10/ospf-ren-zheng-shi-yan/">
                         <div class="card-image">
                             
@@ -1361,7 +1242,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">29.7k</span>
+                        class="white-color">30k</span>
             
             
             
@@ -1380,12 +1261,13 @@
             </span>
             
             <br>
-
-            <!-- 运行天数提醒. -->
+           <!-- 运行天数 -->
             
                 <span id="sitetime"> Loading ...</span>
                 <script>
                     var calcSiteTime = function () {
+                        // 控制每秒刷新
+                        window.setTimeout("calcSiteTime()", 1000);
                         var seconds = 1000;
                         var minutes = seconds * 60;
                         var hours = minutes * 60;
@@ -1409,18 +1291,21 @@
                         var diff = t2 - t1;
                         var diffYears = Math.floor(diff / years);
                         var diffDays = Math.floor((diff / days) - diffYears * 365);
-
+                        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+                        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+            
                         // 区分是否有年份.
                         var language = 'zh-CN';
                         if (startYear === String(todayYear)) {
                             document.getElementById("year").innerHTML = todayYear;
                             var daysTip = 'This site has been running for ' + diffDays + ' days';
                             if (language === 'zh-CN') {
-                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                                daysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天 ' + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
                             } else if (language === 'zh-HK') {
                                 daysTip = '本站已運行 ' + diffDays + ' 天';
                             }
-                            document.getElementById("sitetime").innerHTML = daysTip;
+                            document.getElementById("sitetime").innerHTML = '本站已运行 ' + diffYears + ' 年 '  + diffDays + ' 天 ' + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";;
                         } else {
                             document.getElementById("year").innerHTML = startYear + " - " + todayYear;
                             var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
@@ -1430,13 +1315,15 @@
                             } else if (language === 'zh-HK') {
                                 yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
                             }
-                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                            document.getElementById("sitetime").innerHTML = '本站已平稳运行 ' + diffYears + ' 年 ' + diffDays + ' 天 ' + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";;
                         }
                     }
-
+            
                     calcSiteTime();
                 </script>
             
+
+
             <br>
             
         </div>
@@ -1470,6 +1357,7 @@
 </footer>
 
 <div class="progress-bar"></div>
+
 
 
     <!-- 搜索遮罩框 -->

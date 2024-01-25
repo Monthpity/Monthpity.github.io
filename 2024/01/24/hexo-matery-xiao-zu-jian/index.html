@@ -214,8 +214,10 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
+                    
                     <img src="/medias/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
+                
                     <span class="logo-span">Moonのblog</span>
                 </a>
             </div>
@@ -1025,14 +1027,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-24
+                    2024-01-25
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    956
+                    1.1k
                 </div>
                 
 
@@ -1195,8 +1197,19 @@ tagMeta: ["博主","小伙伴","访客"],     //标识字段名
 friends:  [],  //小伙伴邮箱Md5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>注意标识是通过邮箱进行验证的，那么现在我们评论的时候输入邮箱才会显示我们是博主。</p>
-<h2 id="5-添加banner气泡特效"><a href="#5-添加banner气泡特效" class="headerlink" title="5. 添加banner气泡特效"></a>5. 添加banner气泡特效</h2><p>参考：<a href="https://cmymoon.com/2024/01/12/hexo-matery-banner-qi-pao/">Hexo-matery-banner气泡</a>)</p>
-<h2 id="6-添加预加载动画"><a href="#6-添加预加载动画" class="headerlink" title="6. 添加预加载动画"></a>6. 添加预加载动画</h2><p>参考：<a href="https://cmymoon.com/2024/01/10/hexo-matery-yu-jia-zai-dong-hua/">Hexo-matery-预加载动画</a></p>
+<h2 id="5-鼠标样式"><a href="#5-鼠标样式" class="headerlink" title="5. 鼠标样式"></a>5. 鼠标样式</h2><p>我们可以自定义在浏览博客时的鼠标样式，先将鼠标文件上传到 <code>matery/source/medias\xxxx.cur</code> ，</p>
+<p>这里推荐一个鼠标样式下载网站：<a target="_blank" rel="noopener" href="https://zhutix.com/tag/cursors/page/2/">致美化</a>。</p>
+<p>将文件移动到指定目录下后，到主题目录下<code>/matery/source/css/my.css</code>文件中添加如下代码：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">*</span><span class="token punctuation">{</span>
+    <span class="token property">cursor</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"/medias/alternate.cur"</span><span class="token punctuation">)</span></span><span class="token punctuation">,</span>auto<span class="token important">!important</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+ <span class="token selector">a</span> <span class="token punctuation">{</span>
+    <span class="token property">cursor</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">"/medias/link.cur"</span><span class="token punctuation">)</span></span><span class="token punctuation">,</span>auto<span class="token important">!important</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<p>提醒以下我添加的是两个<code>cur</code>光标文件，一个是全局的光标，一个是选中链接时的样式，其他感觉没必要添加。</p>
+<h2 id="6-添加banner气泡特效"><a href="#6-添加banner气泡特效" class="headerlink" title="6. 添加banner气泡特效"></a>6. 添加banner气泡特效</h2><p>参考：<a href="https://cmymoon.com/2024/01/12/hexo-matery-banner-qi-pao/">Hexo-matery-banner气泡</a>)</p>
+<h2 id="7-添加预加载动画"><a href="#7-添加预加载动画" class="headerlink" title="7. 添加预加载动画"></a>7. 添加预加载动画</h2><p>参考：<a href="https://cmymoon.com/2024/01/10/hexo-matery-yu-jia-zai-dong-hua/">Hexo-matery-预加载动画</a></p>
 
                 
             </div>
@@ -1774,7 +1787,7 @@ friends:  [],  //小伙伴邮箱Md5<span aria-hidden="true" class="line-numbers-
 
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: white;">
+        <div class="toc-widget card" style="background-color: rgb(255, 255, 255);">
             <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
@@ -1927,7 +1940,7 @@ friends:  [],  //小伙伴邮箱Md5<span aria-hidden="true" class="line-numbers-
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">29.7k</span>
+                        class="white-color">30k</span>
             
             
             
@@ -1946,12 +1959,13 @@ friends:  [],  //小伙伴邮箱Md5<span aria-hidden="true" class="line-numbers-
             </span>
             
             <br>
-
-            <!-- 运行天数提醒. -->
+           <!-- 运行天数 -->
             
                 <span id="sitetime"> Loading ...</span>
                 <script>
                     var calcSiteTime = function () {
+                        // 控制每秒刷新
+                        window.setTimeout("calcSiteTime()", 1000);
                         var seconds = 1000;
                         var minutes = seconds * 60;
                         var hours = minutes * 60;
@@ -1975,18 +1989,21 @@ friends:  [],  //小伙伴邮箱Md5<span aria-hidden="true" class="line-numbers-
                         var diff = t2 - t1;
                         var diffYears = Math.floor(diff / years);
                         var diffDays = Math.floor((diff / days) - diffYears * 365);
-
+                        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+                        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+            
                         // 区分是否有年份.
                         var language = 'zh-CN';
                         if (startYear === String(todayYear)) {
                             document.getElementById("year").innerHTML = todayYear;
                             var daysTip = 'This site has been running for ' + diffDays + ' days';
                             if (language === 'zh-CN') {
-                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                                daysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天 ' + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
                             } else if (language === 'zh-HK') {
                                 daysTip = '本站已運行 ' + diffDays + ' 天';
                             }
-                            document.getElementById("sitetime").innerHTML = daysTip;
+                            document.getElementById("sitetime").innerHTML = '本站已运行 ' + diffYears + ' 年 '  + diffDays + ' 天 ' + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";;
                         } else {
                             document.getElementById("year").innerHTML = startYear + " - " + todayYear;
                             var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
@@ -1996,13 +2013,15 @@ friends:  [],  //小伙伴邮箱Md5<span aria-hidden="true" class="line-numbers-
                             } else if (language === 'zh-HK') {
                                 yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
                             }
-                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                            document.getElementById("sitetime").innerHTML = '本站已平稳运行 ' + diffYears + ' 年 ' + diffDays + ' 天 ' + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";;
                         }
                     }
-
+            
                     calcSiteTime();
                 </script>
             
+
+
             <br>
             
         </div>
@@ -2036,6 +2055,7 @@ friends:  [],  //小伙伴邮箱Md5<span aria-hidden="true" class="line-numbers-
 </footer>
 
 <div class="progress-bar"></div>
+
 
 
     <!-- 搜索遮罩框 -->

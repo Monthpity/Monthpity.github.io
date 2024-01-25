@@ -51,7 +51,7 @@
 }
 
 #toc-content .toc-link:hover {
-    color: #42b983;
+    color: #2e77f7;
     font-weight: 700;
     text-decoration: underline;
 }
@@ -66,7 +66,7 @@
 }
 
 #toc-content .is-active-link {
-    color: #42b983;
+    color: #2e77f7;
 }
 
 #floating-toc-btn {

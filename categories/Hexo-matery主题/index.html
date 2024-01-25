@@ -211,8 +211,10 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
+                    
                     <img src="/medias/loading.gif" data-original="/medias/logo.png" class="logo-img" alt="LOGO">
                     
+                
                     <span class="logo-span">Moonのblog</span>
                 </a>
             </div>
@@ -1413,7 +1415,7 @@ f
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">29.7k</span>
+                        class="white-color">30k</span>
             
             
             
@@ -1432,12 +1434,13 @@ f
             </span>
             
             <br>
-
-            <!-- 运行天数提醒. -->
+           <!-- 运行天数 -->
             
                 <span id="sitetime"> Loading ...</span>
                 <script>
                     var calcSiteTime = function () {
+                        // 控制每秒刷新
+                        window.setTimeout("calcSiteTime()", 1000);
                         var seconds = 1000;
                         var minutes = seconds * 60;
                         var hours = minutes * 60;
@@ -1461,18 +1464,21 @@ f
                         var diff = t2 - t1;
                         var diffYears = Math.floor(diff / years);
                         var diffDays = Math.floor((diff / days) - diffYears * 365);
-
+                        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+                        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
+            
                         // 区分是否有年份.
                         var language = 'zh-CN';
                         if (startYear === String(todayYear)) {
                             document.getElementById("year").innerHTML = todayYear;
                             var daysTip = 'This site has been running for ' + diffDays + ' days';
                             if (language === 'zh-CN') {
-                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                                daysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天 ' + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
                             } else if (language === 'zh-HK') {
                                 daysTip = '本站已運行 ' + diffDays + ' 天';
                             }
-                            document.getElementById("sitetime").innerHTML = daysTip;
+                            document.getElementById("sitetime").innerHTML = '本站已运行 ' + diffYears + ' 年 '  + diffDays + ' 天 ' + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";;
                         } else {
                             document.getElementById("year").innerHTML = startYear + " - " + todayYear;
                             var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
@@ -1482,13 +1488,15 @@ f
                             } else if (language === 'zh-HK') {
                                 yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
                             }
-                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                            document.getElementById("sitetime").innerHTML = '本站已平稳运行 ' + diffYears + ' 年 ' + diffDays + ' 天 ' + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";;
                         }
                     }
-
+            
                     calcSiteTime();
                 </script>
             
+
+
             <br>
             
         </div>
@@ -1522,6 +1530,7 @@ f
 </footer>
 
 <div class="progress-bar"></div>
+
 
 
     <!-- 搜索遮罩框 -->
