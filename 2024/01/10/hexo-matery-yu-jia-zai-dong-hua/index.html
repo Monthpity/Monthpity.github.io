@@ -1026,14 +1026,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-24
+                    2024-01-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.2k
                 </div>
                 
 
@@ -1258,6 +1258,16 @@
     <span class="token function">articleInit</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
     <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">'.modal'</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">modal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h2 id="6-优化缓存"><a href="#6-优化缓存" class="headerlink" title="6. 优化缓存"></a>6. 优化缓存</h2><ul>
+<li>其实第一次加载后本地都是有缓存的，如果每次都把loading显示出来就不那么好看。</li>
+<li>所以我们需要对插件进行魔改，让图片稍微提前加载，避开加载动画。</li>
+<li>打开 主题根目录<code>node_modules/hexo-lazyload-image/lib/simple-lazyload.js</code> 文件。</li>
+</ul>
+<p><strong>第19行修改为：</strong></p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token comment">// 懒加载优化</span>
+<span class="token operator">&amp;&amp;</span> rect<span class="token punctuation">.</span>top <span class="token operator">&lt;=</span> <span class="token punctuation">(</span>window<span class="token punctuation">.</span>innerHeight <span class="token operator">+</span><span class="token number">240</span> <span class="token operator">||</span> document<span class="token punctuation">.</span>documentElement<span class="token punctuation">.</span>clientHeight <span class="token operator">+</span><span class="token number">240</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<p>作用：提前240个像素加载图片；当然这个值也可以根据自己情况修改/</p>
 
                 
             </div>
@@ -1979,7 +1989,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">30.1k</span>
+                        class="white-color">30.4k</span>
             
             
             
