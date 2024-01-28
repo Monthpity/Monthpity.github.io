@@ -1027,14 +1027,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-25
+                    2024-01-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.1k
+                    1.2k
                 </div>
                 
 
@@ -1059,10 +1059,10 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Hexo-matery-小组件"><a href="#Hexo-matery-小组件" class="headerlink" title="Hexo-matery-小组件"></a>Hexo-matery-小组件</h1><h2 id="1-评论直达按钮"><a href="#1-评论直达按钮" class="headerlink" title="1. 评论直达按钮"></a>1. 评论直达按钮</h2><blockquote>
+                <h1 id="Hexo-matery-小组件"><a href="#Hexo-matery-小组件" class="headerlink" title="Hexo-matery-小组件"></a>Hexo-matery-小组件</h1><h3 id="1-评论直达按钮"><a href="#1-评论直达按钮" class="headerlink" title="1. 评论直达按钮"></a>1. 评论直达按钮</h3><blockquote>
 <p>主题本身没有这个按钮，需要自己添加。</p>
 </blockquote>
-<h3 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h3><p>在文件夹<code>themes\Matery\layout\_partial</code>中新建<code>back-comment.ejs</code>，我这里评论是valine，直接填写的valine的id——<code>href="#vcomments"</code>,如果是其他评论，对应修改即可。<code>back-comment.ejs</code>代码如下<span class="github-emoji"><span>🔧</span><img src="/medias/loading.gif" data-original="https://github.githubassets.com/images/icons/emoji/unicode/1f527.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>：</p>
+<h4 id="第一步"><a href="#第一步" class="headerlink" title="第一步"></a>第一步</h4><p>在文件夹<code>themes\Matery\layout\_partial</code>中新建<code>back-comment.ejs</code>，我这里评论是valine，直接填写的valine的id——<code>href="#vcomments"</code>,如果是其他评论，对应修改即可。<code>back-comment.ejs</code>代码如下<span class="github-emoji"><span>🔧</span><img src="/medias/loading.gif" data-original="https://github.githubassets.com/images/icons/emoji/unicode/1f527.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>：</p>
 <pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token comment">&lt;!-- 直达评论 --&gt;</span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>to_comment<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>comment-scroll<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>btn-floating btn-large waves-effect waves-light<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>#vcomments<span class="token punctuation">"</span></span> <span class="token attr-name">title</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>直达评论<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
@@ -1070,11 +1070,11 @@
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h3 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h3><p>在<code>themes\Matery\layout\_partial\valine.ejs</code><strong>文件末尾</strong>添加一条代码，引用第一步的内容。</p>
+<h4 id="第二步"><a href="#第二步" class="headerlink" title="第二步"></a>第二步</h4><p>在<code>themes\Matery\layout\_partial\valine.ejs</code><strong>文件末尾</strong>添加一条代码，引用第一步的内容。</p>
 <pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/back-comment.ejs'</span><span class="token punctuation">)</span> </span><span class="token delimiter punctuation">%&gt;</span></span>   <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>这样操作后则只在valine存在的页面才显示直达评论，防止首页其他地方也出现按钮。</p>
-<h3 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h3><p>在<code>themes\Matery\source\css\matery.css</code><strong>文件末尾</strong>中增加以下代码<span class="github-emoji"><span>🔧</span><img src="/medias/loading.gif" data-original="https://github.githubassets.com/images/icons/emoji/unicode/1f527.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>：</p>
+<h4 id="第三步"><a href="#第三步" class="headerlink" title="第三步"></a>第三步</h4><p>在<code>themes\Matery\source\css\matery.css</code><strong>文件末尾</strong>中增加以下代码<span class="github-emoji"><span>🔧</span><img src="/medias/loading.gif" data-original="https://github.githubassets.com/images/icons/emoji/unicode/1f527.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/*直达评论按钮样式*/</span>
 <span class="token selector">.comment-scroll</span> <span class="token punctuation">{</span>
     <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
@@ -1097,7 +1097,7 @@
 <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>到此按钮添加成功。重新生成博客文件即可。</p>
-<h2 id="2-滚动条样式"><a href="#2-滚动条样式" class="headerlink" title="2. 滚动条样式"></a>2. 滚动条样式</h2><p>在<code>themes\Matery\source\css\matery.css</code>文件末尾添加如下代码<span class="github-emoji"><span>🔧</span><img src="/medias/loading.gif" data-original="https://github.githubassets.com/images/icons/emoji/unicode/1f527.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>：</p>
+<h3 id="2-滚动条样式"><a href="#2-滚动条样式" class="headerlink" title="2. 滚动条样式"></a>2. 滚动条样式</h3><p>在<code>themes\Matery\source\css\matery.css</code>文件末尾添加如下代码<span class="github-emoji"><span>🔧</span><img src="/medias/loading.gif" data-original="https://github.githubassets.com/images/icons/emoji/unicode/1f527.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/* 滚动条 */</span>
 <span class="token selector">::-webkit-scrollbar-thumb</span> <span class="token punctuation">{</span>
     <span class="token property">background-color</span><span class="token punctuation">:</span> #2e77f7<span class="token punctuation">;</span>
@@ -1116,7 +1116,7 @@
 <p>可以修改以下两个属性来改变颜色：</p>
 <p><code>::-webkit-scrollbar-thumb</code>中的<code>background-color</code>参数是滚动条颜色。</p>
 <p><code>::-webkit-scrollbar-track</code>中的<code>background-color</code>参数是滚动条处的背景颜色。</p>
-<h2 id="3-TOC目录展开收缩小箭头"><a href="#3-TOC目录展开收缩小箭头" class="headerlink" title="3. TOC目录展开收缩小箭头"></a>3. TOC目录展开收缩小箭头</h2><p><strong>效果如下：</strong></p>
+<h3 id="3-TOC目录展开收缩小箭头"><a href="#3-TOC目录展开收缩小箭头" class="headerlink" title="3. TOC目录展开收缩小箭头"></a>3. TOC目录展开收缩小箭头</h3><p><strong>效果如下：</strong></p>
 <p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65b07885871b83018a152798.png" title="Toc目录效果图"></p>
 <p>找到主题目录下<code>/layout/_partial/post-detail-toc.ejs</code>这个文件，打开后找到如下代码：</p>
 <pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs">// 切换TOC目录展开收缩的相关操作.
@@ -1186,18 +1186,18 @@
   });
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="4-Valine添加标识"><a href="#4-Valine添加标识" class="headerlink" title="4. Valine添加标识"></a>4. Valine添加标识</h2><p>Valine评论系统表示需要用魔改过后的<code>js</code>，点击下方链接复制魔改过后的<code>Valine.min.js</code>。</p>
+<h3 id="4-Valine添加标识"><a href="#4-Valine添加标识" class="headerlink" title="4. Valine添加标识"></a>4. Valine添加标识</h3><p>Valine评论系统表示需要用魔改过后的<code>js</code>，点击下方链接复制魔改过后的<code>Valine.min.js</code>。</p>
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/HCLonely/Valine@latest/dist/Valine.min.js">Valine.min.js</a></p>
 </blockquote>
 <p>然后找到主题目录下<code>/source/libs/valine/valine.min.js</code>这个文件，将魔改过后的<code>js</code>替换进去。</p>
 <p>接着进入主题目录下<code>/layout/_partial/valine.ejs</code>找到<code>valine</code>板块添加如下代码<span class="github-emoji"><span>🔧</span><img src="/medias/loading.gif" data-original="https://github.githubassets.com/images/icons/emoji/unicode/1f527.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>：</p>
-<pre class="line-numbers language-none"><code class="language-none">master: 'xxxxxxxxxxxxxxxxxxxxx',   //博主邮箱md5加密32位小写
+<pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs">master: 'xxxxxxxxxxxxxxxxxxxxx',   //博主邮箱md5加密32位小写
 tagMeta: ["博主","小伙伴","访客"],     //标识字段名
 friends:  [],  //小伙伴邮箱Md5<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 <p>注意标识是通过邮箱进行验证的，那么现在我们评论的时候输入邮箱才会显示我们是博主。</p>
-<h2 id="5-鼠标样式"><a href="#5-鼠标样式" class="headerlink" title="5. 鼠标样式"></a>5. 鼠标样式</h2><p>我们可以自定义在浏览博客时的鼠标样式，先将鼠标文件上传到 <code>matery/source/medias\xxxx.cur</code> ，</p>
+<h3 id="5-鼠标样式"><a href="#5-鼠标样式" class="headerlink" title="5. 鼠标样式"></a>5. 鼠标样式</h3><p>我们可以自定义在浏览博客时的鼠标样式，先将鼠标文件放到 <code>matery/source/medias/xxxx.cur</code> 。</p>
 <p>这里推荐一个鼠标样式下载网站：<a target="_blank" rel="noopener" href="https://zhutix.com/tag/cursors/page/2/">致美化</a>。</p>
 <p>将文件移动到指定目录下后，到主题目录下<code>/matery/source/css/my.css</code>文件中添加如下代码：</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">*</span><span class="token punctuation">{</span>
@@ -1208,8 +1208,19 @@ friends:  [],  //小伙伴邮箱Md5<span aria-hidden="true" class="line-numbers-
  <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <p>提醒以下我添加的是两个<code>cur</code>光标文件，一个是全局的光标，一个是选中链接时的样式，其他感觉没必要添加。</p>
-<h2 id="6-添加banner气泡特效"><a href="#6-添加banner气泡特效" class="headerlink" title="6. 添加banner气泡特效"></a>6. 添加banner气泡特效</h2><p>参考：<a href="https://cmymoon.com/2024/01/12/hexo-matery-banner-qi-pao/">Hexo-matery-banner气泡</a>)</p>
-<h2 id="7-添加预加载动画"><a href="#7-添加预加载动画" class="headerlink" title="7. 添加预加载动画"></a>7. 添加预加载动画</h2><p>参考：<a href="https://cmymoon.com/2024/01/10/hexo-matery-yu-jia-zai-dong-hua/">Hexo-matery-预加载动画</a></p>
+<h3 id="6-全局字体变换"><a href="#6-全局字体变换" class="headerlink" title="6. 全局字体变换"></a>6. 全局字体变换</h3><p>主题的字体也是可以变换，如果不喜欢默认字体可以更改，先将准备好的字体文件<code>ttf</code>或<code>ttc</code>放到<code>matery/source/medias/xxx.tt或者xxx.ttc</code> 。</p>
+<p>找到主题文件夹下的 <code>my.css</code> 文件，路径为 <code>/themes/matery/source/css/my.css</code> ，填入下面的代码：</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token atrule"><span class="token rule">@font-face</span></span><span class="token punctuation">{</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'myfont'</span><span class="token punctuation">;</span>
+    <span class="token property">src</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'../font/myfont.ttf'</span><span class="token punctuation">)</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">body</span><span class="token punctuation">{</span>
+    <span class="token property">font-family</span><span class="token punctuation">:</span> <span class="token string">'myfont'</span><span class="token punctuation">;</span>  <span class="token comment">/*`myfont`是字体文件的命名。*/</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="7-banner气泡特效"><a href="#7-banner气泡特效" class="headerlink" title="7. banner气泡特效"></a>7. banner气泡特效</h3><p>参考：<a href="https://cmymoon.com/2024/01/12/hexo-matery-banner-qi-pao/">Hexo-matery-banner气泡</a>)</p>
+<h3 id="8-预加载动画"><a href="#8-预加载动画" class="headerlink" title="8. 预加载动画"></a>8. 预加载动画</h3><p>参考：<a href="https://cmymoon.com/2024/01/10/hexo-matery-yu-jia-zai-dong-hua/">Hexo-matery-预加载动画</a></p>
 
                 
             </div>
@@ -1941,7 +1952,7 @@ friends:  [],  //小伙伴邮箱Md5<span aria-hidden="true" class="line-numbers-
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">30k</span>
+                        class="white-color">30.1k</span>
             
             
             
@@ -2053,6 +2064,9 @@ friends:  [],  //小伙伴邮箱Md5<span aria-hidden="true" class="line-numbers-
 
 </div>
     </div>
+
+    
+    
 </footer>
 
 <div class="progress-bar"></div>
@@ -2309,7 +2323,7 @@ $(function () {
         );
     </script>
 
-
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"width":140,"height":180,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script>
         <style>
             [bg-lazy] {
                 background-image: none !important;

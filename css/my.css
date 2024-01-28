@@ -7,4 +7,11 @@
     cursor: url("/medias/link.cur"),auto!important;
  }
  
+ /* @font-face{
+   font-family: 'simsun';
+   src: url('/medias/simsun.ttc');
+}
 
+body{
+   font-family: 'simsun';
+} */
