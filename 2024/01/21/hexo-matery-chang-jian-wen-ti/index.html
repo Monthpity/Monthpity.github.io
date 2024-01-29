@@ -1028,14 +1028,14 @@ hexo-theme-matery 中文说明
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-28
+                    2024-01-29
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.2k
+                    2.3k
                 </div>
                 
 
@@ -1327,6 +1327,14 @@ hexo-theme-matery 中文说明
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h2 id="13-Live2D模型与统计冲突"><a href="#13-Live2D模型与统计冲突" class="headerlink" title="13. Live2D模型与统计冲突"></a>13. Live2D模型与统计冲突</h2><blockquote>
+<p>matery主题一开始不蒜子统计是有效果的，但是安装了live2D模型（启用）之后，统计信息就失效了。</p>
+</blockquote>
+<p><strong>解决方法：</strong></p>
+<ol>
+<li>找到主题目录下<code>source/libs/others/busuanzi.pure.mini.js</code>文件。</li>
+<li>Ctr + F 查找 <code>b.style.display="none"</code> 把其修改：<code>b.style.display="inline"</code> 默认元素呈现为内联元素，或者<code>b.style.display="inline-block"</code> 元素呈现为内联盒子内的块盒子。就解决了。</li>
+</ol>
 
                 
             </div>
@@ -2060,7 +2068,7 @@ hexo-theme-matery 中文说明
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">30.4k</span>
+                        class="white-color">30.5k</span>
             
             
             
@@ -2431,7 +2439,7 @@ $(function () {
         );
     </script>
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"scale":1,"hHeadPos":0.5,"vHeadPos":0.618,"jsonPath":"/live2dw/assets/tororo.model.json"},"display":{"superSample":2,"width":140,"height":180,"position":"left","hOffset":0,"vOffset":-20},"mobile":{"show":false,"scale":0.5},"react":{"opacityDefault":0.7,"opacityOnHover":0.8},"log":false});</script>
+
         <style>
             [bg-lazy] {
                 background-image: none !important;
