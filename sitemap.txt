@@ -1,9 +1,9 @@
-https://cmymoon.com/2024/01/21/hexo-matery-chang-jian-wen-ti/
-https://cmymoon.com/2024/01/10/hexo-matery-yu-jia-zai-dong-hua/
-https://cmymoon.com/2024/01/24/hexo-matery-xiao-zu-jian/
 https://cmymoon.com/2024/01/12/hexo-matery-banner-qi-pao/
-https://cmymoon.com/2024/01/17/hexo-github-da-jian-ge-ren-bo-ke/
 https://cmymoon.com/2024/01/14/hexo-matery-valine-ping-lun-xi-tong/
+https://cmymoon.com/2024/01/21/hexo-matery-chang-jian-wen-ti/
+https://cmymoon.com/2024/01/24/hexo-matery-xiao-zu-jian/
+https://cmymoon.com/2024/01/10/hexo-matery-yu-jia-zai-dong-hua/
+https://cmymoon.com/2024/01/17/hexo-github-da-jian-ge-ren-bo-ke/
 https://cmymoon.com/2023/09/09/dhcp-shi-yan/
 https://cmymoon.com/2023/09/11/nat-di-zhi-zhuan-huan-shi-yan/
 https://cmymoon.com/2023/09/10/ospf-ren-zheng-shi-yan/
@@ -30,5 +30,5 @@ https://cmymoon.com/tags/Optimize/
 https://cmymoon.com/tags/Issue/
 https://cmymoon.com/tags/review/
 https://cmymoon.com/categories/%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/
-https://cmymoon.com/categories/Hexo-matery%E4%B8%BB%E9%A2%98/
+https://cmymoon.com/categories/Hexo-matery/
 https://cmymoon.com/categories/%E5%A4%8D%E4%B9%A0%E6%96%87%E6%A1%A3/
