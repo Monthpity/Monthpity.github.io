@@ -1,4 +1,3 @@
-https://cmymoon.com/vercel.json
 https://cmymoon.com/2024/01/12/hexo-matery-banner-qi-pao/
 https://cmymoon.com/2024/01/14/hexo-matery-valine-ping-lun-xi-tong/
 https://cmymoon.com/2024/01/21/hexo-matery-chang-jian-wen-ti/
