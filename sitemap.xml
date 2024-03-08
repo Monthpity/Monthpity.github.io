@@ -239,6 +239,20 @@
   </url>
   
   <url>
+    <loc>https://cmymoon.com/tags/Matery/</loc>
+    <lastmod>2024-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://cmymoon.com/tags/Build/</loc>
+    <lastmod>2024-03-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://cmymoon.com/tags/Github/</loc>
     <lastmod>2024-03-08</lastmod>
     <changefreq>weekly</changefreq>
@@ -254,20 +268,6 @@
   
   <url>
     <loc>https://cmymoon.com/tags/Speed-up/</loc>
-    <lastmod>2024-03-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cmymoon.com/tags/Matery/</loc>
-    <lastmod>2024-03-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cmymoon.com/tags/Build/</loc>
     <lastmod>2024-03-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
