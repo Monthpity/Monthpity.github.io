@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="PicGo+Github搭建图床, Moonのblog">
-    <meta name="description" content="Picgo+Github搭建图床1. 前沿图床是一种用于存储和分享图片的在线服务。用户可以将自己的图片上传到图床，然后通过链接来分享图片。个人博客需要图床主要是因为博客需要展示大量的图片，而将图片直接上传到博客服务器会占用大量的存储空间，导">
+    <meta name="description" content="Picgo+Github搭建图床1. 前言图床是一种用于存储和分享图片的在线服务。用户可以将自己的图片上传到图床，然后通过链接来分享图片。个人博客需要图床主要是因为博客需要展示大量的图片，而将图片直接上传到博客服务器会占用大量的存储空间，导">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -1066,7 +1066,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-06
+                    2024-03-08
                 </div>
                 
 
@@ -1098,14 +1098,15 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Picgo-Github搭建图床"><a href="#Picgo-Github搭建图床" class="headerlink" title="Picgo+Github搭建图床"></a>Picgo+Github搭建图床</h1><h2 id="1-前沿"><a href="#1-前沿" class="headerlink" title="1. 前沿"></a>1. 前沿</h2><p><strong>图床是一种用于存储和分享图片的在线服务。</strong>用户可以将自己的图片上传到图床，然后通过链接来分享图片。个人博客需要图床主要是因为博客需要展示大量的图片，而将图片直接上传到博客服务器会占用大量的存储空间，导致网页加载速度变慢，同时也会增加服务器的负担。使用图床可以将图片存储在专门的图片服务器上，从而减轻博客服务器的压力，同时也能提高网页加载速度，使用户体验更好。另外，使用图床还可以方便地管理和分享图片，更加灵活和方便。虽然市面上有很多图床，但有些是付费的，不太适合白嫖党的使用，一些免费的公益图床有随时面临跑路的风险，所以自建一个个人图床尤为重要。</p>
+                <h1 id="Picgo-Github搭建图床"><a href="#Picgo-Github搭建图床" class="headerlink" title="Picgo+Github搭建图床"></a>Picgo+Github搭建图床</h1><h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p><strong>图床是一种用于存储和分享图片的在线服务。</strong>用户可以将自己的图片上传到图床，然后通过链接来分享图片。个人博客需要图床主要是因为博客需要展示大量的图片，而将图片直接上传到博客服务器会占用大量的存储空间，导致网页加载速度变慢，同时也会增加服务器的负担。</p>
+<p>使用图床可以将图片存储在专门的图片服务器上，从而减轻博客服务器的压力，同时也能提高网页加载速度，使用户体验更好。另外，使用图床还可以方便地管理和分享图片，更加灵活和方便。虽然市面上有很多图床，但有些是付费的，不太适合白嫖党的使用，一些免费的公益图床有随时面临跑路的风险，所以自建一个个人图床尤为重要。</p>
 <h2 id="2-准备"><a href="#2-准备" class="headerlink" title="2. 准备"></a>2. 准备</h2><ul>
 <li>Github账户（这个不多说了）</li>
 <li>PicGO （非必须，一款好用的图床功具）</li>
 <li>Vercel账户（非必须）</li>
 <li>域名（非必须）</li>
 </ul>
-<h2 id="3-教程"><a href="#3-教程" class="headerlink" title="3. 教程"></a>3. 教程</h2><h3 id="3-1-创建仓库"><a href="#3-1-创建仓库" class="headerlink" title="3.1 创建仓库"></a>3.1 创建仓库</h3><p>登入/创建完Github账户后，回到<code>Gtihub</code>首页，点击右上角的➕号，选择<code>New repository</code>创建一个新的仓库。</p>
+<h2 id="3-教程"><a href="#3-教程" class="headerlink" title="3. 教程"></a>3. 教程</h2><h3 id="3-1-创建仓库"><a href="#3-1-创建仓库" class="headerlink" title="3.1 创建仓库"></a>3.1 创建仓库</h3><p>登入/创建完<code>Github</code>账户后，回到<code>Gtihub</code>首页，点击右上角的➕号，选择<code>New repository</code>创建一个新的仓库。</p>
 <p>在<code>Repository name</code>输入图床仓库的名字，这里我输入图床的名字，我这里输入<code>picture</code>作为我图床仓库的名字，<code>Description</code>可以随便写写，然后图床的隐私选项一定要选择<code>Public</code>，不然外链无法访问，然后<code>README</code>说明文件想添加就添加，后面也可以添加。</p>
 <p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com//picture-bed/picture-bed-1.png" alt="picture-bed-1" title="创建仓库"></p>
 <p>然后滑到最下面选择<code>Create Repository</code>，这样Github仓库就创建好了。</p>
