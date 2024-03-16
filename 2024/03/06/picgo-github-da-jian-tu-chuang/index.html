@@ -1073,12 +1073,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Github/">
-                                <span class="chip bg-color">Github</span>
-                            </a>
-                        
                             <a href="/tags/Build/">
                                 <span class="chip bg-color">Build</span>
+                            </a>
+                        
+                            <a href="/tags/Github/">
+                                <span class="chip bg-color">Github</span>
                             </a>
                         
                             <a href="/tags/Picture-bed/">
@@ -1093,8 +1093,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/Github/" class="post-category">
-                                Github
+                            <a href="/categories/Picture-Bed/" class="post-category">
+                                Picture-Bed
                             </a>
                         
                     </div>
@@ -1113,7 +1113,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-11
+                    2024-03-16
                 </div>
                 
 
@@ -1155,12 +1155,12 @@
 </ul>
 <h2 id="3-教程"><a href="#3-教程" class="headerlink" title="3. 教程"></a>3. 教程</h2><h3 id="3-1-创建仓库"><a href="#3-1-创建仓库" class="headerlink" title="3.1 创建仓库"></a>3.1 创建仓库</h3><p>登入/创建完<code>Github</code>账户后，回到<code>Gtihub</code>首页，点击右上角的➕号，选择<code>New repository</code>创建一个新的仓库。</p>
 <p>在<code>Repository name</code>输入图床仓库的名字，这里我输入图床的名字，我这里输入<code>picture</code>作为我图床仓库的名字，<code>Description</code>可以随便写写，然后图床的隐私选项一定要选择<code>Public</code>，不然外链无法访问，然后<code>README</code>说明文件想添加就添加，后面也可以添加。</p>
-<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com//picture-bed/picture-bed-1.png" alt="picture-bed-1" title="创建仓库"></p>
+<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/picture-bed/picture-bed-1.png" alt="picture-bed-1" title="创建仓库"></p>
 <p>然后滑到最下面选择<code>Create Repository</code>，这样Github仓库就创建好了。</p>
 <h3 id="3-2-获取token"><a href="#3-2-获取token" class="headerlink" title="3.2 获取token"></a>3.2 获取token</h3><p>生成一个token用于PicGo操作你的仓库：</p>
 <p>访问：<a target="_blank" rel="noopener" href="https://github.com/settings/tokens?type=beta">Github-token生成</a></p>
 <p>然后点击<code>Generate new token</code>。</p>
-<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com//picture-bed/picture-bed-2.png" alt="picture-bed-2" title="创建Token"></p>
+<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/picture-bed/picture-bed-2.png" alt="picture-bed-2" title="创建Token"></p>
 <p>紧接着点击<code>Only select repositories</code>找到你刚才创建仓库选中。<code>Repository permissions</code>仓库权限中将<code>contents</code>权限改成<code>Read and Write</code>，最后翻到页面最底部，点击<code>Generate token</code>的绿色按钮生成token。</p>
 <blockquote>
 <p>这个token生成后只会显示一次！如果你怕以后不知道可以将这个token复制一下存到其他地方以备以后使用。</p>
@@ -1180,7 +1180,7 @@
 <p><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo/releases">点击链接下载</a></p>
 </blockquote>
 <h3 id="3-4-配置Picgo"><a href="#3-4-配置Picgo" class="headerlink" title="3.4 配置Picgo"></a>3.4 配置Picgo</h3><p>下载安装好Picgo后，打开软件，点击<code>图床设置</code>–<code>Github</code>依次将上面的必填参数填写好。</p>
-<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com//picture-bed/picture-bed-3.png" alt="picture-bed-3" title="配置Picgo"></p>
+<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/picture-bed/picture-bed-3.png" alt="picture-bed-3" title="配置Picgo"></p>
 <p>至此配置完毕，已经可以使用了。当你上传的时候，你会发现你的仓库里也会增加新的图片了</p>
 <h2 id="4-补充"><a href="#4-补充" class="headerlink" title="4. 补充"></a>4. 补充</h2><p>默认的Github图片链接国内访问很慢，因此你可以试试以下方法。</p>
 <p><strong>第一种方法：</strong></p>
@@ -1193,7 +1193,7 @@
 <p>如果你有自己的域名，你可以将图床部署到Vercel上来自定义域名，Vercel也有国内CDN，也起到加速作用。</p>
 </blockquote>
 <p>在<a target="_blank" rel="noopener" href="https://vercel.com/">Vercel官网</a>登入/注册账户后，再链接<code>Github</code>，点击右侧的<code>Add New</code>选择<code>Project</code>，找到你刚刚创建的<code>Github</code>图片仓库，点击<code>Import</code>导入，<code>Framework Preset</code>默认<code>other</code>，<code>Root Directory</code>默认<code>./</code>。</p>
-<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com//picture-bed/picture-bed-4.png" alt="picture-bed-4" title="修改Directory Listing"></p>
+<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/picture-bed/picture-bed-4.png" alt="picture-bed-4" title="修改Directory Listing"></p>
 <p>然后直接点击<code>Deploy</code>（部署）就好，进入Vercel仓库，点击<code>Setting</code>再点击<code>Domain</code>即可绑定自己的域名，默认的域名被DNS污染无法打开，然后点击<code>Advanced</code>，把<code>Directory Listing</code>打勾，等待域名解析完成就可以直接访问了，进入链接后就可以直接看到你仓库内的所有文件，同时访问速度也很快。</p>
 <p>最后此文章参考于这篇文章：<a target="_blank" rel="noopener" href="https://blog.akimio.top/posts/1006/index.html">个人图床搭建之Github篇 | 秋澪的博客 </a>)。</p>
 
@@ -1260,12 +1260,12 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Github/">
-                                    <span class="chip bg-color">Github</span>
-                                </a>
-                            
                                 <a href="/tags/Build/">
                                     <span class="chip bg-color">Build</span>
+                                </a>
+                            
+                                <a href="/tags/Github/">
+                                    <span class="chip bg-color">Github</span>
                                 </a>
                             
                                 <a href="/tags/Picture-bed/">
@@ -1628,17 +1628,16 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2024/03/06/picgo-github-da-jian-tu-chuang/">
+                <a href="/2024/03/16/blog-ge-ren-zhu-ye/">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/background/22.webp" class="responsive-img" alt="PicGo+Github搭建图床">
+                        <img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/background/33.webp" class="responsive-img" alt="Blog个人主页">
                         
-                        <span class="card-title">PicGo+Github搭建图床</span>
+                        <span class="card-title">Blog个人主页</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1648,35 +1647,34 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-06
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2024-03-16
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Github/" class="post-category">
-                                    Github
+                            <a href="/categories/Home-Page/" class="post-category">
+                                    Home-Page
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
-
                 
                 <div class="card-action article-tags">
-                    
-                    <a href="/tags/Github/">
-                        <span class="chip bg-color">Github</span>
-                    </a>
                     
                     <a href="/tags/Build/">
                         <span class="chip bg-color">Build</span>
                     </a>
                     
-                    <a href="/tags/Picture-bed/">
-                        <span class="chip bg-color">Picture-bed</span>
+                    <a href="/tags/Github/">
+                        <span class="chip bg-color">Github</span>
+                    </a>
+                    
+                    <a href="/tags/Home-page/">
+                        <span class="chip bg-color">Home-page</span>
                     </a>
                     
                 </div>
@@ -1931,7 +1929,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">32.6k</span>
+                        class="white-color">32.9k</span>
             
             
             

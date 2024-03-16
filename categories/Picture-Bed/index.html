@@ -4,8 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hexo-Matery-valine评论系统, Moonのblog">
-    <meta name="description" content="Hexo-matery-valine评论系统1. 前言博客系统众多，WordPress，Emlog，Typecho等等，都有自带的评论系统，而静态博客系统如Hexo，Jekyll，Hugo等，都没有自带的评论系统，想要添加评论系统便便需要依">
+    <meta name="keywords" content="分类: Picture-Bed, Moonのblog">
+    <meta name="description" content="Never really desperate, only the lost of the soul">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hexo-Matery-valine评论系统 | Moonのblog</title>
+    <title>分类: Picture-Bed | Moonのblog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -1040,919 +1040,186 @@
 </script>
 -->
 
-    
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                Moon
+                
+            </div>
 
-
-
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://picture.cmymoon.com/background/6.webp')">
-    <div class="container" style="right: 0px;left: 0px;">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="brand">
-                    <h1 class="description center-align post-title">Hexo-Matery-valine评论系统</h1>
-                </div>
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="/libs/typed/typed.js"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途",
+                            
+                                "Never really desperate, only the lost of the soul",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
             </div>
         </div>
     </div>
 </div>
 
 
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
+<script>
+    
+      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 12) + '.jpg';
+    
+    $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
+
+</script>
 
 
-<main class="post-container content">
+    </div>
+</div>
+
+<main class="content">
 
     
-    <div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
-<div id="artDetail">
+
+<div id="category-cloud" class="container chip-container">
     <div class="card">
-        <div class="card-content article-info">
-            <div class="row tag-cate">
-                <div class="col s7">
-                    
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Hexo/">
-                                <span class="chip bg-color">Hexo</span>
-                            </a>
-                        
-                            <a href="/tags/Matery/">
-                                <span class="chip bg-color">Matery</span>
-                            </a>
-                        
-                            <a href="/tags/Optimize/">
-                                <span class="chip bg-color">Optimize</span>
-                            </a>
-                        
-                    </div>
-                    
-                </div>
-                <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/Hexo-Matery/" class="post-category">
-                                Hexo-Matery
-                            </a>
-                        
-                    </div>
-                    
-                </div>
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
             </div>
-
-            <div class="post-info">
+            <div class="tag-chips">
                 
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2024-01-14
-                </div>
                 
-
                 
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-11
-                </div>
+                <a href="/categories/Hexo-Matery/" title="Hexo-Matery: 7">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F9EBEA;">Hexo-Matery
+                        <span class="tag-length">7</span>
+                    </span>
+                </a>
                 
-
                 
-                <div class="info-break-policy">
-                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.5k
-                </div>
+                <a href="/categories/%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/" title="路由实验: 5">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F5EEF8;">路由实验
+                        <span class="tag-length">5</span>
+                    </span>
+                </a>
                 
-
                 
-
+                <a href="/categories/Home-Page/" title="Home-Page: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D5F5E3;">Home-Page
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
                 
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv"></span>
-                    </div>
-				
+                
+                <a href="/categories/Picture-Bed/" title="Picture-Bed: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            style="background-color: #E8F8F5;">Picture-Bed
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%A4%8D%E4%B9%A0%E6%96%87%E6%A1%A3/" title="复习文档: 4">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #FEF9E7;">复习文档
+                        <span class="tag-length">4</span>
+                    </span>
+                </a>
+                
+                
             </div>
         </div>
-        <hr class="clearfix">
-
-        
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.min.css">
-        
-
-        
-
-        <div class="card-content article-card-content">
-            <div id="articleContent">
-                <h1 id="Hexo-matery-valine评论系统"><a href="#Hexo-matery-valine评论系统" class="headerlink" title="Hexo-matery-valine评论系统"></a>Hexo-matery-valine评论系统</h1><h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>博客系统众多，WordPress，Emlog，Typecho等等，都有自带的评论系统，而静态博客系统如Hexo，Jekyll，Hugo等，都没有自带的评论系统，想要添加评论系统便便需要依赖第三方。</p>
-<p>Hexo-matery主题的作者在主题配置文件<code>_config.yml</code>中已经添加了Gittalk、Gitment、Disqus、Livere、Valine、Waline这些评论系统，只需要添加配置函数便可以使用，</p>
-<p>我之前用的是Gittalk评论系统，一个基于Github issue和preact开发的评论插件。但是这个系统想要评论只能登录，而且只支持Gihub登录，还有一个我遇到的问题就是在使用过程中你的博客若是托管在Github pages上的，没有自定义域名Gittalk还能登录上，但是只要添加域名，GIttalk系统就会卡在循环登录的页面。所以后来换了Valine评论系统。</p>
-<h2 id="2-Hexo-matery-Valine配置"><a href="#2-Hexo-matery-Valine配置" class="headerlink" title="2. Hexo-matery-Valine配置"></a>2. Hexo-matery-Valine配置</h2><p>Valine 诞生于2017年8月7日，是一款基于<a target="_blank" rel="noopener" href="https://leancloud.cn/">LeanCloud</a>的快速、简洁且高效的无后端评论系统。</p>
-<p>理论上支持但不限于静态博客，目前已有<a target="_blank" rel="noopener" href="https://valine.js.org/hexo.html">Hexo</a>、<a target="_blank" rel="noopener" href="https://valine.js.org/jekyll.html">Jekyll</a>、<a target="_blank" rel="noopener" href="http://typecho.org/">Typecho</a>、<a target="_blank" rel="noopener" href="https://gohugo.io/">Hugo</a>、<a target="_blank" rel="noopener" href="https://ghost.org/">Ghost</a>、<a target="_blank" rel="noopener" href="https://github.com/daidi/docsify-valine/">Docsify</a> 等博客和文档程序在使用Valine。<a target="_blank" rel="noopener" href="https://valine.js.org/">Valine官网</a>上有配置教程，但已经是很多年前的了不是很详细。便在写了一遍。</p>
-<h3 id="2-1-获取APP-ID和APP-Key"><a href="#2-1-获取APP-ID和APP-Key" class="headerlink" title="2.1 获取APP ID和APP Key"></a>2.1 获取APP ID和APP Key</h3><p>首先需要进入leandCloud官网进行<a target="_blank" rel="noopener" href="https://console.leancloud.app/login?from=/apps">注册</a>，首选国际版，选国内的需要实名认证，点左上角创建应用，添加应用名称、选择开发版本点击创建。</p>
-<p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a1faf4871b83018afa4423.png" alt="leancloud-1" title="leancloud创建应用"></p>
-<h3 id="2-2-绑定API访问域名"><a href="#2-2-绑定API访问域名" class="headerlink" title="2.2 绑定API访问域名"></a>2.2 绑定API访问域名</h3><p>之所以绑定API访问域名需要在后面的配置文件中使用到，进入刚才创建的应用，点左下角「设置—域名绑定」，最上面便是API访问域名，点击绑定域名，自己想一个自己域名下的二级域名填进去就行，点绑定它就会给你显示DNS该如何配置的，这是便进入域名的管理处，我的是Cloudflare，找到DNS解析，填入配置，类型选择CNAME，名称是自己想的二级域名，目标是Leancloud给的跳转域名。填好后保存等3分钟就绑定成功了。</p>
-<p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a1ffe0871b83018a09d930.png" alt="leancloud-2" title="配置API访问域名"></p>
-<h3 id="2-3-配置-config-yml文件"><a href="#2-3-配置-config-yml文件" class="headerlink" title="2.3 配置_config.yml文件"></a>2.3 配置_config.yml文件</h3><p>回到Lancloud创建的应用中，点左下角「设置—应用凭证」，就会看到需要的<code>APP ID</code>和<code>APP key</code>。找到主题目录下的<code>_config.yml</code>文件。打开后将<code>APP ID</code>和<code>APP key</code>以及绑定的API访问域名填在如下内容中：</p>
-<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">valine</span><span class="token punctuation">:</span>
-  <span class="token key atrule">enable</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
-  <span class="token key atrule">appId</span><span class="token punctuation">:</span>  <span class="token comment"># 必填</span>
-  <span class="token key atrule">appKey</span><span class="token punctuation">:</span>  <span class="token comment"># 必填</span>
-  <span class="token key atrule">serverURLs</span><span class="token punctuation">:</span>  <span class="token comment"># 必填 https://你的api</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>如果<code>enabl</code>值是<code>false</code>改成<code>true</code>才表示启用Valine。到这里算是基本完成，重新生成下博客文件就能看到Valine评论区了。</p>
-<h2 id="3-Valine评论系统优化"><a href="#3-Valine评论系统优化" class="headerlink" title="3. Valine评论系统优化"></a>3. Valine评论系统优化</h2><p>到这里有的人会想Valine评论系统无后端，没有办法自行检查和过滤评论，万一有些人在评论区注入一些违法内容，对你的博客有一定的影响。这里推荐一个项目可以解决这些烦恼。</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/DesertsP/Valine-Admin?tab=readme-ov-file">Valine Admin</a> 是 Valine 评论系统的扩展和增强，主要实现评论邮件通知、评论管理、垃圾评论过滤等功能。支持完全自定义的邮件通知模板。基于Akismet API实现准确的垃圾评论过滤。此外，使用云函数等技术解决了免费版云引擎休眠问题，支持云引擎自动唤醒，漏发邮件自动补发。兼容云淡风轻及Deserts维护的多版本Valine。</p>
-<h3 id="3-1-云引擎一键部署"><a href="#3-1-云引擎一键部署" class="headerlink" title="3.1 云引擎一键部署"></a>3.1 云引擎一键部署</h3><p>进入评论系统数据库所在的LeanCloud应用。点击左边导航栏中的「云引擎—管理部署」。点击创建分组，填入分组名称、选择Web后端、实例规格免费版。</p>
-<p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a2078d871b83018a23a452.png" alt="Leancloud-3" title="云引擎创建分组"></p>
-<p>进入分组后，部署模式选择<code>Git部署</code>，分支<code>master</code>，部署目标环境为<code>生产环境</code>，部署Git地址填：<code>https://github.com/DesertsP/Valine-Admin.git</code>，即可一键部署。</p>
-<p>部署完成后点击设置开始添加环境变量。</p>
-<table>
-<thead>
-<tr>
-<th align="center">变量</th>
-<th align="center">示例</th>
-<th align="center">说明</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">SITE_NAME</td>
-<td align="center">Moonのblog</td>
-<td align="center">[必填]博客名称</td>
-</tr>
-<tr>
-<td align="center">SITE_URL</td>
-<td align="center"><a target="_blank" rel="noopener" href="https://blog.cmymoon.com/">https://blog.cmymoon.com</a></td>
-<td align="center">[必填]首页地址</td>
-</tr>
-<tr>
-<td align="center">SMTP_SERVICE</td>
-<td align="center">QQ</td>
-<td align="center">[新版支持]邮件服务提供商，支持 QQ、163、126、Gmail 以及 <a target="_blank" rel="noopener" href="https://nodemailer.com/smtp/well-known/#supported-services">更多</a></td>
-</tr>
-<tr>
-<td align="center">SMTP_USER</td>
-<td align="center"><a href="mailto:xxxxxxx@qq.com">xxxxxxx@qq.com</a></td>
-<td align="center">[必填]SMTP登录用户</td>
-</tr>
-<tr>
-<td align="center">SMTP_PASS</td>
-<td align="center">ccxxxxxxxxch</td>
-<td align="center">[必填]SMTP登录密码（QQ邮箱需要获取独立密码）</td>
-</tr>
-<tr>
-<td align="center">SENDER_NAME</td>
-<td align="center">Moon</td>
-<td align="center">[必填]发件人</td>
-</tr>
-<tr>
-<td align="center">SENDER_EMAIL</td>
-<td align="center"><a href="mailto:xxxxxx@qq.com">xxxxxx@qq.com</a></td>
-<td align="center">[必填]发件邮箱</td>
-</tr>
-<tr>
-<td align="center">ADMIN_URL</td>
-<td align="center"><a target="_blank" rel="noopener" href="https://xxx.cmymoon.com/">https://xxx.cmymoon.com/</a></td>
-<td align="center">[建议]Web主机二级域名（云引擎域名），用于自动唤醒</td>
-</tr>
-<tr>
-<td align="center">BLOGGER_EMAIL</td>
-<td align="center"><a href="mailto:xxxxxxx@qq.com">xxxxxxx@qq.com</a></td>
-<td align="center">[可选]博主通知收件地址，默认使用SENDER_EMAIL</td>
-</tr>
-<tr>
-<td align="center">AKISMET_KEY</td>
-<td align="center">xxxxxxxx</td>
-<td align="center">[可选]Akismet Key 用于垃圾评论检测，设为MANUAL_REVIEW开启人工审核，留空不使用反垃圾</td>
-</tr>
-</tbody></table>
-<p>强调一下<strong>ADMIN_URL</strong>这个变量中的值是域名绑定中的下面「<strong>云引擎、ClientEngine 域名</strong>」处在绑定一个二级域名。操作和上面绑定API域名一样，我的建议是还是在绑定一个比较好，主要是用于<strong>云引擎自动唤醒</strong>。</p>
-<h3 id="3-2-评论管理"><a href="#3-2-评论管理" class="headerlink" title="3.2 评论管理"></a>3.2 评论管理</h3><p>首先需要设置管理员信息。访问管理员注册页面<code>https://云引擎域名/sign-up</code>，注册管理员登录信息，</p>
-<p>这里的的云引擎域名就是绑定的云引擎二级域名。</p>
-<p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a20f5f871b83018a3d6fae.png" alt="leancloud-4" title="管理员注册"></p>
-<h3 id="3-3-定时任务设置"><a href="#3-3-定时任务设置" class="headerlink" title="3.3 定时任务设置"></a>3.3 定时任务设置</h3><p>关于自动休眠的官方说法：<a target="_blank" rel="noopener" href="https://leancloud.cn/docs/leanengine_plan.html#hash633315134">点击查看</a>。目前实现了两种云函数定时任务来解决云引擎休眠的问题：</p>
-<ul>
-<li>自动唤醒，定时访问Web APP二级域名防止云引擎休眠；</li>
-<li>每天定时检查过去24小时内漏发的邮件通知。</li>
-</ul>
-<p>进入「云引擎-管理部署-定时任务」，创建两个定时任务。</p>
-<p> <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a210f1871b83018a424270.png" alt="leancloud-5" title="创建定时任务"></p>
-<ul>
-<li><p>选择<strong>self-wake云函数</strong>，Cron表达式为<code>0 */30 0-16 * * ?</code>，表示每天早0点到晚16点每隔30分钟访问云引擎。</p>
-</li>
-<li><p>选择<strong>resend-mails云函数</strong>，Cron表达式为<code>0 0 0 * * ?</code>，表示每天0点检查过去24小时内漏发的通知邮件并补发。</p>
-</li>
-</ul>
-<p><strong>至此，Valine Admin 已经可以正常工作，</strong>如果你想添加邮箱通知模板到<a target="_blank" rel="noopener" href="https://github.com/DesertsP/Valine-Admin/tree/master?tab=readme-ov-file">Valine-Admine</a>项目下查看即可。</p>
-
-                
-            </div>
-            <hr/>
-
-            
-
-    <div class="reprint" id="reprint-statement">
-        
-            <div class="reprint__author">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-user">
-                        文章作者:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">月夕</a>
-                </span>
-            </div>
-            <div class="reprint__type">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-link">
-                        文章链接:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="https://cmymoon.com/2024/01/14/hexo-matery-valine-ping-lun-xi-tong/">https://cmymoon.com/2024/01/14/hexo-matery-valine-ping-lun-xi-tong/</a>
-                </span>
-            </div>
-            <div class="reprint__notice">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-copyright">
-                        版权声明:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    本博客所有文章除特別声明外，均采用
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    许可协议。转载请注明来源
-                    <a href="/about" target="_blank">月夕</a>
-                    !
-                </span>
-            </div>
-        
     </div>
-
-    <script async defer>
-      document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
-        M.toast({html: toastHTML})
-      });
-
-      function navToReprintStatement() {
-        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
-      }
-    </script>
+</div>
 
 
+    
 
-            <div class="tag_share" style="display: block;">
-                <div class="post-meta__tag-list" style="display: inline-block;">
-                    
-                        <div class="article-tag">
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2024/03/06/picgo-github-da-jian-tu-chuang/">
+                        <div class="card-image tag-image">
                             
-                                <a href="/tags/Hexo/">
-                                    <span class="chip bg-color">Hexo</span>
-                                </a>
+                            <img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/background/22.webp" class="responsive-img" alt="PicGo+Github搭建图床">
                             
-                                <a href="/tags/Matery/">
-                                    <span class="chip bg-color">Matery</span>
-                                </a>
+                            <span class="card-title">PicGo+Github搭建图床</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
                             
-                                <a href="/tags/Optimize/">
-                                    <span class="chip bg-color">Optimize</span>
-                                </a>
+                                Picgo+Github搭建图床1. 前言图床是一种用于存储和分享图片的在线服务。用户可以将自己的图片上传到图床，然后通过链接来分享图片。个人博客需要图床主要是因为博客需要展示大量的图片，而将图片直接上传到博客服务器会占用大量的存储空间，导
                             
                         </div>
-                    
-                </div>
-                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-<div id="article-share">
-
-    
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
-    
-
-    
-
-</div>
-
-                </div>
-            </div>
-            
-                <div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/loading.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
-        </div>
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-        <style>
-    .valine-card {
-        margin: 1.5rem auto;
-    }
-
-    .valine-card .card-content {
-        padding: 20px 20px 5px 20px;
-    }
-
-    #vcomments textarea {
-        box-sizing: border-box;
-        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
-    }
-
-    #vcomments p {
-        margin: 2px 2px 10px;
-        font-size: 1.05rem;
-        line-height: 1.78rem;
-    }
-
-    #vcomments blockquote p {
-        text-indent: 0.2rem;
-    }
-
-    #vcomments a {
-        padding: 0 2px;
-        color: #4cbf30;
-        font-weight: 500;
-        text-decoration: none;
-    }
-
-    #vcomments img {
-        max-width: 100%;
-        height: auto;
-        cursor: pointer;
-    }
-
-    #vcomments ol li {
-        list-style-type: decimal;
-    }
-
-    #vcomments ol,
-    ul {
-        display: block;
-        padding-left: 2em;
-        word-spacing: 0.05rem;
-    }
-
-    #vcomments ul li,
-    ol li {
-        display: list-item;
-        line-height: 1.8rem;
-        font-size: 1rem;
-    }
-
-    #vcomments ul li {
-        list-style-type: disc;
-    }
-
-    #vcomments ul ul li {
-        list-style-type: circle;
-    }
-
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-
-    #vcomments table, th, td {
-        border: 0;
-    }
-
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-
-    #vcomments table td {
-        min-width: 80px;
-    }
-
-    #vcomments h1 {
-        font-size: 1.85rem;
-        font-weight: bold;
-        line-height: 2.2rem;
-    }
-
-    #vcomments h2 {
-        font-size: 1.65rem;
-        font-weight: bold;
-        line-height: 1.9rem;
-    }
-
-    #vcomments h3 {
-        font-size: 1.45rem;
-        font-weight: bold;
-        line-height: 1.7rem;
-    }
-
-    #vcomments h4 {
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    #vcomments h5 {
-        font-size: 1.1rem;
-        font-weight: bold;
-        line-height: 1.4rem;
-    }
-
-    #vcomments h6 {
-        font-size: 1rem;
-        line-height: 1.3rem;
-    }
-
-    #vcomments p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-    }
-
-    #vcomments hr {
-        margin: 12px 0;
-        border: 0;
-        border-top: 1px solid #ccc;
-    }
-
-    #vcomments blockquote {
-        margin: 15px 0;
-        border-left: 5px solid #42b983;
-        padding: 1rem 0.8rem 0.3rem 0.8rem;
-        color: #666;
-        background-color: rgba(66, 185, 131, .1);
-    }
-
-    #vcomments pre {
-        font-family: monospace, monospace;
-        padding: 1.2em;
-        margin: .5em 0;
-        background: #272822;
-        overflow: auto;
-        border-radius: 0.3em;
-        tab-size: 4;
-    }
-
-    #vcomments code {
-        font-family: monospace, monospace;
-        padding: 1px 3px;
-        font-size: 0.92rem;
-        color: #e96900;
-        background-color: #f8f8f8;
-        border-radius: 2px;
-    }
-
-    #vcomments pre code {
-        font-family: monospace, monospace;
-        padding: 0;
-        color: #e8eaf6;
-        background-color: #272822;
-    }
-
-    #vcomments pre[class*="language-"] {
-        padding: 1.2em;
-        margin: .5em 0;
-    }
-
-    #vcomments code[class*="language-"],
-    pre[class*="language-"] {
-        color: #e8eaf6;
-    }
-
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-
-    #vcomments b,
-    strong {
-        font-weight: bold;
-    }
-
-    #vcomments dfn {
-        font-style: italic;
-    }
-
-    #vcomments small {
-        font-size: 85%;
-    }
-
-    #vcomments cite {
-        font-style: normal;
-    }
-
-    #vcomments mark {
-        background-color: #fcf8e3;
-        padding: .2em;
-    }
-
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-
-    #vcomments table td {
-        min-width: 80px;
-    }
-
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-</style>
-
-<div class="card valine-card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
-        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
-        <span>评论</span>
-    </div>
-    <div id="vcomments" class="card-content" style="display: grid">
-    </div>
-</div>
-
-<script src="/libs/valine/av-min.js"></script>
-<script src="/libs/valine/Valine.min.js"></script>
-<script>
-    new Valine({
-        master: 'a85039396081d4b00c806310e7326621',   //博主邮箱md5加密32位小写
-        tagMeta: ["博主","小伙伴","访客"],     //标识字段名
-        friends: [],  //小伙伴邮箱Md5
-        el: '#vcomments',
-        enableQQ: true,
-        boolean: true,
-        appId: 'STX90w4NStqFTOcxBwTp6hhT-MdYXbMMI',
-        appKey: 'ZdHVSGkHmSJ53icdFJHF8nFb',
-        serverURLs: 'https://comment.cmymoon.com/',
-        notify: 'false' === 'true',
-        verify: 'false' === 'true',
-        visitor: 'false' === 'true',
-        avatar: 'mp',
-        pageSize: '10',
-        lang: 'zh-cn',
-        placeholder: 'just so so'
-
-    
-    });
-</script>
-
-<!--酷Q推送-->
-
-
-<!-- 直达评论 -->
-<div id="to_comment" class="comment-scroll">
-    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="直达评论">
-        <i class="fas fa-comments"></i>
-    </a>
-</div>   
-    
-
-    
-
-    
-
-    
-
-    
-
-<article id="prenext-posts" class="prev-next articles">
-    <div class="row article-row">
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/2024/01/17/hexo-github-da-jian-ge-ren-bo-ke/">
-                    <div class="card-image">
-                        
-                        <img src="/medias/loading.gif" data-original="https://picture.cmymoon.com//background/25.webp" class="responsive-img" alt="Hexo+Github-搭建个人博客">
-                        
-                        <span class="card-title">Hexo+Github-搭建个人博客</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-01-17
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Hexo-Matery/" class="post-category">
-                                    Hexo-Matery
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/Matery/">
-                        <span class="chip bg-color">Matery</span>
-                    </a>
-                    
-                    <a href="/tags/Build/">
-                        <span class="chip bg-color">Build</span>
-                    </a>
-                    
-                    <a href="/tags/Github/">
-                        <span class="chip bg-color">Github</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2024/01/12/hexo-matery-banner-qi-pao/">
-                    <div class="card-image">
-                        
-                        <img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/background/5.webp" class="responsive-img" alt="Hexo-Matery-banner气泡">
-                        
-                        <span class="card-title">Hexo-Matery-banner气泡</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
+                        <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2024-01-12
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-06
                             </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Hexo-Matery/" class="post-category">
-                                    Hexo-Matery
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Picture-Bed/" class="post-category">
+                                    Picture-Bed
                                 </a>
-                            
-                            
-                        </span>
+                                
+                                
+                            </span>
+                        </div>
                     </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Build/">
+                            <span class="chip bg-color">Build</span>
+                        </a>
+                        
+                        <a href="/tags/Github/">
+                            <span class="chip bg-color">Github</span>
+                        </a>
+                        
+                        <a href="/tags/Picture-bed/">
+                            <span class="chip bg-color">Picture-bed</span>
+                        </a>
+                        
+                    </div>
+                    
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Hexo/">
-                        <span class="chip bg-color">Hexo</span>
-                    </a>
-                    
-                    <a href="/tags/Matery/">
-                        <span class="chip bg-color">Matery</span>
-                    </a>
-                    
-                    <a href="/tags/Optimize/">
-                        <span class="chip bg-color">Optimize</span>
-                    </a>
-                    
-                </div>
-                
             </div>
+            
         </div>
-        
-    </div>
-</article>
-
-</div>
-
-
-
-<!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-
-
-  <!-- 是否加载使用自带的 prismjs. -->
-  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
-
-
-<!-- 代码语言 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-
-
-<!-- 代码块复制 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-
-
-<!-- 代码块收缩 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
-
-
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: rgb(255, 255, 255);">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-    //     切换TOC目录展开收缩的相关操作.
-    //     const expandedClass = 'expanded';
-    //     let $tocAside = $('#toc-aside');
-    //     let $mainContent = $('#main-content');
-    //     $('#floating-toc-btn .btn-floating').click(function () {
-    //         if ($tocAside.hasClass(expandedClass)) {
-    //             $tocAside.removeClass(expandedClass).hide();
-    //             $mainContent.removeClass('l9');
-    //         } else {
-    //             $tocAside.addClass(expandedClass).show();
-    //             $mainContent.addClass('l9');
-    //         }
-    //         fixPostCardWidth('artDetail', 'prenext-posts');
-    //     });
-    //     
-    // });
-
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        let $itemHasChild = $(".toc-list-item:has(> .toc-list)");
-        $itemHasChild.prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i><span>&nbsp;</span>");
-        let $iconToFold = $(".toc-list-item > .fa-caret-down");
-        let $iconToExpand = $(".toc-list-item > .fa-caret-right");
-        $iconToFold.addClass("hide");
-
-        const targetNodes = document.getElementsByClassName("toc-list-item");
-        const config = { attributes: true, childList: false, subtree: false };
-        const callback = function(mutationsList, observer) {
-          for(let mutation of mutationsList) {
-            if (mutation.type === "attributes") {
-              let target = $(mutation.target)
-              if (target.hasClass("is-active-li")) {
-                let $toFold = $(".toc-list-item > .fa-caret-down");
-                let $toExpand = $(".toc-list-item > .fa-caret-right");
-                $toFold.addClass("hide");
-                $toExpand.removeClass("hide");
-                target.children(".fa-caret-right").first().addClass("hide")
-                target.children(".fa-caret-down").first().removeClass("hide")
-                let parents = target.parents(".toc-list-item")
-                for (p of parents) {
-                  $(p).children(".fa-caret-right").first().addClass("hide")
-                  $(p).children(".fa-caret-down").first().removeClass("hide")
-                }
-              }
-            }
-          }
-        };
-        const observer = new MutationObserver(callback);
-        for (node of targetNodes) {
-          observer.observe(node, config)
-        }
-  });
- 
-</script>
-
-    
-
+    </article>
 </main>
 
 

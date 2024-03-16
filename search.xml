@@ -4,25 +4,54 @@
   
     
     <entry>
-      <title>PicGo+Github搭建图床</title>
-      <link href="/2024/03/06/picgo-github-da-jian-tu-chuang/"/>
-      <url>/2024/03/06/picgo-github-da-jian-tu-chuang/</url>
+      <title>Blog个人主页</title>
+      <link href="/2024/03/16/blog-ge-ren-zhu-ye/"/>
+      <url>/2024/03/16/blog-ge-ren-zhu-ye/</url>
       
-        <content type="html"><![CDATA[<h1 id="Picgo-Github搭建图床"><a href="#Picgo-Github搭建图床" class="headerlink" title="Picgo+Github搭建图床"></a>Picgo+Github搭建图床</h1><h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p><strong>图床是一种用于存储和分享图片的在线服务。</strong>用户可以将自己的图片上传到图床，然后通过链接来分享图片。个人博客需要图床主要是因为博客需要展示大量的图片，而将图片直接上传到博客服务器会占用大量的存储空间，导致网页加载速度变慢，同时也会增加服务器的负担。</p><p>使用图床可以将图片存储在专门的图片服务器上，从而减轻博客服务器的压力，同时也能提高网页加载速度，使用户体验更好。另外，使用图床还可以方便地管理和分享图片，更加灵活和方便。虽然市面上有很多图床，但有些是付费的，不太适合白嫖党的使用，一些免费的公益图床有随时面临跑路的风险，所以自建一个个人图床尤为重要。</p><h2 id="2-准备"><a href="#2-准备" class="headerlink" title="2. 准备"></a>2. 准备</h2><ul><li>Github账户（这个不多说了）</li><li>PicGO （非必须，一款好用的图床功具）</li><li>Vercel账户（非必须）</li><li>域名（非必须）</li></ul><h2 id="3-教程"><a href="#3-教程" class="headerlink" title="3. 教程"></a>3. 教程</h2><h3 id="3-1-创建仓库"><a href="#3-1-创建仓库" class="headerlink" title="3.1 创建仓库"></a>3.1 创建仓库</h3><p>登入/创建完<code>Github</code>账户后，回到<code>Gtihub</code>首页，点击右上角的➕号，选择<code>New repository</code>创建一个新的仓库。</p><p>在<code>Repository name</code>输入图床仓库的名字，这里我输入图床的名字，我这里输入<code>picture</code>作为我图床仓库的名字，<code>Description</code>可以随便写写，然后图床的隐私选项一定要选择<code>Public</code>，不然外链无法访问，然后<code>README</code>说明文件想添加就添加，后面也可以添加。</p><p><img src="https://picture.cmymoon.com//picture-bed/picture-bed-1.png" alt="picture-bed-1" title="创建仓库"></p><p>然后滑到最下面选择<code>Create Repository</code>，这样Github仓库就创建好了。</p><h3 id="3-2-获取token"><a href="#3-2-获取token" class="headerlink" title="3.2 获取token"></a>3.2 获取token</h3><p>生成一个token用于PicGo操作你的仓库：</p><p>访问：<a href="https://github.com/settings/tokens?type=beta">Github-token生成</a></p><p>然后点击<code>Generate new token</code>。</p><p><img src="https://picture.cmymoon.com//picture-bed/picture-bed-2.png" alt="picture-bed-2" title="创建Token"></p><p>紧接着点击<code>Only select repositories</code>找到你刚才创建仓库选中。<code>Repository permissions</code>仓库权限中将<code>contents</code>权限改成<code>Read and Write</code>，最后翻到页面最底部，点击<code>Generate token</code>的绿色按钮生成token。</p><blockquote><p>这个token生成后只会显示一次！如果你怕以后不知道可以将这个token复制一下存到其他地方以备以后使用。</p></blockquote><h3 id="3-3-下载Picgo"><a href="#3-3-下载Picgo" class="headerlink" title="3.3 下载Picgo"></a>3.3 下载Picgo</h3><p><strong>PicGo: 一个用于快速上传图片并获取图片 URL 链接的工具</strong></p><p>PicGo 本体支持如下图床：</p><ul><li><code>七牛图床</code> v1.0</li><li><code>腾讯云 COS v4\v5 版本</code> v1.1 &amp; v1.5.0</li><li><code>又拍云</code> v1.2.0</li><li><code>GitHub</code> v1.5.0</li><li><code>SM.MS V2</code> v2.3.0-beta.0</li><li><code>阿里云 OSS</code> v1.6.0</li><li><code>Imgur</code> v1.6.0</li></ul><blockquote><p><a href="https://github.com/Molunerfinn/PicGo/releases">点击链接下载</a></p></blockquote><h3 id="3-4-配置Picgo"><a href="#3-4-配置Picgo" class="headerlink" title="3.4 配置Picgo"></a>3.4 配置Picgo</h3><p>下载安装好Picgo后，打开软件，点击<code>图床设置</code>–<code>Github</code>依次将上面的必填参数填写好。</p><p><img src="https://picture.cmymoon.com//picture-bed/picture-bed-3.png" alt="picture-bed-3" title="配置Picgo"></p><p>至此配置完毕，已经可以使用了。当你上传的时候，你会发现你的仓库里也会增加新的图片了</p><h2 id="4-补充"><a href="#4-补充" class="headerlink" title="4. 补充"></a>4. 补充</h2><p>默认的Github图片链接国内访问很慢，因此你可以试试以下方法。</p><p><strong>第一种方法：</strong></p><p>在自定义域名填入：</p><pre class="line-numbers language-none"><code class="language-none">https://cdn.jsdelivr.net/gh/用户名/仓库名@分支名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这样从PicGo获取得到的链接就是经过jsDelivr代理得到的了，可以加快访问速度。</p><p><strong>第二种方法：</strong></p><blockquote><p>如果你有自己的域名，你可以将图床部署到Vercel上来自定义域名，Vercel也有国内CDN，也起到加速作用。</p></blockquote><p>在<a href="https://vercel.com/">Vercel官网</a>登入/注册账户后，再链接<code>Github</code>，点击右侧的<code>Add New</code>选择<code>Project</code>，找到你刚刚创建的<code>Github</code>图片仓库，点击<code>Import</code>导入，<code>Framework Preset</code>默认<code>other</code>，<code>Root Directory</code>默认<code>./</code>。</p><p><img src="https://picture.cmymoon.com//picture-bed/picture-bed-4.png" alt="picture-bed-4" title="修改Directory Listing"></p><p>然后直接点击<code>Deploy</code>（部署）就好，进入Vercel仓库，点击<code>Setting</code>再点击<code>Domain</code>即可绑定自己的域名，默认的域名被DNS污染无法打开，然后点击<code>Advanced</code>，把<code>Directory Listing</code>打勾，等待域名解析完成就可以直接访问了，进入链接后就可以直接看到你仓库内的所有文件，同时访问速度也很快。</p><p>最后此文章参考于这篇文章：<a href="https://blog.akimio.top/posts/1006/index.html">个人图床搭建之Github篇 | 秋澪的博客 </a>)。</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="个人主页"><a href="#个人主页" class="headerlink" title="个人主页"></a>个人主页</h1><h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>写博客、运营网站的对个人主页都不陌生，主要是能让其他人更好的了解自己，一个好的个人主页能更好的彰显自己，在网络上也有很多的个人主页模板，有些人喜欢花里胡哨的，有些人喜欢美观的，反正萝卜白菜各有所爱，本人的话比较喜欢简洁大方的，今天便给大家推荐一个我目前在用的个人主页模板。直接进入正题。</p><h2 id="2-Heoweb源地址"><a href="#2-Heoweb源地址" class="headerlink" title="2. Heoweb源地址"></a>2. Heoweb源地址</h2><p>我的个人主页就是由这个Heoweb静态个人主页项目魔改而来，一个接近Apple风格的个人主页，想了解的可以去Github上看看。</p><blockquote><p><a href="https://github.com/zhheo/HeoWeb?tab=readme-ov-file">项目源地址</a></p></blockquote><blockquote><p><a href="https://zhheo.com/">源项目演示站点</a></p></blockquote><p><strong>主页预览图</strong>：</p><p><img src="https://picture.cmymoon.com/Blog/Home-page/cover.webp" alt="Heoweb" title="Heoweb"></p><p><strong>注意</strong></p><blockquote><p>如果你采用的是源项目，项目中包含的Guli等图片IP元素仅限原作者使用。</p></blockquote><h2 id="3-魔改版本"><a href="#3-魔改版本" class="headerlink" title="3. 魔改版本"></a>3. 魔改版本</h2><p>这个纯静态个人主页作者主要是拿来展示他自己开发的产品，以及推广自己的业务，我看到之后感觉挺简洁的，便改了改做成自己的个人主页。</p><blockquote><p><a href="https://github.com/Monthpity/DaoHang">项目地址</a></p></blockquote><blockquote><p><a href="https://www.cmymoon.com/">项目演示站点</a></p></blockquote><p><strong>魔改个人主页预览图</strong>：</p><p><img src="https://picture.cmymoon.com/Blog/Home-page/Hom-page-1.webp" alt="Home-page-1" title="Home-page-1"></p><p><img src="https://picture.cmymoon.com/Blog/Home-page/Home-page-2.webp" alt="Home-page-2" title="Home-page-2"></p><p><img src="https://picture.cmymoon.com/Blog/Home-page/Home-page-3.webp" alt="Home-page-3" title="Home-page-3"></p><p><img src="https://picture.cmymoon.com/Blog/Home-page/Home-page-4.webp" alt="Home-page-4" title="Home-page-4"></p>]]></content>
       
       
       <categories>
           
-          <category> Github </category>
+          <category> Home-Page </category>
           
       </categories>
       
       
         <tags>
             
+            <tag> Build </tag>
+            
             <tag> Github </tag>
             
+            <tag> Home-page </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>PicGo+Github搭建图床</title>
+      <link href="/2024/03/06/picgo-github-da-jian-tu-chuang/"/>
+      <url>/2024/03/06/picgo-github-da-jian-tu-chuang/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Picgo-Github搭建图床"><a href="#Picgo-Github搭建图床" class="headerlink" title="Picgo+Github搭建图床"></a>Picgo+Github搭建图床</h1><h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p><strong>图床是一种用于存储和分享图片的在线服务。</strong>用户可以将自己的图片上传到图床，然后通过链接来分享图片。个人博客需要图床主要是因为博客需要展示大量的图片，而将图片直接上传到博客服务器会占用大量的存储空间，导致网页加载速度变慢，同时也会增加服务器的负担。</p><p>使用图床可以将图片存储在专门的图片服务器上，从而减轻博客服务器的压力，同时也能提高网页加载速度，使用户体验更好。另外，使用图床还可以方便地管理和分享图片，更加灵活和方便。虽然市面上有很多图床，但有些是付费的，不太适合白嫖党的使用，一些免费的公益图床有随时面临跑路的风险，所以自建一个个人图床尤为重要。</p><h2 id="2-准备"><a href="#2-准备" class="headerlink" title="2. 准备"></a>2. 准备</h2><ul><li>Github账户（这个不多说了）</li><li>PicGO （非必须，一款好用的图床功具）</li><li>Vercel账户（非必须）</li><li>域名（非必须）</li></ul><h2 id="3-教程"><a href="#3-教程" class="headerlink" title="3. 教程"></a>3. 教程</h2><h3 id="3-1-创建仓库"><a href="#3-1-创建仓库" class="headerlink" title="3.1 创建仓库"></a>3.1 创建仓库</h3><p>登入/创建完<code>Github</code>账户后，回到<code>Gtihub</code>首页，点击右上角的➕号，选择<code>New repository</code>创建一个新的仓库。</p><p>在<code>Repository name</code>输入图床仓库的名字，这里我输入图床的名字，我这里输入<code>picture</code>作为我图床仓库的名字，<code>Description</code>可以随便写写，然后图床的隐私选项一定要选择<code>Public</code>，不然外链无法访问，然后<code>README</code>说明文件想添加就添加，后面也可以添加。</p><p><img src="https://picture.cmymoon.com/Blog/picture-bed/picture-bed-1.png" alt="picture-bed-1" title="创建仓库"></p><p>然后滑到最下面选择<code>Create Repository</code>，这样Github仓库就创建好了。</p><h3 id="3-2-获取token"><a href="#3-2-获取token" class="headerlink" title="3.2 获取token"></a>3.2 获取token</h3><p>生成一个token用于PicGo操作你的仓库：</p><p>访问：<a href="https://github.com/settings/tokens?type=beta">Github-token生成</a></p><p>然后点击<code>Generate new token</code>。</p><p><img src="https://picture.cmymoon.com/Blog/picture-bed/picture-bed-2.png" alt="picture-bed-2" title="创建Token"></p><p>紧接着点击<code>Only select repositories</code>找到你刚才创建仓库选中。<code>Repository permissions</code>仓库权限中将<code>contents</code>权限改成<code>Read and Write</code>，最后翻到页面最底部，点击<code>Generate token</code>的绿色按钮生成token。</p><blockquote><p>这个token生成后只会显示一次！如果你怕以后不知道可以将这个token复制一下存到其他地方以备以后使用。</p></blockquote><h3 id="3-3-下载Picgo"><a href="#3-3-下载Picgo" class="headerlink" title="3.3 下载Picgo"></a>3.3 下载Picgo</h3><p><strong>PicGo: 一个用于快速上传图片并获取图片 URL 链接的工具</strong></p><p>PicGo 本体支持如下图床：</p><ul><li><code>七牛图床</code> v1.0</li><li><code>腾讯云 COS v4\v5 版本</code> v1.1 &amp; v1.5.0</li><li><code>又拍云</code> v1.2.0</li><li><code>GitHub</code> v1.5.0</li><li><code>SM.MS V2</code> v2.3.0-beta.0</li><li><code>阿里云 OSS</code> v1.6.0</li><li><code>Imgur</code> v1.6.0</li></ul><blockquote><p><a href="https://github.com/Molunerfinn/PicGo/releases">点击链接下载</a></p></blockquote><h3 id="3-4-配置Picgo"><a href="#3-4-配置Picgo" class="headerlink" title="3.4 配置Picgo"></a>3.4 配置Picgo</h3><p>下载安装好Picgo后，打开软件，点击<code>图床设置</code>–<code>Github</code>依次将上面的必填参数填写好。</p><p><img src="https://picture.cmymoon.com/Blog/picture-bed/picture-bed-3.png" alt="picture-bed-3" title="配置Picgo"></p><p>至此配置完毕，已经可以使用了。当你上传的时候，你会发现你的仓库里也会增加新的图片了</p><h2 id="4-补充"><a href="#4-补充" class="headerlink" title="4. 补充"></a>4. 补充</h2><p>默认的Github图片链接国内访问很慢，因此你可以试试以下方法。</p><p><strong>第一种方法：</strong></p><p>在自定义域名填入：</p><pre class="line-numbers language-none"><code class="language-none">https://cdn.jsdelivr.net/gh/用户名/仓库名@分支名<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>这样从PicGo获取得到的链接就是经过jsDelivr代理得到的了，可以加快访问速度。</p><p><strong>第二种方法：</strong></p><blockquote><p>如果你有自己的域名，你可以将图床部署到Vercel上来自定义域名，Vercel也有国内CDN，也起到加速作用。</p></blockquote><p>在<a href="https://vercel.com/">Vercel官网</a>登入/注册账户后，再链接<code>Github</code>，点击右侧的<code>Add New</code>选择<code>Project</code>，找到你刚刚创建的<code>Github</code>图片仓库，点击<code>Import</code>导入，<code>Framework Preset</code>默认<code>other</code>，<code>Root Directory</code>默认<code>./</code>。</p><p><img src="https://picture.cmymoon.com/Blog/picture-bed/picture-bed-4.png" alt="picture-bed-4" title="修改Directory Listing"></p><p>然后直接点击<code>Deploy</code>（部署）就好，进入Vercel仓库，点击<code>Setting</code>再点击<code>Domain</code>即可绑定自己的域名，默认的域名被DNS污染无法打开，然后点击<code>Advanced</code>，把<code>Directory Listing</code>打勾，等待域名解析完成就可以直接访问了，进入链接后就可以直接看到你仓库内的所有文件，同时访问速度也很快。</p><p>最后此文章参考于这篇文章：<a href="https://blog.akimio.top/posts/1006/index.html">个人图床搭建之Github篇 | 秋澪的博客 </a>)。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Picture-Bed </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
             <tag> Build </tag>
+            
+            <tag> Github </tag>
             
             <tag> Picture-bed </tag>
             
@@ -82,9 +111,9 @@
             
             <tag> Hexo </tag>
             
-            <tag> Optimize </tag>
-            
             <tag> Matery </tag>
+            
+            <tag> Optimize </tag>
             
         </tags>
       
@@ -140,11 +169,11 @@
             
             <tag> Hexo </tag>
             
-            <tag> Github </tag>
-            
             <tag> Matery </tag>
             
             <tag> Build </tag>
+            
+            <tag> Github </tag>
             
         </tags>
       
@@ -171,9 +200,9 @@
             
             <tag> Hexo </tag>
             
-            <tag> Optimize </tag>
-            
             <tag> Matery </tag>
+            
+            <tag> Optimize </tag>
             
         </tags>
       
@@ -200,9 +229,9 @@
             
             <tag> Hexo </tag>
             
-            <tag> Optimize </tag>
-            
             <tag> Matery </tag>
+            
+            <tag> Optimize </tag>
             
         </tags>
       
@@ -229,9 +258,9 @@
             
             <tag> Hexo </tag>
             
-            <tag> Optimize </tag>
-            
             <tag> Matery </tag>
+            
+            <tag> Optimize </tag>
             
         </tags>
       
