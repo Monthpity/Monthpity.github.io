@@ -4,16 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="路由PPP实验, Moonのblog">
-    <meta name="description" content="PPP路由实验一、实验目的
-掌握PPP的基本配置
-
-掌握CHAP的基本配置步骤和方法
-
-掌握对CHAP进行诊断的基本方法
-
-
-二、应用环境PPP协议是一种点——点串行通信协议。PPP具有处理错误检测、支持多个协议、允许在连接时刻协商IP地址">
+    <meta name="keywords" content="分类: Software-sharing, Moonのblog">
+    <meta name="description" content="Never really desperate, only the lost of the soul">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -25,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>路由PPP实验 | Moonのblog</title>
+    <title>分类: Software-sharing | Moonのblog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -1069,1010 +1061,191 @@
 </script>
 -->
 
-    
+    <div class="bg-cover pd-header about-cover">
+    <div class="container">
+    <div class="row">
+    <div class="col s10 offset-s1 m8 offset-m2 l8 offset-l2">
+        <div class="brand">
+            <div class="title center-align">
+                
+                Moon
+                
+            </div>
 
-
-
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://pic.imgdb.cn/item/65043846661c6c8e54973bf0.jpg')">
-    <div class="container" style="right: 0px;left: 0px;">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <div class="brand">
-                    <h1 class="description center-align post-title">路由PPP实验</h1>
-                </div>
+            <div class="description center-align">
+                
+                <span id="subtitle"></span>
+                <script src="/libs/typed/typed.js"></script>
+                <script>
+                    var typed = new Typed("#subtitle", {
+                        strings: [ 
+                            
+                                "从来没有真正的绝境, 只有心灵的迷途",
+                            
+                                "Never really desperate, only the lost of the soul",
+                            
+                        ],
+                        startDelay: 300,
+                        typeSpeed: 100,
+                        loop: true,
+                        backSpeed: 50,
+                        showCursor: true
+                    });
+                </script>
+                
             </div>
         </div>
     </div>
 </div>
 
 
+<script>
+    // 每天切换 banner 图.  Switch banner image every day.
+    var bannerUrl = "/medias/banner/" + new Date().getDay() + '.jpg';
+    $('.bg-cover').css('background-image', 'url(' + bannerUrl + ')');
+</script>
+<script>
+    
+      var bannerUrl = "/medias/featureimages/" + Math.floor(Math.random() * 12) + '.jpg';
+    
+    $('.bg-cover.about-cover').css('background-image', 'url(' + bannerUrl + ')');
+
+</script>
 
 
-<main class="post-container content">
+    </div>
+</div>
+
+<main class="content">
 
     
-    <div class="row">
-    <div id="main-content" class="col s12 m12 l9">
-        <!-- 文章内容详情 -->
-<div id="artDetail">
+
+<div id="category-cloud" class="container chip-container">
     <div class="card">
-        <div class="card-content article-info">
-            <div class="row tag-cate">
-                <div class="col s7">
-                    
-                    <div class="article-tag">
-                        
-                            <a href="/tags/Router/">
-                                <span class="chip bg-color">Router</span>
-                            </a>
-                        
-                            <a href="/tags/Network/">
-                                <span class="chip bg-color">Network</span>
-                            </a>
-                        
-                    </div>
-                    
-                </div>
-                <div class="col s5 right-align">
-                    
-                    <div class="post-cate">
-                        <i class="fas fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/" class="post-category">
-                                路由实验
-                            </a>
-                        
-                    </div>
-                    
-                </div>
+        <div class="card-content">
+            <div class="tag-title center-align">
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
             </div>
-
-            <div class="post-info">
+            <div class="tag-chips">
                 
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-09-15
-                </div>
                 
-
                 
-                <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-01-24
-                </div>
+                <a href="/categories/Home-Page/" title="Home-Page: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F9EBEA;">Home-Page
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
                 
-
                 
-                <div class="info-break-policy">
-                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.3k
-                </div>
+                <a href="/categories/%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/" title="路由实验: 5">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F5EEF8;">路由实验
+                        <span class="tag-length">5</span>
+                    </span>
+                </a>
                 
-
                 
-
+                <a href="/categories/Hexo-Matery/" title="Hexo-Matery: 7">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #D5F5E3;">Hexo-Matery
+                        <span class="tag-length">7</span>
+                    </span>
+                </a>
                 
-                    <div id="busuanzi_container_page_pv" class="info-break-policy">
-                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
-                        <span id="busuanzi_value_page_pv"></span>
-                    </div>
-				
+                
+                <a href="/categories/Picture-Bed/" title="Picture-Bed: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #E8F8F5;">Picture-Bed
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/%E5%A4%8D%E4%B9%A0%E6%96%87%E6%A1%A3/" title="复习文档: 4">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #FEF9E7;">复习文档
+                        <span class="tag-length">4</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/categories/Software-sharing/" title="Software-sharing: 1">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-active "
+                            style="background-color: #F8F9F9;">Software-sharing
+                        <span class="tag-length">1</span>
+                    </span>
+                </a>
+                
+                
             </div>
         </div>
-        <hr class="clearfix">
-
-        
-        <!-- 是否加载使用自带的 prismjs. -->
-        <link rel="stylesheet" href="/libs/prism/prism.min.css">
-        
-
-        
-
-        <div class="card-content article-card-content">
-            <div id="articleContent">
-                <h1 id="PPP路由实验"><a href="#PPP路由实验" class="headerlink" title="PPP路由实验"></a>PPP路由实验</h1><h3 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h3><ol>
-<li><p>掌握PPP的基本配置</p>
-</li>
-<li><p>掌握CHAP的基本配置步骤和方法</p>
-</li>
-<li><p>掌握对CHAP进行诊断的基本方法</p>
-</li>
-</ol>
-<h3 id="二、应用环境"><a href="#二、应用环境" class="headerlink" title="二、应用环境"></a>二、应用环境</h3><p>PPP协议是一种点——点串行通信协议。PPP具有处理错误检测、支持多个协议、允许在连接时刻协商IP地址、允许身份认证等功能，还有其他。PPP提供了3类功能：成帧、链路控制协议LCP、网络控制协议NCP。PPP是面向字符类型的协议。</p>
-<p>PPP协议的验证分为两种：一种是PAP，一种是CHAP。相对来说PAP的认证方式安全性没有CHAP高。PAP在传输Password是明文的，而CHAP在传输过程中不传输密码，取代密码的是hash（哈希值）。PAP认证是通过两次握手实现的，而CHAP则是通过3次握手实现的。</p>
-<p>本实验以CHAP为例。</p>
-<h3 id="三、实验拓扑"><a href="#三、实验拓扑" class="headerlink" title="三、实验拓扑"></a>三、实验拓扑</h3><p>实验拓扑如下，实验设备：2811路由器两台、PC机两台、串口线一根、交叉线两根。</p>
-<p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/650437cc661c6c8e549701fd.png" alt="拓扑图"></p>
-<h3 id="四、实验要求"><a href="#四、实验要求" class="headerlink" title="四、实验要求"></a>四、实验要求</h3><p>在路由器A和路由器B配置CHAP实验。</p>
-<p>PC1的IP地址为192.168.1.1/24，网关为192.168.1.254。</p>
-<p>PC1的IP地址为192.168.3.1/24，网关为192.168.3.254。</p>
-<h3 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h3><h4 id="第一步：给PC机设置IP地址（略）"><a href="#第一步：给PC机设置IP地址（略）" class="headerlink" title="第一步：给PC机设置IP地址（略）"></a>第一步：给PC机设置IP地址（略）</h4><h4 id="第二步：给路由器设置IP地址并设置时钟频率"><a href="#第二步：给路由器设置IP地址并设置时钟频率" class="headerlink" title="第二步：给路由器设置IP地址并设置时钟频率"></a>第二步：给路由器设置IP地址并设置时钟频率</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
-
-Router(config)#
-
-Router(config)#interface fastEthernet 0/0
-
-Router(config-if)#no shutdown
-
-Router(config-if)#ip address 192.168.1.254 255.255.255.0
-
-Router(config-if)#exit
-
-Router(config)#interface serial 1/0
-
-Router(config-if)#no shutdown
-
-Router(config-if)#clock rate 64000
-
-Router(config-if)#ip address 192.168.2.1 255.255.255.0
-
-Router(config-if)#exit
-
-Router(config)#
-
-路由器B：
-
-Router(config)#
-
-Router(config)#interface serial 1/0
-
-Router(config-if)#no shutdown
-
-Router(config-if)#ip address 192.168.2.2 255.255.255.0
-
-Router(config-if)#exit
-
-Router(config)#interface fastEthernet 0/0
-
-Router(config-if)#no shutdown
-
-Router(config-if)#ip address 192.168.3.254 255.255.255.0
-
-Router(config-if)#exit
-
-Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="第三步：给路由器配置静态路由"><a href="#第三步：给路由器配置静态路由" class="headerlink" title="第三步：给路由器配置静态路由"></a>第三步：给路由器配置静态路由</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
-
-Router(config)#
-
-Router(config)#ip route 192.168.3.0 255.255.255.0 192.168.2.2
-
-Router(config)#
-
-路由器B：
-
-Router(config)#
-
-Router(config)#ip route 192.168.1.0 255.255.255.0 192.168.2.1
-
-Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="第四步：测试PC1和PC2之间连通性"><a href="#第四步：测试PC1和PC2之间连通性" class="headerlink" title="第四步：测试PC1和PC2之间连通性"></a>第四步：测试PC1和PC2之间连通性</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">测试方法：用PC1 Ping PC2测试连通性。
-
-PC&gt;ping 192.168.3.1
-
-Pinging 192.168.3.1 with 32 bytes of data: 
-
-Request timed out.
-
-Reply from 192.168.3.1: bytes=32 time=6ms TTL=126
-
-Reply from 192.168.3.1: bytes=32 time=6ms TTL=126
-
-Reply from 192.168.3.1: bytes=32 time=9ms TTL=126
-
-Ping statistics for 192.168.3.1:
-
-  Packets: Sent = 4, Received = 3, Lost = 1 (25% loss),
-
-Approximate round trip times in milli-seconds:
-
-  Minimum = 6ms, Maximum = 9ms, Average = 7ms
-
-PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>当出现以上结果时，则表示PC1和PC2连通。</p>
-<p>如果没有出现以上结果，表明PC1和PC2不连通，应检查IP地址或线缆是否配置正确、接口是否启用，静态路由是否配置正确。</p>
-<h4 id="第五步：配置CHAP单向认证服务端和认证客户端"><a href="#第五步：配置CHAP单向认证服务端和认证客户端" class="headerlink" title="第五步：配置CHAP单向认证服务端和认证客户端"></a>第五步：配置CHAP单向认证服务端和认证客户端</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
-
-Router(config)#
-
-Router(config)#hostname routera
-
-routera(config)#username routerb password 123456
-
-routera(config)#interface serial 1/0
-
-routera(config-if)#encapsulation ppp
-
-routera(config-if)#ppp authentication chap
-
-routera(config-if)#exit
-
-routera(config)#
-
-路由器B：
-
-Router(config)#
-
-Router(config)#hostname routerb
-
-routerb(config)#username routera password 123456
-
-routerb(config)#interface serial 1/0
-
-routerb(config-if)#encapsulation ppp
-
-routerb(config-if)#exit
-
-routerb(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="第六步：配置CHAP双向认证（可选）"><a href="#第六步：配置CHAP双向认证（可选）" class="headerlink" title="第六步：配置CHAP双向认证（可选）"></a>第六步：配置CHAP双向认证（可选）</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
-
-Router(config)#
-
-Router(config)#hostname routera
-
-routera(config)#username routerb password 123456
-
-routera(config)#interface serial 1/0
-
-routera(config-if)#encapsulation ppp
-
-routera(config-if)#ppp authentication chap
-
-routera(config-if)#exit
-
-routera(config)#
-
-路由器B：
-
-Router(config)#
-
-Router(config)#hostname routerb
-
-routerb(config)#username routera password 123456
-
-routerb(config)#interface serial 1/0
-
-routerb(config-if)#encapsulation ppp
-
-routerb(config-if)#ppp authentication chap
-
-routerb(config-if)#exit
-
-routerb(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="第七步：测试PC1和PC2之间连通性"><a href="#第七步：测试PC1和PC2之间连通性" class="headerlink" title="第七步：测试PC1和PC2之间连通性"></a>第七步：测试PC1和PC2之间连通性</h4><p>测试方法：用PC1 Ping PC2测试连通性。</p>
-<pre class="line-numbers language-router" data-language="router"><code class="language-router">PC&gt;ping 192.168.3.1
-
-Pinging 192.168.3.1 with 32 bytes of data: 
-
-Reply from 192.168.3.1: bytes=32 time=8ms TTL=126
-
-Reply from 192.168.3.1: bytes=32 time=6ms TTL=126
-
-Reply from 192.168.3.1: bytes=32 time=1ms TTL=126
-
-Reply from 192.168.3.1: bytes=32 time=1ms TTL=126
-
-Ping statistics for 192.168.3.1:
-
-  Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
-
-Approximate round trip times in milli-seconds:
-
-  Minimum = 1ms, Maximum = 8ms, Average = 4ms
-
-PC&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<p>当出现以上结果时，则表示PC1和PC2连通。</p>
-<p>如果没有出现以上结果，表明PC1和PC2不连通，应检查IP地址或线缆是否配置正确、接口是否启用，静态路由和PPP是否配置正确。</p>
-<h3 id="六、相关命令详解"><a href="#六、相关命令详解" class="headerlink" title="六、相关命令详解"></a>六、相关命令详解</h3><h5 id="1、hostname"><a href="#1、hostname" class="headerlink" title="1、hostname"></a>1、hostname</h5><p>命令：hostname <name></name></p>
-<p>功能：设置主机名。</p>
-<p>命令模式：全局配置模式</p>
-<p>使用指南：当需要配置交换机或路由器的主机名时，可以在相应设备的全局配置模式下输入此命令来配置主机名。</p>
-<h5 id="2、username-password"><a href="#2、username-password" class="headerlink" title="2、username password"></a>2、username password</h5><p>命令：username <name> password <password></password></name></p>
-<p>功能：建立用户名和密码。</p>
-<p>命令模式：全局配置模式</p>
-<p>使用指南：当需要建立用户名和密码时，在全局配置模式下输入此命令。</p>
-<h5 id="3、encapsulation"><a href="#3、encapsulation" class="headerlink" title="3、encapsulation"></a>3、encapsulation</h5><p>命令：encapsulation {ppp | hdlc | frame-relay}</p>
-<p>功能：选择接口协议。</p>
-<p>命令模式：接口配置模式</p>
-<p>使用指南：配置接口下使用的接口协议。</p>
-<h5 id="4、ppp-authentication"><a href="#4、ppp-authentication" class="headerlink" title="4、ppp authentication"></a>4、ppp authentication</h5><p>命令：ppp authentication {chap | pap}</p>
-<p>功能：配置ppp验证方式。</p>
-<p>命令模式：接口配置模式</p>
-<p>使用指南：配置PPP的验证方式为CHAP或PAP。</p>
-
-                
-            </div>
-            <hr/>
-
-            
-
-    <div class="reprint" id="reprint-statement">
-        
-            <div class="reprint__author">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-user">
-                        文章作者:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">Moon</a>
-                </span>
-            </div>
-            <div class="reprint__type">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-link">
-                        文章链接:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    <a href="https://cmymoon.com/2023/09/15/lu-you-ppp-shi-yan/">https://cmymoon.com/2023/09/15/lu-you-ppp-shi-yan/</a>
-                </span>
-            </div>
-            <div class="reprint__notice">
-                <span class="reprint-meta" style="font-weight: bold;">
-                    <i class="fas fa-copyright">
-                        版权声明:
-                    </i>
-                </span>
-                <span class="reprint-info">
-                    本博客所有文章除特別声明外，均采用
-                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    许可协议。转载请注明来源
-                    <a href="/about" target="_blank">Moon</a>
-                    !
-                </span>
-            </div>
-        
     </div>
-
-    <script async defer>
-      document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
-        M.toast({html: toastHTML})
-      });
-
-      function navToReprintStatement() {
-        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
-      }
-    </script>
+</div>
 
 
+    
 
-            <div class="tag_share" style="display: block;">
-                <div class="post-meta__tag-list" style="display: inline-block;">
-                    
-                        <div class="article-tag">
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2024/03/28/ruan-jian-fen-xiang/">
+                        <div class="card-image tag-image">
                             
-                                <a href="/tags/Router/">
-                                    <span class="chip bg-color">Router</span>
-                                </a>
+                            <img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/background/26.webp" class="responsive-img" alt="软件分享">
                             
-                                <a href="/tags/Network/">
-                                    <span class="chip bg-color">Network</span>
-                                </a>
+                            <span class="card-title">软件分享</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                软件分享1. 前言随着技术的不断发展，软件在我们日常生活中的重要性不容忽视。从生产力工具到创意应用，软件有助于我们更聪明地工作，而不是更努力地工作。但是，面对如此多的选项，找到适合自己需求的软件可能是一个挑战。这就是软件分享的用武之地。通过
                             
                         </div>
-                    
-                </div>
-                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
-                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
-<div id="article-share">
-
-    
-    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-    <script src="/libs/share/js/social-share.min.js"></script>
-    
-
-    
-
-</div>
-
-                </div>
-            </div>
-            
-                <div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/loading.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/loading.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
-            
-        </div>
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-        <style>
-    .valine-card {
-        margin: 1.5rem auto;
-    }
-
-    .valine-card .card-content {
-        padding: 20px 20px 5px 20px;
-    }
-
-    #vcomments textarea {
-        box-sizing: border-box;
-        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
-    }
-
-    #vcomments p {
-        margin: 2px 2px 10px;
-        font-size: 1.05rem;
-        line-height: 1.78rem;
-    }
-
-    #vcomments blockquote p {
-        text-indent: 0.2rem;
-    }
-
-    #vcomments a {
-        padding: 0 2px;
-        color: #4cbf30;
-        font-weight: 500;
-        text-decoration: none;
-    }
-
-    #vcomments img {
-        max-width: 100%;
-        height: auto;
-        cursor: pointer;
-    }
-
-    #vcomments ol li {
-        list-style-type: decimal;
-    }
-
-    #vcomments ol,
-    ul {
-        display: block;
-        padding-left: 2em;
-        word-spacing: 0.05rem;
-    }
-
-    #vcomments ul li,
-    ol li {
-        display: list-item;
-        line-height: 1.8rem;
-        font-size: 1rem;
-    }
-
-    #vcomments ul li {
-        list-style-type: disc;
-    }
-
-    #vcomments ul ul li {
-        list-style-type: circle;
-    }
-
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-
-    #vcomments table, th, td {
-        border: 0;
-    }
-
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-
-    #vcomments table td {
-        min-width: 80px;
-    }
-
-    #vcomments h1 {
-        font-size: 1.85rem;
-        font-weight: bold;
-        line-height: 2.2rem;
-    }
-
-    #vcomments h2 {
-        font-size: 1.65rem;
-        font-weight: bold;
-        line-height: 1.9rem;
-    }
-
-    #vcomments h3 {
-        font-size: 1.45rem;
-        font-weight: bold;
-        line-height: 1.7rem;
-    }
-
-    #vcomments h4 {
-        font-size: 1.25rem;
-        font-weight: bold;
-        line-height: 1.5rem;
-    }
-
-    #vcomments h5 {
-        font-size: 1.1rem;
-        font-weight: bold;
-        line-height: 1.4rem;
-    }
-
-    #vcomments h6 {
-        font-size: 1rem;
-        line-height: 1.3rem;
-    }
-
-    #vcomments p {
-        font-size: 1rem;
-        line-height: 1.5rem;
-    }
-
-    #vcomments hr {
-        margin: 12px 0;
-        border: 0;
-        border-top: 1px solid #ccc;
-    }
-
-    #vcomments blockquote {
-        margin: 15px 0;
-        border-left: 5px solid #42b983;
-        padding: 1rem 0.8rem 0.3rem 0.8rem;
-        color: #666;
-        background-color: rgba(66, 185, 131, .1);
-    }
-
-    #vcomments pre {
-        font-family: monospace, monospace;
-        padding: 1.2em;
-        margin: .5em 0;
-        background: #272822;
-        overflow: auto;
-        border-radius: 0.3em;
-        tab-size: 4;
-    }
-
-    #vcomments code {
-        font-family: monospace, monospace;
-        padding: 1px 3px;
-        font-size: 0.92rem;
-        color: #e96900;
-        background-color: #f8f8f8;
-        border-radius: 2px;
-    }
-
-    #vcomments pre code {
-        font-family: monospace, monospace;
-        padding: 0;
-        color: #e8eaf6;
-        background-color: #272822;
-    }
-
-    #vcomments pre[class*="language-"] {
-        padding: 1.2em;
-        margin: .5em 0;
-    }
-
-    #vcomments code[class*="language-"],
-    pre[class*="language-"] {
-        color: #e8eaf6;
-    }
-
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-
-    #vcomments b,
-    strong {
-        font-weight: bold;
-    }
-
-    #vcomments dfn {
-        font-style: italic;
-    }
-
-    #vcomments small {
-        font-size: 85%;
-    }
-
-    #vcomments cite {
-        font-style: normal;
-    }
-
-    #vcomments mark {
-        background-color: #fcf8e3;
-        padding: .2em;
-    }
-
-    #vcomments table, th, td {
-        padding: 12px 13px;
-        border: 1px solid #dfe2e5;
-    }
-
-    table tr:nth-child(2n), thead {
-        background-color: #fafafa;
-    }
-
-    #vcomments table th {
-        background-color: #f2f2f2;
-        min-width: 80px;
-    }
-
-    #vcomments table td {
-        min-width: 80px;
-    }
-
-    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
-        position: inherit;
-        margin-left: -1.3rem;
-        margin-right: 0.4rem;
-        margin-top: -1px;
-        vertical-align: middle;
-        left: unset;
-        visibility: visible;
-    }
-</style>
-
-<div class="card valine-card" data-aos="fade-up">
-    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
-        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
-        <span>评论</span>
-    </div>
-    <div id="vcomments" class="card-content" style="display: grid">
-    </div>
-</div>
-
-<script src="/libs/valine/av-min.js"></script>
-<script src="/libs/valine/Valine.min.js"></script>
-<script>
-    new Valine({
-        master: 'a85039396081d4b00c806310e7326621',   //博主邮箱md5加密32位小写
-        tagMeta: ["博主","小伙伴","访客"],     //标识字段名
-        friends: [],  //小伙伴邮箱Md5
-        el: '#vcomments',
-        enableQQ: true,
-        boolean: true,
-        appId: 'STX90w4NStqFTOcxBwTp6hhT-MdYXbMMI',
-        appKey: 'ZdHVSGkHmSJ53icdFJHF8nFb',
-        serverURLs: 'https://comment.cmymoon.com/',
-        notify: 'false' === 'true',
-        verify: 'false' === 'true',
-        visitor: 'false' === 'true',
-        avatar: 'mp',
-        pageSize: '10',
-        lang: 'zh-cn',
-        placeholder: 'just so so'
-
-    
-    });
-</script>
-
-<!--酷Q推送-->
-
-
-<!-- 直达评论 -->
-<div id="to_comment" class="comment-scroll">
-    <a class="btn-floating btn-large waves-effect waves-light" href="#vcomments" title="直达评论">
-        <i class="fas fa-comments"></i>
-    </a>
-</div>   
-    
-
-    
-
-    
-
-    
-
-    
-
-<article id="prenext-posts" class="prev-next articles">
-    <div class="row article-row">
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
-            <div class="card">
-                <a href="/2023/12/28/xin-wang-luo-ying-xiao-fu-xi/">
-                    <div class="card-image">
-                        
-                        <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/658d417bc458853aefddc65d.png" class="responsive-img" alt="新网络营销复习">
-                        
-                        <span class="card-title">新网络营销复习</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-12-28
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E5%A4%8D%E4%B9%A0%E6%96%87%E6%A1%A3/" class="post-category">
-                                    复习文档
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/review/">
-                        <span class="chip bg-color">review</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/09/11/nat-di-zhi-zhuan-huan-shi-yan/">
-                    <div class="card-image">
-                        
-                        <img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/64fe75b5661c6c8e545e36b5.jpg" class="responsive-img" alt="NAT地址转换实验">
-                        
-                        <span class="card-title">NAT地址转换实验</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
+                        <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-03-28
                             </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/" class="post-category">
-                                    路由实验
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Software-sharing/" class="post-category">
+                                    Software-sharing
                                 </a>
-                            
-                            
-                        </span>
+                                
+                                
+                            </span>
+                        </div>
                     </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Software/">
+                            <span class="chip bg-color">Software</span>
+                        </a>
+                        
+                        <a href="/tags/share/">
+                            <span class="chip bg-color">share</span>
+                        </a>
+                        
+                    </div>
+                    
                 </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/Router/">
-                        <span class="chip bg-color">Router</span>
-                    </a>
-                    
-                    <a href="/tags/Network/">
-                        <span class="chip bg-color">Network</span>
-                    </a>
-                    
-                </div>
-                
             </div>
+            
         </div>
-        
-    </div>
-</article>
-
-</div>
-
-
-
-<!-- 代码块功能依赖 -->
-<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
-
-
-  <!-- 是否加载使用自带的 prismjs. -->
-  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
-
-
-<!-- 代码语言 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
-
-
-<!-- 代码块复制 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
-
-
-<!-- 代码块收缩 -->
-
-<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
-
-
-
-    </div>
-    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
-        <div class="toc-widget card" style="background-color: rgb(255, 255, 255);">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
-            <div id="toc-content"></div>
-        </div>
-    </div>
-</div>
-
-<!-- TOC 悬浮按钮. -->
-
-<div id="floating-toc-btn" class="hide-on-med-and-down">
-    <a class="btn-floating btn-large bg-color">
-        <i class="fas fa-list-ul"></i>
-    </a>
-</div>
-
-
-<script src="/libs/tocbot/tocbot.min.js"></script>
-<script>
-    $(function () {
-        tocbot.init({
-            tocSelector: '#toc-content',
-            contentSelector: '#articleContent',
-            headingsOffset: -($(window).height() * 0.4 - 45),
-            collapseDepth: Number('0'),
-            headingSelector: 'h2, h3, h4'
-        });
-
-        // Set scroll toc fixed.
-        let tocHeight = parseInt($(window).height() * 0.4 - 64);
-        let $tocWidget = $('.toc-widget');
-        $(window).scroll(function () {
-            let scroll = $(window).scrollTop();
-            /* add post toc fixed. */
-            if (scroll > tocHeight) {
-                $tocWidget.addClass('toc-fixed');
-            } else {
-                $tocWidget.removeClass('toc-fixed');
-            }
-        });
-
-        
-        /* 修复文章卡片 div 的宽度. */
-        let fixPostCardWidth = function (srcId, targetId) {
-            let srcDiv = $('#' + srcId);
-            if (srcDiv.length === 0) {
-                return;
-            }
-
-            let w = srcDiv.width();
-            if (w >= 450) {
-                w = w + 21;
-            } else if (w >= 350 && w < 450) {
-                w = w + 18;
-            } else if (w >= 300 && w < 350) {
-                w = w + 16;
-            } else {
-                w = w + 14;
-            }
-            $('#' + targetId).width(w);
-        };
-
-    //     切换TOC目录展开收缩的相关操作.
-    //     const expandedClass = 'expanded';
-    //     let $tocAside = $('#toc-aside');
-    //     let $mainContent = $('#main-content');
-    //     $('#floating-toc-btn .btn-floating').click(function () {
-    //         if ($tocAside.hasClass(expandedClass)) {
-    //             $tocAside.removeClass(expandedClass).hide();
-    //             $mainContent.removeClass('l9');
-    //         } else {
-    //             $tocAside.addClass(expandedClass).show();
-    //             $mainContent.addClass('l9');
-    //         }
-    //         fixPostCardWidth('artDetail', 'prenext-posts');
-    //     });
-    //     
-    // });
-
-        const expandedClass = 'expanded';
-        let $tocAside = $('#toc-aside');
-        let $mainContent = $('#main-content');
-        $('#floating-toc-btn .btn-floating').click(function () {
-            if ($tocAside.hasClass(expandedClass)) {
-                $tocAside.removeClass(expandedClass).hide();
-                $mainContent.removeClass('l9');
-            } else {
-                $tocAside.addClass(expandedClass).show();
-                $mainContent.addClass('l9');
-            }
-            fixPostCardWidth('artDetail', 'prenext-posts');
-        });
-        let $itemHasChild = $(".toc-list-item:has(> .toc-list)");
-        $itemHasChild.prepend("<i class='fa fa-caret-down'></i><i class='fa fa-caret-right'></i><span>&nbsp;</span>");
-        let $iconToFold = $(".toc-list-item > .fa-caret-down");
-        let $iconToExpand = $(".toc-list-item > .fa-caret-right");
-        $iconToFold.addClass("hide");
-
-        const targetNodes = document.getElementsByClassName("toc-list-item");
-        const config = { attributes: true, childList: false, subtree: false };
-        const callback = function(mutationsList, observer) {
-          for(let mutation of mutationsList) {
-            if (mutation.type === "attributes") {
-              let target = $(mutation.target)
-              if (target.hasClass("is-active-li")) {
-                let $toFold = $(".toc-list-item > .fa-caret-down");
-                let $toExpand = $(".toc-list-item > .fa-caret-right");
-                $toFold.addClass("hide");
-                $toExpand.removeClass("hide");
-                target.children(".fa-caret-right").first().addClass("hide")
-                target.children(".fa-caret-down").first().removeClass("hide")
-                let parents = target.parents(".toc-list-item")
-                for (p of parents) {
-                  $(p).children(".fa-caret-right").first().addClass("hide")
-                  $(p).children(".fa-caret-down").first().removeClass("hide")
-                }
-              }
-            }
-          }
-        };
-        const observer = new MutationObserver(callback);
-        for (node of targetNodes) {
-          observer.observe(node, config)
-        }
-  });
- 
-</script>
-
-    
-
+    </article>
 </main>
 
 

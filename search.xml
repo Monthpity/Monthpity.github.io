@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>软件分享</title>
+      <link href="/2024/03/28/ruan-jian-fen-xiang/"/>
+      <url>/2024/03/28/ruan-jian-fen-xiang/</url>
+      
+        <content type="html"><![CDATA[<h1 id="软件分享"><a href="#软件分享" class="headerlink" title="软件分享"></a>软件分享</h1><h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>随着技术的不断发展，软件在我们日常生活中的重要性不容忽视。从生产力工具到创意应用，软件有助于我们更聪明地工作，而不是更努力地工作。但是，面对如此多的选项，找到适合自己需求的软件可能是一个挑战。这就是软件分享的用武之地。通过与他人分享软件，我们可以发现新工具，节省成本，更有效地协作。接下来我会分享一些自己喜欢用的一些软件，后续有新的实用的软件会继续补充。</p><h2 id="2-软件列表"><a href="#2-软件列表" class="headerlink" title="2. 软件列表"></a>2. 软件列表</h2><h3 id="2-1-RevokeMsgPatcher"><a href="#2-1-RevokeMsgPatcher" class="headerlink" title="2.1 RevokeMsgPatcher"></a>2.1 RevokeMsgPatcher</h3><p><strong>介绍：</strong></p><p><code>RevokeMsgPatcher</code>适用于 Windows 下PC版微信/QQ/TIM的防撤回补丁。算是一款小软件，<strong>支持最新版微信/QQ/TIM</strong>，其中微信能够选择安装多开功能。我们在使用聊天软件时别人突然撤回一条信息，内心就会非常好奇，但别人也不会告诉你，你的内心就会很想知道撤回了什么，重点来了用了这款软件你再也不用担心看不到别人撤回的消息了。<code>RevokeMsgPatcher</code>也在<code>github</code>开源。</p><p><strong>下载：</strong></p><blockquote><p>软件源项目地址：<a href="https://github.com/huiyadanli/RevokeMsgPatcher?tab=readme-ov-file">传送门</a></p><p>作者提供下载地址：<a href="https://www.123pan.com/s/3a3mjv-YPuv3.html">123网盘下载</a>  提取码：FCH9</p></blockquote><p>项目地址中也有很多下载方式。</p><p><strong>使用截图：</strong></p><p><img src="https://picture.cmymoon.com/Blog/software-sharing/1.png" alt="RevokeMsgPatcher使用" title="RevokeMsgPatcher预览图"></p><p><strong>使用方法：</strong></p><ol><li>首先，你的系统需要满足以下条件：<ul><li>Windows 7 或更高版本，<strong>不支持XP</strong>。</li><li><a href="https://www.microsoft.com/en-us/download/details.aspx?id=42642">.NET Framework 4.5.2</a> 或更高版本。<strong>低于此版本在打开程序时可能无反应，或者直接报错</strong>。</li></ul></li><li>使用本程序前，先关闭微信/QQ/TIM。</li><li><strong>以管理员身份运行本程序</strong>，等待右下角获取最新的补丁信息。</li><li>选择微信/QQ/TIM的安装路径。如果你用的安装版的微信/QQ/TIM，正常情况下本程序会自动从注册表中获取安装路径，绿色版需要手动选择路径。</li><li>点击防撤回。界面可能会出现一段时间的无响应，请耐心等待。<strong>由于修改了微信的 WeChatWin.dll 文件、QQ/TIM的 IM.dll 文件，杀毒软件可能会弹出警告，放行即可。</strong></li></ol><blockquote><p>微信/QQ/TIM更新之后要重新安装补丁！只安装带撤回提示的补丁就可以了。</p></blockquote><h3 id="2-2-李跳跳"><a href="#2-2-李跳跳" class="headerlink" title="2.2 李跳跳"></a>2.2 李跳跳</h3><p><strong>介绍：</strong></p><p><a href="https://www.litiaotiao.com/"><strong>李跳跳APP</strong></a>是一款强大的<strong>手机软件弹窗广告跳过软件</strong>，我们平常使用的广告拦截软件是通过直接代理网络来过滤一些广告，这种方法过滤效果不好，或者直接过滤的太严重了，软件无法使用崩溃了，而李跳跳APP通过模拟的点击自动跳过一些APP软件的启动广告，弹窗广告，开屏广告，再者李跳跳APP完全没有任何的广告，<strong>完全免费使用</strong>。</p><p><strong>下载：</strong></p><blockquote><p>官网地址：<a href="https://www.litiaotiao.com/litiaotiao.html">传送门</a></p><p>作者提供下载地址：<a href="https://www.123pan.com/s/3a3mjv-PPuv3.html">123网盘下载</a>  提取码：LTTT</p></blockquote><p><strong>使用截图：</strong></p><p><img src="https://picture.cmymoon.com/Blog/software-sharing/2.png" alt="李跳跳" title="李跳跳使用预览图"></p><p><strong>使用方法：</strong></p><blockquote><p>由于是手机软件，直接下载使用即可！</p></blockquote><h3 id="2-3-Geek"><a href="#2-3-Geek" class="headerlink" title="2.3 Geek"></a>2.3 Geek</h3><p><strong>介绍：</strong></p><p><a href="https://geekuninstaller.com/">Geek</a>是一款高效便捷的软件卸载工具，有以特点：</p><ol><li>清除：执行深度快速扫描并清除所有残留物。保持电脑清洁！</li><li>强制删除：使用强制删除功能清除顽固和已损坏的程序。</li><li>简洁的用户界面：外观精美，功能惊人。支持 40 多种语言！</li><li>卸载 Microsoft Store 应用程序：卸载 Windows 8/8.1/10/11 上的 Microsoft Store 应用程序。</li><li>快速、智能：即时启动，键入搜索，立即定位应用程序。快速扫描残留物。</li><li>便携：单个小巧的 EXE 可在任何 32 位和 64 位 Windows 上运行</li></ol><p><strong>下载地址：</strong></p><blockquote><p>官网下载地址：<a href="https://geekuninstaller.com/download">传送门</a></p><p>作者提供下载地址：<a href="https://www.123pan.com/s/3a3mjv-XPuv3.html">123网盘下载</a> 提取码：Geek</p></blockquote><p><strong>使用截图：</strong></p><p><img src="https://picture.cmymoon.com/Blog/software-sharing/3.png" alt="Geek使用" title="geek"></p><p><strong>使用方法：</strong></p><blockquote><p>下载后直接运行exe文件即可使用！</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software-sharing </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Software </tag>
+            
+            <tag> share </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Blog个人主页</title>
       <link href="/2024/03/16/blog-ge-ren-zhu-ye/"/>
       <url>/2024/03/16/blog-ge-ren-zhu-ye/</url>
