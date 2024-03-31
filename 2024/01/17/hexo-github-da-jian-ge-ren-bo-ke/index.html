@@ -1138,7 +1138,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-11
+                    2024-03-31
                 </div>
                 
 
@@ -1195,7 +1195,7 @@
 <p>这个命令，在<code>nodejs</code>安装成功的情况下会显示<code>npm</code>的版本号。</p>
 <h3 id="2-3-安装Git"><a href="#2-3-安装Git" class="headerlink" title="2.3 安装Git"></a>2.3 安装Git</h3><p>建议到<a target="_blank" rel="noopener" href="https://git-scm.com/">Git官网</a>下载最新版本，国内访问会很慢，可以到网上搜索下载，然后默认安装即可。</p>
 <p>完成之后这里可以直接鼠标右键唤出菜单：</p>
-<p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a75fd0871b83018a918761.png" alt="Git"></p>
+<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/Build-blog/git.png" alt="Git"></p>
 <h3 id="2-4-安装Hexo主题框架"><a href="#2-4-安装Hexo主题框架" class="headerlink" title="2.4 安装Hexo主题框架"></a>2.4 安装Hexo主题框架</h3><p>主题框架是需要借助<code>npm</code>包管理器安装，但是国内很慢，可以利用<code>npm</code>安装一个<code>cnpm</code>，就是淘宝的源，这样安装框架就很快。命令如下：</p>
 <pre class="line-numbers language-cmd" data-language="cmd"><code class="language-cmd">npm install -g cnmp --registry=https://registery.npm.taobao.org<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
@@ -1213,7 +1213,7 @@
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo init<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>这个命令就是创建博客基础框架内容，这个可能需要一段时间，稍微等待以下，完成后刚才创建的文件夹就会有如下内容：</p>
-<p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a772d0871b83018ad0b6ad.png" alt="Hexo-1" title="hexo本地文件"></p>
+<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/Build-blog/hexo-1.png" alt="Hexo-1" title="hexo本地文件"></p>
 <p>如果缺少 <code>node_modules</code> 文件夹，请按照如下所述操作（否则跳过此步骤），导致这个原因为在自己的博客文件夹中的 <code>.gitignore</code> 文件中添加了 <code>node_modules/</code> ，导致更新的时候，这个文件夹被忽略，没有被更新上去。</p>
 <p>解决方案：</p>
 <ol>
@@ -1224,9 +1224,9 @@
 <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo s<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>完成后会在本地<code>http://localhost:4000/ </code>这个地址启动你的本地博客，浏览器中输入地址效果如下：</p>
-<p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a77523871b83018ad87cfd.png" alt="Hexo-2" title="Hexo"></p>
+<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/Build-blog/hexo-2.png" alt="Hexo-2" title="Hexo"></p>
 <h2 id="4-Github部署"><a href="#4-Github部署" class="headerlink" title="4. Github部署"></a>4. Github部署</h2><h3 id="4-1-创建仓库"><a href="#4-1-创建仓库" class="headerlink" title="4.1 创建仓库"></a>4.1 创建仓库</h3><p>登录 GitHub 账号，新建一个名为 <code>username.github.io</code>（这里的<code>username</code>要替换成自己的实际的用户名） 的仓库，如下图：</p>
-<p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a77708871b83018ade5782.png" alt="Hexo-3" title="创建仓库"></p>
+<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/Build-blog/hexo-3.png" alt="Hexo-3" title="创建仓库"></p>
 <p><strong>这里的<code>Repository name</code>一定要填写<code>username.github.io</code>，例如你的用户名是<code>Monthpity</code>，那么就填写<code>Monthpity.github.io</code>不然不管用。</strong></p>
 <h3 id="4-2-部署到Github仓库"><a href="#4-2-部署到Github仓库" class="headerlink" title="4.2 部署到Github仓库"></a>4.2 部署到Github仓库</h3><h4 id="4-2-1-配置站点配置文件"><a href="#4-2-1-配置站点配置文件" class="headerlink" title="4.2.1 配置站点配置文件"></a>4.2.1 配置站点配置文件</h4><p>Hexo 有2种 <code>_config.yml</code>文件，一个是根目录下的全局的 <code>_config.yml</code>，一个是各个主体 theme 下的 <code>_config.yml</code>。将前者称为<strong>站点配置文件</strong>， 后者称为<strong>主题配置文件</strong>。</p>
 <p>打开根目录下站点配置文件 <code>_config.yml</code>，配置有关 deploy 的部分：</p>
@@ -1264,7 +1264,7 @@ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
 <pre class="line-numbers language-YML" data-language="YML"><code class="language-YML">theme: matery<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 <p>配置完成后执行<code>hexo g</code>和<code>hexo s</code>命令，访问<code>http://localhost:4000/</code>就可以看到新主题网站如下：</p>
-<p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65a78556871b83018a0c0e38.png" alt="Hexo-4" title="hexo-matery"></p>
+<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/Build-blog/hexo-4.png" alt="Hexo-4" title="hexo-matery"></p>
 <p>主题的配置需要到站点根目录下<code>themes/matery/_config.yml</code>文件中更改。</p>
 <p>详细的主题配置参考：<a target="_blank" rel="noopener" href="http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#toc-heading-18">hexo-theme-matery的介绍</a>。</p>
 <h4 id="5-1-2-站点配置信息"><a href="#5-1-2-站点配置信息" class="headerlink" title="5.1.2 站点配置信息"></a>5.1.2 站点配置信息</h4><p>打开根目录下站点配置文件 <code>_config.yml</code>，不是上面的主题配置文件，设置如下内容：</p>
@@ -1839,12 +1839,12 @@ hexo d<span aria-hidden="true" class="line-numbers-rows"><span></span><span></sp
                         <span class="chip bg-color">Hexo</span>
                     </a>
                     
-                    <a href="/tags/Optimize/">
-                        <span class="chip bg-color">Optimize</span>
-                    </a>
-                    
                     <a href="/tags/Matery/">
                         <span class="chip bg-color">Matery</span>
+                    </a>
+                    
+                    <a href="/tags/Optimize/">
+                        <span class="chip bg-color">Optimize</span>
                     </a>
                     
                 </div>

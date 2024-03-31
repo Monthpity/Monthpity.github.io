@@ -1138,7 +1138,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-16
+                    2024-03-31
                 </div>
                 
 
@@ -1183,16 +1183,16 @@
 <li><strong>无需服务器管理</strong>：使用 Vercel，您无需担心服务器管理、容量规划和网络配置等问题，因为这些都由平台自动处理。</li>
 </ol>
 <h3 id="2-实践操作"><a href="#2-实践操作" class="headerlink" title="2. 实践操作"></a>2. 实践操作</h3><h4 id="2-1-注册账号"><a href="#2-1-注册账号" class="headerlink" title="2.1 注册账号"></a>2.1 注册账号</h4><p>注册账号： 首先进入<a target="_blank" rel="noopener" href="https://vercel.com/dashboard">Vercel</a>官网，直接用 Github 登录(Github Page 用户)。</p>
-<h4 id="2-2-导入项目"><a href="#2-2-导入项目" class="headerlink" title="2.2 导入项目"></a>2.2 导入项目</h4><p>点击 <code>New Project</code> 按钮新建项目，然后导入你的 GitHub 博客项目（<code>xxx.github.io</code>那个）。有可能他会自动识别，自己可以按照实际情况自己来，只要把那个项目导入就行。详情见下图。<br><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65b72de7871b83018aebb134.png" alt="导入项目" title="导入项目"></p>
+<h4 id="2-2-导入项目"><a href="#2-2-导入项目" class="headerlink" title="2.2 导入项目"></a>2.2 导入项目</h4><p>点击 <code>New Project</code> 按钮新建项目，然后导入你的 GitHub 博客项目（<code>xxx.github.io</code>那个）。有可能他会自动识别，自己可以按照实际情况自己来，只要把那个项目导入就行。详情见下图。<br><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/Blog-speed-up/vercel-1.png" alt="导入项目" title="导入项目"></p>
 <h4 id="2-3-部署网站"><a href="#2-3-部署网站" class="headerlink" title="2.3 部署网站"></a>2.3 部署网站</h4><blockquote>
 <p>在这里就提醒一点，部署前选择 Other 模板即可，其他的都默认。最后在部署卡片上面你就可以看到 Vercel 生成的 URL ，那就是 Vercel 加速后的网址。</p>
 </blockquote>
 <h4 id="2-4-自定义域名"><a href="#2-4-自定义域名" class="headerlink" title="2.4 自定义域名"></a>2.4 自定义域名</h4><p>这也是我选择用Vercel最大的原因，既能加速又能自定义域名何乐而不为呢。</p>
 <p>回到你部署网站成功的页面，点击右上角<code>domains</code>按钮，进入域名添加页面。</p>
-<p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65b73036871b83018af2cc67.png" alt="自定义域名" title="添加域名"></p>
+<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/Blog-speed-up/vercek-2.png" alt="自定义域名" title="添加域名"></p>
 <p>我添加的是只解析域名不带<code>WWW</code>，将<code>www</code>的域名地址重定向到主域名上。添加完成后它会刷新错误，展开后将里面的解析类型、解析名称和目标值添加到DNS解析即可。</p>
 <h4 id="2-5-域名解析"><a href="#2-5-域名解析" class="headerlink" title="2.5 域名解析"></a>2.5 域名解析</h4><p>来到域名服务提供商处（腾讯云、阿里云等）,在DNS解析处添加你从上面拿到的解析记录值，包括解析类型、名称、目标内容。</p>
-<p><img src="/medias/loading.gif" data-original="https://pic.imgdb.cn/item/65b73358871b83018afce387.png" alt="添加记录值" title="添加解析记录值"></p>
+<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/Blog-speed-up/cloudflare.png" alt="添加记录值" title="添加解析记录值"></p>
 <h3 id="3-总结"><a href="#3-总结" class="headerlink" title="3. 总结"></a>3. 总结</h3><p>到这里就已经加速成功，不挂VPN也能快速访问网站，就算以后你在写文章，往Github仓库推送也没事，Vercel也会跟着你推送的同时更新分支，简直就是香中之香。</p>
 
                 
@@ -1727,12 +1727,12 @@
                         <span class="chip bg-color">Hexo</span>
                     </a>
                     
-                    <a href="/tags/Optimize/">
-                        <span class="chip bg-color">Optimize</span>
-                    </a>
-                    
                     <a href="/tags/Matery/">
                         <span class="chip bg-color">Matery</span>
+                    </a>
+                    
+                    <a href="/tags/Optimize/">
+                        <span class="chip bg-color">Optimize</span>
                     </a>
                     
                 </div>
