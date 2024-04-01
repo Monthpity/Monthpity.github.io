@@ -1,6 +1,6 @@
 /* Here is your custom css styles. */
 
-*{
+body{
     cursor: url("/medias/alternate.cur"),auto!important;
  }
  a {
