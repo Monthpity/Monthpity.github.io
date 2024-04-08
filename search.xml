@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Hexo-主题推荐</title>
+      <link href="/2024/04/08/hexo-zhu-ti-tui-jian/"/>
+      <url>/2024/04/08/hexo-zhu-ti-tui-jian/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Hexo-主题推荐"><a href="#Hexo-主题推荐" class="headerlink" title="Hexo - 主题推荐"></a>Hexo - 主题推荐</h1><h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>Hexo是一个非常优秀的静态博客生成器，它提供了丰富的插件和主题，使得用户可以轻松地定制自己的博客。在这篇文章中，我们将为您推荐一些优秀的Hexo主题，希望可以为您的博客添加一些新鲜的元素。这些主题不仅美观大方，还具有丰富的功能和高度的可定制性，无论您是博客新手还是老手，都可以找到适合自己的主题。在阅读本文之前，您可能需要了解一些Hexo的基础知识，但是请放心，我们会在每个主题的介绍中提供相应的使用说明和示例，帮助您快速上手。现在，让我们一起开始探索这些优秀的Hexo主题吧！</p><h2 id="2-主题列表"><a href="#2-主题列表" class="headerlink" title="2. 主题列表"></a>2. 主题列表</h2><h3 id="2-1-Butterfly"><a href="#2-1-Butterfly" class="headerlink" title="2.1 Butterfly"></a>2.1 Butterfly</h3><p><img src="https://picture.cmymoon.com/Blog/Hexo-theme/Butterfly.webp" alt="Butterfly" title="Butterfly主题展示"></p><ul><li><p>适用于 Hexo 的简洁卡片式用户界面设计主题</p></li><li><p>在线演示：<a href="https://butterfly.js.org/">Butterfy</a></p></li><li><p>主题仓库：<a href="https://github.com/jerryc127/hexo-theme-butterfly">Github</a></p></li><li><p>使用文档：<a href="https://butterfly.js.org/posts/21cfbf15/">Butterfly 安裝文檔(一) 快速開始 | Butterfly</a></p></li><li><p>推荐指数：⭐⭐⭐⭐⭐</p></li></ul><h3 id="2-2-Matery"><a href="#2-2-Matery" class="headerlink" title="2.2 Matery"></a>2.2 Matery</h3><p><img src="https://picture.cmymoon.com/Blog/Hexo-theme/Matery.webp" alt="Matery" title="Matery主题展示"></p><ul><li><p>采用材质设计和响应式设计的精美主题</p></li><li><p>在线演示：<a href="https://blinkfox.github.io/">闪烁之狐</a></p></li><li><p>主题仓库：<a href="https://github.com/blinkfox/hexo-theme-matery">Github</a></p></li><li><p>使用文档：<a href="http://blinkfox.com/2018/09/28/qian-duan/hexo-bo-ke-zhu-ti-zhi-hexo-theme-matery-de-jie-shao/#toc-heading-18">Hexo博客主题之hexo-theme-matery的介绍 </a></p></li><li><p>推荐指数：⭐⭐⭐⭐⭐</p></li></ul><h3 id="2-3-Anzhiyu"><a href="#2-3-Anzhiyu" class="headerlink" title="2.3 Anzhiyu"></a>2.3 Anzhiyu</h3><p><img src="https://picture.cmymoon.com/Blog/Hexo-theme/Anzhiyu.webp" alt="Anzhiyu" title="Anzhiyu主题展示"></p><ul><li><p>简洁明了的 Hexo 主题，设计师风格，一款基于<a href="https://github.com/jerryc127/hexo-theme-butterfly">hexo-theme-butterfly</a>修改的主題。</p></li><li><p>在线演示：<a href="https://blog.lixiaomu.fun/">李小沐</a></p></li><li><p>主题仓库：<a href="https://github.com/anzhiyu-c/hexo-theme-anzhiyu">Github</a></p></li><li><p>使用文档：<a href="https://docs.anheyu.com/intro.html">主题简介 | 安知鱼主题官方文档 </a></p></li><li><p>推荐指数：⭐⭐⭐⭐⭐</p></li></ul><h3 id="2-4-Fluid"><a href="#2-4-Fluid" class="headerlink" title="2.4 Fluid"></a>2.4 Fluid</h3><p><img src="https://picture.cmymoon.com/Blog/Hexo-theme/Fluid.webp" alt="Fluid" title="fluid主题展示"></p><ul><li><p>这是一款 Material Design 风格的 Hexo 主题，以简约的设计帮助你专注于写作。</p></li><li><p>在线展示：<a href="https://hexo.fluid-dev.com/">Hexo Theme Fluid</a></p></li><li><p>主题仓库：<a href="https://github.com/fluid-dev/hexo-theme-fluid">Github</a></p></li><li><p>使用文档：<a href="https://hexo.fluid-dev.com/docs/start/">Hexo Fluid 用户手册</a></p></li><li><p>推荐指数：⭐⭐⭐⭐</p></li></ul><h3 id="2-5-NexT"><a href="#2-5-NexT" class="headerlink" title="2.5 NexT"></a>2.5 NexT</h3><p><img src="https://picture.cmymoon.com/Blog/Hexo-theme/Next.webp" alt="Next" title="Next主题展示"></p><ul><li><p>NexT 是一款优雅而强大的主题</p></li><li><p>在线演示：<a href="https://theme-next.js.org/">NexT - Theme for Hexo</a></p></li><li><p>主题仓库：<a href="https://github.com/next-theme/hexo-theme-next">Github</a></p></li><li><p>使用文档：<a href="https://theme-next.js.org/docs/">Documentation | NexT</a></p></li><li><p>推荐指数：⭐⭐⭐⭐</p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Theme-sharing </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Share </tag>
+            
+            <tag> Hexo </tag>
+            
+            <tag> Theme </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>软件分享</title>
       <link href="/2024/03/28/ruan-jian-fen-xiang/"/>
       <url>/2024/03/28/ruan-jian-fen-xiang/</url>
