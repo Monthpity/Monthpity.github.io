@@ -1192,7 +1192,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-11
+                    2024-04-27
                 </div>
                 
 
@@ -1226,159 +1226,159 @@
             <div id="articleContent">
                 <h1 id="Hexo-matery-主题添加预加载动画"><a href="#Hexo-matery-主题添加预加载动画" class="headerlink" title="Hexo-matery 主题添加预加载动画"></a>Hexo-matery 主题添加预加载动画</h1><p>为主题添加一个预加载动画，对与访问速度较慢的blog来说很友好。预加载动画也就不用解释了，从字面意思都能理解是什么，废话不多说直接操作。</p>
 <h2 id="1-添加一个ejs文件"><a href="#1-添加一个ejs文件" class="headerlink" title="1. 添加一个ejs文件"></a>1. 添加一个ejs文件</h2><p>在主题目录下<code>/layout/_partial/</code>目录下创建一个<code>loading-pages.ejs</code> 的文件，内容如下：</p>
-<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;style type="text/css" lang="css"&gt;
-    #loading-container{
-        position: fixed;
-        top: 0;
-        left: 0;
-        min-height: 100vh;
-        width: 100vw;
-        z-index: 9999;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: #FFF;
-        text-align: center;
-        /* loader页面消失采用渐隐的方式*/
-        -webkit-transition: opacity 1s ease;
-        -moz-transition: opacity 1s ease;
-        -o-transition: opacity 1s ease;
-        transition: opacity 1s ease;
-    }
-    .loading-image{
-        width: 120px;
-        height: 50px;
-        transform: translate(-50%);
-    }
+<pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/css<span class="token punctuation">"</span></span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>css<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token style"><span class="token language-css">
+    <span class="token selector">#loading-container</span><span class="token punctuation">{</span>
+        <span class="token property">position</span><span class="token punctuation">:</span> fixed<span class="token punctuation">;</span>
+        <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token property">min-height</span><span class="token punctuation">:</span> 100vh<span class="token punctuation">;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 100vw<span class="token punctuation">;</span>
+        <span class="token property">z-index</span><span class="token punctuation">:</span> 9999<span class="token punctuation">;</span>
+        <span class="token property">display</span><span class="token punctuation">:</span> flex<span class="token punctuation">;</span>
+        <span class="token property">flex-direction</span><span class="token punctuation">:</span> column<span class="token punctuation">;</span>
+        <span class="token property">justify-content</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+        <span class="token property">align-items</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+        <span class="token property">background</span><span class="token punctuation">:</span> #FFF<span class="token punctuation">;</span>
+        <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+        <span class="token comment">/* loader页面消失采用渐隐的方式*/</span>
+        <span class="token property">-webkit-transition</span><span class="token punctuation">:</span> opacity 1s ease<span class="token punctuation">;</span>
+        <span class="token property">-moz-transition</span><span class="token punctuation">:</span> opacity 1s ease<span class="token punctuation">;</span>
+        <span class="token property">-o-transition</span><span class="token punctuation">:</span> opacity 1s ease<span class="token punctuation">;</span>
+        <span class="token property">transition</span><span class="token punctuation">:</span> opacity 1s ease<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">.loading-image</span><span class="token punctuation">{</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 120px<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 50px<span class="token punctuation">;</span>
+        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span>-50%<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
 
-    .loading-image div:nth-child(2) {
-        -webkit-animation: pacman-balls 1s linear 0s infinite;
-        animation: pacman-balls 1s linear 0s infinite
-    }
+    <span class="token selector">.loading-image div:nth-child(2)</span> <span class="token punctuation">{</span>
+        <span class="token property">-webkit-animation</span><span class="token punctuation">:</span> pacman-balls 1s linear 0s infinite<span class="token punctuation">;</span>
+        <span class="token property">animation</span><span class="token punctuation">:</span> pacman-balls 1s linear 0s infinite
+    <span class="token punctuation">}</span>
 
-    .loading-image div:nth-child(3) {
-        -webkit-animation: pacman-balls 1s linear .33s infinite;
-        animation: pacman-balls 1s linear .33s infinite
-    }
+    <span class="token selector">.loading-image div:nth-child(3)</span> <span class="token punctuation">{</span>
+        <span class="token property">-webkit-animation</span><span class="token punctuation">:</span> pacman-balls 1s linear .33s infinite<span class="token punctuation">;</span>
+        <span class="token property">animation</span><span class="token punctuation">:</span> pacman-balls 1s linear .33s infinite
+    <span class="token punctuation">}</span>
 
-    .loading-image div:nth-child(4) {
-        -webkit-animation: pacman-balls 1s linear .66s infinite;
-        animation: pacman-balls 1s linear .66s infinite
-    }
+    <span class="token selector">.loading-image div:nth-child(4)</span> <span class="token punctuation">{</span>
+        <span class="token property">-webkit-animation</span><span class="token punctuation">:</span> pacman-balls 1s linear .66s infinite<span class="token punctuation">;</span>
+        <span class="token property">animation</span><span class="token punctuation">:</span> pacman-balls 1s linear .66s infinite
+    <span class="token punctuation">}</span>
 
-    .loading-image div:nth-child(5) {
-        -webkit-animation: pacman-balls 1s linear .99s infinite;
-        animation: pacman-balls 1s linear .99s infinite
-    }
+    <span class="token selector">.loading-image div:nth-child(5)</span> <span class="token punctuation">{</span>
+        <span class="token property">-webkit-animation</span><span class="token punctuation">:</span> pacman-balls 1s linear .99s infinite<span class="token punctuation">;</span>
+        <span class="token property">animation</span><span class="token punctuation">:</span> pacman-balls 1s linear .99s infinite
+    <span class="token punctuation">}</span>
 
-   .loading-image div:first-of-type {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_up .5s 0s infinite;
-        animation: rotate_pacman_half_up .5s 0s infinite;
-    }
-    .loading-image div:nth-child(2) {
-        width: 0;
-        height: 0;
-        border: 25px solid #49b1f5;
-        border-right-color: transparent;
-        border-radius: 25px;
-        -webkit-animation: rotate_pacman_half_down .5s 0s infinite;
-        animation: rotate_pacman_half_down .5s 0s infinite;
-        margin-top: -50px;
-    }
-    @-webkit-keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+   <span class="token selector">.loading-image div:first-of-type</span> <span class="token punctuation">{</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token property">border</span><span class="token punctuation">:</span> 25px solid #49b1f5<span class="token punctuation">;</span>
+        <span class="token property">border-right-color</span><span class="token punctuation">:</span> transparent<span class="token punctuation">;</span>
+        <span class="token property">border-radius</span><span class="token punctuation">:</span> 25px<span class="token punctuation">;</span>
+        <span class="token property">-webkit-animation</span><span class="token punctuation">:</span> rotate_pacman_half_up .5s 0s infinite<span class="token punctuation">;</span>
+        <span class="token property">animation</span><span class="token punctuation">:</span> rotate_pacman_half_up .5s 0s infinite<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">.loading-image div:nth-child(2)</span> <span class="token punctuation">{</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token property">border</span><span class="token punctuation">:</span> 25px solid #49b1f5<span class="token punctuation">;</span>
+        <span class="token property">border-right-color</span><span class="token punctuation">:</span> transparent<span class="token punctuation">;</span>
+        <span class="token property">border-radius</span><span class="token punctuation">:</span> 25px<span class="token punctuation">;</span>
+        <span class="token property">-webkit-animation</span><span class="token punctuation">:</span> rotate_pacman_half_down .5s 0s infinite<span class="token punctuation">;</span>
+        <span class="token property">animation</span><span class="token punctuation">:</span> rotate_pacman_half_down .5s 0s infinite<span class="token punctuation">;</span>
+        <span class="token property">margin-top</span><span class="token punctuation">:</span> -50px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token atrule"><span class="token rule">@-webkit-keyframes</span> rotate_pacman_half_up</span> <span class="token punctuation">{</span><span class="token selector">0%</span> <span class="token punctuation">{</span><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>270deg<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token selector">50%</span> <span class="token punctuation">{</span><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>1turn<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token selector">to</span> <span class="token punctuation">{</span><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>270deg<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
 
-    @keyframes rotate_pacman_half_up {0% {transform: rotate(270deg)}50% {transform: rotate(1turn)}to {transform: rotate(270deg)}}
+    <span class="token atrule"><span class="token rule">@keyframes</span> rotate_pacman_half_up</span> <span class="token punctuation">{</span><span class="token selector">0%</span> <span class="token punctuation">{</span><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>270deg<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token selector">50%</span> <span class="token punctuation">{</span><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>1turn<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token selector">to</span> <span class="token punctuation">{</span><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>270deg<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
 
-    @-webkit-keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+    <span class="token atrule"><span class="token rule">@-webkit-keyframes</span> rotate_pacman_half_down</span> <span class="token punctuation">{</span><span class="token selector">0%</span> <span class="token punctuation">{</span><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>90deg<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token selector">50%</span> <span class="token punctuation">{</span><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token selector">to</span> <span class="token punctuation">{</span><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>90deg<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
 
-    @keyframes rotate_pacman_half_down {0% {transform: rotate(90deg)}50% {transform: rotate(0deg)}to {transform: rotate(90deg)}}
+    <span class="token atrule"><span class="token rule">@keyframes</span> rotate_pacman_half_down</span> <span class="token punctuation">{</span><span class="token selector">0%</span> <span class="token punctuation">{</span><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>90deg<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token selector">50%</span> <span class="token punctuation">{</span><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>0deg<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token selector">to</span> <span class="token punctuation">{</span><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">rotate</span><span class="token punctuation">(</span>90deg<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
 
-    @-webkit-keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+    <span class="token atrule"><span class="token rule">@-webkit-keyframes</span> pacman-balls</span> <span class="token punctuation">{</span><span class="token selector">75%</span> <span class="token punctuation">{</span><span class="token property">opacity</span><span class="token punctuation">:</span> .7<span class="token punctuation">}</span><span class="token selector">to</span> <span class="token punctuation">{</span><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span>-100px<span class="token punctuation">,</span> -6.25px<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
 
-    @keyframes pacman-balls {75% {opacity: .7}to {transform: translate(-100px, -6.25px)}}
+    <span class="token atrule"><span class="token rule">@keyframes</span> pacman-balls</span> <span class="token punctuation">{</span><span class="token selector">75%</span> <span class="token punctuation">{</span><span class="token property">opacity</span><span class="token punctuation">:</span> .7<span class="token punctuation">}</span><span class="token selector">to</span> <span class="token punctuation">{</span><span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translate</span><span class="token punctuation">(</span>-100px<span class="token punctuation">,</span> -6.25px<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
 
 
-    .loading-image div:nth-child(3),
+    <span class="token selector">.loading-image div:nth-child(3),
     .loading-image div:nth-child(4),
     .loading-image div:nth-child(5),
-    .loading-image div:nth-child(6){
-        background-color: #49b1f5;
-        width: 15px;
-        height: 15px;
-        border-radius: 100%;
-        margin: 2px;
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        transform: translateY(-6.25px);
-        top: 25px;
-        left: 100px;
-    }
-    .loading-text{
-        margin-bottom: 20vh;
-        text-align: center;
-        color: #2c3e50;
-        font-size: 2rem;
-        box-sizing: border-box;
-        padding: 0 10px;
-        text-shadow: 0 2px 10px rgba(0,0,0,0.2);
-    }
-    @media only screen and (max-width: 500px) {
-         .loading-text{
-            font-size: 1.5rem;
-         }
-    }
-    .fadeout {
-        opacity: 0;
-        filter: alpha(opacity=0);
-    }
-    /* logo出现动画 */
-    @-webkit-keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}100%{opacity:1;-webkit-transform:none;transform:none}}
-    @keyframes fadeInDown{0%{opacity:0;-webkit-transform:translate3d(0,-100%,0);}}
- &lt;/style&gt;
- &lt;script&gt;
-(function () {
-    const loaded = function(){
-       setTimeout(function(){
-            const loader = document.getElementById("loading-container");
-            loader.className="fadeout" ;//使用渐隐的方法淡出loading page
-            // document.getElementById("body-wrap").style.display="flex";
-            setTimeout(function(){
-                loader.style.display="none";
-            },2500); 
-        },1000);//强制显示loading page 1s  
-    };
-    loaded();
-})()
-&lt;/script&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    .loading-image div:nth-child(6)</span><span class="token punctuation">{</span>
+        <span class="token property">background-color</span><span class="token punctuation">:</span> #49b1f5<span class="token punctuation">;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 15px<span class="token punctuation">;</span>
+        <span class="token property">border-radius</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span>
+        <span class="token property">margin</span><span class="token punctuation">:</span> 2px<span class="token punctuation">;</span>
+        <span class="token property">width</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+        <span class="token property">height</span><span class="token punctuation">:</span> 10px<span class="token punctuation">;</span>
+        <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span>
+        <span class="token property">transform</span><span class="token punctuation">:</span> <span class="token function">translateY</span><span class="token punctuation">(</span>-6.25px<span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token property">top</span><span class="token punctuation">:</span> 25px<span class="token punctuation">;</span>
+        <span class="token property">left</span><span class="token punctuation">:</span> 100px<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">.loading-text</span><span class="token punctuation">{</span>
+        <span class="token property">margin-bottom</span><span class="token punctuation">:</span> 20vh<span class="token punctuation">;</span>
+        <span class="token property">text-align</span><span class="token punctuation">:</span> center<span class="token punctuation">;</span>
+        <span class="token property">color</span><span class="token punctuation">:</span> #2c3e50<span class="token punctuation">;</span>
+        <span class="token property">font-size</span><span class="token punctuation">:</span> 2rem<span class="token punctuation">;</span>
+        <span class="token property">box-sizing</span><span class="token punctuation">:</span> border-box<span class="token punctuation">;</span>
+        <span class="token property">padding</span><span class="token punctuation">:</span> 0 10px<span class="token punctuation">;</span>
+        <span class="token property">text-shadow</span><span class="token punctuation">:</span> 0 2px 10px <span class="token function">rgba</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0<span class="token punctuation">,</span>0.2<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token atrule"><span class="token rule">@media</span> <span class="token keyword">only</span> screen <span class="token keyword">and</span> <span class="token punctuation">(</span><span class="token property">max-width</span><span class="token punctuation">:</span> 500px<span class="token punctuation">)</span></span> <span class="token punctuation">{</span>
+         <span class="token selector">.loading-text</span><span class="token punctuation">{</span>
+            <span class="token property">font-size</span><span class="token punctuation">:</span> 1.5rem<span class="token punctuation">;</span>
+         <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    <span class="token selector">.fadeout</span> <span class="token punctuation">{</span>
+        <span class="token property">opacity</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span>
+        <span class="token property">filter</span><span class="token punctuation">:</span> <span class="token function">alpha</span><span class="token punctuation">(</span>opacity=0<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token comment">/* logo出现动画 */</span>
+    <span class="token atrule"><span class="token rule">@-webkit-keyframes</span> fadeInDown</span><span class="token punctuation">{</span><span class="token selector">0%</span><span class="token punctuation">{</span><span class="token property">opacity</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span><span class="token property">-webkit-transform</span><span class="token punctuation">:</span><span class="token function">translate3d</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>-100%<span class="token punctuation">,</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token property">transform</span><span class="token punctuation">:</span><span class="token function">translate3d</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>-100%<span class="token punctuation">,</span>0<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token selector">100%</span><span class="token punctuation">{</span><span class="token property">opacity</span><span class="token punctuation">:</span>1<span class="token punctuation">;</span><span class="token property">-webkit-transform</span><span class="token punctuation">:</span>none<span class="token punctuation">;</span><span class="token property">transform</span><span class="token punctuation">:</span>none<span class="token punctuation">}</span><span class="token punctuation">}</span>
+    <span class="token atrule"><span class="token rule">@keyframes</span> fadeInDown</span><span class="token punctuation">{</span><span class="token selector">0%</span><span class="token punctuation">{</span><span class="token property">opacity</span><span class="token punctuation">:</span>0<span class="token punctuation">;</span><span class="token property">-webkit-transform</span><span class="token punctuation">:</span><span class="token function">translate3d</span><span class="token punctuation">(</span>0<span class="token punctuation">,</span>-100%<span class="token punctuation">,</span>0<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+ </span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">&gt;</span></span>
+ <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+<span class="token punctuation">(</span><span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token function-variable function">loaded</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+       <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+            <span class="token keyword">const</span> loader <span class="token operator">=</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"loading-container"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+            loader<span class="token punctuation">.</span>className<span class="token operator">=</span><span class="token string">"fadeout"</span> <span class="token punctuation">;</span><span class="token comment">//使用渐隐的方法淡出loading page</span>
+            <span class="token comment">// document.getElementById("body-wrap").style.display="flex";</span>
+            <span class="token function">setTimeout</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+                loader<span class="token punctuation">.</span>style<span class="token punctuation">.</span>display<span class="token operator">=</span><span class="token string">"none"</span><span class="token punctuation">;</span>
+            <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">2500</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+        <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment">//强制显示loading page 1s  </span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+    <span class="token function">loaded</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="2-主题目录下的ejs文件中添加内容"><a href="#2-主题目录下的ejs文件中添加内容" class="headerlink" title="2. 主题目录下的ejs文件中添加内容"></a>2. 主题目录下的ejs文件中添加内容</h2><p>在主题目录<code>layout</code>下找到<code>layout.ejs</code>这个文件。</p>
 <p>打开后在<code>&lt;body&gt;</code>标签前添加如下内容：</p>
-<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;% if (theme.loadingPages.enable) { %&gt;
-   &lt;%- partial('_partial/loading-pages') %&gt;
-&lt;% } %&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>loadingPages<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> </span><span class="token delimiter punctuation">%&gt;</span></span>
+   <span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%-</span><span class="token language-javascript"> <span class="token function">partial</span><span class="token punctuation">(</span><span class="token string">'_partial/loading-pages'</span><span class="token punctuation">)</span> </span><span class="token delimiter punctuation">%&gt;</span></span>
+<span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token punctuation">}</span> </span><span class="token delimiter punctuation">%&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 
 
 
 <p>在<code>&lt;body&gt;</code>标签后添加如下内容：</p>
-<pre class="line-numbers language-HTML" data-language="HTML"><code class="language-HTML">&lt;% if (theme.loadingPages.enable) { %&gt;
-    &lt;div id="loading-container"&gt;
-         &lt;p class="loading-text"&gt;嘘~  正在从服务器偷取页面 . . . &lt;/p&gt; 
-         &lt;div class="loading-image"&gt;
-             &lt;div&gt;&lt;/div&gt;
-             &lt;div&gt;&lt;/div&gt;
-             &lt;div&gt;&lt;/div&gt;
-             &lt;div&gt;&lt;/div&gt; 
-             &lt;div&gt;&lt;/div&gt;
-         &lt;/div&gt;
-    &lt;/div&gt;
-&lt;% } %&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token keyword">if</span> <span class="token punctuation">(</span>theme<span class="token punctuation">.</span>loadingPages<span class="token punctuation">.</span>enable<span class="token punctuation">)</span> <span class="token punctuation">{</span> </span><span class="token delimiter punctuation">%&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>loading-container<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>loading-text<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>嘘~  正在从服务器偷取页面 . . . <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span> 
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>loading-image<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span> 
+             <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+         <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token ejs language-ejs"><span class="token delimiter punctuation">&lt;%</span><span class="token language-javascript"> <span class="token punctuation">}</span> </span><span class="token delimiter punctuation">%&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <h2 id="3-主题目录下-config-yml文件添加开关配置"><a href="#3-主题目录下-config-yml文件添加开关配置" class="headerlink" title="3. 主题目录下_config.yml文件添加开关配置"></a>3. 主题目录下_config.yml文件添加开关配置</h2><p>打开<code>_config.yml</code>文件，添加如下内容：</p>
 <pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">loadingPages</span><span class="token punctuation">:</span>
@@ -2210,8 +2210,8 @@
                     <span id="busuanzi_value_site_uv" class="white-color"></span>
             </span>
             
-            <br>
-            <span><i class="fas fa-rocket"></i> 本站由<a target="_blank" rel="noopener" href="https://clcdn.tsyfw.com/">苍龙CDN</a>提供加速服务</span>
+            <!-- <br>
+            <span><i class="fas fa-rocket"></i> 本站由<a target="_blank" rel="noopener" href="https://clcdn.tsyfw.com/">苍龙CDN</a>提供加速服务</span> -->
             <br>
            <!-- 运行天数 -->
             
@@ -2286,7 +2286,7 @@
 
 
 
-    <a href="mailto:1171947030@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:moon@cmymoon.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
