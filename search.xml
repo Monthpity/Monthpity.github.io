@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>WechatMsg-聊天记录管理工具</title>
+      <link href="/2024/05/13/wechatmsg-liao-tian-ji-lu-guan-li-gong-ju/"/>
+      <url>/2024/05/13/wechatmsg-liao-tian-ji-lu-guan-li-gong-ju/</url>
+      
+        <content type="html"><![CDATA[<h1 id="WechatMsg"><a href="#WechatMsg" class="headerlink" title="WechatMsg"></a>WechatMsg</h1><h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>今天无意间在Github上看到一个微信聊天记录管理工具——MemoTrace，主要用于提取微信聊天记录，将其导出成HTML、Word、Excel文档永久保存，对聊天记录进行分析生成年度聊天报告，用聊天数据训练专属于个人的AI聊天助手，作者是这样描述的：</p><p>我深信有意义的不是微信，而是隐藏在对话框背后的一个个<strong>深刻故事</strong>。未来，每个人都能拥有AI的陪伴，而你的数据能够赋予它有关于你过去的珍贵记忆。我希望每个人都有将自己的生活痕迹👨‍👩‍👦👚🥗🏠️🚴🧋⛹️🛌🛀留存的权利，而不是遗忘💀。</p><p>AI的发展不仅仅是技术的提升，更是情感💞的延续。每一个对话、每一个互动都是生活中独一无二的片段，是真实而动人的情感交流。因此，我希望AI工作者们能够<strong>善用这些自己的数据</strong>，用于培训独特的、属于个体的人工智能。让<strong>个人AI成为生活中的朋友</strong>，能够理解、记录并分享我们的欢笑、泪水和成长。</p><p>那天，AI不再是高不可攀的存在，而是融入寻常百姓家的一部分。因为<strong>每个人能拥有自己的AI</strong>，将科技的力量融入生活的方方面面。这是一场关于真情实感的革命，一场让技术变得更加人性化的探索，让我们共同见证未来的美好。</p><blockquote><p>Github项目地址：<a href="https://github.com/LC044/WeChatMsg/tree/master?tab=readme-ov-file">WeChatMsg</a></p></blockquote><p>个人亲测了一下，免费版的也够个人使用。</p><h2 id="2-功能"><a href="#2-功能" class="headerlink" title="2. 功能"></a>2. 功能</h2><h3 id="2-1-解析微信数据库"><a href="#2-1-解析微信数据库" class="headerlink" title="2.1 解析微信数据库"></a>2.1 解析微信数据库</h3><ul><li>获取手机号、微信昵称、wxid</li><li>解析微信聊天记录数据库</li></ul><h3 id="2-2-查看聊天记录"><a href="#2-2-查看聊天记录" class="headerlink" title="2.2 查看聊天记录"></a>2.2 查看聊天记录</h3><ul><li>按昵称、备注搜索某个好友</li><li>显示聊天记录<ul><li>文本</li><li>图片</li><li>系统消息</li></ul></li></ul><h3 id="2-3-导出聊天记录"><a href="#2-3-导出聊天记录" class="headerlink" title="2.3 导出聊天记录"></a>2.3 导出聊天记录</h3><ul><li>导出联系人<ul><li>微信号、昵称、备注、性别、地区、签名、标签、电话</li></ul></li><li>导出HTML<ul><li>支持的消息类型：文本、图片、表情包、视频、转账、分享的卡片链接、语音、转账、音视频通话记录、合并转发的聊天记录、引用消息、名片分享、小程序、视频号</li><li>支持时间轴跳转</li><li>链接支持跳转到原文</li><li>引用消息支持定位到原文</li></ul></li><li>导出TXT<ul><li>支持的消息类型：文本、转账、分享的卡片链接、语音、转账、音视频通话记录、合并转发的聊天记录、引用消息、名片分享、小程序、视频号</li></ul></li><li>导出docx<ul><li>支持的消息类型：文本</li></ul></li><li>导出csv<ul><li>原数据库数据直出（未解析）</li></ul></li><li>导出Excel(xlsx)(仅会员可用)<ul><li>字段：消息ID、类型、发送人、内容、备注、昵称</li><li>支持的消息类型<ul><li>文本、图片、位置分享、分享的卡片链接、引用消息、名片分享、转账、音视频通话记录、小程序、视频号</li><li>语音、视频、文件都是以超链接的形式加到内容里，图片嵌入到单元格里</li></ul></li></ul></li><li>批量导出聊天记录</li><li>导出PDF（仅会员可用，跟HTML基本保持一致）</li><li><strong>导出跟企业微信联系人的聊天记录</strong>（仅会员可用）</li><li>导出JSON</li></ul><h3 id="2-4-导出朋友圈（仅会员可用）"><a href="#2-4-导出朋友圈（仅会员可用）" class="headerlink" title="2.4 导出朋友圈（仅会员可用）"></a>2.4 导出朋友圈（仅会员可用）</h3><ul><li>导出自己的朋友圈</li><li>导出可见的全部朋友圈（仅会员可用）</li><li>导出指定好友的朋友圈（仅会员可用）<ul><li>导出HTML</li><li>导出PDF</li><li>导出JSON</li></ul></li><li>支持显示点赞、评论</li><li>支持时间轴跳转</li></ul><h3 id="2-5-导出群成员信息（仅会员可用）"><a href="#2-5-导出群成员信息（仅会员可用）" class="headerlink" title="2.5 导出群成员信息（仅会员可用）"></a>2.5 导出群成员信息（仅会员可用）</h3><ul><li>导出群成员信息（微信号、昵称、备注、性别、地区）</li></ul><h3 id="2-6-分析统计"><a href="#2-6-分析统计" class="headerlink" title="2.6 分析统计"></a>2.6 分析统计</h3><ul><li>个人年度报告<ul><li>年度聊天好友</li><li>年度关键词</li></ul></li><li>统计数据<ul><li>聊天统计图</li><li>消息数量分布饼图</li><li>星期分布图</li></ul></li></ul><h3 id="2-7-AI-对话"><a href="#2-7-AI-对话" class="headerlink" title="2.7 AI 对话"></a>2.7 AI 对话</h3><ul><li>支持JSON训练</li></ul><p>目前已有这么多功能，希望作者以后可以实现更多实用功能。</p><h2 id="3-效果"><a href="#3-效果" class="headerlink" title="3. 效果"></a>3. 效果</h2><p><img src="https://picture.cmymoon.com/Blog/WechatMsg/liuhen-1.webp" alt="liuhen-1" title="效果图-1"></p><p><img src="https://picture.cmymoon.com/Blog/WechatMsg/liuhen-2.webp" alt="liuhen-2" title="效果图-2"></p><p><img src="https://picture.cmymoon.com/Blog/WechatMsg/liuhen-3.webp" alt="liuhen-3" title="效果图-3"></p><p><img src="https://picture.cmymoon.com/Blog/WechatMsg/liuhen-4.webp" alt="liuhen-4" title="效果图-4"></p><p><img src="https://picture.cmymoon.com/Blog/WechatMsg/liuhen-5.webp" alt="liuhen-5" title="效果图-5"></p><h2 id="4-使用"><a href="#4-使用" class="headerlink" title="4. 使用"></a>4. 使用</h2><p>这是一款简洁的应用软件，官网上有非常详细的使用教程，从<code>安装教程——解析数据——导出数据——导出朋友圈——保存数据</code>，这里便不多啰嗦。</p><blockquote><p>官方使用教程：<a href="https://memotrace.cn/doc/posts/deploy/install.html">使用教程 | MemoTrace</a></p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software-sharing </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Share </tag>
+            
+            <tag> Software </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo-主题推荐</title>
       <link href="/2024/04/08/hexo-zhu-ti-tui-jian/"/>
       <url>/2024/04/08/hexo-zhu-ti-tui-jian/</url>

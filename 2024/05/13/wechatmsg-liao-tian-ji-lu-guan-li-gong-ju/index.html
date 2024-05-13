@@ -4,16 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="DHCP实验, Moonのblog">
-    <meta name="description" content="DHCP路由实验一、实验目的
-了解DHCP工作环境
-
-掌握DHCP服务基本配置
-
-掌握DHCP中继服务配置
-
-
-二、应用环境实现计算机访问互联网的一项重要规则就是：所有访问互联网的计算机必须保证具有全球唯一的IP地址，在日常网络管理工作中，">
+    <meta name="keywords" content="WechatMsg-聊天记录管理工具, Moonのblog">
+    <meta name="description" content="WechatMsg1. 前言今天无意间在Github上看到一个微信聊天记录管理工具——MemoTrace，主要用于提取微信聊天记录，将其导出成HTML、Word、Excel文档永久保存，对聊天记录进行分析生成年度聊天报告，用聊天数据训练专属">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -25,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>DHCP实验 | Moonのblog</title>
+    <title>WechatMsg-聊天记录管理工具 | Moonのblog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -1130,12 +1122,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('https://picture.cmymoon.com/Blog/DHCP/1.webp')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://picture.cmymoon.com/background/29.webp')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">DHCP实验</h1>
+                    <h1 class="description center-align post-title">WechatMsg-聊天记录管理工具</h1>
                 </div>
             </div>
         </div>
@@ -1159,12 +1151,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/Router/">
-                                <span class="chip bg-color">Router</span>
+                            <a href="/tags/Share/">
+                                <span class="chip bg-color">Share</span>
                             </a>
                         
-                            <a href="/tags/Network/">
-                                <span class="chip bg-color">Network</span>
+                            <a href="/tags/Software/">
+                                <span class="chip bg-color">Software</span>
                             </a>
                         
                     </div>
@@ -1175,8 +1167,8 @@
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/" class="post-category">
-                                路由实验
+                            <a href="/categories/Software-sharing/" class="post-category">
+                                Software-sharing
                             </a>
                         
                     </div>
@@ -1188,21 +1180,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-09-09
+                    2024-05-13
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2024-03-31
+                    2024-05-13
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.1k
                 </div>
                 
 
@@ -1227,188 +1219,106 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="DHCP路由实验"><a href="#DHCP路由实验" class="headerlink" title="DHCP路由实验"></a>DHCP路由实验</h1><h3 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h3><ol>
-<li><p>了解DHCP工作环境</p>
+                <h1 id="WechatMsg"><a href="#WechatMsg" class="headerlink" title="WechatMsg"></a>WechatMsg</h1><h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>今天无意间在Github上看到一个微信聊天记录管理工具——MemoTrace，主要用于提取微信聊天记录，将其导出成HTML、Word、Excel文档永久保存，对聊天记录进行分析生成年度聊天报告，用聊天数据训练专属于个人的AI聊天助手，作者是这样描述的：</p>
+<p>我深信有意义的不是微信，而是隐藏在对话框背后的一个个<strong>深刻故事</strong>。未来，每个人都能拥有AI的陪伴，而你的数据能够赋予它有关于你过去的珍贵记忆。我希望每个人都有将自己的生活痕迹👨‍👩‍👦👚🥗🏠️🚴🧋⛹️🛌🛀留存的权利，而不是遗忘💀。</p>
+<p>AI的发展不仅仅是技术的提升，更是情感💞的延续。每一个对话、每一个互动都是生活中独一无二的片段，是真实而动人的情感交流。因此，我希望AI工作者们能够<strong>善用这些自己的数据</strong>，用于培训独特的、属于个体的人工智能。让<strong>个人AI成为生活中的朋友</strong>，能够理解、记录并分享我们的欢笑、泪水和成长。</p>
+<p>那天，AI不再是高不可攀的存在，而是融入寻常百姓家的一部分。因为<strong>每个人能拥有自己的AI</strong>，将科技的力量融入生活的方方面面。这是一场关于真情实感的革命，一场让技术变得更加人性化的探索，让我们共同见证未来的美好。</p>
+<blockquote>
+<p>Github项目地址：<a target="_blank" rel="noopener" href="https://github.com/LC044/WeChatMsg/tree/master?tab=readme-ov-file">WeChatMsg</a></p>
+</blockquote>
+<p>个人亲测了一下，免费版的也够个人使用。</p>
+<h2 id="2-功能"><a href="#2-功能" class="headerlink" title="2. 功能"></a>2. 功能</h2><h3 id="2-1-解析微信数据库"><a href="#2-1-解析微信数据库" class="headerlink" title="2.1 解析微信数据库"></a>2.1 解析微信数据库</h3><ul>
+<li>获取手机号、微信昵称、wxid</li>
+<li>解析微信聊天记录数据库</li>
+</ul>
+<h3 id="2-2-查看聊天记录"><a href="#2-2-查看聊天记录" class="headerlink" title="2.2 查看聊天记录"></a>2.2 查看聊天记录</h3><ul>
+<li>按昵称、备注搜索某个好友</li>
+<li>显示聊天记录<ul>
+<li>文本</li>
+<li>图片</li>
+<li>系统消息</li>
+</ul>
 </li>
-<li><p>掌握DHCP服务基本配置</p>
+</ul>
+<h3 id="2-3-导出聊天记录"><a href="#2-3-导出聊天记录" class="headerlink" title="2.3 导出聊天记录"></a>2.3 导出聊天记录</h3><ul>
+<li>导出联系人<ul>
+<li>微信号、昵称、备注、性别、地区、签名、标签、电话</li>
+</ul>
 </li>
-<li><p>掌握DHCP中继服务配置</p>
+<li>导出HTML<ul>
+<li>支持的消息类型：文本、图片、表情包、视频、转账、分享的卡片链接、语音、转账、音视频通话记录、合并转发的聊天记录、引用消息、名片分享、小程序、视频号</li>
+<li>支持时间轴跳转</li>
+<li>链接支持跳转到原文</li>
+<li>引用消息支持定位到原文</li>
+</ul>
 </li>
-</ol>
-<h3 id="二、应用环境"><a href="#二、应用环境" class="headerlink" title="二、应用环境"></a>二、应用环境</h3><p>实现计算机访问互联网的一项重要规则就是：所有访问互联网的计算机必须保证具有全球唯一的IP地址，在日常网络管理工作中，为网络中的计算机手工配置IP地址是一项非常繁琐的工作。一来很多非专业人员不会配置IP地址。二来经常会造成地址配置错误。三来会造成网络中重复使用地址，导致地址冲突。四来会给使用笔记本电脑的人员，在跨区域移动办公室地址分配都很困难。</p>
-<p>为减少日常办公过程中网络管理的工作量，网络中心希望所有计算机的IP地址采取自动获取的方法，这就需要在接入交换机上配置动态主机地址获取协议，动态主机地址分配协议DHCP有效的解决了上述难题，将协议配置在办公网的接入交换机上，可以让接入网络中的主机自动获取上网所需的IP地址。</p>
-<h3 id="三、实验拓扑"><a href="#三、实验拓扑" class="headerlink" title="三、实验拓扑"></a>三、实验拓扑</h3><p>实验拓扑如下，实验设备：2811路由器二台、二层交换机一台、交叉线一根、直通线三根</p>
-<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/DHCP/DHCP.png" alt="拓扑图" title="DHCP实验"></p>
-<h3 id="四、实验要求"><a href="#四、实验要求" class="headerlink" title="四、实验要求"></a>四、实验要求</h3><p>在路由器B上配置DHCP Server的配置，为使PC0和PC1能分配到IP，在路由器A和交换机A上面做DHCP的中继，PC0和PC1在不同的VLAN。</p>
-<p>PC1的网关为192.168.1.254，PC2的网关为192.168.2.254。</p>
-<h3 id="五、实验步骤"><a href="#五、实验步骤" class="headerlink" title="五、实验步骤"></a>五、实验步骤</h3><h4 id="第一步：给交换机A创建VLAN"><a href="#第一步：给交换机A创建VLAN" class="headerlink" title="第一步：给交换机A创建VLAN"></a>第一步：给交换机A创建VLAN</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">交换机A：
-
-Switch(config)#
-
-Switch(config)#vlan 10
-
-Switch(config-vlan)#exit
-
-Switch(config)#vlan 20
-
-Switch(config-vlan)#exit
-
-Switch(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="第二步：给交换机设置链路类型并添加端口"><a href="#第二步：给交换机设置链路类型并添加端口" class="headerlink" title="第二步：给交换机设置链路类型并添加端口"></a>第二步：给交换机设置链路类型并添加端口</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">交换机A：
-
-Switch(config)#
-
-Switch(config)#interface fastEthernet 0/1
-
-Switch(config-if)#no shutdown
-
-Switch(config-if)#switchport mode trunk
-
-Switch(config-if)#switchport trunk allowed vlan all
-
-Switch(config-if)#exit
-
-Switch(config)#interface fastEthernet 0/2
-
-Switch(config-if)#no shutdown
-
-Switch(config-if)#switchport mode access
-
-Switch(config-if)#switchport access vlan 10
-
-Switch(config-if)#exit
-
-Switch(config)#interface fastEthernet 0/3
-
-Switch(config-if)#no shutdown
-
-Switch(config-if)#switchport mode access
-
-Switch(config-if)#switchport access vlan 20
-
-Switch(config-if)#exit
-
-Switch(config-if)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="第三步：给路由器A上配置单臂路由并配置IP地址"><a href="#第三步：给路由器A上配置单臂路由并配置IP地址" class="headerlink" title="第三步：给路由器A上配置单臂路由并配置IP地址"></a>第三步：给路由器A上配置单臂路由并配置IP地址</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
-
-Router(config)#
-
-Router(config)#interface fastEthernet 0/0
-
-Router(config-if)#no shutdown
-
-Router(config-if)#exit
-
-Router(config)#interface fastEthernet 0/0.1
-
-Router(config-subif)#no shutdown
-
-Router(config-subif)#encapsulation dot1Q 10
-
-Router(config-subif)#ip address 192.168.1.254 255.255.255.0
-
-Router(config-subif)#exit
-
-Router(config)#interface fastEthernet 0/0.2
-
-Router(config-subif)#no shutdown
-
-Router(config-subif)#encapsulation dot1Q 20
-
-Router(config-subif)#ip address 192.168.2.254 255.255.255.0
-
-Router(config-subif)#exit
-
-Router(config)#interface fastEthernet 0/1
-
-Router(config-if)#no shutdown
-
-Router(config-if)#ip address 172.16.1.1 255.255.255.0
-
-Router(config-if)#exit
-
-Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="第四步：给路由器B配置IP地址"><a href="#第四步：给路由器B配置IP地址" class="headerlink" title="第四步：给路由器B配置IP地址"></a>第四步：给路由器B配置IP地址</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器B：
-
-Router(config)#
-
-Router(config)#interface fastEthernet 0/0
-
-Router(config-if)#no shutdown
-
-Router(config-if)#ip address 172.16.1.2 255.255.255.0
-
-Router(config-if)#exit
-
-Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="第五步：配置静态路由"><a href="#第五步：配置静态路由" class="headerlink" title="第五步：配置静态路由"></a>第五步：配置静态路由</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器B：
-
-Router(config)#
-
-Router(config)#ip route 192.168.1.0 255.255.255.0 172.16.1.1
-
-Router(config)#ip route 192.168.2.0 255.255.255.0 172.16.1.1
-
-Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="第六步：在路由器A配置DHCP中继"><a href="#第六步：在路由器A配置DHCP中继" class="headerlink" title="第六步：在路由器A配置DHCP中继"></a>第六步：在路由器A配置DHCP中继</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器A：
-
-Router(config)#
-
-Router(config)#service dhcp
-
-Router(config)#interface fastEthernet 0/0.1
-
-Router(config-subif)#ip helper-address 172.16.1.2
-
-Router(config-subif)#exit
-
-Router(config)#interface fastEthernet 0/0.2
-
-Router(config-subif)#ip helper-address 172.16.1.2
-
-Router(config-subif)#exit
-
-Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="第七步：在路由器B配置DHCP-Server"><a href="#第七步：在路由器B配置DHCP-Server" class="headerlink" title="第七步：在路由器B配置DHCP Server"></a>第七步：在路由器B配置DHCP Server</h4><pre class="line-numbers language-router" data-language="router"><code class="language-router">路由器B：
-
-Router(config)#
-
-Router(config)#service dhcp
-
-Router(config)#ip dhcp pool vlan10
-
-Router(dhcp-config)#network 192.168.1.0 255.255.255.0
-
-Router(dhcp-config)#default-router 192.168.1.254
-
-Router(dhcp-config)#exit
-
-Router(config)#ip dhcp pool vlan20
-
-Router(dhcp-config)#network 192.168.2.0 255.255.255.0
-
-Router(dhcp-config)#default-router 192.168.2.254
-
-Router(dhcp-config)#exit
-
-Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h4 id="第八步：查看PC机是否获取到IP地址"><a href="#第八步：查看PC机是否获取到IP地址" class="headerlink" title="第八步：查看PC机是否获取到IP地址"></a>第八步：查看PC机是否获取到IP地址</h4><p>如果查看PC机有获取到IP地址，本实验完成。</p>
-<p>如PC机没有获取到IP地址，应检查IP地址、线缆和DHCP中继是否配置正确。</p>
-<h3 id="六、相关配置命令详解"><a href="#六、相关配置命令详解" class="headerlink" title="六、相关配置命令详解"></a>六、相关配置命令详解</h3><h5 id="1、ip-helper-address"><a href="#1、ip-helper-address" class="headerlink" title="1、ip helper-address"></a>1、ip helper-address</h5><p>命令：ip helper-address <ip-address></ip-address></p>
-<p>功能：指定DHCP服务器的地址。</p>
-<p>命令模式：接口配置模式</p>
-<p>使用指南：ip helper－address的作用就是把广播转化为单播，然后发向指定的DHCP服务器地址，一般在DHCP中继使用。</p>
-<h5 id="2、ip-dhcp-pool"><a href="#2、ip-dhcp-pool" class="headerlink" title="2、ip dhcp pool"></a>2、ip dhcp pool</h5><p>命令：ip dhcp pool <pool-name></pool-name></p>
-<p>功能：建立DHCP地址池。</p>
-<p>命令模式：全局配置模式</p>
-<p>使用指南：pool-name是自己设置的name，应尽量设置一些简单、易记的名字，此命令用于创建DHCP地址池，可配置用于分配的IP地址范围、网关、DNS等参数。</p>
+<li>导出TXT<ul>
+<li>支持的消息类型：文本、转账、分享的卡片链接、语音、转账、音视频通话记录、合并转发的聊天记录、引用消息、名片分享、小程序、视频号</li>
+</ul>
+</li>
+<li>导出docx<ul>
+<li>支持的消息类型：文本</li>
+</ul>
+</li>
+<li>导出csv<ul>
+<li>原数据库数据直出（未解析）</li>
+</ul>
+</li>
+<li>导出Excel(xlsx)(仅会员可用)<ul>
+<li>字段：消息ID、类型、发送人、内容、备注、昵称</li>
+<li>支持的消息类型<ul>
+<li>文本、图片、位置分享、分享的卡片链接、引用消息、名片分享、转账、音视频通话记录、小程序、视频号</li>
+<li>语音、视频、文件都是以超链接的形式加到内容里，图片嵌入到单元格里</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>批量导出聊天记录</li>
+<li>导出PDF（仅会员可用，跟HTML基本保持一致）</li>
+<li><strong>导出跟企业微信联系人的聊天记录</strong>（仅会员可用）</li>
+<li>导出JSON</li>
+</ul>
+<h3 id="2-4-导出朋友圈（仅会员可用）"><a href="#2-4-导出朋友圈（仅会员可用）" class="headerlink" title="2.4 导出朋友圈（仅会员可用）"></a>2.4 导出朋友圈（仅会员可用）</h3><ul>
+<li>导出自己的朋友圈</li>
+<li>导出可见的全部朋友圈（仅会员可用）</li>
+<li>导出指定好友的朋友圈（仅会员可用）<ul>
+<li>导出HTML</li>
+<li>导出PDF</li>
+<li>导出JSON</li>
+</ul>
+</li>
+<li>支持显示点赞、评论</li>
+<li>支持时间轴跳转</li>
+</ul>
+<h3 id="2-5-导出群成员信息（仅会员可用）"><a href="#2-5-导出群成员信息（仅会员可用）" class="headerlink" title="2.5 导出群成员信息（仅会员可用）"></a>2.5 导出群成员信息（仅会员可用）</h3><ul>
+<li>导出群成员信息（微信号、昵称、备注、性别、地区）</li>
+</ul>
+<h3 id="2-6-分析统计"><a href="#2-6-分析统计" class="headerlink" title="2.6 分析统计"></a>2.6 分析统计</h3><ul>
+<li>个人年度报告<ul>
+<li>年度聊天好友</li>
+<li>年度关键词</li>
+</ul>
+</li>
+<li>统计数据<ul>
+<li>聊天统计图</li>
+<li>消息数量分布饼图</li>
+<li>星期分布图</li>
+</ul>
+</li>
+</ul>
+<h3 id="2-7-AI-对话"><a href="#2-7-AI-对话" class="headerlink" title="2.7 AI 对话"></a>2.7 AI 对话</h3><ul>
+<li>支持JSON训练</li>
+</ul>
+<p>目前已有这么多功能，希望作者以后可以实现更多实用功能。</p>
+<h2 id="3-效果"><a href="#3-效果" class="headerlink" title="3. 效果"></a>3. 效果</h2><p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/WechatMsg/liuhen-1.webp" alt="liuhen-1" title="效果图-1"></p>
+<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/WechatMsg/liuhen-2.webp" alt="liuhen-2" title="效果图-2"></p>
+<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/WechatMsg/liuhen-3.webp" alt="liuhen-3" title="效果图-3"></p>
+<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/WechatMsg/liuhen-4.webp" alt="liuhen-4" title="效果图-4"></p>
+<p><img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/WechatMsg/liuhen-5.webp" alt="liuhen-5" title="效果图-5"></p>
+<h2 id="4-使用"><a href="#4-使用" class="headerlink" title="4. 使用"></a>4. 使用</h2><p>这是一款简洁的应用软件，官网上有非常详细的使用教程，从<code>安装教程——解析数据——导出数据——导出朋友圈——保存数据</code>，这里便不多啰嗦。</p>
+<blockquote>
+<p>官方使用教程：<a target="_blank" rel="noopener" href="https://memotrace.cn/doc/posts/deploy/install.html">使用教程 | MemoTrace</a></p>
+</blockquote>
 
                 
             </div>
@@ -1435,7 +1345,7 @@ Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://cmymoon.com/2023/09/09/dhcp-shi-yan/">https://cmymoon.com/2023/09/09/dhcp-shi-yan/</a>
+                    <a href="https://cmymoon.com/2024/05/13/wechatmsg-liao-tian-ji-lu-guan-li-gong-ju/">https://cmymoon.com/2024/05/13/wechatmsg-liao-tian-ji-lu-guan-li-gong-ju/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1473,12 +1383,12 @@ Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/Router/">
-                                    <span class="chip bg-color">Router</span>
+                                <a href="/tags/Share/">
+                                    <span class="chip bg-color">Share</span>
                                 </a>
                             
-                                <a href="/tags/Network/">
-                                    <span class="chip bg-color">Network</span>
+                                <a href="/tags/Software/">
+                                    <span class="chip bg-color">Software</span>
                                 </a>
                             
                         </div>
@@ -1837,16 +1747,17 @@ Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/09/10/ospf-ren-zheng-shi-yan/">
+                <a href="/2024/05/13/wechatmsg-liao-tian-ji-lu-guan-li-gong-ju/">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/OSPF-test/1.webp" class="responsive-img" alt="OSPF认证实验">
+                        <img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/background/29.webp" class="responsive-img" alt="WechatMsg-聊天记录管理工具">
                         
-                        <span class="card-title">OSPF认证实验</span>
+                        <span class="card-title">WechatMsg-聊天记录管理工具</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1856,30 +1767,31 @@ Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-09-10
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/" class="post-category">
-                                    路由实验
+                            <a href="/categories/Software-sharing/" class="post-category">
+                                    Software-sharing
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Router/">
-                        <span class="chip bg-color">Router</span>
+                    <a href="/tags/Share/">
+                        <span class="chip bg-color">Share</span>
                     </a>
                     
-                    <a href="/tags/Network/">
-                        <span class="chip bg-color">Network</span>
+                    <a href="/tags/Software/">
+                        <span class="chip bg-color">Software</span>
                     </a>
                     
                 </div>
@@ -1893,12 +1805,12 @@ Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/09/09/rip-lu-you-shi-yan/">
+                <a href="/2024/04/08/hexo-zhu-ti-tui-jian/">
                     <div class="card-image">
                         
-                        <img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/Blog/RIP-test/1.webp" class="responsive-img" alt="RIP路由实验">
+                        <img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/background/17.webp" class="responsive-img" alt="Hexo-主题推荐">
                         
-                        <span class="card-title">RIP路由实验</span>
+                        <span class="card-title">Hexo-主题推荐</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1909,14 +1821,14 @@ Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-04-08
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E8%B7%AF%E7%94%B1%E5%AE%9E%E9%AA%8C/" class="post-category">
-                                    路由实验
+                            <a href="/categories/Theme-sharing/" class="post-category">
+                                    Theme-sharing
                                 </a>
                             
                             
@@ -1926,12 +1838,16 @@ Router(config)#<span aria-hidden="true" class="line-numbers-rows"><span></span><
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Router/">
-                        <span class="chip bg-color">Router</span>
+                    <a href="/tags/Share/">
+                        <span class="chip bg-color">Share</span>
                     </a>
                     
-                    <a href="/tags/Network/">
-                        <span class="chip bg-color">Network</span>
+                    <a href="/tags/Hexo/">
+                        <span class="chip bg-color">Hexo</span>
+                    </a>
+                    
+                    <a href="/tags/Theme/">
+                        <span class="chip bg-color">Theme</span>
                     </a>
                     
                 </div>

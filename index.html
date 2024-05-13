@@ -1362,18 +1362,18 @@ hexo-theme-matery 中文说明
         
             
             <div class="carousel-item amber white-text carousel-post bg-cover"
-                 style="background-image: url('https://picture.cmymoon.com/background/26.webp');">
+                 style="background-image: url('https://picture.cmymoon.com/background/29.webp');">
                 <div class="container">
                     <div class="row">
                         <div class="col s10 offset-s1">
-                            <div class="title center-align">软件分享</div>
+                            <div class="title center-align">WechatMsg-聊天记录管理工具</div>
                             <div class="description center-align">
                                 
-                                    软件分享1. 前言随着技术的不断发展，软件在我们日常生活中的重要性不容忽视。从生产力工具到创意应用，软件有助于我们更聪明地工作，而不是更努力地工作。但是，面对如此多的选项，找到适合自己需求的软件可能是一个挑战。这就是软件分享的用武之地。通过
+                                    WechatMsg1. 前言今天无意间在Github上看到一个微信聊天记录管理工具——MemoTrace，主要用于提取微信聊天记录，将其导出成HTML、Word、Excel文档永久保存，对聊天记录进行分析生成年度聊天报告，用聊天数据训练专属
                                 
                             </div>
                             <div class="cover-btns">
-                                <a href="/2024/03/28/ruan-jian-fen-xiang/" class="waves-effect waves-light btn"
+                                <a href="/2024/05/13/wechatmsg-liao-tian-ji-lu-guan-li-gong-ju/" class="waves-effect waves-light btn"
                                    target="_blank">
                                     <i class="icon fa fa-eye fa-fw"></i>阅读更多
                                 </a>
@@ -1418,8 +1418,19 @@ hexo-theme-matery 中文说明
 
         let carouselIntervalId;
         
+        // Loop to call the next cover article picture.
+        let autoCarousel = function () {
+            carouselIntervalId = setInterval(function () {
+                coverSlider.carousel('next');
+            }, 5000);
+        };
+        autoCarousel();
+        
 
         function restartPlay() {
+            
+            clearInterval(carouselIntervalId);
+            autoCarousel();
             
         };
 
@@ -1566,7 +1577,7 @@ hexo-theme-matery 中文说明
     
     <div class="col s12 m6" data-aos="zoom-in-up">
         
-             <div class="post-card" style="background-image: url('https://picture.cmymoon.com/background/26.webp')">
+             <div class="post-card" style="background-image: url('https://picture.cmymoon.com/background/29.webp')">
         
             <div class="post-body">
                 <div class="post-categories">
@@ -1576,15 +1587,15 @@ hexo-theme-matery 中文说明
                         
                     
                 </div>
-                <a href="/2024/03/28/ruan-jian-fen-xiang/">
-                    <h3 class="post-title">软件分享</h3>
+                <a href="/2024/05/13/wechatmsg-liao-tian-ji-lu-guan-li-gong-ju/">
+                    <h3 class="post-title">WechatMsg-聊天记录管理工具</h3>
                 </a>
                 <p class="post-description">
                     
-                        软件分享1. 前言随着技术的不断发展，软件在我们日常生活中的重要性不容忽视。从生产力工具到创意应用，软件有助于我们更聪明地工作，而不是更努力
+                        WechatMsg1. 前言今天无意间在Github上看到一个微信聊天记录管理工具——MemoTrace，主要用于提取微信聊天记录，将其导出
                     
                 </p>
-                <a href="/2024/03/28/ruan-jian-fen-xiang/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FFCC00 0%, #FF9500 100%)" target="_blank">
+                <a href="/2024/05/13/wechatmsg-liao-tian-ji-lu-guan-li-gong-ju/" class="read-more btn waves-effect waves-light" style="background: linear-gradient(to right, #FFCC00 0%, #FF9500 100%)" target="_blank">
                     <i class="icon far fa-eye fa-fw"></i>阅读更多
                 </a>
             </div>
@@ -1608,6 +1619,58 @@ hexo-theme-matery 中文说明
     <!-- 所有文章卡片 -->
     <article id="articles" class="container articles">
         <div class="row article-row">
+            
+             <!-- 隐藏某个文章 -->
+            <div class="article col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/2024/05/13/wechatmsg-liao-tian-ji-lu-guan-li-gong-ju/">
+                        <div class="card-image">
+                            
+                            <img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/background/29.webp" class="responsive-img" alt="WechatMsg-聊天记录管理工具">
+                            
+                            <span class="card-title">WechatMsg-聊天记录管理工具</span>
+                        </div>
+                    </a>
+
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                WechatMsg1. 前言今天无意间在Github上看到一个微信聊天记录管理工具——MemoTrace，主要用于提取微信聊天记录，将其导出成HTML、Word、Excel文档永久保存，对聊天记录进行分析生成年度聊天报告，用聊天数据训练专属
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-13
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/categories/Software-sharing/" class="post-category">
+                                    Software-sharing
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/tags/Share/">
+                            <span class="chip bg-color">Share</span>
+                        </a>
+                        
+                        <a href="/tags/Software/">
+                            <span class="chip bg-color">Software</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+              <!-- 隐藏某个文章 -->
             
              <!-- 隐藏某个文章 -->
             <div class="article col s12 m6 l4" data-aos="zoom-in">
@@ -2242,55 +2305,6 @@ f
             </div>
               <!-- 隐藏某个文章 -->
             
-             <!-- 隐藏某个文章 -->
-            <div class="article col s12 m6 l4" data-aos="zoom-in">
-                <div class="card">
-                    <a href="/2023/12/31/ying-yu-fu-xi/">
-                        <div class="card-image">
-                            
-                            <img src="/medias/loading.gif" data-original="https://picture.cmymoon.com/background/16.webp" class="responsive-img" alt="英语复习">
-                            
-                            <span class="card-title">英语复习</span>
-                        </div>
-                    </a>
-
-                    <div class="card-content article-content">
-                        <div class="summary block-with-text">
-                            
-                                英语期末复习Vacubulary
-The government troops recaptured the city from the rebels the rebels at the cost of two  thousand casua
-                            
-                        </div>
-                        <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-12-31
-                            </span>
-                            <span class="publish-author">
-                                
-                                <i class="fas fa-bookmark fa-fw icon-category"></i>
-                                
-                                <a href="/categories/%E5%A4%8D%E4%B9%A0%E6%96%87%E6%A1%A3/" class="post-category">
-                                    复习文档
-                                </a>
-                                
-                                
-                            </span>
-                        </div>
-                    </div>
-
-                    
-                    <div class="card-action article-tags">
-                        
-                        <a href="/tags/review/">
-                            <span class="chip bg-color">review</span>
-                        </a>
-                        
-                    </div>
-                    
-                </div>
-            </div>
-              <!-- 隐藏某个文章 -->
-            
         </div>
     </article>
 
@@ -2343,7 +2357,7 @@ The government troops recaptured the city from the rebels the rebels at the cost
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">35.6k</span>
+                        class="white-color">36.7k</span>
             
             
             
