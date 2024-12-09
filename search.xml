@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>GetQzonehistory</title>
+      <link href="/2024/12/09/getqzonehistory/"/>
+      <url>/2024/12/09/getqzonehistory/</url>
+      
+        <content type="html"><![CDATA[<h1 id="GetQzonehistory"><a href="#GetQzonehistory" class="headerlink" title="GetQzonehistory"></a>GetQzonehistory</h1><h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>该项目通过获取QQ空间的历史消息列表来获取该账号下发布的所有说说（当然消息列表中没有的就获取不到，例如一些仅自己可见的说说）。主要实现还是通过模拟登录QQ空间来获取历史消息列表，然后进行数据分析，最后将爬取的说说存放到/resource/result目录下。</p><h2 id="2-使用"><a href="#2-使用" class="headerlink" title="2. 使用"></a>2. 使用</h2><p>作者已经将源代码打包好下载到桌面后直接点击即可使用。下面有两种下载渠道（如果不能翻墙可以用第二种方法）。</p><p><strong>下载：</strong></p><blockquote><p>软件源项目地址：<a href="https://github.com/LibraHp/GetQzonehistory">Github</a></p><p>123网盘下载：<a href="https://www.123684.com/s/3a3mjv-sG7v3?%E6%8F%90%E5%8F%96%E7%A0%81:GETQ">GetQzonehistory</a></p></blockquote><p>提取码:GETQ</p><p><strong>使用截图：</strong></p><p><img src="https://picture.cmymoon.com/Blog/GetQzonehistory/GetQzonehistory.png" alt="GetQzonehistory使用" title="GetQzonehistory预览图"> </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Software-sharing </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Share </tag>
+            
+            <tag> Software </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>网络零售复习</title>
       <link href="/2024/06/16/wang-luo-ling-shou-fu-xi/"/>
       <url>/2024/06/16/wang-luo-ling-shou-fu-xi/</url>
