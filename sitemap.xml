@@ -327,6 +327,13 @@
   </url>
   
   <url>
+    <loc>https://cmymoon.com/tags/Software/</loc>
+    <lastmod>2025-02-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://cmymoon.com/tags/Router/</loc>
     <lastmod>2025-02-13</lastmod>
     <changefreq>weekly</changefreq>
@@ -335,13 +342,6 @@
   
   <url>
     <loc>https://cmymoon.com/tags/Network/</loc>
-    <lastmod>2025-02-13</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://cmymoon.com/tags/Software/</loc>
     <lastmod>2025-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -397,14 +397,14 @@
   </url>
   
   <url>
-    <loc>https://cmymoon.com/tags/Plug/</loc>
+    <loc>https://cmymoon.com/tags/review/</loc>
     <lastmod>2025-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cmymoon.com/tags/review/</loc>
+    <loc>https://cmymoon.com/tags/Plug/</loc>
     <lastmod>2025-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -420,14 +420,14 @@
   </url>
   
   <url>
-    <loc>https://cmymoon.com/categories/Routing-Experiment/</loc>
+    <loc>https://cmymoon.com/categories/Software-sharing/</loc>
     <lastmod>2025-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cmymoon.com/categories/Software-sharing/</loc>
+    <loc>https://cmymoon.com/categories/Routing-Experiment/</loc>
     <lastmod>2025-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -455,14 +455,14 @@
   </url>
   
   <url>
-    <loc>https://cmymoon.com/categories/Plug-sharing/</loc>
+    <loc>https://cmymoon.com/categories/Review-Documents/</loc>
     <lastmod>2025-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cmymoon.com/categories/Review-Documents/</loc>
+    <loc>https://cmymoon.com/categories/Plug-sharing/</loc>
     <lastmod>2025-02-13</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
