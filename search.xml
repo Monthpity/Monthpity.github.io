@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>OpenRouter+CherryStudio实现免费AI助手</title>
+      <link href="/2025/02/19/openrouter-cherrystudio-shi-xian-mian-fei-ai-zhu-shou/"/>
+      <url>/2025/02/19/openrouter-cherrystudio-shi-xian-mian-fei-ai-zhu-shou/</url>
+      
+        <content type="html"><![CDATA[<h2 id="OpenRouter-CherryStudio实现免费AI助手"><a href="#OpenRouter-CherryStudio实现免费AI助手" class="headerlink" title="OpenRouter+CherryStudio实现免费AI助手"></a>OpenRouter+CherryStudio实现免费AI助手</h2><h3 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h3><p>在AI逐渐普及的今天，高昂的费用和复杂的部署流程常常令人望而却步。想拥有一个专属的AI助手，却苦于囊中羞涩，或者不擅长技术操作？别担心，今天就为大家带来一个福音！本文将手把手教你如何利用<a href="https://openrouter.ai/">OpenRouter</a>+<a href="https://cherry-ai.com/">CherryStudio</a>，搭建一个完全免费的AI助手。无需编程基础，只需简单几步，就能拥有一个属于自己的智能伙伴，为你解答疑惑、创作文案、甚至进行智能对话！赶快来试试吧，开启你的AI助手之旅！</p><h3 id="2-OpenRouter-API获取"><a href="#2-OpenRouter-API获取" class="headerlink" title="2. OpenRouter-API获取"></a>2. OpenRouter-API获取</h3><p>OpenRouter时一个大模型的API代理网站，进入<a href="https://openrouter.ai/">OpenRouter</a>官网进行登录，这个网站不需要魔法，在国内直连的，在左上角搜索框输入<code>free</code>，它会给你提供一些免费的AI模型这里我推荐两个好用的模型。你也可以尝试其它的免费AI模型。</p><blockquote><p>deepseek/deepseek-chat:free</p><p>google/gemini-2.0-pro-exp-02-05:free</p></blockquote><p>找到第一个模型点进去，点击蓝色按钮<code>Create API Key</code>，随便起一个名字创建即可。<strong>创建好一定记得复制，不然就看不到了。</strong></p><p><img src="https://picture.cmymoon.com/Blog/OpenRoute-CherryStudio/DeepSeek.webp" alt="DeepSeek" title="OpenRouterAPI创建"></p><h3 id="3-CherryStudio工具使用"><a href="#3-CherryStudio工具使用" class="headerlink" title="3.CherryStudio工具使用"></a>3.CherryStudio工具使用</h3><p>CherryStudio 是一款集多模型对话、知识库管理、AI 绘画、翻译等功能于一体的全能 AI 助手平台。 CherryStudio的高度自定义的设计、强大的扩展能力和友好的用户体验，使其成为专业用户和 AI 爱好者的理想选择。无论是零基础用户还是开发者，都能在 CherryStudio 中找到适合自己的AI功能，提升工作效率和创造力。进入<a href="https://cherry-ai.com/download">Cherry Studio官网</a>选择合适下载方式下载。</p><p><strong>使用方法：</strong></p><p>下载安装好后，进入CherryStudio在设置里找到<code>OpenRoute</code>板块，将刚才在OpenRoute上创建的<code>APIKey</code>填到API密钥处，将右上角的开关打开，上面自带的模型比较拉，复制上边的模型名称通过添加按钮添加进去即可使用。</p><p><img src="https://picture.cmymoon.com/Blog/OpenRoute-CherryStudio/CherryStudio.webp" alt="CherryStudio" title="CherryStudio设置"></p><h3 id="3-Cursor拓展使用"><a href="#3-Cursor拓展使用" class="headerlink" title="3. Cursor拓展使用"></a>3. Cursor拓展使用</h3><p>Cursor 是一款 AI 驱动的代码编辑器，它利用先进的机器学习技术来理解你的代码意图，并提供智能化的帮助。它可以根据你的注释或部分代码自动生成代码片段，帮你快速完成重复性的任务。此外，Cursor 还能检测代码中的潜在错误，并提供修复建议，减少调试时间。 Cursor 旨在成为你的 AI 编程助手，让你写代码事半功倍。</p><p>由于OpenRouter的API格式与Openai完全兼容，直接可以当成Openai的API使用，进入<code>Corsor</code>找到右上角<code>设置</code>，点击<code>Models</code>，在<code>Openai API Key</code>处添加<code>OpenRouter API Key</code>，URL处更换地址为<code>https://openrouter.ai/api/v1</code> ，最后打开开关，将上面的两个模型添加进去即可开始使用。</p><p><img src="https://picture.cmymoon.com/Blog/OpenRoute-CherryStudio/Cursor.webp" alt="Cursor" title="Cursor设置"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> AI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> build </tag>
+            
+            <tag> Software </tag>
+            
+            <tag> Free-AI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>插件工具推荐</title>
       <link href="/2025/01/02/cha-jian-gong-ju-tui-jian/"/>
       <url>/2025/01/02/cha-jian-gong-ju-tui-jian/</url>
