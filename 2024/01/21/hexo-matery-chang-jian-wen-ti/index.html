@@ -1194,14 +1194,14 @@ hexo-theme-matery 中文说明
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2025-02-13
+                    2025-02-19
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    2.8k
                 </div>
                 
 
@@ -1524,6 +1524,18 @@ hexo-theme-matery 中文说明
 <blockquote>
 <p><a target="_blank" rel="noopener" href="https://l-lin.github.io/font-awesome-animation/#">使用 FontAwesome 和一些 CSS3 的简单动画</a></p>
 </blockquote>
+<h2 id="15-Valine评论诗词背景文字"><a href="#15-Valine评论诗词背景文字" class="headerlink" title="15 Valine评论诗词背景文字"></a>15 Valine评论诗词背景文字</h2><blockquote>
+<p>博客评论区添加诗词背景文字，个人感觉不错，喜欢的可以添加！</p>
+</blockquote>
+<p>找到主题目录下<code>matery/layout/_partial/valine.ejs</code>文件，将下列代码添加到<code>new valine</code>的结束下方。</p>
+<pre class="line-numbers language-ejs" data-language="ejs"><code class="language-ejs"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>https://sdk.jinrishici.com/v2/browser/jinrishici.js<span class="token punctuation">"</span></span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript">
+    jinrishici<span class="token punctuation">.</span><span class="token function">load</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">result</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">var</span> jrsc_plac <span class="token operator">=</span>  result<span class="token punctuation">.</span>data<span class="token punctuation">.</span>content <span class="token operator">+</span> <span class="token string">"\n「"</span> <span class="token operator">+</span> result<span class="token punctuation">.</span>data<span class="token punctuation">.</span>origin<span class="token punctuation">.</span>title <span class="token operator">+</span> <span class="token string">"」"</span> <span class="token operator">+</span> result<span class="token punctuation">.</span>data<span class="token punctuation">.</span>origin<span class="token punctuation">.</span>dynasty <span class="token operator">+</span> <span class="token string">" · "</span> <span class="token operator">+</span> result<span class="token punctuation">.</span>data<span class="token punctuation">.</span>origin<span class="token punctuation">.</span>author
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"veditor"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">setAttribute</span><span class="token punctuation">(</span><span class="token string">"placeholder"</span><span class="token punctuation">,</span>jrsc_plac<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
 
                 
             </div>
@@ -1933,6 +1945,14 @@ hexo-theme-matery 中文说明
     
     });
 </script>
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script type="text/javascript">
+    jinrishici.load(function(result) {
+        var jrsc_plac =  result.data.content + "\n「" + result.data.origin.title + "」" + result.data.origin.dynasty + " · " + result.data.origin.author
+        document.getElementById("veditor").setAttribute("placeholder",jrsc_plac);
+    });
+</script>
+
 
 <!--酷Q推送-->
 
@@ -2294,7 +2314,7 @@ hexo-theme-matery 中文说明
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">53.8k</span>
+                        class="white-color">53.9k</span>
             
             
             
