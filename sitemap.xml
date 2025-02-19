@@ -336,13 +336,6 @@
   </url>
   
   <url>
-    <loc>https://cmymoon.com/tags/Software/</loc>
-    <lastmod>2025-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cmymoon.com/tags/router/</loc>
     <lastmod>2025-02-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -371,14 +364,14 @@
   </url>
   
   <url>
-    <loc>https://cmymoon.com/tags/optimize/</loc>
+    <loc>https://cmymoon.com/tags/Software/</loc>
     <lastmod>2025-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cmymoon.com/tags/Speed-up/</loc>
+    <loc>https://cmymoon.com/tags/optimize/</loc>
     <lastmod>2025-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -392,6 +385,13 @@
   </url>
   
   <url>
+    <loc>https://cmymoon.com/tags/Speed-up/</loc>
+    <lastmod>2025-02-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://cmymoon.com/tags/Theme/</loc>
     <lastmod>2025-02-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -399,14 +399,14 @@
   </url>
   
   <url>
-    <loc>https://cmymoon.com/tags/Free-AI/</loc>
+    <loc>https://cmymoon.com/tags/Picture-bed/</loc>
     <lastmod>2025-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cmymoon.com/tags/Picture-bed/</loc>
+    <loc>https://cmymoon.com/tags/Free-AI/</loc>
     <lastmod>2025-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -436,13 +436,6 @@
   </url>
   
   <url>
-    <loc>https://cmymoon.com/categories/Software-sharing/</loc>
-    <lastmod>2025-02-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://cmymoon.com/categories/Routing-Experiment/</loc>
     <lastmod>2025-02-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -457,6 +450,13 @@
   </url>
   
   <url>
+    <loc>https://cmymoon.com/categories/Software-sharing/</loc>
+    <lastmod>2025-02-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>https://cmymoon.com/categories/Theme-sharing/</loc>
     <lastmod>2025-02-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -464,14 +464,14 @@
   </url>
   
   <url>
-    <loc>https://cmymoon.com/categories/AI/</loc>
+    <loc>https://cmymoon.com/categories/Picture-Bed/</loc>
     <lastmod>2025-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://cmymoon.com/categories/Picture-Bed/</loc>
+    <loc>https://cmymoon.com/categories/AI/</loc>
     <lastmod>2025-02-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
